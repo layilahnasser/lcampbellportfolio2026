@@ -11,6 +11,8 @@
   // Renders text; anything still starting with "TODO:" gets a visible dashed outline.
   const t = (s) => {
     const str = String(s ?? "");
+    const mid = str.search(/\sTODO:/); // a TODO at the end of a real sentence: keep the text, outline only the placeholder
+    if (mid > 0) return esc(str.slice(0, mid)) + " " + t(str.slice(mid + 1));
     if (/^TODO\b/.test(str)) {
       const clean = str.replace(/^TODO:?\s*/, "");
       return `<span class="todo" title="Placeholder — edit js/data.js">${esc(clean || "Add content")}</span>`;

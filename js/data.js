@@ -300,67 +300,146 @@ window.PORTFOLIO = {
     },
 
     {
-      id: "robin-nest",
-      title: "Robin Nest",
+      id: "cancer-nutrition-app",
+      title: "AI-Powered Cancer Nutrition App",
       subtitle: "Meal planning for cancer patients",
       focus: "Health & UX",
       approach: "Explore an AI-driven meal planning app",
       summary: "Empowering caregivers and cancer patients with compassionate, AI-driven nutrition and treatment-based tools.",
       ballColor: "#ffb020",
       year: "2025",
-      tags: ["Healthcare", "Accessibility", "Prototyping"],
+      tags: ["Healthcare", "Surveys", "Personas", "AI"],
       role: "UX Designer & Researcher",
       team: "Analysts, information architects and product managers",
       timeline: "Aug – Nov 2025",
-      tools: "Personas, journey maps, wireframes, prototypes",
-      hero: { src: "", caption: "TODO: Hero image — Robin Nest screens" },
+      tools: "Surveys, interviews, personas, journey mapping, RICE prioritization, wireframes, prototypes",
+      hero: { src: "assets/img/nutrition-app-home.png", fit: "phone", caption: "The app's home screen: a warm welcome, a daily tip, and one-tap access to nutrition support." },
 
       problem: {
         statement:
-          "Cancer patients need meal planning support they can trust. Robin Nest connects them with meal planning services, resources, and support tools.",
-        context: "TODO: How the team identified this need.",
-        goal: "Design flows that meet patients' nutritional needs while prioritizing accessibility, trust, and ease of use."
+          "Caregivers and cancer patients often lack access to a specialized nutrition support system that provides personalized AI-driven guidance, community-driven meal planning, and professional 24/7 oncology support.",
+        context:
+          "Fragmented resources force families to navigate conflicting advice, unsafe food choices, and exhausting meal preparation without clear guidance. Caregivers, already under emotional and logistical strain, struggle to provide safe meals, while patients face serious risks from mismanaged nutrition, including medication interactions and hospital readmissions.",
+        goal:
+          "Design a compassionate, cancer-focused nutrition platform that lightens the daily burden: safe and personalized, supported by community, and available at any hour. TODO: add one line on your own contribution (e.g. which parts of the research and design you led)."
       },
+
       research: {
-        summary: "User research to make sure the app meets the nutritional needs of patients.",
+        summary:
+          "Our first step was an online survey, distributed across several relevant communities. Within a few days we had 50 responses, and they helped us pinpoint five main pain points that guided every step after.",
         methods: [
-          { name: "User interviews", detail: "TODO: Who you interviewed." },
-          { name: "Surveys", detail: "TODO: What you asked." },
-          { name: "Personas & journey mapping", detail: "Created to ground design decisions in patient needs." },
-          { name: "Usability testing", detail: "TODO: What you tested." }
+          {
+            name: "Mixed-methods survey (50 responses)",
+            detail: "Open-ended questions, multiple-choice items, and ordinal scale prompts, capturing both quantitative patterns (like how often caregivers feel stressed, and their confidence levels) and qualitative stories about nutrition challenges, emotional strain and unmet needs."
+          },
+          {
+            name: "Customer journey mapping",
+            detail: "Five caregiving stages (Aware, Search, Plan & Prep, Check & Verify, Eat & Reflect) to surface emotional and logistical pain points and find opportunities to improve trust, usability and long-term engagement."
+          },
+          {
+            name: "User interviews",
+            detail: "TODO: how many people you spoke with, who they were, and what you asked (your resume lists interviews for this project)."
+          },
+          {
+            name: "Usability testing",
+            detail: "TODO: how many participants, what you tested (low-fi or high-fi), and the main finding."
+          }
         ],
-        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
-        image: { src: "", caption: "TODO: Personas or journey map" }
+        insights: [
+          "88% of caregivers report moderate to severe exhaustion.",
+          "56% of cancer patients feel confused about the conflicting nutrition information they're given.",
+          "44% of caregivers report a high level of stress due to unmet needs."
+        ],
+        image: [
+          { src: "assets/img/nutrition-survey.png", caption: "The Cancer Care Planning Survey, run as a University of Michigan research study." },
+          { src: "assets/img/nutrition-quotes.png", caption: "In their words: pain points from caregivers and cancer patients." }
+        ]
       },
+
       define: {
-        persona: "TODO: Patient persona — needs and frustrations.",
-        journey: "TODO: The point in the journey where support breaks down.",
-        image: { src: "", caption: "TODO: Persona" }
-      },
-      ideate: {
-        summary: "Designed and iterated user flows with a team of analysts, information architects, and product managers, aligning decisions with ethical and therapeutic goals.",
-        image: { src: "", caption: "TODO: User flow" }
-      },
-      iterations: [
-        { version: "V1 — Wireframes", change: "Built wireframes prioritizing accessibility, trust, and ease of use.", feedback: "TODO: What testing showed.", image: { src: "", caption: "TODO: Wireframes" } },
-        { version: "V2 — Prototype", change: "TODO: What you changed.", feedback: "TODO: What improved.", image: { src: "", caption: "TODO: Prototype" } }
-      ],
-      execution: {
-        summary: "TODO: Walk through the final app flows.",
-        decisions: [
-          { title: "Accessibility", why: "TODO: A specific choice and why." },
-          { title: "Trust", why: "TODO: A specific choice and why." },
-          { title: "Ease of use", why: "TODO: A specific choice and why." }
+        persona:
+          "Daniel Morris, The Caregiver: 45, married with three kids, a tax manager in Detroit, MI. He worries about what food to cook for his dad (the patient) given his medication needs, and he's exhausted from balancing caregiving, work and family. His wishlist: a centralized dashboard, AI-powered assistance, cancer-specific resources, and simple communication tools.",
+        journey:
+          "Mapping the journey showed where it breaks: conflicting nutrition advice and unclear first steps (Aware); fear of choosing unsafe foods (Search); the daily burden of meal prep with limited help (Plan & Prep); no simple, reliable way to check food against medications (Check & Verify); and no one to ask at odd hours, leaving emotional and decision fatigue.",
+        painPointsHeading: "Five common pain points from the survey",
+        painPoints: [
+          "Nutrition confusion and safety risks: caregivers and patients struggled with conflicting information and unsafe food choices.",
+          "Emotional exhaustion and lack of personal time: caregivers felt isolated and overwhelmed.",
+          "Meal preparation burden: daily cooking and diet restrictions were mentally and physically draining.",
+          "Financial strain: the costs of care and meal planning added stress.",
+          "Need for clearer communication from healthcare providers: caregivers wanted upfront, practical guidance."
         ],
-        images: [{ src: "", caption: "TODO: Final screens" }],
+        image: [
+          { src: "assets/img/nutrition-persona.png", caption: "Primary persona: Daniel, the caregiver." },
+          { src: "assets/img/nutrition-journey-map.png", caption: "Cancer patient and caregiver journey map across five stages: goals, emotions, pain points and opportunities." }
+        ]
+      },
+
+      ideate: {
+        summary:
+          "Persona hypotheses, interview questions and problem statements went onto a shared team board, along with candidate features that we scored with RICE (Reach, Impact, Confidence, Effort). The journey map's opportunities fed that list: personalized onboarding, an AI grocery list builder, a community meal train, meal delivery integrations, a food scanner with medication-compatibility checks, and a 24/7 AI assistant with oncology dietitian access. TODO: add two lines on how the team narrowed to the final feature set, and which idea you advocated for.",
+        image: [
+          { src: "", caption: "TODO: Ideation and RICE prioritization board. Save your board screenshot as assets/img/nutrition-board.jpg and set src to that path." },
+          { src: "", caption: "TODO: Your early sketches. Photograph or scan them, save as assets/img/nutrition-sketches.jpg, and set src." }
+        ]
+      },
+
+      iterations: [
+        {
+          version: "Round 1 — Sketches & low-fidelity",
+          change: "TODO: What the first sketches or wireframes explored (for example the home screen, the nutrition hub, or the scanner).",
+          feedback: "TODO: What testing or critique showed (for example which screens confused people), and what you changed.",
+          image: { src: "", caption: "TODO: Low-fidelity wireframes. Save as assets/img/nutrition-lowfi.jpg and set src." }
+        },
+        {
+          version: "Round 2 — High-fidelity wireframes",
+          change: "Six core screens (Home, Nutrition Support, AI Grocery List Builder, AI Assistant, Partner Meal Delivery and Meal Train), tied together by a persistent bottom navigation: Home, Nutrition, Scanner, Dietitian, Profile.",
+          feedback: "TODO: What usability testing showed on the high-fidelity version, and the final changes it led to.",
+          image: { src: "", caption: "TODO: The six high-fidelity screens. Save your screenshot as assets/img/nutrition-wireframes.jpg and set src." }
+        }
+      ],
+
+      execution: {
+        summary:
+          "A compassionate platform designed to lighten the daily burdens faced by cancer patients and caregivers through smart, cancer-focused nutrition tools, built around features that matter in moments of vulnerability. Each feature answers a specific pain point from the journey map.",
+        decisions: [
+          {
+            title: "AI Grocery List Builder",
+            why: "Provides personalized, safe shopping lists that adapt to individual treatment needs. Diagnosis and treatment type are optional, and symptoms like nausea or loss of appetite are one-tap choices, so a tired caregiver isn't typing. It answers the Search-stage fear of choosing unsafe foods."
+          },
+          {
+            title: "Community Meal Train",
+            why: "Lets families and friends coordinate meal support, with dietary notes, allergies and diagnosis kept in one place. It turns concern into meaningful action so no one feels alone, and eases the Plan & Prep burden and caregiver burnout."
+          },
+          {
+            title: "Meal Delivery Partnerships",
+            why: "Gives access to nutritious, cancer-friendly meals delivered to the door. Filters such as Low Sodium and High Protein, plus an AI recommendation based on medications and treatment plan, reduce meal-prep stress during difficult times."
+          },
+          {
+            title: "AI Food Scanner",
+            why: "Checks food and medication compatibility in seconds, so users can make safer choices and discover healthier options without anxiety. It addresses the Check & Verify gap: no simple, reliable point of truth."
+          },
+          {
+            title: "24/7 AI Assistant and dietitian access",
+            why: "Quick-question shortcuts and a path to an oncology dietitian mean expert advice is always within reach, at any hour, providing both reassurance and evidence-based support. It answers 'no one is available at odd hours'."
+          },
+          {
+            title: "A calm, warm visual language",
+            why: "TODO: Explain the choice of soft sage greens, warm cream and coral accents, and generous spacing, and why they suit people who are stressed and tired."
+          }
+        ],
+        images: [{ src: "", caption: "TODO: The final high-fidelity screens. Use the same assets/img/nutrition-wireframes.jpg as above, or crop individual screens." }],
         prototypeUrl: ""
       },
+
       outcome: {
         results: [
-          { value: "5", label: "research methods" },
-          { value: "3", label: "design priorities" }
+          { value: "50", label: "survey responses in a few days" },
+          { value: "88%", label: "of caregivers report moderate to severe exhaustion" },
+          { value: "5", label: "journey stages mapped" },
+          { value: "5", label: "core features, each tied to a pain point" }
         ],
-        reflection: "TODO: What you learned about designing for health contexts."
+        reflection: "TODO: What you learned about designing for health contexts, and what you'd do next (for example, testing with real caregivers or validating the food scanner's safety rules with dietitians)."
       }
     },
 

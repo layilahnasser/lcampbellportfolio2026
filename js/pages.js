@@ -16,6 +16,9 @@
     { key: "outcome", label: "Outcome" }
   ];
 
+  // A frame can hold one image or a list of images
+  const imgs = (x, cls = "") => (Array.isArray(x) ? x.map((i) => img(i, cls)).join("") : img(x, cls));
+
   const ext = (href, label) =>
     `<a href="${esc(href)}" target="_blank" rel="noopener">${label}<span class="sr-only"> (opens in a new tab)</span></a>`;
 
@@ -302,7 +305,7 @@
               <div><dt>Timeline</dt><dd>${t(p.timeline)}</dd></div>
               <div><dt>Tools &amp; methods</dt><dd>${t(p.tools)}</dd></div>
             </dl>
-            ${img(p.hero, "shot--hero")}
+            ${img(p.hero, "shot--hero" + (p.hero && p.hero.fit === "phone" ? " shot--phone" : ""))}
           </header>
 
           <div class="case-layout">
@@ -327,19 +330,24 @@
                   .join("")}</div>
                 <h3>Key insights</h3>
                 <ol class="insights">${p.research.insights.map((x) => `<li>${t(x)}</li>`).join("")}</ol>
-                ${img(p.research.image)}
+                ${imgs(p.research.image)}
               </section>
 
               <section id="define" class="frame">
                 ${frameHead(3, "Define")}
                 <div class="two-col"><div><h3>Who we're designing for</h3><p>${t(p.define.persona)}</p></div><div><h3>Where it breaks down</h3><p>${t(p.define.journey)}</p></div></div>
-                ${img(p.define.image)}
+                ${
+                  p.define.painPoints
+                    ? `<h3>${esc(p.define.painPointsHeading || "Common pain points")}</h3><ol class="insights">${p.define.painPoints.map((x) => `<li>${t(x)}</li>`).join("")}</ol>`
+                    : ""
+                }
+                ${imgs(p.define.image)}
               </section>
 
               <section id="ideate" class="frame">
                 ${frameHead(4, "Ideate")}
                 <p>${t(p.ideate.summary)}</p>
-                ${img(p.ideate.image)}
+                ${imgs(p.ideate.image)}
               </section>
 
               <section id="iterate" class="frame">
@@ -350,7 +358,7 @@
                       <div class="iteration-text"><h3>${t(it.version)}</h3>
                         <p><b>What changed:</b> ${t(it.change)}</p>
                         <p><b>What testing showed:</b> ${t(it.feedback)}</p></div>
-                      ${img(it.image)}
+                      ${imgs(it.image)}
                     </li>`
                   )
                   .join("")}</ol>

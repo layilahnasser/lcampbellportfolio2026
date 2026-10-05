@@ -38,6 +38,7 @@ assets/         photo (img/layilah.jpg), resume.pdf, fonts, favicon
 - **Case studies:** the facts from your resume are already in. Replace each dashed-pink `TODO:` line with your own words, and add screenshots to `assets/img/` (`src: "assets/img/your-file.png"`).
 - **Opener text:** edit `showOpener()` in `js/main.js`. It appears once per browser tab session and can be closed with the button or Esc.
 - **Scoreboard wording:** each project has `subtitle`, `focus`, `approach` and `summary` in `js/data.js`.
+- **Case-study images:** each frame can take one image or a list (`image: [ {src, caption}, {src, caption} ]`). Empty `src` shows a placeholder.
 - **Add or remove a project:** copy or delete a block inside `projects: [ … ]` and give it a unique `id`.
 
 ## Design notes
