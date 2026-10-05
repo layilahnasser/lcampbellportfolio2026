@@ -65,28 +65,33 @@ window.PORTFOLIO = {
       steps: [
         {
           label: "Spot the problem",
-          meta: "Adobe · 2020–21",
-          text: "As Adobe's DEI Program Lead, I ran qualitative and quantitative research to find our talent gaps and presented it to the CEO. The findings supported a $3M donation to HBCUs and HSIs."
+          org: "Adobe",
+          when: "2020\u201321",
+          text: "As Adobe's DEI Program Lead, I researched our talent gaps and presented the findings to the CEO. They supported a $3M donation to HBCUs and HSIs."
         },
         {
           label: "Fix it from the hiring side",
-          meta: "Adobe · 2020–21",
-          text: "I partnered with design teams to add 200+ diverse UX design candidates, widening the pipelines for product and research roles, and trained 500+ recruiters and hiring managers on inclusive hiring."
+          org: "Adobe",
+          when: "2020\u201321",
+          text: "I partnered with design teams to add 200+ diverse UX design candidates, and trained 500+ recruiters and hiring managers on inclusive hiring."
         },
         {
           label: "Run the research myself",
-          meta: "Southwest Airlines · 2023–25",
-          text: "I interviewed hiring managers and candidates to find process pain points, redesigned the recruiting workflow, and built tracking tools that improved recruiter efficiency by 25%."
+          org: "Southwest Airlines",
+          when: "2023\u201325",
+          text: "I interviewed hiring managers and candidates, redesigned the recruiting workflow, and built tracking tools that improved recruiter efficiency by 25%."
         },
         {
           label: "Teach myself the craft",
-          meta: "Google UX Design Course · 2025",
-          text: "I built the Crowning Calendar, a scheduling app, end to end: 10+ structured interviews across five states, personas, journey maps and affinity diagrams, then low-fidelity wireframes in Figma refined with usability feedback to improve task success."
+          org: "Google UX Design Course",
+          when: "2025",
+          text: "I built the Crowning Calendar end to end: 10+ interviews across five states, personas and journey maps, then Figma wireframes refined through usability feedback."
         },
         {
           label: "Go all in",
-          meta: "University of Michigan · Now",
-          text: "I'm completing an M.S. in UX Research & Design while doing the work: usability research for the USDA, an AI-powered education initiative at Instructure, and research internships at Root Insurance and UK Digital Health Systems."
+          org: "University of Michigan",
+          when: "Now",
+          text: "I'm completing my M.S. in UX Research & Design while doing the work: research for the USDA and Instructure, plus internships at Root Insurance and UK Digital Health Systems."
         }
       ],
       turn: "Now I want to reverse that relationship, through research, thoughtful design, and solutions that work for more people.",

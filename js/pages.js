@@ -129,17 +129,29 @@
           ${portrait({ cls: "player-card--about", header: A.card.header, title: A.card.title, lines: A.card.lines, photo: A.card.photo, alt: A.card.photoAlt })}
         </section>
 
-        <section class="section narrow-wide" aria-labelledby="path-title">
+        <section class="section path-section" aria-labelledby="path-title">
           ${pill("Frame 1")}
           <h2 id="path-title" class="h-md">${esc(A.path.heading)}</h2>
           <p class="path-lead">${esc(A.path.lead)}</p>
           <blockquote class="path-quote"><p>${esc(A.path.quote)}</p></blockquote>
           <p class="path-bridge">${esc(A.path.bridge)}</p>
-          <ol class="path-steps">
-            ${A.path.steps
-              .map((st, i) => `<li class="path-step"><b aria-hidden="true">${i + 1}</b><div><h3>${esc(st.label)}</h3><p class="path-meta">${esc(st.meta)}</p><p>${esc(st.text)}</p></div></li>`)
-              .join("")}
-          </ol>
+          <div class="jmap-wrap">
+            <ol class="jmap" style="--n:${A.path.steps.length}" aria-label="My path into UX, in order">
+              <li class="jline" aria-hidden="true"><svg viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false">
+                <defs><linearGradient id="jmapG" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#ff2fb4"/><stop offset="1" stop-color="#27d9f5"/></linearGradient></defs>
+                <polyline points="${A.path.steps.map((_, i) => `${(100 / (A.path.steps.length * 2)) * (2 * i + 1)},${i % 2 === 0 ? 30 : 70}`).join(" ")}" fill="none" stroke="url(#jmapG)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+              </svg></li>
+              ${A.path.steps
+                .map((st, i) => {
+                  const up = i % 2 === 0;
+                  return `<li class="jstep jstep--${up ? "up" : "down"}${i === A.path.steps.length - 1 ? " jstep--now" : ""}" style="--i:${i + 1}">
+                    <div class="jcard"><h3>${esc(st.label)}</h3><p class="jorg">${esc(st.org)}</p><p>${esc(st.text)}</p></div>
+                    <div class="jmark"><span class="jwhen">${esc(st.when)}</span><i class="jdot" aria-hidden="true"><b>${i + 1}</b></i></div>
+                  </li>`;
+                })
+                .join("")}
+            </ol>
+          </div>
           <p class="path-turn">${esc(A.path.turn)}</p>
           <p class="path-extra">${esc(A.path.extra)}</p>
         </section>
