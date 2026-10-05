@@ -398,9 +398,11 @@ ${(p.execution.goals || [])
                   .map(
                     (g) => `<article class="goal-card">
                       <header class="goal-head"><span class="frame-no">${esc(g.tag)}</span><p class="goal-statement">${esc(g.title || g.statement)}</p></header>
-                      <p class="goal-why">${t(g.why)}</p>
+                      <div class="goal-body${g.images ? " goal-body--shot" : ""}">
+                        <p class="goal-why">${t(g.why)}</p>
+                        ${g.images ? `<div class="goal-shots">${imgs(g.images)}</div>` : ""}
+                      </div>
                       ${g.before && g.after ? `<div class="compare-pair"><div class="cmp-col"><p class="cmp-tag">Before</p>${img(g.before)}</div><div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p>${img(g.after)}</div></div>` : ""}
-                      ${g.images ? `<div class="goal-shots">${imgs(g.images)}</div>` : ""}
                     </article>`
                   )
                   .join("")}

@@ -243,17 +243,18 @@ window.PORTFOLIO = {
             { role: "Secondary typeface", name: "Montserrat" }
           ],
           image: [
-            { src: "assets/img/milk-color-system.jpg", caption: "Color system: primitives and semantic tokens for primary, secondary, success, error and greyscale." },
+            { src: "assets/img/milk-color-system.jpg", fit: "wide", caption: "Color system: primitives and semantic tokens for primary, secondary, success, error and greyscale." },
             { src: "assets/img/milk-type-scale.png", caption: "Type system: Nunito Sans and Montserrat, with a scale for desktop, tablet and mobile." }
           ]
         },
         {
           version: "Round 2: Components",
-          change: "Built the component library on those tokens: primary, secondary and tertiary buttons in three sizes, each with default, hover, selected, focused and disabled states; navigation links; add-to-cart and quantity controls; product cards in grid, list and quick-add layouts; the cart item and order summary; and the Churned, Scooped, Chilled, Repeat ticker. Pages were designed for desktop and mobile in a light (blush) and a dark (cocoa) theme.",
+          change: "Built the component library on those tokens: primary, secondary and tertiary buttons in three sizes, each with default, hover, selected, focused and disabled states; navigation links; add-to-cart and quantity controls; product cards in grid, list and quick-add layouts; the order summary; and the Churned, Scooped, Chilled, Repeat ticker. Pages were designed for desktop and mobile in a light (blush) and a dark (cocoa) theme.",
           feedback: "TODO: What testing or review showed on the high-fidelity version.",
           image: [
             { src: "assets/img/milk-buttons.jpg", fit: "wide", caption: "Buttons: primary, secondary and tertiary, in three sizes and five states." },
-            { src: "assets/img/milk-components.jpg", fit: "wide", caption: "Components: product cards, cart item, order summary, add button, logo lockups and the ticker." }
+            { src: "assets/img/milk-components.jpg", fit: "wide", caption: "Components: logo lockups, product cards (list, grid and quick-add), order summary, add button and the ticker." },
+            { src: "assets/img/milk-cart-mobile.jpg", fit: "phone", caption: "Mobile cart in light mode: a buy-5-get-1-free nudge, quantity controls, a gift-note option and a clear checkout button." }
           ]
         }
       ],
@@ -265,16 +266,19 @@ window.PORTFOLIO = {
           {
             tag: "Goal 1",
             title: "Flavors and the craft",
+            images: [{ src: "assets/img/milk-flavors.jpg", fit: "full", caption: "Our Flavors, in light (blush) and dark (cocoa) themes." }],
             why: "The flavor page leads with a chocolate-drip banner and an \"Our Flavors\" grid of pints, each with a name, short description, price and add-to-cart. Filter chips (All Flavors, Most Popular, Seasonal Favorites, Dairy-Free, Gluten-Free) help people narrow down quickly. Each flavor has an item page with reviews, guaranteed frozen delivery, a \"real ingredients\" note and \"you may also like\" suggestions."
           },
           {
             tag: "Goal 2",
             title: "Finding a shop",
+            images: [{ src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "Find Pints: a card for each shop, on desktop and mobile." }],
             why: "A dedicated Find Pints page gives each shop (Ann Arbor, Detroit and Royal Oak) its own large city heading, a short description, hours of operation, the address, a storefront photo, and two clear actions: Get Directions and Order Now. The ticker separates the shops and keeps the brand voice playful."
           },
           {
             tag: "Goal 3",
             title: "Image-forward browsing",
+            images: [{ src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "The homepage, desktop: every section led by a photo." }],
             why: "The homepage opens on a full-bleed strawberry hero, \"Sweet, Creamy & Back in Season,\" then the ticker and a Shop Bestsellers row of pints. Below, a \"Thoughtfully scooped, just for you\" story, customer quotes beside flavor photography, the team behind the shop and an Instagram call-out keep every section led by a photo, so products are seen before they are read about."
           }
         ],
