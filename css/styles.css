@@ -567,3 +567,17 @@ body.opener-open { overflow: hidden; }
 .shot--phone { display: grid; place-items: center; padding: 28px 16px; border-radius: 16px; border: 1px solid var(--line); background: radial-gradient(ellipse 60% 70% at 50% 45%, rgba(110, 50, 255, 0.28), transparent 75%), #120d22; }
 .shot--phone img { width: min(300px, 100%); border: 0; border-radius: 22px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55), 0 0 40px rgba(110, 50, 255, 0.3); }
 .shot--phone figcaption { text-align: center; }
+
+/* Brand system block (colors + typefaces) in a case study */
+.swatches { list-style: none; margin: 0 0 14px; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.swatches li { display: flex; flex-direction: column; justify-content: flex-end; min-height: 96px; padding: 12px 14px; border-radius: 12px; background: var(--sw); color: var(--on); border: 1px solid var(--line); }
+.swatches b { font-size: 1rem; }
+.swatches span { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; }
+.typefaces { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.typefaces li { display: flex; flex-direction: column; padding: 10px 16px; border-radius: 12px; background: var(--panel); border: 1px solid var(--line); }
+.typefaces span { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 700; }
+.typefaces strong { font-size: 1.15rem; }
+
+.iteration-wide { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.iteration-wide .shot { margin: 0; }
+@media (max-width: 760px) { .iteration-wide { grid-template-columns: 1fr; } }

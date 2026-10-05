@@ -444,68 +444,6 @@ window.PORTFOLIO = {
     },
 
     {
-      id: "crowning-calendar",
-      title: "Crowning Calendar",
-      subtitle: "Scheduling for pageant preparation",
-      focus: "End-to-end UX",
-      approach: "Research a scheduling experience",
-      summary: "A scheduling app built from end-to-end UX research.",
-      ballColor: "#61f29a",
-      year: "2025",
-      tags: ["Google UX course", "Figma", "Scheduling"],
-      role: "UX Designer & Researcher",
-      team: "TODO: e.g. solo project",
-      timeline: "Jul – Oct 2025",
-      tools: "Figma, interviews, affinity diagrams",
-      hero: { src: "", caption: "TODO: Hero image — Crowning Calendar screens" },
-
-      problem: {
-        statement: "Consultants and clients struggle with time management and scheduling.",
-        context: "Surfaced through 10+ structured interviews with consultants and clients across five states.",
-        goal: "Design and test a scheduling/calendar app grounded in research, from first interview to prototype."
-      },
-      research: {
-        summary: "A full research-to-design process built on structured interviews.",
-        methods: [
-          { name: "Structured interviews", detail: "10+ interviews with consultants and clients across five states to identify pain points in time management and scheduling." },
-          { name: "Personas", detail: "Translated raw data into user personas." },
-          { name: "Journey maps & affinity diagrams", detail: "Ensured research-driven design outcomes." }
-        ],
-        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
-        image: { src: "", caption: "TODO: Affinity diagram" }
-      },
-      define: {
-        persona: "TODO: Primary persona — consultant or client.",
-        journey: "TODO: The scheduling moment where things break down.",
-        image: { src: "", caption: "TODO: Persona or journey map" }
-      },
-      ideate: {
-        summary: "TODO: How you went from affinity diagram to the first wireframes.",
-        image: { src: "", caption: "TODO: Sketches" }
-      },
-      iterations: [
-        { version: "V1 — Low-fidelity", change: "Developed and tested low-fidelity wireframes and prototypes in Figma.", feedback: "Iterated based on usability feedback to improve task success rates. TODO: add what you changed.", image: { src: "", caption: "TODO: Low-fidelity wireframes" } },
-        { version: "V2 — Refined prototype", change: "TODO: What you refined.", feedback: "TODO: What testing showed.", image: { src: "", caption: "TODO: Refined prototype" } }
-      ],
-      execution: {
-        summary: "TODO: Walk through the final design.",
-        decisions: [
-          { title: "TODO: Design decision #1", why: "TODO: The research behind it." },
-          { title: "TODO: Design decision #2", why: "TODO: The research behind it." }
-        ],
-        images: [{ src: "", caption: "TODO: Final screens" }],
-        prototypeUrl: ""
-      },
-      outcome: {
-        results: [
-          { value: "10+", label: "interviews" },
-          { value: "5", label: "states represented" }
-        ],
-        reflection: "TODO: What you learned and what you'd do differently."
-      }
-    },
-
-    {
       id: "root-insurance",
       title: "Root Insurance",
       subtitle: "Retention research for 500,000+ policyholders",
@@ -630,59 +568,148 @@ window.PORTFOLIO = {
     {
       id: "crown-code",
       title: "Crown Code",
-      subtitle: "A preparation routine for pageant contestants",
-      focus: "Mobile app concept",
+      subtitle: "Interview prep for pageant contestants",
+      focus: "Mobile app design",
       approach: "Bring interview practice and prep into one place",
-      summary: "A mobile app concept that brings interview practice, preparation tasks, and progress sharing into one place, helping pageant contestants build a consistent preparation routine.",
+      summary: "A mobile app that brings interview flashcards, text-based reminders and a full prep dashboard into one place, helping pageant contestants build a consistent preparation routine.",
       ballColor: "#c6f24a",
-      year: "",
-      tags: ["Mobile app", "Concept"],
-      role: "TODO: your role",
-      team: "TODO: team",
-      timeline: "TODO: timeline",
-      tools: "TODO: tools",
-      hero: { src: "", caption: "TODO: Hero image — Crown Code screens" },
+      year: "2026",
+      tags: ["Mobile app", "Design system", "Light & dark mode"],
+      role: "UX Designer",
+      team: "Solo project (Layilah Campbell)",
+      timeline: "Jan – Apr 2026",
+      tools: "Design brief, component library, light and dark mode prototypes",
+      hero: { src: "assets/img/crown-home.png", fit: "phone", caption: "Crown Code's home screen: a personal greeting and a path to the day's practice." },
 
       problem: {
-        statement: "How might pageant contestants build a consistent preparation routine when interview practice, preparation tasks, and progress live in different places?",
-        context: "TODO: How you identified this need (your pageant coaching work may be the story).",
-        goal: "Bring interview practice, preparation tasks, and progress sharing into one mobile app."
+        statement:
+          "Pageant contestants often prepare for interviews with scattered tools like paper notes, screenshots, text messages, PDFs and social media advice, which makes it hard to stay organized, practice consistently, and know whether their answers are improving.",
+        context:
+          "The app is an extension of the Crown Code brand, which already sells interview flashcards. Many contestants also need support beyond interview questions: reminders, readiness tracking, and personalized practice that matches their pageant system and division. TODO: add one line on how you saw this need first-hand (for example through your pageant coaching).",
+        goal:
+          "Create a single, easy-to-use platform that combines interview preparation, accountability and competition organization, so pageant prep feels manageable, consistent and effective."
       },
+
       research: {
-        summary: "TODO: What you learned and how.",
+        summary:
+          "The project began from a design brief with an executive summary, problem statement, scope and requirements. TODO: describe the research behind the brief (interviews with contestants or coaches, a competitor review, or your own coaching experience) and what it taught you.",
         methods: [
-          { name: "TODO: Method", detail: "TODO: Detail." },
-          { name: "TODO: Method", detail: "TODO: Detail." }
+          { name: "Design brief", detail: "A written brief defining the product, problem, seven core features and ten requirements, including iOS and Android support." },
+          { name: "TODO: User research", detail: "TODO: Who you talked to or observed, and how many." },
+          { name: "TODO: Competitive review", detail: "TODO: What other prep tools, flashcard apps or reminder apps you looked at." }
         ],
         insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
-        image: { src: "", caption: "TODO: Research synthesis" }
+        image: { src: "", caption: "TODO: Research synthesis, notes or competitor comparison" }
       },
+
       define: {
-        persona: "TODO: Contestant persona — goals and frustrations.",
-        journey: "TODO: Where preparation falls apart.",
-        image: { src: "", caption: "TODO: Persona or journey" }
-      },
-      ideate: {
-        summary: "TODO: How you explored the app's structure.",
-        image: { src: "", caption: "TODO: Sketches or flows" }
-      },
-      iterations: [
-        { version: "V1", change: "TODO: What you built first.", feedback: "TODO: What you learned.", image: { src: "", caption: "TODO: V1" } },
-        { version: "V2", change: "TODO: What you changed.", feedback: "TODO: What improved.", image: { src: "", caption: "TODO: V2" } }
-      ],
-      execution: {
-        summary: "TODO: Walk through the final app.",
-        decisions: [
-          { title: "Interview practice", why: "TODO: The design choice and why." },
-          { title: "Preparation tasks", why: "TODO: The design choice and why." },
-          { title: "Progress sharing", why: "TODO: The design choice and why." }
+        persona:
+          "A pageant contestant preparing for interviews and competition, often busy, who needs quick, efficient prep tools and wants support beyond interview questions: reminders, readiness tracking, and practice that matches her pageant system and division.",
+        journey:
+          "Today, preparation lives in notes, screenshots, texts, PDFs and social media advice. That makes consistent practice, growth tracking and organization hard, and it leaves contestants unsure whether their answers are actually getting better.",
+        lists: [
+          {
+            heading: "Scope: seven core features",
+            items: [
+              "Interview flashcards and practice: study flashcards that help build thoughtful, polished, confident responses.",
+              "Text message practice mode: daily interview questions, weekly confidence prompts, quick-response challenges, reminders and pageant-week check-ins.",
+              "Full prep dashboard: a preparation timeline, packing checklist, paperwork reminders, goal tracker, answer bank and pageant-week readiness tracker.",
+              "System-specific practice: personalize by pageant type, division and competition focus.",
+              "Smarter answer feedback: answer scores, clarity suggestions, stronger rewritten versions, and guidance on confidence, relevance and specificity.",
+              "Progress tracking: practice streaks, saved responses, readiness scores and weekly summary reports.",
+              "Accountability tools: reminders, nudges and progress-based encouragement to keep users motivated and consistent."
+            ]
+          },
+          {
+            heading: "Requirements",
+            items: [
+              "Works on both iOS and Android.",
+              "Secure accounts that keep practice history, saved responses, flashcards and progress.",
+              "View, save and interact with digital interview flashcards.",
+              "Optional text-message practice: daily questions, reminders, countdown texts and practice prompts.",
+              "Personalization by pageant system, division and competition focus.",
+              "Answer feedback with scoring and suggestions for improvement.",
+              "Progress monitoring of consistency, improvement and readiness over time.",
+              "Preparation tools: timelines, checklists, deadline reminders and answer banks.",
+              "Push notifications for practice sessions, preparation tasks, deadlines and pageant-week milestones.",
+              "A visually clean, easy-to-navigate, supportive interface for busy users."
+            ]
+          }
         ],
-        images: [{ src: "", caption: "TODO: Final screens" }],
+        image: { src: "", caption: "TODO: Persona or journey map, if you made one" }
+      },
+
+      ideate: {
+        summary:
+          "TODO: How you explored the app's structure: sketches, a flow for practice, feedback and progress, and how you decided on the four main tabs (Home, Cards, Progress, Profile).",
+        image: [{ src: "", caption: "TODO: Early sketches. Save as assets/img/crown-sketches.jpg and set src." }]
+      },
+
+      iterations: [
+        {
+          version: "Round 1 — Sketches & low-fidelity",
+          change: "TODO: What the first wireframes explored.",
+          feedback: "TODO: What feedback or testing showed, and what you changed.",
+          image: { src: "", caption: "TODO: Low-fidelity wireframes. Save as assets/img/crown-lowfi.jpg and set src." }
+        },
+        {
+          version: "Round 2 — Design system & high fidelity",
+          change: "Built a component library (primary, secondary and tertiary buttons in three sizes, navigation, flashcards, progress and readiness cards, top bar and action footer), then designed profile, home and progress, and flashcard screens in light mode, with a dark mode frame for the same screens.",
+          feedback: "TODO: What testing or review showed, and what changed as a result.",
+          image: [
+            { src: "assets/img/crown-components.jpg", caption: "Component library: buttons, navigation, flashcards, progress and readiness cards." },
+            { src: "assets/img/crown-screens-light.png", caption: "Screen set, light mode: profile pages, home and progress pages, and flashcards." }
+          ]
+        }
+      ],
+
+      execution: {
+        summary:
+          "Three design decisions shaped the app, all in service of one goal: making pageant prep feel more consistent, focused and effective. Together they bring preparation and organization into one place.",
+        palette: [
+          { name: "Crowning Blue", hex: "#00878A" },
+          { name: "Golden Rush", hex: "#E4BD3C" },
+          { name: "Stunning Black", hex: "#000000" },
+          { name: "Sweet White", hex: "#FFFFFF" }
+        ],
+        typefaces: [
+          { role: "Primary typeface", name: "Manrope" },
+          { role: "Secondary typeface", name: "Newsreader" }
+        ],
+        decisions: [
+          {
+            title: "Readiness dashboard",
+            why: "Built a dashboard to help users track deadlines, practice and action items in one place. This creates more structure, visibility and accountability throughout pageant prep."
+          },
+          {
+            title: "Interview flashcards",
+            why: "Designed flashcards that support interview practice while also teaching users a clear answer structure. This helps contestants build stronger, more confident responses."
+          },
+          {
+            title: "Progress sharing",
+            why: "Created a readiness profile that users can share with coaches for more continuous support. This makes feedback more personalized, timely, and connected to the user's real progress."
+          },
+          {
+            title: "Brand, type and color",
+            why: "TODO: Why teal and gold, and why a Manrope and Newsreader pairing, suit confident, polished prep."
+          }
+        ],
+        images: [
+          { src: "assets/img/crown-dashboard.png", fit: "phone", caption: "Readiness dashboard: readiness score, mastery streak and practice streak." },
+          { src: "assets/img/crown-flashcards.png", fit: "phone", caption: "Flashcards: tap to reveal, with a clear answer structure." },
+          { src: "assets/img/crown-share.png", fit: "phone", caption: "Share Your Journey: a readiness profile to share with coaches." }
+        ],
         prototypeUrl: ""
       },
+
       outcome: {
-        results: [{ value: "3", label: "tools in one place" }],
-        reflection: "TODO: What you learned and what you'd do next."
+        results: [
+          { value: "7", label: "core features scoped" },
+          { value: "10", label: "requirements defined" },
+          { value: "2", label: "display modes: light and dark" },
+          { value: "1", label: "place for all of pageant prep" }
+        ],
+        reflection: "TODO: What you learned about designing a focused, motivating prep tool, and what you'd do next (for example usability testing with contestants, or building the answer-feedback flow)."
       }
     }
   ],

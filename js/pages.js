@@ -19,6 +19,12 @@
   // A frame can hold one image or a list of images
   const imgs = (x, cls = "") => (Array.isArray(x) ? x.map((i) => img(i, cls)).join("") : img(x, cls));
 
+  // relative luminance, used to pick readable text on a color swatch
+  const lum = (hex) => {
+    const c = hex.replace("#", "").match(/../g).map((h) => parseInt(h, 16) / 255).map((v) => (v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4));
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  };
+
   const ext = (href, label) =>
     `<a href="${esc(href)}" target="_blank" rel="noopener">${label}<span class="sr-only"> (opens in a new tab)</span></a>`;
 
@@ -341,6 +347,9 @@
                     ? `<h3>${esc(p.define.painPointsHeading || "Common pain points")}</h3><ol class="insights">${p.define.painPoints.map((x) => `<li>${t(x)}</li>`).join("")}</ol>`
                     : ""
                 }
+                ${(p.define.lists || [])
+                  .map((l) => `<h3>${esc(l.heading)}</h3><ol class="insights">${l.items.map((x) => `<li>${t(x)}</li>`).join("")}</ol>`)
+                  .join("")}
                 ${imgs(p.define.image)}
               </section>
 
@@ -358,7 +367,7 @@
                       <div class="iteration-text"><h3>${t(it.version)}</h3>
                         <p><b>What changed:</b> ${t(it.change)}</p>
                         <p><b>What testing showed:</b> ${t(it.feedback)}</p></div>
-                      ${imgs(it.image)}
+                      ${Array.isArray(it.image) && it.image.length > 1 ? `<div class="iteration-wide">${imgs(it.image)}</div>` : imgs(it.image)}
                     </li>`
                   )
                   .join("")}</ol>
@@ -368,6 +377,15 @@
                 ${frameHead(6, "Design execution")}
                 <p>${t(p.execution.summary)}</p>
                 <div class="shots">${p.execution.images.map((im) => img(im)).join("")}</div>
+${
+                  p.execution.palette
+                    ? `<h3>Brand system</h3>
+                <ul class="swatches" aria-label="Brand colors">${p.execution.palette
+                  .map((c) => `<li style="--sw:${esc(c.hex)};--on:${(lum(c.hex) + 0.05) / 0.054 > 1.05 / (lum(c.hex) + 0.05) ? "#0d0a14" : "#fff"}"><b>${esc(c.name)}</b><span>${esc(c.hex)}</span></li>`)
+                  .join("")}</ul>
+                ${(p.execution.typefaces || []).length ? `<ul class="typefaces">${p.execution.typefaces.map((f) => `<li><span>${esc(f.role)}</span><strong>${esc(f.name)}</strong></li>`).join("")}</ul>` : ""}`
+                    : ""
+                }
                 <h3>Why it looks &amp; works this way</h3>
                 <div class="decision-grid">${p.execution.decisions
                   .map((d, i) => `<div class="decision"><span class="card-num">0${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.why)}</p></div>`)

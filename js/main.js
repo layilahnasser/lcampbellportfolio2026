@@ -23,6 +23,7 @@
   const plain = (s) => String(s ?? "").replace(/^TODO:?\s*/, "");
 
   const img = (im, cls = "") => {
+    if (im && im.fit === "phone") cls += " shot--phone";
     if (im && im.src) {
       return `<figure class="shot ${cls}"><img src="${esc(im.src)}" alt="${esc(plain(im.caption))}" loading="lazy">${
         im.caption ? `<figcaption>${esc(plain(im.caption))}</figcaption>` : ""
