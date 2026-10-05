@@ -95,7 +95,12 @@ window.PORTFOLIO = {
 
     // Frame 2
     toolsHeading: "How I turn insight into product direction",
-    tools: ["Figma", "Claude", "VS Code", "Lovable", "Gemini"],
+    tools: [
+      "Figma", "Miro", "Adobe Photoshop",
+      "Claude", "ChatGPT", "Copilot", "Gemini", "Lovable",
+      "VS Code", "Python", "R", "HTML", "CSS",
+      "NVivo", "Lookback", "User Interviews"
+    ],
     capabilities: [
       {
         title: "Qualitative & mixed-methods research",
