@@ -617,3 +617,12 @@ body.opener-open { overflow: hidden; }
 .goal-card .compare-pair { margin-top: 6px; align-items: start; }
 .goal-card .shot { margin: 0; }
 .goal-shots { display: grid; gap: 14px; margin-top: 6px; }
+
+/* Page-by-page before/after (Outcome) */
+.compare--page { margin: 0 0 26px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+.compare--page .compare-label { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; color: #fff; }
+.compare-pair--single { grid-template-columns: 1fr; }
+.compare--page .shot img { max-height: 640px; object-fit: contain; object-position: top; background: #fdf3e4; }
+
+.iteration-wide:has(.shot--wide) { grid-template-columns: 1fr; }
+.shot--wide img { width: 100%; }

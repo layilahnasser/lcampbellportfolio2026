@@ -191,9 +191,9 @@ window.PORTFOLIO = {
 
       research: {
         summary:
-          "We audited the current Milk & Froth site, then compared four ice cream brands, two local and two nationwide, across eight site features: online ordering, mobile app, search bar, store locator, 404 pages, product catalog, menu navigation bar and contact us.",
+          "We audited the current Milk & Froth site (its homepage, About page and Find Pints page appear in the before and after at the end), then compared four ice cream brands, two local and two nationwide, across eight site features: online ordering, mobile app, search bar, store locator, 404 pages, product catalog, menu navigation bar and contact us.",
         methods: [
-          { name: "Current-site review", detail: "Looked at the live homepage and About page to see how the brand, flavors and story were presented." },
+          { name: "Current-site review", detail: "Walked through the live homepage, About page and Find Pints page to see how the brand, flavors, story and stockists were presented." },
           { name: "Competitive analysis", detail: "Compared Milkshake Factory, Michigan Creamery, Jeni's and Van Leeuwen across eight features." },
           { name: "TODO: User research", detail: "TODO: Any interviews, surveys or usability tests you ran (and how many people)." }
         ],
@@ -203,8 +203,7 @@ window.PORTFOLIO = {
           "TODO: What the current site did well or poorly for flavors, shops and browsing."
         ],
         image: [
-          { src: "assets/img/milk-competitive.jpg", caption: "Competitive analysis: two local and two nationwide brands across eight features." },
-          { src: "assets/img/milk-current-about.jpg", caption: "Starting point: the current About page. (The current homepage and locations list appear in the before and after below.)" }
+          { src: "assets/img/milk-competitive.jpg", caption: "Competitive analysis: two local and two nationwide brands across eight features." }
         ]
       },
 
@@ -229,67 +228,53 @@ window.PORTFOLIO = {
             ]
           }
         ],
-        map: {
-          heading: "From goals to design",
-          rows: [
-            { tag: "Goal 1", need: "Promote distinctive flavors and the handcrafted process", design: "A flavor grid with filter chips, and item pages with ingredient and delivery notes.", where: "Menu and product pages" },
-            { tag: "Goal 2", need: "Make storefronts easy to find across Michigan", design: "A Find Pints page with a search box, and per-shop hours, address, photo and directions.", where: "Find Pints" },
-            { tag: "Goal 3", need: "Make browsing intuitive and image-forward", design: "A photo-led homepage with bestsellers, customer quotes beside photography, and the team behind the shop.", where: "Homepage" }
-          ]
-        }
       },
 
       ideate: {
         summary:
-          "Wireframes mapped five pages and the content each one needs. Home: a hero, a creamy banner, best sellers, a marquee scroller, a customer quote, Scoop Shops (Ann Arbor and Detroit) and a Who We Are section. Menu: an All Flavors header, filter chips, a dripping-ice-cream banner and product cards. About Us: Who Is Milk & Froth, rotating images and process text. Contact Us: customer service, FAQs, partnerships, wholesale, find a shop, and a message form. An e-commerce grid shows the flavors.",
-        image: [
-          { src: "assets/img/milk-wire-home.png", fit: "tall", caption: "Wireframe: Home" },
-          { src: "assets/img/milk-wire-menu.png", fit: "tall", caption: "Wireframe: Menu" },
-          { src: "assets/img/milk-wire-about.png", fit: "tall", caption: "Wireframes: About Us and E-commerce" },
-          { src: "assets/img/milk-wire-contact.png", fit: "tall", caption: "Wireframe: Contact Us" }
-        ]
+          "Wireframes mapped five pages and the content each one needs, with a shared header and footer. Home: a hero, a creamy banner, best sellers, a marquee scroller, a customer quote, Scoop Shops (Ann Arbor and Detroit) and a Who We Are section. Menu: an All Flavors header, filter chips, a dripping-ice-cream banner and product cards. About Us: Who Is Milk & Froth, rotating images and process text. Contact Us: customer service, FAQs, partnerships, wholesale, find a shop, and a message form. E-commerce: a grid of flavors.",
+        image: [{ src: "assets/img/milk-wireframes.jpg", fit: "wide", caption: "Wireframes: Home, Menu, About Us and E-commerce, and Contact Us." }]
       },
 
       iterations: [
         {
-          version: "Round 1: Wireframes",
-          change: "Low-fidelity layouts for Home, Menu, About Us, Contact Us and E-commerce, with a shared header and footer (shop, company, customer service and email sign-up).",
-          feedback: "TODO: What feedback or testing showed, and what you changed."
+          version: "Round 1: Wireframes to a design system",
+          change: "Moved from the grey wireframes above to a design system built on the brand: Roasted Strawberry as the primary color, plus a golden secondary, success green, error red and a greyscale. Each color has a 10-step primitive scale and semantic roles (surface, border, text and icon in subtle, lighter, default and darker steps). Type pairs Nunito Sans with Montserrat, with a scale for desktop, tablet and mobile.",
+          feedback: "TODO: What feedback or testing showed, and what you changed.",
+          image: [
+            { src: "assets/img/milk-color-system.jpg", caption: "Color system: primitives and semantic tokens for primary, secondary, success, error and greyscale." },
+            { src: "assets/img/milk-type-scale.png", caption: "Type system: Nunito Sans and Montserrat, with a scale for desktop, tablet and mobile." }
+          ]
         },
         {
-          version: "Round 2: Brand system & components",
-          change: "Defined the brand colors and type, then built a component library: primary, secondary and tertiary buttons in three sizes, each with default, hover, selected, focused and disabled states; navigation links; add-to-cart and quantity controls; and product cards in list, grid and quick-add layouts. Navigation (a desktop bar and a mobile menu with an Order Now button), the product, item and footer pages, and a shopping cart were designed in both a light (blush) and a dark (cocoa) theme. A slide-out cart shows the items, a \"buy 5, get one free\" nudge (\"Add 3 more pints to checkout\"), a gift-note option and a clear checkout button. Full cart, checkout, location, product, e-commerce and 404 pages were then designed for both desktop and mobile.",
+          version: "Round 2: Components",
+          change: "Built the component library on those tokens: primary, secondary and tertiary buttons in three sizes, each with default, hover, selected, focused and disabled states; navigation links; add-to-cart and quantity controls; product cards in grid, list and quick-add layouts; the cart item and order summary; and the Churned, Scooped, Chilled, Repeat ticker. Pages were designed for desktop and mobile in a light (blush) and a dark (cocoa) theme.",
           feedback: "TODO: What testing or review showed on the high-fidelity version.",
           image: [
-            { src: "assets/img/milk-type-scale.png", caption: "Type system: Nunito Sans and Montserrat, with a scale for desktop, tablet and mobile." },
-            { src: "assets/img/milk-components.jpg", caption: "Component library: buttons in every state and size, navigation, add-to-cart and product cards." }
+            { src: "assets/img/milk-buttons.jpg", fit: "wide", caption: "Buttons: primary, secondary and tertiary, in three sizes and five states." },
+            { src: "assets/img/milk-components.jpg", fit: "wide", caption: "Components: product cards, cart item, order summary, add button, logo lockups and the ticker." }
           ]
         }
       ],
 
       execution: {
         summary:
-          "Each of the three goals from the project brief became a concrete part of the site, built on the brand's red-and-cream look. Here is each goal with what we designed in response.",
+          "Each goal from Define became concrete features, built on the design system above. The screens for each are in the before and after at the end.",
         goals: [
           {
             tag: "Goal 1",
-            statement: "Promote Milk & Froth's distinctive flavor profiles and handcrafted ice cream process.",
-            why: "The product page leads with a chocolate-drip banner and an \"Our Flavors\" grid of pints, each with a name, short description, price and add-to-cart. Filter chips (All Flavors, Most Popular, Seasonal Favorites, Dairy-Free, Gluten-Free) help people narrow down quickly. Each flavor also has an item page with reviews, guaranteed frozen delivery, a \"real ingredients\" note and \"you may also like\" suggestions, designed for desktop and mobile in light and dark themes.",
-            images: [{ src: "assets/img/milk-product.jpg", caption: "Goal 1: the flavor and product pages, desktop and mobile, in light and dark." }]
+            title: "Flavors and the craft",
+            why: "The flavor page leads with a chocolate-drip banner and an \"Our Flavors\" grid of pints, each with a name, short description, price and add-to-cart. Filter chips (All Flavors, Most Popular, Seasonal Favorites, Dairy-Free, Gluten-Free) help people narrow down quickly. Each flavor has an item page with reviews, guaranteed frozen delivery, a \"real ingredients\" note and \"you may also like\" suggestions."
           },
           {
             tag: "Goal 2",
-            statement: "Design a location-focused feature that highlights Milk & Froth storefronts across Michigan, improving store discoverability and helping users quickly find relevant location information.",
-            why: "A dedicated Find Pints page, headed \"Michigan's Sweetest Stops,\" invites people to find a Milk & Froth near them. Each shop (Ann Arbor, Detroit and Royal Oak) gets its own large city heading, a short description, hours of operation, the address, a storefront photo, and two clear actions: Get Directions and Order Now. A \"Churned, Scooped, Chilled, Repeat\" ticker separates the shops and keeps the brand voice playful.",
-            before: { src: "assets/img/milk-current-locations.jpg", caption: "The current locations page: a plain text list of markets by city." },
-            after: { src: "assets/img/milk-locations.jpg", caption: "Find Pints: search plus rich, scannable shop details." }
+            title: "Finding a shop",
+            why: "A dedicated Find Pints page, headed \"Michigan's Sweetest Stops,\" opens with a search box for a city or zip code. Each shop (Ann Arbor, Detroit and Royal Oak) then gets its own large city heading, a short description, hours of operation, the address, a storefront photo, and two clear actions: Get Directions and Order Now. The ticker separates the shops and keeps the brand voice playful."
           },
           {
             tag: "Goal 3",
-            statement: "Design a more intuitive, image-forward website that highlights products visually.",
-            why: "The homepage opens on a full-bleed strawberry hero, \"Sweet, Creamy & Back in Season,\" then the ticker and a Shop Bestsellers row of pints. Below, a \"Thoughtfully scooped, just for you\" story, customer quotes set beside flavor photography, the team behind the shop and an Instagram call-out keep every section led by a photo, so products are seen before they are read about. A mobile version stacks the same sections in one column.",
-            before: { src: "assets/img/milk-current-home.jpg", caption: "The current homepage." },
-            after: { src: "assets/img/milk-homepage.jpg", caption: "The redesigned, image-forward homepage." }
+            title: "Image-forward browsing",
+            why: "The homepage opens on a full-bleed strawberry hero, \"Sweet, Creamy & Back in Season,\" then the ticker and a Shop Bestsellers row of pints. Below, a \"Thoughtfully scooped, just for you\" story, customer quotes beside flavor photography, the team behind the shop and an Instagram call-out keep every section led by a photo, so products are seen before they are read about."
           }
         ],
         palette: [
@@ -316,13 +301,44 @@ window.PORTFOLIO = {
             why: "TODO: Why Roasted Strawberry and Blushed Froth with Nunito Sans and Montserrat suit the playful, indulgent brand, and how the type scale adapts across desktop, tablet and mobile."
           }
         ],
-        images: [
-          { src: "assets/img/milk-cart-checkout.jpg", caption: "Beyond the goals: cart, checkout and 404 pages, desktop and mobile." }
-        ],
+        images: [],
         prototypeUrl: ""
       },
 
       outcome: {
+        compare: [
+          {
+            label: "Homepage",
+            goal: "Goal 3",
+            before: { src: "assets/img/milk-current-home.jpg", caption: "Before: the current homepage." },
+            after: { src: "assets/img/milk-homepage.jpg", caption: "After: an image-forward homepage." }
+          },
+          {
+            label: "Find Pints: search",
+            goal: "Goal 2",
+            before: { src: "assets/img/milk-current-locations.jpg", caption: "Before: the current Find Pints page, a text list of markets by city." },
+            after: { src: "assets/img/milk-locations.jpg", caption: "After: a search by city or zip code." }
+          },
+          {
+            label: "Find Pints: shop pages",
+            goal: "Goal 2",
+            after: { src: "assets/img/milk-locations-page.jpg", caption: "After: Ann Arbor, Detroit and Royal Oak, each with hours, address, photo and directions." }
+          },
+          {
+            label: "About",
+            before: { src: "assets/img/milk-current-about.jpg", caption: "Before: the current About page." },
+            after: { src: "assets/img/milk-about-after.jpg", caption: "After: the redesigned About page." }
+          },
+          {
+            label: "Flavors and product pages",
+            goal: "Goal 1",
+            after: { src: "assets/img/milk-product.jpg", caption: "After: flavor and item pages, desktop and mobile, light and dark." }
+          },
+          {
+            label: "Cart, checkout and 404",
+            after: { src: "assets/img/milk-cart-checkout.jpg", caption: "After: cart, checkout and 404 pages, desktop and mobile." }
+          }
+        ],
         results: [
           { value: "3", label: "design goals, each with a feature" },
           { value: "4", label: "brands compared" },

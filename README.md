@@ -47,7 +47,8 @@ Some case-study images are wired to file names but don't exist yet. Until you ad
 
 | File | Where it appears |
 |---|---|
-| `milk-components.jpg`, `milk-product.jpg`, `milk-cart-checkout.jpg` | Milk and Froth: component library, product pages, cart/checkout/404 |
+| `milk-color-system.jpg` | Milk and Froth: color system (primitives and semantic tokens) |
+| `milk-locations-page.jpg`, `milk-about-after.jpg`, `milk-product.jpg`, `milk-cart-checkout.jpg` | Milk and Froth: the "after" screens for shop pages, About, flavors/product, and cart/checkout/404 |
 | `crown-sketches.jpg`, `crown-lowfi.jpg`, `crown-screens-dark.png` | Crown Code: sketches, low-fi, dark mode screens |
 | `nutrition-board.jpg`, `nutrition-sketches.jpg`, `nutrition-lowfi.jpg`, `nutrition-wireframes.jpg` | Cancer Nutrition App: RICE board, sketches, low-fi, six high-fi screens |
 

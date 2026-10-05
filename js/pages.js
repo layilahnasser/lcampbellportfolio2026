@@ -391,7 +391,7 @@
 ${(p.execution.goals || [])
                   .map(
                     (g) => `<article class="goal-card">
-                      <header class="goal-head"><span class="frame-no">${esc(g.tag)}</span><p class="goal-statement">${esc(g.statement)}</p></header>
+                      <header class="goal-head"><span class="frame-no">${esc(g.tag)}</span><p class="goal-statement">${esc(g.title || g.statement)}</p></header>
                       <p class="goal-why">${t(g.why)}</p>
                       ${g.before && g.after ? `<div class="compare-pair"><div class="cmp-col"><p class="cmp-tag">Before</p>${img(g.before)}</div><div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p>${img(g.after)}</div></div>` : ""}
                       ${g.images ? `<div class="goal-shots">${imgs(g.images)}</div>` : ""}
@@ -424,6 +424,21 @@ ${(p.execution.goals || [])
 
               <section id="outcome" class="frame">
                 ${frameHead(7, "Outcome &amp; reflection")}
+                ${
+                  p.outcome.compare
+                    ? `<h3>Before and after, page by page</h3>${p.outcome.compare
+                        .map(
+                          (c) => `<div class="compare compare--page">
+                            <p class="compare-label">${c.goal ? `<span class="frame-no">${esc(c.goal)}</span> ` : ""}${esc(c.label)}</p>
+                            <div class="compare-pair${c.before ? "" : " compare-pair--single"}">
+                              ${c.before ? `<div class="cmp-col"><p class="cmp-tag">Before</p>${img(c.before)}</div>` : ""}
+                              <div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p>${img(c.after)}</div>
+                            </div>
+                          </div>`
+                        )
+                        .join("")}`
+                    : ""
+                }
                 <div class="results">${p.outcome.results
                   .map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`)
                   .join("")}</div>
