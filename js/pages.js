@@ -6,15 +6,13 @@
   const main = document.getElementById("main");
   const page = document.body.dataset.page;
 
-  const FRAMES = [
-    { key: "problem", label: "Problem" },
-    { key: "research", label: "Research" },
-    { key: "define", label: "Define" },
-    { key: "ideate", label: "Ideate" },
-    { key: "iterate", label: "Iterate" },
-    { key: "execution", label: "Execution" },
-    { key: "outcome", label: "Outcome" }
-  ];
+  // Section ids stay the same; only the visible names change per kind of project.
+  const FRAME_KEYS = ["problem", "research", "define", "ideate", "iterate", "execution", "outcome"];
+  const FRAME_SETS = {
+    design: ["Problem", "Research", "Design Goals", "Wireframes", "Design System", "Final Design", "Outcome"],
+    research: ["Problem", "Research", "Define", "Ideate", "Iterate", "Execution", "Outcome"]
+  };
+  const framesFor = (p) => FRAME_KEYS.map((key, i) => ({ key, label: FRAME_SETS[p.frames || "design"][i] }));
 
   // A frame can hold one image or a list of images
   const imgs = (x, cls = "") => (!x ? "" : Array.isArray(x) ? x.map((i) => img(i, cls)).join("") : img(x, cls));
@@ -297,6 +295,7 @@
       const p = P.projects[idx];
       const next = P.projects[(idx + 1) % P.projects.length];
       const isLast = idx === P.projects.length - 1;
+      const FRAMES = framesFor(p);
       document.title = `${plain(p.title)} — ${me.firstName} ${me.lastName}`;
 
       const frameHead = (n, title) =>
@@ -330,14 +329,14 @@
           <div class="case-layout">
             <div class="case-body">
               <section id="problem" class="frame">
-                ${frameHead(1, "The problem")}
+                ${frameHead(1, FRAMES[0].label)}
                 <p class="callout">${t(p.problem.statement)}</p>
                 <h3>How I identified it</h3><p>${t(p.problem.context)}</p>
                 <h3>Goal</h3><p>${t(p.problem.goal)}</p>
               </section>
 
               <section id="research" class="frame">
-                ${frameHead(2, "Research")}
+                ${frameHead(2, FRAMES[1].label)}
                 <p>${t(p.research.summary)}</p>
                 <div class="method-grid">${p.research.methods
                   .map((m) => `<div class="method"><h3>${t(m.name)}</h3><p>${t(m.detail)}</p></div>`)
@@ -348,7 +347,7 @@
               </section>
 
               <section id="define" class="frame">
-                ${frameHead(3, "Define")}
+                ${frameHead(3, FRAMES[2].label)}
                 ${p.define.callout ? `<p class="callout">${t(p.define.callout)}</p>` : ""}
                 ${
                   p.define.persona || p.define.journey
@@ -374,13 +373,13 @@
               </section>
 
               <section id="ideate" class="frame">
-                ${frameHead(4, "Ideate")}
+                ${frameHead(4, FRAMES[3].label)}
                 <p>${t(p.ideate.summary)}</p>
                 ${imgs(p.ideate.image)}
               </section>
 
               <section id="iterate" class="frame">
-                ${frameHead(5, "Iterate")}
+                ${frameHead(5, FRAMES[4].label)}
                 <ol class="iterations">${p.iterations
                   .map(
                     (it) => `<li class="iteration">
@@ -395,7 +394,7 @@
               </section>
 
               <section id="execution" class="frame">
-                ${frameHead(6, "Design execution")}
+                ${frameHead(6, FRAMES[5].label)}
                 <p>${t(p.execution.summary)}</p>
 ${(p.execution.goals || [])
                   .map(
@@ -426,7 +425,7 @@ ${(p.execution.goals || [])
               </section>
 
               <section id="outcome" class="frame">
-                ${frameHead(7, "Outcome &amp; reflection")}
+                ${frameHead(7, FRAMES[6].label + " &amp; reflection")}
                 ${
                   p.outcome.compare
                     ? `<h3>Before and after, page by page</h3>${p.outcome.compare

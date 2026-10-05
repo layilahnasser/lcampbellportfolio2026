@@ -505,6 +505,7 @@ window.PORTFOLIO = {
 
     {
       id: "root-insurance",
+      frames: "research", // frame names: "design" (default) or "research"
       title: "Root Insurance",
       subtitle: "Retention research for 500,000+ policyholders",
       focus: "Retention research",
@@ -712,6 +713,7 @@ window.PORTFOLIO = {
 
     {
       id: "usda-acir",
+      frames: "research", // frame names: "design" (default) or "research"
       title: "USDA ACIR Portal",
       subtitle: "Search, navigation & mobile usability",
       focus: "Usability research",
@@ -783,6 +785,7 @@ window.PORTFOLIO = {
 
     {
       id: "instructure-elevated",
+      frames: "research", // frame names: "design" (default) or "research"
       title: "Instructure ElevateED",
       subtitle: "Exploring AI in education",
       focus: "Strategy research",
