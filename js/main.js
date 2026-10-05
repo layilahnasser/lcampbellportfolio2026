@@ -200,7 +200,6 @@
           <p class="footer-links">
             ${me.email ? `<a href="mailto:${esc(me.email)}">Email</a>` : ""}
             ${me.linkedin ? `<a href="${esc(me.linkedin)}" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>` : ""}
-            ${me.uxfolio ? `<a href="${esc(me.uxfolio)}" target="_blank" rel="noopener">UXfolio<span class="sr-only"> (opens in a new tab)</span></a>` : ""}
             <a href="resume.html">Resume</a>
           </p>
         </div>`;

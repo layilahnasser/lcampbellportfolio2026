@@ -385,14 +385,6 @@ main > * { width: min(var(--maxw), 100% - 2 * var(--gutter)); margin-inline: aut
 .contact-list dt { color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
 .contact-list dd { margin: 0; }
 .contact-list a { font-weight: 600; word-break: break-word; }
-.lane-tablet { display: grid; gap: 14px; padding: 22px; border-radius: 20px; background: linear-gradient(170deg, #1d1830, #0f0c18); border: 2px solid #2b2443; box-shadow: 0 0 40px rgba(91, 60, 255, 0.25); margin-bottom: 40px; }
-.lane-tablet-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
-.lane-tablet-head > span { font-weight: 700; padding: 4px 12px; border-radius: 8px; background: var(--pink-strong); }
-.lane-tablet label { display: grid; gap: 6px; font-weight: 600; font-size: 0.9rem; }
-.lane-tablet input, .lane-tablet textarea { font: inherit; color: var(--text); background: #0b0814; border: 2px solid #8d82ad; border-radius: 10px; padding: 10px 12px; }
-.lane-tablet input:focus, .lane-tablet textarea:focus { border-color: var(--cyan); outline: none; }
-.form-note { font-size: 0.8rem; color: var(--muted); margin: 0; }
-.lane-tablet .btn { justify-content: center; }
 
 /* ---------- Case study ---------- */
 .case-hero { padding: 40px 0 10px; }
@@ -645,3 +637,7 @@ body.opener-open { overflow: hidden; }
 .goal-body--shot .goal-shots { margin: 0; }
 .goal-shots .shot--full img { max-height: none; width: 100%; background: transparent; }
 @media (max-width: 760px) { .goal-body--shot { grid-template-columns: 1fr; } }
+
+.page-head--contact { max-width: 720px; padding-bottom: 56px; }
+.page-head--contact .contact-list { margin-top: 32px; }
+.page-head--contact .contact-list dd { font-size: 1.1rem; }

@@ -264,27 +264,16 @@
         me.email && ["Email", `<a href="mailto:${esc(me.email)}">${esc(me.email)}</a>`],
         me.phone && ["Phone", `<a href="tel:+1${esc(me.phone.replace(/\D/g, ""))}">${esc(me.phone)}</a>`],
         me.linkedin && ["LinkedIn", ext(me.linkedin, esc(me.linkedin.replace(/^https?:\/\/(www\.)?/, "")))],
-        me.uxfolio && ["Portfolio", ext(me.uxfolio, esc(me.uxfolio.replace(/^https?:\/\//, "")))],
         me.location && ["Location", esc(me.location)]
       ].filter(Boolean);
       return `
-        <section class="page-head page-head--split">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h1>Let's bowl a round</h1>
-            <p class="lede">I'd love to talk about research, design and how I can help build experiences people love.</p>
-            <dl class="contact-list">
-              ${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}
-            </dl>
-          </div>
-          <form class="lane-tablet" id="contact-form">
-            <div class="lane-tablet-head">${logo("logo--sm")}<span>Lane ${P.projects.length + 1}</span></div>
-            <label>Your name<input name="name" required autocomplete="name"></label>
-            <label>Your email<input name="email" type="email" required autocomplete="email"></label>
-            <label>Message<textarea name="message" rows="4" required></textarea></label>
-            <button class="btn btn--pink" type="submit">Send message</button>
-            <p class="form-note">Opens your email app with the message ready to send.</p>
-          </form>
+        <section class="page-head page-head--contact">
+          <p class="eyebrow">Contact</p>
+          <h1>Let's bowl a round</h1>
+          <p class="lede">I'd love to talk about research, design and how I can help build experiences people love.</p>
+          <dl class="contact-list">
+            ${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}
+          </dl>
         </section>`;
     },
 
@@ -478,15 +467,5 @@ ${(p.execution.goals || [])
       { rootMargin: "-40% 0px -55% 0px" }
     );
     document.querySelectorAll(".frame").forEach((s) => io.observe(s));
-  }
-
-  if (page === "contact") {
-    document.getElementById("contact-form").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const f = new FormData(e.target);
-      const subject = encodeURIComponent(`Portfolio inquiry from ${f.get("name")}`);
-      const body = encodeURIComponent(`${f.get("message")}\n\n— ${f.get("name")} (${f.get("email")})`);
-      window.location.href = `mailto:${me.email}?subject=${subject}&body=${body}`;
-    });
   }
 })();
