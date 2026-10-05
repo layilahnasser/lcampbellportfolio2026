@@ -2,7 +2,7 @@
 (function () {
   const P = window.PORTFOLIO;
   const me = P.profile;
-  const { esc, t, isTodo, plain, img, ballSVG, logo, portrait, star, pinSVG } = window.LANES;
+  const { esc, t, isTodo, plain, img, ballSVG, logo, portrait, pinSVG } = window.LANES;
   const main = document.getElementById("main");
   const page = document.body.dataset.page;
 
@@ -50,7 +50,7 @@
 
   function homeLane() {
     const rows = [[0], [-1, 1], [-2, 0, 2], [-3, -1, 1, 3]];
-    return `<div class="hero-lane" aria-hidden="true">
+    return `<div class="hero-lane">
       <div class="hero-lane-plane">
         <div class="gutter gutter--l"></div><div class="gutter gutter--r"></div>
         <div class="arrows">${"<i></i>".repeat(7)}</div>
@@ -62,23 +62,20 @@
   /* ---------- Pages ---------- */
   const pages = {
     home() {
-      const first = P.projects[0];
       return `
         <section class="hero" aria-labelledby="hero-title">
-          <h1 id="hero-title" class="sr-only">${esc(me.firstName)} ${esc(me.lastName)} — ${esc(me.title)}</h1>
-          <div class="hero-stats"><span>Location: ${esc(me.location)}</span><span>Final frame: M.S., May 2027</span></div>
-          ${star("#27d9f5", "star-a")}${star("#ff2fb4", "star-b")}
+          <div class="hero-bg" aria-hidden="true">${homeLane()}</div>
           <div class="hero-copy">
             ${logo("logo--xl")}
+            <h1 id="hero-title" class="hero-title"><span class="sr-only">${esc(me.firstName)} ${esc(me.lastName)}: </span>${esc(me.heroTitle)}</h1>
             <p class="hero-tagline">${esc(me.headline)}</p>
             <div class="hero-ctas">
-              <a class="btn btn--pink" href="#scoreboard">Pick a project</a>
-              <a class="btn btn--ghost" href="about.html">Meet the player</a>
+              <a class="btn btn--pink" href="#scoreboard">View my work <span aria-hidden="true">→</span></a>
+              <a class="btn btn--ghost" href="about.html">About me <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <div class="hero-scene">
-            ${homeLane()}
-            ${portrait({ ballColor: first?.ballColor, cls: "portrait--hero" })}
+            ${portrait({ ballColor: "#ff2fb4", cls: "player-card--hero" })}
           </div>
         </section>
 
@@ -111,7 +108,7 @@
             <p class="lede lede--big">${esc(A.headline)}</p>
             ${A.paragraphs.map((p) => `<p class="about-p">${t(p)}</p>`).join("")}
           </div>
-          ${portrait({ cls: "portrait--about", ballColor: "#27d9f5" })}
+          ${portrait({ cls: "player-card--about", ballColor: "#ff2fb4" })}
         </section>
 
         <section class="section" aria-label="Highlights">

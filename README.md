@@ -1,6 +1,6 @@
 # Layilah Campbell — Portfolio (The Lanes edition)
 
-A UX research & design portfolio themed after **The Lanes – Ten Pin Bowling** on Roblox. Your photo is the player at the lane, your projects are on the scoreboard, and clicking one rolls a ball down the lane (and knocks down the pins) before the case study opens.
+A UX research & design portfolio themed after **The Lanes – Ten Pin Bowling** on Roblox. Your photo is on a player card beside the lane, your projects are on the scoreboard, and clicking one rolls a ball down the lane (and knocks down the pins) before the case study opens.
 
 It's plain HTML, CSS and JavaScript. There's nothing to install and no build step.
 
@@ -16,7 +16,7 @@ Optional: install the **Live Server** extension in VS Code, right-click `index.h
 ## Where things live
 
 ```
-index.html      Home: neon name logo, your photo at the lane, project scoreboard
+index.html      Home: neon name, headline, player card + lane, project scoreboard
 about.html      About Me
 work.html       My Work (case-study cards)
 resume.html     Resume (+ Download PDF)
@@ -31,7 +31,8 @@ assets/         photo (img/layilah.jpg), resume.pdf, fonts, favicon
 
 ## Common edits
 
-- **Photo:** replace `assets/img/layilah.jpg` with a higher-resolution portrait (about 800×1120 px works well). Keep the same file name.
+- **Photo:** replace `assets/img/layilah.jpg` with a higher-resolution portrait (about 1200×1100 px works well, roughly square). Keep the same file name.
+- **Home headline and player card text:** `heroTitle`, `headline`, `school`, `degreeLine` and `gradLine` at the top of `js/data.js`.
 - **LinkedIn:** set `linkedin` in `js/data.js`. It appears on the Contact page and in the footer.
 - **Resume PDF:** replace `assets/resume.pdf`.
 - **Case studies:** the facts from your resume are already in. Replace each dashed-pink `TODO:` line with your own words, and add screenshots to `assets/img/` (`src: "assets/img/your-file.png"`).

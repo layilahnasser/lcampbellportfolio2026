@@ -17,7 +17,12 @@ window.PORTFOLIO = {
     firstName: "Layilah",
     lastName: "Campbell",
     title: "UX Research & Design", // shows under your name in the neon logo
-    headline: "I spent 7 years finding the people who build technology. Now I research and design what gets built.",
+    heroTitle: "From Recruiting at Google, Adobe & Meta to UX.", // big cyan line on the home page
+    headline: "I spent seven years finding the people who build technology. Now I research people's needs and turn insights into better product experiences.",
+    // Text on the player card (home page + About)
+    school: "University of Michigan",
+    degreeLine: "Master's Candidate - School of Information",
+    gradLine: "Expected May 2027",
     status: "Open to opportunities", // HUD pill
     location: "Ann Arbor, MI",
     email: "layilah@umich.edu",
@@ -27,7 +32,7 @@ window.PORTFOLIO = {
     resumePdf: "assets/resume.pdf",
     photo: "assets/img/layilah.jpg", // swap this file for a higher-resolution photo any time
     photoAlt:
-      "Portrait of Layilah Campbell smiling, with long curly dark hair, wearing a navy University of Michigan sweatshirt"
+      "Portrait of Layilah Campbell smiling, with long curly dark hair, wearing a black blazer"
   },
 
   /* ---------- About Me (from your UXfolio) ---------- */
