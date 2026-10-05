@@ -1,68 +1,46 @@
 # Layilah Campbell — Portfolio (The Lanes edition)
 
-A UX portfolio themed after **The Lanes – Ten Pin Bowling** on Roblox. It uses a neon bowling-alley look, an in-game style HUD, and your avatar standing at the lane. Projects sit on the **scoreboard**, and clicking one rolls a ball down the lane (STRIKE!) before the case study opens.
+A UX research & design portfolio themed after **The Lanes – Ten Pin Bowling** on Roblox. Your photo is the player at the lane, your projects are on the scoreboard, and clicking one rolls a ball down the lane (and knocks down the pins) before the case study opens.
 
-It's plain HTML, CSS and JavaScript with no build step and nothing to install.
+It's plain HTML, CSS and JavaScript. There's nothing to install and no build step.
+
+## See your changes on your own computer
+
+1. Unzip the folder.
+2. Double-click **`index.html`**. It opens in your browser.
+3. Open the folder in VS Code and edit **`js/data.js`**. All your text lives there.
+4. Save the file, then refresh the browser tab. Your change shows up right away.
+
+Optional: install the **Live Server** extension in VS Code, right-click `index.html`, and choose **Open with Live Server**. The page then refreshes by itself every time you save.
+
+## Where things live
 
 ```
-index.html      Home: HUD, neon name logo, your avatar at the lane, project scoreboard
+index.html      Home: neon name logo, your photo at the lane, project scoreboard
 about.html      About Me
-work.html       My Work: "ball rack" of case-study cards
-resume.html     Resume (+ Download PDF button)
-contact.html    Contact (email / LinkedIn + a lane-tablet message form)
-project.html    One case-study template: project.html?p=<project id>
-js/data.js      ← ALL YOUR CONTENT LIVES HERE
-js/main.js      HUD, logo, avatar, ball-roll transition
+work.html       My Work (case-study cards)
+resume.html     Resume (+ Download PDF)
+contact.html    Contact
+project.html    One case-study template (project.html?p=<project id>)
+js/data.js      ← ALL YOUR CONTENT: bio, projects, resume, contact details
+js/main.js      Header, logo, photo frame, ball-roll animation
 js/pages.js     Builds each page from data.js
-css/styles.css  All styling
-assets/         Images, favicon, resume PDF
+css/styles.css  Colors, type and layout
+assets/         photo (img/layilah.jpg), resume.pdf, fonts, favicon
 ```
 
-## 1. Add your content (one file)
+## Common edits
 
-Open **`js/data.js`** and replace each `"TODO: …"` with your real content. Until you replace them, those spots show on the site with a **dashed pink outline**, so you can see what's still missing.
+- **Photo:** replace `assets/img/layilah.jpg` with a higher-resolution portrait (about 800×1120 px works well). Keep the same file name.
+- **LinkedIn:** set `linkedin` in `js/data.js`. It appears on the Contact page and in the footer.
+- **Resume PDF:** replace `assets/resume.pdf`.
+- **Case studies:** the facts from your resume are already in. Replace each dashed-pink `TODO:` line with your own words, and add screenshots to `assets/img/` (`src: "assets/img/your-file.png"`).
+- **Add or remove a project:** copy or delete a block inside `projects: [ … ]` and give it a unique `id`.
 
-- **Projects**: each project is a full case study split into "frames":
-  Problem → Research → Define → Ideate → Iterate (V1/V2/V3) → Design Execution (with *why* each decision was made) → Outcome & Reflection.
-  This follows what Roblox asks for: design process, research, iteration and justified design execution.
-- **Images**: put screenshots in `assets/img/` and set `src: "assets/img/your-file.png"`. An empty `src` shows a placeholder box.
-- **Ball colour**: `ballColor` sets the ball that rolls down the lane for that project.
-- **Scoreboard total**: `score` is a short headline result, for example `"+32%"`.
-- **Avatar**: change `profile.avatar` colours (skin, hair, shirt, pants, shoes) to match your Roblox avatar.
-- **Resume PDF**: save your resume as `assets/resume.pdf`.
-- **Add or remove projects**: copy or delete a block in `projects: [ … ]`. Give each one a unique `id`.
+## Design notes
 
-## 2. Preview it locally in VS Code
-
-1. Open this folder in VS Code.
-2. Install the **Live Server** extension. Then right-click `index.html` and choose **Open with Live Server**.
-   (Double-clicking `index.html` also works.)
-
-## 3. Put it live on GitHub Pages
-
-1. Commit and push to GitHub:
-   ```bash
-   git add .
-   git commit -m "Update portfolio content"
-   git push
-   ```
-2. On GitHub, go to **Settings → Pages**.
-3. Under **Build and deployment**, set **Source: Deploy from a branch**, then pick your branch (e.g. `main`) and the `/ (root)` folder. Click **Save**.
-4. After about a minute, the site will be at
-   `https://layilahnasser.github.io/lcampbellportfolio2026/`. Send that link to your recruiter.
-
-## Typography
-
-The fonts match **The Lanes** logo:
-- **Damion**: the neon script ("The Lanes"). Used for your name, page titles and "STRIKE!".
-- **Fredoka**: the rounded bold sans ("TEN PIN BOWLING"). Used for your title, navigation and all body text.
-
-Both are free Google Fonts (SIL Open Font License). They're stored in `assets/fonts/`, so the site doesn't depend on Google's servers.
-
-## Accessibility notes
-
-- Every scoreboard row and card is a real link, so keyboard and screen-reader users can use them. Press **Esc** or **Skip** to skip the ball roll.
-- People who turn on *reduce motion* in their OS go straight to the case study with no animation.
-- The layout is responsive down to phone width.
+- **Type** comes from The Lanes logo. **Damion** is the neon script (name, page titles). **Fredoka** is the rounded sans (title, navigation, body text). Both are open-license fonts stored in `assets/fonts/`.
+- **Accessibility:** text and controls meet WCAG 2.2 AA contrast, including a worst-case check against the lightest part of the background glow. There is full keyboard support, a skip link, visible focus rings, labelled landmarks and link text that makes sense out of context. Press **Esc** or **Skip** to skip the ball roll. With *reduce motion* turned on in the operating system, the roll is skipped automatically.
+- **Ball motion:** the ball drops and bounces at release, then skids wide, hooks back toward the pocket and slows slightly. Its surface rolls forward in 3D as it travels.
 
 *Fan-made tribute to The Lanes on Roblox. Not affiliated with the game's developers.*
