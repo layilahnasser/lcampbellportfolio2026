@@ -73,7 +73,7 @@
         <!-- torso -->
         <rect x="58" y="104" width="84" height="92" rx="10" fill="${a.shirt}"/>
         <path d="M86 104l14 16 14-16" fill="none" stroke="#14101c" stroke-width="4" opacity=".35"/>
-        <text x="100" y="168" text-anchor="middle" font-family="Yellowtail, cursive" font-size="26" fill="#fff" opacity=".9">${esc(
+        <text x="100" y="168" text-anchor="middle" font-family="Damion, cursive" font-size="26" fill="#fff" opacity=".9">${esc(
           (me.firstName[0] || "") + (me.lastName[0] || "")
         )}</text>
         <!-- arms -->

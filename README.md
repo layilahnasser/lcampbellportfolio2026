@@ -51,6 +51,14 @@ Open **`js/data.js`** and replace each `"TODO: …"` with your real content. Unt
 4. After about a minute, the site will be at
    `https://layilahnasser.github.io/lcampbellportfolio2026/`. Send that link to your recruiter.
 
+## Typography
+
+The fonts match **The Lanes** logo:
+- **Damion**: the neon script ("The Lanes"). Used for your name, page titles and "STRIKE!".
+- **Fredoka**: the rounded bold sans ("TEN PIN BOWLING"). Used for your title, navigation and all body text.
+
+Both are free Google Fonts (SIL Open Font License). They're stored in `assets/fonts/`, so the site doesn't depend on Google's servers.
+
 ## Accessibility notes
 
 - Every scoreboard row and card is a real link, so keyboard and screen-reader users can use them. Press **Esc** or **Skip** to skip the ball roll.
