@@ -42,12 +42,6 @@ window.PORTFOLIO = {
     title: "Meet Layilah",
     pronunciation: "Lay-La",
     lede: "I bring a rare perspective to product work: I understand the people who build technology, the teams making product decisions, and the people who ultimately use those experiences.",
-    // Three-move version of your story (the full path is Frame 1 below)
-    story: [
-      { title: "Spotted the talent gap", text: "Took the research to Adobe's CEO." },
-      { title: "Fixed it from the hiring side", text: "Opened UX pipelines for product and research roles." },
-      { title: "Became the practitioner", text: "Self-taught, then Michigan-trained." }
-    ],
     card: {
       header: "Meet the player",
       title: "Layilah Campbell",

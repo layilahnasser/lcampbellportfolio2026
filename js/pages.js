@@ -122,9 +122,6 @@
             <p class="eyebrow">About Me · ${esc(A.kicker)}</p>
             <h1>${esc(A.title)} <span class="h1-sub">(${esc(A.pronunciation)})</span></h1>
             <p class="lede lede--big">${esc(A.lede)}</p>
-            <ol class="trio" aria-label="My story in three moves">
-              ${A.story.map((x, i) => `<li><b>${i + 1}</b><span><strong>${esc(x.title)}</strong>${esc(x.text)}</span></li>`).join("")}
-            </ol>
           </div>
           ${portrait({ cls: "player-card--about", header: A.card.header, title: A.card.title, lines: A.card.lines, photo: A.card.photo, alt: A.card.photoAlt })}
         </section>

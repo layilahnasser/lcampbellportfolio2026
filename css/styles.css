@@ -489,11 +489,6 @@ main > * { width: min(var(--maxw), 100% - 2 * var(--gutter)); margin-inline: aut
 
 /* ---------- About: story frames ---------- */
 .h1-sub { font-size: 0.5em; white-space: nowrap; }
-.trio { counter-reset: none; list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 10px; max-width: 34em; }
-.trio li { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); }
-.trio li span { display: flex; flex-direction: column; color: var(--muted); font-size: 0.95rem; line-height: 1.35; }
-.trio li strong { color: #fff; font-size: 1.05rem; }
-.trio b { flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--pink-strong); color: #fff; font-size: 0.95rem; }
 .frame-pill { display: inline-block; margin-bottom: 10px; padding: 4px 12px; border-radius: 8px; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #0d0a14; background: var(--pink); }
 .narrow-wide { max-width: 860px; margin-left: max(var(--gutter), calc((100% - var(--maxw)) / 2)); margin-right: auto; }
 .path-lead { margin: 0 0 6px; color: var(--muted); font-size: 1.1rem; }
