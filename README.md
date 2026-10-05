@@ -37,6 +37,7 @@ assets/         photo (img/layilah.jpg), resume.pdf, fonts, favicon
 - **Resume PDF:** replace `assets/resume.pdf`.
 - **Case studies:** the facts from your resume are already in. Replace each dashed-pink `TODO:` line with your own words, and add screenshots to `assets/img/` (`src: "assets/img/your-file.png"`).
 - **Opener text and game link:** edit `showOpener()` in `js/main.js` (the link is `https://www.roblox.com/games/1333478699/The-Lanes-Bowling`). It appears once per browser tab session and can be closed with the button or Esc.
+- **Home stat readouts:** `stats` in `js/data.js` (use the value `"projects"` to show the live number of case studies).
 - **Scoreboard wording:** each project has `subtitle`, `focus`, `approach` and `summary` in `js/data.js`.
 - **Case-study images:** each frame can take one image or a list (`image: [ {src, caption}, {src, caption} ]`). Empty `src` shows a placeholder.
 - **Add or remove a project:** copy or delete a block inside `projects: [ … ]` and give it a unique `id`.
@@ -56,6 +57,7 @@ Some case-study images are wired to file names but don't exist yet. Until you ad
 
 - **Type** comes from The Lanes logo. **Damion** is the neon script (name, page titles). **Fredoka** is the rounded sans (title, navigation, body text). Both are open-license fonts stored in `assets/fonts/`.
 - **Accessibility:** text and controls meet WCAG 2.2 AA contrast, including a worst-case check against the lightest part of the background glow. There is full keyboard support, a skip link, visible focus rings, labelled landmarks and link text that makes sense out of context. Press **Esc** or **Skip** to skip the ball roll. With *reduce motion* turned on in the operating system, the roll is skipped automatically.
+- **Case-study scorecard:** a sticky frame strip fills with strikes (X) as you read each section, and a "Strike!" panel at the end rolls you into the next lane.
 - **Lane look:** honey maple wood with white board lines, glowing royal-blue rails, blue target dots and pin-spot markers, and glossy red-necked pins, modeled on the lane in The Lanes.
 - **Ball motion:** the ball drops and bounces at release, then skids wide, hooks back toward the pocket and slows slightly. Its surface rolls forward in 3D as it travels.
 

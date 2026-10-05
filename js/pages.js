@@ -90,7 +90,12 @@
             </div>
           </div>
           <div class="hero-scene">
-            ${portrait({ ballColor: "#ff2fb4", cls: "player-card--hero" })}
+            <div class="hero-card-col">
+              ${portrait({ ballColor: "#ff2fb4", cls: "player-card--hero" })}
+              <dl class="statbar" aria-label="At a glance">
+                ${(me.stats || []).map((x) => `<div class="statbar-i"><dd>${esc(x.value === "projects" ? P.projects.length : x.value)}</dd><dt>${esc(x.label)}</dt></div>`).join("")}
+              </dl>
+            </div>
           </div>
         </section>
 
@@ -291,6 +296,7 @@
       const idx = Math.max(0, P.projects.findIndex((p) => p.id === id));
       const p = P.projects[idx];
       const next = P.projects[(idx + 1) % P.projects.length];
+      const isLast = idx === P.projects.length - 1;
       document.title = `${plain(p.title)} — ${me.firstName} ${me.lastName}`;
 
       const frameHead = (n, title) =>
@@ -317,12 +323,11 @@
             ${img(p.hero, "shot--hero" + (p.hero && p.hero.fit === "phone" ? " shot--phone" : ""))}
           </header>
 
-          <div class="case-layout">
-            <nav class="frame-nav" aria-label="Case study frames">
-              <p>Scorecard</p>
-              <ol>${FRAMES.map((f, i) => `<li><a href="#${f.key}" data-frame="${f.key}"><b>${i + 1}</b>${f.label}</a></li>`).join("")}</ol>
-            </nav>
+          <nav class="fstrip-nav" aria-label="Case study frames">
+            <ol class="fstrip">${FRAMES.map((f, i) => `<li class="fcell"><a href="#${f.key}" data-frame="${f.key}"><span class="fn">${i + 1}<span class="fl"> ${f.label}</span></span><span class="fm" aria-hidden="true"></span><span class="sr-only fstate"></span></a></li>`).join("")}</ol>
+          </nav>
 
+          <div class="case-layout">
             <div class="case-body">
               <section id="problem" class="frame">
                 ${frameHead(1, "The problem")}
@@ -443,12 +448,17 @@ ${(p.execution.goals || [])
                 <p>${t(p.outcome.reflection)}</p>
               </section>
 
-              ${
-                P.projects.length > 1
-                  ? `<a class="next-lane" href="project.html?p=${esc(next.id)}" data-roll="${esc(next.id)}" style="--ball:${esc(next.ballColor)}">
-                <span>Next lane</span><strong>${t(next.title)}</strong>${ballSVG(next.ballColor, "next-ball")}</a>`
-                  : ""
-              }
+              <section class="strike-panel" id="strike" aria-labelledby="strike-title">
+                <div class="sp-pins" aria-hidden="true">${Array.from({ length: 10 }, (_, k) => `<span class="sp-pin" style="--k:${k}">${pinSVG()}</span>`).join("")}</div>
+                <h2 id="strike-title" class="sp-big">Strike!</h2>
+                ${
+                  isLast
+                    ? `<p>You've bowled every lane. Thanks for playing.</p>
+                <div class="sp-btns"><a class="btn btn--pink" href="index.html#scoreboard">Back to the scoreboard</a><a class="btn btn--ghost" href="contact.html">Get in touch</a></div>`
+                    : `<p>You finished Lane ${idx + 1}: ${esc(plain(p.title))}. Ready for the next frame?</p>
+                <div class="sp-btns"><a class="btn btn--pink" href="project.html?p=${esc(next.id)}" data-roll="${esc(next.id)}">Bowl Lane ${idx + 2}: ${esc(plain(next.title))} <span aria-hidden="true">\u25B8</span></a><a class="btn btn--ghost" href="index.html#scoreboard">Back to the scoreboard</a></div>`
+                }
+              </section>
             </div>
           </div>
         </article>`;
@@ -459,22 +469,42 @@ ${(p.execution.goals || [])
 
   /* ---------- Page behaviours ---------- */
   if (page === "project") {
-    const links = [...document.querySelectorAll(".frame-nav a")];
+    const links = [...document.querySelectorAll(".fstrip a")];
+    const frames = [...document.querySelectorAll(".frame")];
+    const paint = (cur) => {
+      links.forEach((l, i) => {
+        const state = i < cur ? "done" : i === cur ? "now" : "todo";
+        l.parentElement.dataset.state = state;
+        l.querySelector(".fstate").textContent = state === "done" ? " (completed)" : state === "now" ? " (current)" : "";
+        if (state === "now") l.setAttribute("aria-current", "true");
+        else l.removeAttribute("aria-current");
+      });
+    };
+    paint(0);
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) {
-            links.forEach((l) => {
-              const on = l.dataset.frame === e.target.id;
-              l.classList.toggle("is-current", on);
-              if (on) l.setAttribute("aria-current", "true");
-              else l.removeAttribute("aria-current");
-            });
-          }
+          if (e.isIntersecting) paint(frames.indexOf(e.target));
         });
       },
       { rootMargin: "-40% 0px -55% 0px" }
     );
-    document.querySelectorAll(".frame").forEach((s) => io.observe(s));
+    frames.forEach((f) => io.observe(f));
+
+    const sp = document.getElementById("strike");
+    if (sp) {
+      const io2 = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            sp.classList.add("is-hit");
+            // reaching the strike panel completes every frame
+            links.forEach((l) => { l.parentElement.dataset.state = "done"; l.removeAttribute("aria-current"); });
+            io2.disconnect();
+          }
+        },
+        { threshold: 0.45 }
+      );
+      io2.observe(sp);
+    }
   }
 })();

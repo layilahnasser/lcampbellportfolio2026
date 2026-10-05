@@ -19,6 +19,12 @@ window.PORTFOLIO = {
     title: "UX Research & Design", // shows under your name in the neon logo
     heroTitle: "From Big Tech Recruiting to UX.", // big cyan line on the home page
     headline: "Seven years recruiting at Google, Adobe & Meta shaped how I understand people. Now I bring that perspective to research and design.",
+    // Stat readouts under the home photo card. Use the word "projects" to show the live project count.
+    stats: [
+      { value: "7", label: "Years in tech" },
+      { value: "projects", label: "Case studies" },
+      { value: "15+", label: "Interviews" }
+    ],
     // Text on the player card (home page + About)
     school: "University of Michigan",
     degreeLine: "Master's Candidate - School of Information",
