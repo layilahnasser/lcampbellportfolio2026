@@ -54,6 +54,7 @@
       <div class="hero-lane-plane">
         <div class="gutter gutter--l"></div><div class="gutter gutter--r"></div>
         <div class="arrows">${"<i></i>".repeat(7)}</div>
+        <div class="pin-spots">${rows.map((row, r) => row.map((x) => `<span class="pin-spot" style="--x:${x};--r:${r}"></span>`).join("")).join("")}</div>
         <div class="pins">${rows.map((row, r) => row.map((x) => `<span class="pin-wrap" style="--x:${x};--r:${r}">${pinSVG()}</span>`).join("")).join("")}</div>
       </div>
     </div>`;

@@ -42,6 +42,7 @@ assets/         photo (img/layilah.jpg), resume.pdf, fonts, favicon
 
 - **Type** comes from The Lanes logo. **Damion** is the neon script (name, page titles). **Fredoka** is the rounded sans (title, navigation, body text). Both are open-license fonts stored in `assets/fonts/`.
 - **Accessibility:** text and controls meet WCAG 2.2 AA contrast, including a worst-case check against the lightest part of the background glow. There is full keyboard support, a skip link, visible focus rings, labelled landmarks and link text that makes sense out of context. Press **Esc** or **Skip** to skip the ball roll. With *reduce motion* turned on in the operating system, the roll is skipped automatically.
+- **Lane look:** honey maple wood with white board lines, glowing royal-blue rails, blue target dots and pin-spot markers, and glossy red-necked pins, modeled on the lane in The Lanes.
 - **Ball motion:** the ball drops and bounces at release, then skids wide, hooks back toward the pocket and slows slightly. Its surface rolls forward in 3D as it travels.
 
 *Fan-made tribute to The Lanes on Roblox. Not affiliated with the game's developers.*

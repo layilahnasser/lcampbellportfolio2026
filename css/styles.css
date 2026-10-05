@@ -177,15 +177,18 @@ main > * { width: min(var(--maxw), 100% - 2 * var(--gutter)); margin-inline: aut
 .player-card--about { justify-self: center; max-width: 320px; margin: 0 22px 22px 0; }
 
 /* ---------- Bowling lane (shared by hero and lane cam) ---------- */
-.gutter { position: absolute; top: 0; bottom: 0; width: 18px; background: #0b0814; }
-.gutter::after { content: ""; position: absolute; top: 0; bottom: 0; width: 5px; background: var(--lane-light); box-shadow: 0 0 10px var(--lane-light), 0 0 26px var(--lane-light); }
-.gutter--l { left: -18px; } .gutter--l::after { left: 0; }
-.gutter--r { right: -18px; } .gutter--r::after { right: 0; }
+.gutter { position: absolute; top: 0; bottom: 0; width: 9%; background: linear-gradient(90deg, #020104, #0a0618); }
+.gutter::after { content: ""; position: absolute; top: 0; bottom: 0; width: 46%; background: linear-gradient(90deg, #2a14e6, #6a55ff 50%, #2a14e6); box-shadow: 0 0 10px #4326ff, 0 0 30px #4326ff, 0 0 70px rgba(67, 38, 255, 0.7); }
+.gutter--l { right: 100%; } .gutter--l::after { left: 0; }
+.gutter--r { left: 100%; } .gutter--r::after { right: 0; }
 .arrows { position: absolute; left: 0; right: 0; bottom: 24%; display: flex; justify-content: space-evenly; }
-.arrows i { width: 0; height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent; border-bottom: 22px solid rgba(70, 60, 255, 0.85); }
-.arrows i:nth-child(2), .arrows i:nth-child(6) { transform: translateY(16px); }
-.arrows i:nth-child(1), .arrows i:nth-child(7) { transform: translateY(32px); }
-.arrows i:nth-child(4) { transform: translateY(-16px); }
+.arrows i { width: 2.8%; aspect-ratio: 1; border-radius: 50%; background: #2f2cff; box-shadow: 0 0 6px rgba(67, 38, 255, 0.9); }
+.arrows i:nth-child(2), .arrows i:nth-child(6) { transform: translateY(150%); }
+.arrows i:nth-child(1), .arrows i:nth-child(7) { transform: translateY(300%); }
+.arrows i:nth-child(4) { transform: translateY(-150%); }
+/* blue spot markers on the pin deck (they stay after the pins fall, like the game) */
+.pin-spots { position: absolute; inset: 0; }
+.pin-spot { position: absolute; width: 16px; height: 16px; border-radius: 50%; background: #2f2cff; box-shadow: 0 0 6px rgba(67, 38, 255, 0.9); left: calc(50% + var(--x) * 22px - 8px); bottom: calc(100% - 130px + var(--r) * 38px - 8px); }
 .pins { position: absolute; inset: 0; transform-style: preserve-3d; }
 .pin-wrap {
   position: absolute; width: 30px; height: 88px;
@@ -198,9 +201,12 @@ main > * { width: min(var(--maxw), 100% - 2 * var(--gutter)); margin-inline: aut
 .hero-lane-plane,
 .lanecam-lane {
   background:
-    radial-gradient(ellipse 70% 30% at 50% 100%, rgba(255, 220, 170, 0.35), transparent 70%),
-    repeating-linear-gradient(90deg, rgba(60, 30, 10, 0.25) 0 1px, transparent 1px 16px),
-    linear-gradient(to top, var(--wood-1), var(--wood-2) 55%, #2c1a0e);
+    radial-gradient(ellipse 58% 24% at 50% 100%, rgba(255, 246, 220, 0.62), transparent 72%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.62) 0 1.5px, transparent 1.5px) 0 0 / calc(100% / 7) 100% repeat-x,
+    repeating-linear-gradient(90deg, rgba(120, 68, 26, 0.13) 0 1px, transparent 1px 8px),
+    repeating-linear-gradient(0deg, rgba(100, 56, 22, 0.16) 0 1px, transparent 1px 130px),
+    linear-gradient(to top, #efc190, #dea56d 38%, #c68a52 66%, #3a200e 97%);
+  box-shadow: inset 16px 0 22px -12px rgba(67, 38, 255, 0.55), inset -16px 0 22px -12px rgba(67, 38, 255, 0.55);
 }
 
 /* ---------- Home hero (banner: name + headline left, player card + lane right) ---------- */
@@ -223,8 +229,9 @@ main > * { width: min(var(--maxw), 100% - 2 * var(--gutter)); margin-inline: aut
 }
 .hero-bg { position: absolute; inset: 0; z-index: -1; overflow: hidden; }
 .hero-lane { position: absolute; inset: 0; perspective: 760px; perspective-origin: 90% 0%; }
-.hero-lane-plane { position: absolute; left: 93%; bottom: -150px; width: 420px; margin-left: -210px; height: 1250px; transform-origin: 50% 100%; transform: rotateX(70deg); transform-style: preserve-3d; box-shadow: 0 0 80px rgba(91, 60, 255, 0.35); }
-.hero-lane-plane::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, transparent 6%, rgba(255, 255, 255, 0.16) 26%, transparent 42%, transparent 62%, rgba(255, 255, 255, 0.09) 78%, transparent 92%); }
+.hero-lane-plane { position: absolute; left: 93%; bottom: -150px; width: 420px; margin-left: -210px; height: 1250px; transform-origin: 50% 100%; transform: rotateX(70deg); transform-style: preserve-3d; }
+.hero-lane-plane::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to bottom, rgba(5, 3, 12, 0.85), transparent 14%); }
+.hero-lane .pin-spot { width: 18px; height: 18px; left: calc(50% + var(--x) * 30px - 9px); bottom: calc(100% - 230px + var(--r) * 64px - 9px); }
 .hero-lane .pin-wrap { width: 54px; height: 158px; left: calc(50% + var(--x) * 30px - 27px); bottom: calc(100% - 230px + var(--r) * 64px); transform: rotateX(-70deg); }
 .hero-stats { display: flex; flex-direction: column; margin: 0 0 18px; font: italic 500 0.95rem var(--font); color: rgba(255, 255, 255, 0.9); line-height: 1.5; }
 .hero-copy { position: relative; z-index: 2; }
@@ -475,6 +482,7 @@ main > * { width: min(var(--maxw), 100% - 2 * var(--gutter)); margin-inline: aut
 .lanecam-stats { display: flex; flex-direction: column; font: italic 600 0.85rem var(--font); color: #fff; }
 .lanecam-stage { position: absolute; inset: 0; perspective: 700px; perspective-origin: 50% 0%; }
 .lanecam-lane { position: absolute; left: 50%; bottom: -40px; width: min(340px, 70vw); transform: translateX(-50%) rotateX(74deg); height: 1300px; transform-origin: 50% 100%; transform-style: preserve-3d; }
+.lanecam .pin-spot { width: 22px; height: 22px; left: calc(50% + var(--x) * 34px - 11px); bottom: calc(100% - 170px + var(--r) * 56px - 11px); }
 .lanecam .pin-wrap { width: 42px; height: 124px; left: calc(50% + var(--x) * 34px - 21px); bottom: calc(100% - 170px + var(--r) * 56px); transform: rotateX(-74deg); transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1), opacity 0.7s 0.2s; }
 .lanecam.is-hit .pin-wrap { transform: rotateX(-74deg) translate(calc(var(--x) * 40px + 6px), -60px) rotate(calc(var(--x) * 30deg + 50deg)); opacity: 0; }
 .lanecam.is-hit .pin-wrap:nth-child(odd) { transform: rotateX(-74deg) translate(calc(var(--x) * 46px - 10px), -90px) rotate(calc(var(--x) * -20deg - 70deg)); }

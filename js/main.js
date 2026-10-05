@@ -36,7 +36,7 @@
     "M12 0C6.5 0 5.6 6 6.4 12c.7 5 1.8 8-.6 14C2.2 35 .4 45 1.8 55 3 64 6.4 70 12 70s9-6 10.2-15c1.4-10-.4-20-4-29-2.4-6-1.3-9-.6-14C18.4 6 17.5 0 12 0Z";
 
   const pinSVG = (cls = "") =>
-    `<svg class="pin ${cls}" viewBox="-2 -2 28 74" aria-hidden="true"><path d="${PIN_PATH}" fill="#f7f4fb" stroke="#1a1426" stroke-width="2"/><path d="M6.3 15.5h11.4M6.6 19h10.8" stroke="#e8304f" stroke-width="2.2"/></svg>`;
+    `<svg class="pin ${cls}" viewBox="-2 -2 28 74" aria-hidden="true"><defs><linearGradient id="pinG" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f3f0fb"/><stop offset="1" stop-color="#aaa1cc"/></linearGradient></defs><path d="${PIN_PATH}" fill="url(#pinG)" stroke="#1a1426" stroke-width="2"/><path d="M6.3 15.5h11.4M6.6 19h10.8" stroke="#e8304f" stroke-width="2.4"/><path d="M8.2 28c-1 8-.8 16-.2 22" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".85" fill="none"/></svg>`;
 
   // Static ball with three finger holes (used for icons and hover-roll).
   const ballSVG = (color = "#ff2fb4", cls = "") =>
@@ -217,6 +217,7 @@
         <div class="lanecam-lane">
           <div class="gutter gutter--l"></div><div class="gutter gutter--r"></div>
           <div class="arrows">${"<i></i>".repeat(7)}</div>
+          <div class="pin-spots">${pinRows.map((row, r) => row.map((x) => `<span class="pin-spot" style="--x:${x};--r:${r}"></span>`).join("")).join("")}</div>
           <div class="pins">${pinRows
             .map((row, r) => row.map((x) => `<span class="pin-wrap" style="--x:${x};--r:${r}">${pinSVG()}</span>`).join(""))
             .join("")}</div>
