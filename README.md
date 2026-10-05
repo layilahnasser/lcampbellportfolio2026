@@ -41,6 +41,16 @@ assets/         photo (img/layilah.jpg), resume.pdf, fonts, favicon
 - **Case-study images:** each frame can take one image or a list (`image: [ {src, caption}, {src, caption} ]`). Empty `src` shows a placeholder.
 - **Add or remove a project:** copy or delete a block inside `projects: [ … ]` and give it a unique `id`.
 
+## Missing screenshots: drop-in slots
+
+Some case-study images are wired to file names but don't exist yet. Until you add them, the page shows a labeled placeholder that tells you the exact file name. Save your screenshot into `assets/img/` with that name (no code changes) and refresh:
+
+| File | Where it appears |
+|---|---|
+| `milk-components.jpg`, `milk-product.jpg`, `milk-cart-checkout.jpg` | Milk and Froth: component library, product pages, cart/checkout/404 |
+| `crown-sketches.jpg`, `crown-lowfi.jpg`, `crown-screens-dark.png` | Crown Code: sketches, low-fi, dark mode screens |
+| `nutrition-board.jpg`, `nutrition-sketches.jpg`, `nutrition-lowfi.jpg`, `nutrition-wireframes.jpg` | Cancer Nutrition App: RICE board, sketches, low-fi, six high-fi screens |
+
 ## Design notes
 
 - **Type** comes from The Lanes logo. **Damion** is the neon script (name, page titles). **Fredoka** is the rounded sans (title, navigation, body text). Both are open-license fonts stored in `assets/fonts/`.

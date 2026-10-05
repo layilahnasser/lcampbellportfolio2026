@@ -24,6 +24,7 @@
 
   const img = (im, cls = "") => {
     if (im && im.fit === "phone") cls += " shot--phone";
+    if (im && im.fit === "tall") cls += " shot--tall";
     if (im && im.src) {
       return `<figure class="shot ${cls}"><img src="${esc(im.src)}" alt="${esc(plain(im.caption))}" loading="lazy">${
         im.caption ? `<figcaption>${esc(plain(im.caption))}</figcaption>` : ""
@@ -33,6 +34,28 @@
       plain(im?.caption || "")
     )}</small></div></figure>`;
   };
+
+  // A slot is wired to a file name before the file exists. If the file is missing,
+  // show a labeled placeholder (it turns into the real image as soon as the file is added).
+  document.addEventListener(
+    "error",
+    (e) => {
+      const i = e.target;
+      if (!i || i.tagName !== "IMG" || !i.closest(".shot")) return;
+      const fig = i.closest(".shot");
+      const name = (i.getAttribute("src") || "").split("/").pop();
+      const cap = fig.querySelector("figcaption");
+      const ph = document.createElement("div");
+      ph.className = "shot-ph";
+      ph.setAttribute("role", "img");
+      ph.setAttribute("aria-label", "Image placeholder");
+      ph.innerHTML = `<span>Add image</span><small>${esc(cap ? cap.textContent : "")}</small><small class="ph-file">Save the file as assets/img/${esc(name)}</small>`;
+      fig.classList.add("shot--empty");
+      fig.classList.remove("shot--phone", "shot--tall");
+      fig.replaceChildren(ph);
+    },
+    true
+  );
 
   /* ---------- SVG pieces ---------- */
   const PIN_PATH =

@@ -204,15 +204,22 @@ window.PORTFOLIO = {
         ],
         image: [
           { src: "assets/img/milk-competitive.jpg", caption: "Competitive analysis: two local and two nationwide brands across eight features." },
-          { src: "assets/img/milk-current-home.jpg", caption: "Starting point: the current homepage." },
-          { src: "assets/img/milk-current-about.jpg", caption: "Starting point: the current About page." }
+          { src: "assets/img/milk-current-about.jpg", caption: "Starting point: the current About page. (The current homepage and locations list appear in the before and after below.)" }
         ]
       },
 
       define: {
-        persona: "TODO: Primary visitor, such as a flavor-curious local or a gift buyer. Add goals and frustrations.",
-        journey: "TODO: Where finding a flavor or a shop breaks down on the current site.",
+        callout: "The shop already feels vibrant, playful and indulgent. The redesign's job was to carry that same energy, and the craft behind it, into the website.",
         lists: [
+          {
+            heading: "What makes the brand distinctive",
+            items: [
+              "Small-batch ice creams made with real ingredients.",
+              "Every flavor made from scratch in the Eastern Market kitchen.",
+              "Fresh dairy and premium ingredients, with in-house pasteurization for a rich, ultra-creamy texture.",
+              "A bold red interior and modern design that reflect an energetic, indulgent approach."
+            ]
+          },
           {
             heading: "Three goals",
             items: [
@@ -222,33 +229,69 @@ window.PORTFOLIO = {
             ]
           }
         ],
-        image: { src: "", caption: "TODO: Persona or journey map, if you made one" }
+        map: {
+          heading: "From goals to design",
+          rows: [
+            { tag: "Goal 1", need: "Promote distinctive flavors and the handcrafted process", design: "A flavor grid with filter chips, and item pages with ingredient and delivery notes.", where: "Menu and product pages" },
+            { tag: "Goal 2", need: "Make storefronts easy to find across Michigan", design: "A Find Pints page with a search box, and per-shop hours, address, photo and directions.", where: "Find Pints" },
+            { tag: "Goal 3", need: "Make browsing intuitive and image-forward", design: "A photo-led homepage with bestsellers, customer quotes beside photography, and the team behind the shop.", where: "Homepage" }
+          ]
+        }
       },
 
       ideate: {
         summary:
-          "Wireframes mapped five pages and the content each one needs. Home: a hero, a creamy banner, best sellers, a marquee scroller, a customer quote, Scoop Shops (Ann Arbor and Detroit) and a Who We Are section. Menu: an All Flavors header, filter chips, a dripping-ice-cream banner and product cards. About Us: Who Is Milk & Froth, rotating images and process text. Contact Us: customer service, FAQs, partnerships, wholesale, find a shop, and a message form. Plus an e-commerce grid. TODO: add how you chose this structure.",
-        image: [{ src: "", caption: "TODO: Your wireframes (Home, Menu, About, Contact, E-commerce). Save as assets/img/milk-wireframes.jpg and set src." }]
+          "Wireframes mapped five pages and the content each one needs. Home: a hero, a creamy banner, best sellers, a marquee scroller, a customer quote, Scoop Shops (Ann Arbor and Detroit) and a Who We Are section. Menu: an All Flavors header, filter chips, a dripping-ice-cream banner and product cards. About Us: Who Is Milk & Froth, rotating images and process text. Contact Us: customer service, FAQs, partnerships, wholesale, find a shop, and a message form. An e-commerce grid shows the flavors.",
+        image: [
+          { src: "assets/img/milk-wire-home.png", fit: "tall", caption: "Wireframe: Home" },
+          { src: "assets/img/milk-wire-menu.png", fit: "tall", caption: "Wireframe: Menu" },
+          { src: "assets/img/milk-wire-about.png", fit: "tall", caption: "Wireframes: About Us and E-commerce" },
+          { src: "assets/img/milk-wire-contact.png", fit: "tall", caption: "Wireframe: Contact Us" }
+        ]
       },
 
       iterations: [
         {
           version: "Round 1: Wireframes",
           change: "Low-fidelity layouts for Home, Menu, About Us, Contact Us and E-commerce, with a shared header and footer (shop, company, customer service and email sign-up).",
-          feedback: "TODO: What feedback or testing showed, and what you changed.",
-          image: { src: "", caption: "TODO: Wireframes. Same file as above, or crop one page." }
+          feedback: "TODO: What feedback or testing showed, and what you changed."
         },
         {
           version: "Round 2: Brand system & components",
           change: "Defined the brand colors and type, then built a component library: primary, secondary and tertiary buttons in three sizes, each with default, hover, selected, focused and disabled states; navigation links; add-to-cart and quantity controls; and product cards in list, grid and quick-add layouts. Navigation (a desktop bar and a mobile menu with an Order Now button), the product, item and footer pages, and a shopping cart were designed in both a light (blush) and a dark (cocoa) theme. A slide-out cart shows the items, a \"buy 5, get one free\" nudge (\"Add 3 more pints to checkout\"), a gift-note option and a clear checkout button. Full cart, checkout, location, product, e-commerce and 404 pages were then designed for both desktop and mobile.",
           feedback: "TODO: What testing or review showed on the high-fidelity version.",
-          image: { src: "", caption: "TODO: Component library screenshot. Save as assets/img/milk-components.jpg and set src." }
+          image: [
+            { src: "assets/img/milk-type-scale.png", caption: "Type system: Nunito Sans and Montserrat, with a scale for desktop, tablet and mobile." },
+            { src: "assets/img/milk-components.jpg", caption: "Component library: buttons in every state and size, navigation, add-to-cart and product cards." }
+          ]
         }
       ],
 
       execution: {
         summary:
-          "Each of the three goals became a concrete part of the site, built on the brand's red-and-cream look.",
+          "Each of the three goals from the project brief became a concrete part of the site, built on the brand's red-and-cream look. Here is each goal with what we designed in response.",
+        goals: [
+          {
+            tag: "Goal 1",
+            statement: "Promote Milk & Froth's distinctive flavor profiles and handcrafted ice cream process.",
+            why: "The product page leads with a chocolate-drip banner and an \"Our Flavors\" grid of pints, each with a name, short description, price and add-to-cart. Filter chips (All Flavors, Most Popular, Seasonal Favorites, Dairy-Free, Gluten-Free) help people narrow down quickly. Each flavor also has an item page with reviews, guaranteed frozen delivery, a \"real ingredients\" note and \"you may also like\" suggestions, designed for desktop and mobile in light and dark themes.",
+            images: [{ src: "assets/img/milk-product.jpg", caption: "Goal 1: the flavor and product pages, desktop and mobile, in light and dark." }]
+          },
+          {
+            tag: "Goal 2",
+            statement: "Design a location-focused feature that highlights Milk & Froth storefronts across Michigan, improving store discoverability and helping users quickly find relevant location information.",
+            why: "A dedicated Find Pints page, headed \"Michigan's Sweetest Stops,\" invites people to find a Milk & Froth near them. Each shop (Ann Arbor, Detroit and Royal Oak) gets its own large city heading, a short description, hours of operation, the address, a storefront photo, and two clear actions: Get Directions and Order Now. A \"Churned, Scooped, Chilled, Repeat\" ticker separates the shops and keeps the brand voice playful.",
+            before: { src: "assets/img/milk-current-locations.jpg", caption: "The current locations page: a plain text list of markets by city." },
+            after: { src: "assets/img/milk-locations.jpg", caption: "Find Pints: search plus rich, scannable shop details." }
+          },
+          {
+            tag: "Goal 3",
+            statement: "Design a more intuitive, image-forward website that highlights products visually.",
+            why: "The homepage opens on a full-bleed strawberry hero, \"Sweet, Creamy & Back in Season,\" then the ticker and a Shop Bestsellers row of pints. Below, a \"Thoughtfully scooped, just for you\" story, customer quotes set beside flavor photography, the team behind the shop and an Instagram call-out keep every section led by a photo, so products are seen before they are read about. A mobile version stacks the same sections in one column.",
+            before: { src: "assets/img/milk-current-home.jpg", caption: "The current homepage." },
+            after: { src: "assets/img/milk-homepage.jpg", caption: "The redesigned, image-forward homepage." }
+          }
+        ],
         palette: [
           { name: "Roasted Strawberry", hex: "#E02B00" },
           { name: "Blushed Froth", hex: "#FFD6D4" },
@@ -260,18 +303,6 @@ window.PORTFOLIO = {
           { role: "Secondary typeface", name: "Montserrat" }
         ],
         decisions: [
-          {
-            title: "Goal 1: Flavors and the craft",
-            why: "The product page leads with a chocolate-drip banner and an \"Our Flavors\" grid of pints with a name, short description, price and add-to-cart. Filter chips (All Flavors, Most Popular, Seasonal Favorites, Dairy-Free, Gluten-Free) help people narrow down quickly. Each flavor has an item page with reviews, guaranteed frozen delivery, a \"real ingredients\" note and \"you may also like\" suggestions. The product and item pages were designed in horizontal (desktop) and vertical (mobile) views, each in a light and a dark theme."
-          },
-          {
-            title: "Goal 2: Finding a shop",
-            why: "A dedicated Find Pints page, headed \"Michigan's Sweetest Stops,\" invites people to find a Milk & Froth near them. Each shop (Ann Arbor, Detroit and Royal Oak) gets its own large city heading, a short description, hours of operation, the address, a photo of the storefront, and two clear actions: Get Directions and Order Now. A \"Churned, Scooped, Chilled, Repeat\" ticker separates the shops and keeps the brand voice playful, so people can quickly find the location information they need."
-          },
-          {
-            title: "Goal 3: Image-forward browsing",
-            why: "The homepage opens on a full-bleed strawberry hero with \"Sweet, Creamy & Back in Season,\" followed by the Churned, Scooped, Chilled, Repeat ticker and a Shop Bestsellers row of pints, one tagged Seasonal. Below, a \"Thoughtfully scooped, just for you\" story, customer quotes set beside flavor photography, the team behind the shop and an Instagram call-out keep every section led by a photo, so the products are seen before they are read about. A mobile version stacks the same sections in one column."
-          },
           {
             title: "Cart and checkout",
             why: "The shopping cart pairs an item list (quantity controls, a coupon field) with an order summary showing subtotal, estimated shipping and taxes, and a clear Checkout button. It points out free delivery over $50 and shows the accepted payment methods up front. Checkout adds a Delivery or Pick Up toggle, a short address form and a single Pay Now button, so people always know what they will pay."
@@ -286,10 +317,7 @@ window.PORTFOLIO = {
           }
         ],
         images: [
-          { src: "assets/img/milk-locations.jpg", caption: "Goal 2: Find Pints, the location-focused page." },
-          { src: "assets/img/milk-homepage.jpg", caption: "Goal 3: the image-forward homepage." },
-          { src: "", caption: "TODO: Goal 1 product page (desktop and mobile). Save as assets/img/milk-product.jpg and set src." },
-          { src: "", caption: "TODO: Cart, checkout and 404 screens. Save as assets/img/milk-cart-checkout.jpg and set src." }
+          { src: "assets/img/milk-cart-checkout.jpg", caption: "Beyond the goals: cart, checkout and 404 pages, desktop and mobile." }
         ],
         prototypeUrl: ""
       },
@@ -376,13 +404,21 @@ window.PORTFOLIO = {
             ]
           }
         ],
-        image: { src: "", caption: "TODO: Persona or journey map, if you made one" }
+        callout: "The main benefit: a structured, accessible system that makes pageant prep feel manageable, consistent and effective.",
+        map: {
+          heading: "From the brief to the screens",
+          rows: [
+            { tag: "Dashboard", need: "Track deadlines, practice and action items in one place", design: "A readiness score with a mastery streak and a practice streak, for structure, visibility and accountability.", where: "Home and Progress" },
+            { tag: "Flashcards", need: "Practice interview answers and learn a clear answer structure", design: "Tap-to-reveal flashcards in decks, with an answer structure to build stronger, more confident responses.", where: "Cards" },
+            { tag: "Sharing", need: "Get more continuous support from coaches", design: "A readiness profile and a Share Your Journey view, so feedback is personal, timely and tied to real progress.", where: "Profile" }
+          ]
+        }
       },
 
       ideate: {
         summary:
           "TODO: How you explored the app's structure: sketches, a flow for practice, feedback and progress, and how you decided on the four main tabs (Home, Cards, Progress, Profile).",
-        image: [{ src: "", caption: "TODO: Early sketches. Save as assets/img/crown-sketches.jpg and set src." }]
+        image: [{ src: "assets/img/crown-sketches.jpg", caption: "Early sketches." }]
       },
 
       iterations: [
@@ -390,7 +426,7 @@ window.PORTFOLIO = {
           version: "Round 1 — Sketches & low-fidelity",
           change: "TODO: What the first wireframes explored.",
           feedback: "TODO: What feedback or testing showed, and what you changed.",
-          image: { src: "", caption: "TODO: Low-fidelity wireframes. Save as assets/img/crown-lowfi.jpg and set src." }
+          image: { src: "assets/img/crown-lowfi.jpg", caption: "Low-fidelity wireframes." }
         },
         {
           version: "Round 2 — Design system & high fidelity",
@@ -398,7 +434,8 @@ window.PORTFOLIO = {
           feedback: "TODO: What testing or review showed, and what changed as a result.",
           image: [
             { src: "assets/img/crown-components.jpg", caption: "Component library: buttons, navigation, flashcards, progress and readiness cards." },
-            { src: "assets/img/crown-screens-light.png", caption: "Screen set, light mode: profile pages, home and progress pages, and flashcards." }
+            { src: "assets/img/crown-screens-light.png", caption: "Screen set, light mode: profile pages, home and progress pages, and flashcards." },
+            { src: "assets/img/crown-screens-dark.png", caption: "Screen set, dark mode." }
           ]
         }
       ],
@@ -596,8 +633,8 @@ window.PORTFOLIO = {
         summary:
           "Persona hypotheses, interview questions and problem statements went onto a shared team board, along with candidate features that we scored with RICE (Reach, Impact, Confidence, Effort). The journey map's opportunities fed that list: personalized onboarding, an AI grocery list builder, a community meal train, meal delivery integrations, a food scanner with medication-compatibility checks, and a 24/7 AI assistant with oncology dietitian access. TODO: add two lines on how the team narrowed to the final feature set, and which idea you advocated for.",
         image: [
-          { src: "", caption: "TODO: Ideation and RICE prioritization board. Save your board screenshot as assets/img/nutrition-board.jpg and set src to that path." },
-          { src: "", caption: "TODO: Your early sketches. Photograph or scan them, save as assets/img/nutrition-sketches.jpg, and set src." }
+          { src: "assets/img/nutrition-board.jpg", caption: "Ideation and RICE prioritization board." },
+          { src: "assets/img/nutrition-sketches.jpg", caption: "Early sketches." }
         ]
       },
 
@@ -606,13 +643,13 @@ window.PORTFOLIO = {
           version: "Round 1 — Sketches & low-fidelity",
           change: "TODO: What the first sketches or wireframes explored (for example the home screen, the nutrition hub, or the scanner).",
           feedback: "TODO: What testing or critique showed (for example which screens confused people), and what you changed.",
-          image: { src: "", caption: "TODO: Low-fidelity wireframes. Save as assets/img/nutrition-lowfi.jpg and set src." }
+          image: { src: "assets/img/nutrition-lowfi.jpg", caption: "Low-fidelity wireframes." }
         },
         {
           version: "Round 2 — High-fidelity wireframes",
           change: "Six core screens (Home, Nutrition Support, AI Grocery List Builder, AI Assistant, Partner Meal Delivery and Meal Train), tied together by a persistent bottom navigation: Home, Nutrition, Scanner, Dietitian, Profile.",
           feedback: "TODO: What usability testing showed on the high-fidelity version, and the final changes it led to.",
-          image: { src: "", caption: "TODO: The six high-fidelity screens. Save your screenshot as assets/img/nutrition-wireframes.jpg and set src." }
+          image: { src: "assets/img/nutrition-wireframes.jpg", caption: "The six high-fidelity screens." }
         }
       ],
 
@@ -645,7 +682,7 @@ window.PORTFOLIO = {
             why: "TODO: Explain the choice of soft sage greens, warm cream and coral accents, and generous spacing, and why they suit people who are stressed and tired."
           }
         ],
-        images: [{ src: "", caption: "TODO: The final high-fidelity screens. Use the same assets/img/nutrition-wireframes.jpg as above, or crop individual screens." }],
+        images: [{ src: "assets/img/nutrition-wireframes.jpg", caption: "The final high-fidelity screens." }],
         prototypeUrl: ""
       },
 

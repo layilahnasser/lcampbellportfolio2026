@@ -581,3 +581,39 @@ body.opener-open { overflow: hidden; }
 .iteration-wide { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .iteration-wide .shot { margin: 0; }
 @media (max-width: 760px) { .iteration-wide { grid-template-columns: 1fr; } }
+
+/* Before / after pairs and tall wireframe galleries */
+.compare { margin: 0 0 22px; }
+.compare-label { margin: 0 0 8px !important; font-weight: 700; color: var(--cyan); }
+.compare-pair { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.compare-pair .shot { margin: 0; }
+.compare-pair figcaption { font-weight: 600; color: #fff; }
+@media (max-width: 700px) { .compare-pair { grid-template-columns: 1fr; } }
+.iteration-wide:has(.shot--tall) { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); align-items: start; }
+.shot--tall img { width: 100%; max-height: 540px; object-fit: contain; object-position: top; background: #f4f4f4; }
+
+/* Goal / need -> design map (Define frame) */
+.goal-map { display: grid; gap: 10px; margin-bottom: 8px; }
+.gm-row { display: grid; grid-template-columns: 110px 1fr 170px; gap: 18px; align-items: center; padding: 16px 18px; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--ball); border-radius: var(--radius); }
+.gm-row > b { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ball); }
+.gm-need { margin: 0 0 4px !important; font-weight: 700; color: #fff; }
+.gm-do { margin: 0 !important; color: var(--muted); font-size: 0.95rem; }
+.gm-where { justify-self: end; text-align: right; font-weight: 600; font-size: 0.9rem; color: var(--cyan); }
+@media (max-width: 760px) { .gm-row { grid-template-columns: 1fr; gap: 6px; } .gm-where { justify-self: start; text-align: left; } }
+
+.iteration:not(:has(.shot)):not(:has(.iteration-wide)) { grid-template-columns: 1fr; }
+
+.shot-ph .ph-file { margin-top: 6px; color: var(--pink-soft); font-weight: 600; }
+
+/* Goal cards in Design execution: goal wording, design response, before/after or screens */
+.goal-card { margin: 0 0 20px; padding: 22px; background: var(--panel); border: 1px solid var(--line); border-left: 5px solid var(--ball); border-radius: var(--radius); }
+.goal-head { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 10px; }
+.goal-head .frame-no { flex: none; margin-top: 3px; }
+.goal-statement { margin: 0 !important; font-size: 1.15rem; font-weight: 700; color: #fff; max-width: none !important; line-height: 1.35; }
+.goal-why { color: var(--muted); max-width: 70ch; }
+.cmp-col { min-width: 0; }
+.cmp-tag { margin: 0 0 6px !important; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+.cmp-tag--after { color: var(--cyan); }
+.goal-card .compare-pair { margin-top: 6px; align-items: start; }
+.goal-card .shot { margin: 0; }
+.goal-shots { display: grid; gap: 14px; margin-top: 6px; }

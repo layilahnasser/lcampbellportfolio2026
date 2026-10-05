@@ -17,7 +17,7 @@
   ];
 
   // A frame can hold one image or a list of images
-  const imgs = (x, cls = "") => (Array.isArray(x) ? x.map((i) => img(i, cls)).join("") : img(x, cls));
+  const imgs = (x, cls = "") => (!x ? "" : Array.isArray(x) ? x.map((i) => img(i, cls)).join("") : img(x, cls));
 
   // relative luminance, used to pick readable text on a color swatch
   const lum = (hex) => {
@@ -341,7 +341,12 @@
 
               <section id="define" class="frame">
                 ${frameHead(3, "Define")}
-                <div class="two-col"><div><h3>Who we're designing for</h3><p>${t(p.define.persona)}</p></div><div><h3>Where it breaks down</h3><p>${t(p.define.journey)}</p></div></div>
+                ${p.define.callout ? `<p class="callout">${t(p.define.callout)}</p>` : ""}
+                ${
+                  p.define.persona || p.define.journey
+                    ? `<div class="two-col"><div><h3>Who we're designing for</h3><p>${t(p.define.persona)}</p></div><div><h3>Where it breaks down</h3><p>${t(p.define.journey)}</p></div></div>`
+                    : ""
+                }
                 ${
                   p.define.painPoints
                     ? `<h3>${esc(p.define.painPointsHeading || "Common pain points")}</h3><ol class="insights">${p.define.painPoints.map((x) => `<li>${t(x)}</li>`).join("")}</ol>`
@@ -350,6 +355,13 @@
                 ${(p.define.lists || [])
                   .map((l) => `<h3>${esc(l.heading)}</h3><ol class="insights">${l.items.map((x) => `<li>${t(x)}</li>`).join("")}</ol>`)
                   .join("")}
+                ${
+                  p.define.map
+                    ? `<h3>${esc(p.define.map.heading)}</h3><div class="goal-map">${p.define.map.rows
+                        .map((r) => `<div class="gm-row"><b>${esc(r.tag)}</b><div><p class="gm-need">${t(r.need)}</p><p class="gm-do">${t(r.design)}</p></div><span class="gm-where">${esc(r.where)}</span></div>`)
+                        .join("")}</div>`
+                    : ""
+                }
                 ${imgs(p.define.image)}
               </section>
 
@@ -376,8 +388,25 @@
               <section id="execution" class="frame">
                 ${frameHead(6, "Design execution")}
                 <p>${t(p.execution.summary)}</p>
+${(p.execution.goals || [])
+                  .map(
+                    (g) => `<article class="goal-card">
+                      <header class="goal-head"><span class="frame-no">${esc(g.tag)}</span><p class="goal-statement">${esc(g.statement)}</p></header>
+                      <p class="goal-why">${t(g.why)}</p>
+                      ${g.before && g.after ? `<div class="compare-pair"><div class="cmp-col"><p class="cmp-tag">Before</p>${img(g.before)}</div><div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p>${img(g.after)}</div></div>` : ""}
+                      ${g.images ? `<div class="goal-shots">${imgs(g.images)}</div>` : ""}
+                    </article>`
+                  )
+                  .join("")}
                 <div class="shots">${p.execution.images.map((im) => img(im)).join("")}</div>
-${
+                ${
+                  p.execution.compare
+                    ? `<h3>Before and after</h3>${p.execution.compare
+                        .map((c) => `<div class="compare"><p class="compare-label">${esc(c.label)}</p><div class="compare-pair">${img(c.before)}${img(c.after)}</div></div>`)
+                        .join("")}`
+                    : ""
+                }
+                ${
                   p.execution.palette
                     ? `<h3>Brand system</h3>
                 <ul class="swatches" aria-label="Brand colors">${p.execution.palette
