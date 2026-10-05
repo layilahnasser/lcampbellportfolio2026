@@ -17,8 +17,8 @@ window.PORTFOLIO = {
     firstName: "Layilah",
     lastName: "Campbell",
     title: "UX Research & Design", // shows under your name in the neon logo
-    heroTitle: "From Recruiting at Google, Adobe & Meta to UX.", // big cyan line on the home page
-    headline: "I spent seven years finding the people who build technology. Now I research people's needs and turn insights into better product experiences.",
+    heroTitle: "From Big Tech Recruiting to UX.", // big cyan line on the home page
+    headline: "Seven years recruiting at Google, Adobe & Meta shaped how I understand people. Now I bring that perspective to research and design.",
     // Text on the player card (home page + About)
     school: "University of Michigan",
     degreeLine: "Master's Candidate - School of Information",
