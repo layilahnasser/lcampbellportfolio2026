@@ -165,403 +165,134 @@ window.PORTFOLIO = {
   ---------------------------------------------------------------------- */
   projects: [
     {
-      id: "usda-acir",
-      title: "USDA ACIR Portal",
-      subtitle: "Search, navigation & mobile usability",
-      focus: "Usability research",
-      approach: "Evaluate the portal experience",
-      summary: "Helping 360,000+ USDA ACIR users navigate complex agricultural import requirements with greater speed, clarity, and confidence.",
-      ballColor: "#ff2fb4",
+      id: "milk-and-froth",
+      title: "Milk and Froth Redesign",
+      subtitle: "A Detroit-born ice cream brand, reimagined online",
+      focus: "Web design",
+      approach: "Redesigned the site to spotlight flavors, help people find a shop, and browse by image",
+      summary: "A website redesign concept for a Detroit-born ice cream brand, focused on showcasing distinctive flavors, improving location discovery, and creating a more visual browsing experience.",
+      ballColor: "#ff5a3c",
       year: "2026",
-      tags: ["Usability testing", "Interviews", "Surveys"],
-      role: "UX Researcher",
-      team: "4 USDA stakeholders, weekly check-ins",
-      timeline: "Jan – Apr 2026",
-      tools: "Usability studies, interviews, surveys",
-      hero: { src: "", caption: "TODO: Hero image — portal screens or research artifact" },
+      tags: ["Web design", "Competitive analysis", "Design system"],
+      role: "UX Designer",
+      team: "Two designers: Micaela Ciambrone & Layilah Campbell",
+      timeline: "Jan – Mar 2026",
+      tools: "Competitive analysis, wireframes, component library, brand and type system",
+      hero: { src: "assets/img/milk-homepage.jpg", caption: "The redesigned homepage: an image-forward hero for the season's flavors." },
 
       problem: {
         statement:
-          "How can importers, brokers, and government officials find — and feel confident interpreting — what they need in USDA's ACIR portal?",
+          "How can Milk & Froth's website do justice to small-batch ice cream made from scratch, with flavors that stand out, shops that are easy to find, and a more visual way to browse?",
         context:
-          "ACIR serves 360,000+ users working through complex agricultural import requirements. Working weekly with 4 USDA stakeholders, I looked for usability pain points in navigation, search filters, and help resources, with a focus on search functionality and the mobile experience.",
+          "Milk & Froth is a Detroit-born ice cream brand focused on small-batch ice creams made with real ingredients. Every flavor is made from scratch in the Eastern Market kitchen with fresh dairy, premium ingredients and in-house pasteurization, and the shop's bold red interior reflects an energetic, indulgent approach. We started by reviewing the current site and comparing it with other ice cream brands.",
         goal:
-          "Understand where search, navigation, and help resources break down for each group, and recommend changes that improve findability and interpretive confidence."
-      },
-      research: {
-        summary: "A mixed-methods study that combined testing, interviews and surveys across three user groups.",
-        methods: [
-          { name: "Usability testing", detail: "Led sessions with 10+ employees nationwide to identify interaction challenges and workflow inefficiencies." },
-          { name: "User interviews", detail: "15+ importers, brokers, and government officials evaluating search functionality and the mobile experience." },
-          { name: "Surveys", detail: "Designed and deployed surveys to assess findability and interpretive confidence across users." },
-          { name: "Stakeholder check-ins", detail: "Weekly with 4 USDA stakeholders on navigation, search filters, and help resources." }
-        ],
-        insights: [
-          "TODO: Key insight #1 — what surprised you? Add a quote or number.",
-          "TODO: Key insight #2",
-          "TODO: Key insight #3"
-        ],
-        image: { src: "", caption: "TODO: Affinity map or research synthesis" }
-      },
-      define: {
-        persona: "TODO: Primary user (e.g. an importer or broker) — goals and frustrations.",
-        journey: "TODO: The moment in the journey where search or help breaks down.",
-        image: { src: "", caption: "TODO: Persona or journey map" }
-      },
-      ideate: {
-        summary: "TODO: How you turned findings into recommendations for search filters, navigation and help content.",
-        image: { src: "", caption: "TODO: Sketches or recommendation map" }
-      },
-      iterations: [
-        { version: "Round 1", change: "TODO: What you tested first.", feedback: "TODO: What participants struggled with.", image: { src: "", caption: "TODO: Round 1 artifact" } },
-        { version: "Round 2", change: "TODO: What you changed or recommended.", feedback: "TODO: What improved.", image: { src: "", caption: "TODO: Round 2 artifact" } }
-      ],
-      execution: {
-        summary: "TODO: Walk through your final deliverable (report, readout, prototype).",
-        decisions: [
-          { title: "TODO: Recommendation #1", why: "TODO: The evidence behind it." },
-          { title: "TODO: Recommendation #2", why: "TODO: The evidence behind it." }
-        ],
-        images: [{ src: "", caption: "TODO: Final deliverable" }],
-        prototypeUrl: ""
-      },
-      outcome: {
-        results: [
-          { value: "10+", label: "employees in usability tests" },
-          { value: "15+", label: "stakeholder interviews" },
-          { value: "360,000+", label: "ACIR users the portal serves" }
-        ],
-        reflection: "TODO: What you learned and what you'd do next."
-      }
-    },
-
-    {
-      id: "instructure-elevated",
-      title: "Instructure ElevateED",
-      subtitle: "Exploring AI in education",
-      focus: "Product strategy",
-      approach: "Build the case for an education initiative",
-      summary: "Research that built the case for an AI-powered initiative advancing inclusive, alternative education pathways.",
-      ballColor: "#27d9f5",
-      year: "2025",
-      tags: ["Stakeholder interviews", "Affinity mapping", "Wireframes"],
-      role: "UX Researcher",
-      team: "Researchers, designers and organization stakeholders",
-      timeline: "Aug – Dec 2025",
-      tools: "Interviews, affinity walls, prototypes, high-fidelity wireframes",
-      hero: { src: "", caption: "TODO: Hero image — ElevateED wireframes" },
-
-      problem: {
-        statement:
-          "Non-traditional learners face barriers in access, credentialing, and experience — and Instructure needed evidence to expand into inclusive, alternative education pathways.",
-        context:
-          "The EdTech landscape is evolving quickly. UX research was used to build the case for ElevateED, a strategic AI-powered initiative for Instructure.",
-        goal: "Identify the barriers non-traditional learners face and turn them into design recommendations aligned with Instructure's long-term strategy."
-      },
-      research: {
-        summary: "Stakeholder interviews and qualitative synthesis, built up with a cross-functional team.",
-        methods: [
-          { name: "Stakeholder interviews", detail: "Conducted interviews and analyzed needs across the organization." },
-          { name: "Qualitative synthesis", detail: "Synthesized data to identify barriers in access, credentialing, and user experience." },
-          { name: "Affinity walls", detail: "Built with researchers, designers and stakeholders to surface patterns." }
-        ],
-        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
-        image: { src: "", caption: "TODO: Affinity wall" }
-      },
-      define: {
-        persona: "TODO: Non-traditional learner persona — goals and barriers.",
-        journey: "TODO: The step in the journey where access or credentialing breaks down.",
-        image: { src: "", caption: "TODO: Persona or journey map" }
-      },
-      ideate: {
-        summary: "Prototypes and actionable design recommendations, developed cross-functionally. TODO: add how you narrowed down ideas.",
-        image: { src: "", caption: "TODO: Prototype sketches" }
-      },
-      iterations: [
-        { version: "Prototype", change: "TODO: What the first prototype explored.", feedback: "TODO: Feedback from stakeholders.", image: { src: "", caption: "TODO: Early prototype" } },
-        { version: "High-fidelity wireframes", change: "Final high-fidelity wireframes presented to all stakeholders.", feedback: "TODO: How stakeholders responded.", image: { src: "", caption: "TODO: High-fidelity wireframes" } }
-      ],
-      execution: {
-        summary: "Presented final deliverables, including high-fidelity wireframes, to drive alignment with Instructure's long-term strategic goals. Recommendations were shared with over 200 students and corporate employees.",
-        decisions: [
-          { title: "TODO: Design decision #1", why: "TODO: The research behind it." },
-          { title: "TODO: Design decision #2", why: "TODO: The research behind it." }
-        ],
-        images: [{ src: "", caption: "TODO: Final wireframes" }],
-        prototypeUrl: ""
-      },
-      outcome: {
-        results: [
-          { value: "200+", label: "students & employees presented to" },
-          { value: "Hi-fi", label: "wireframes delivered" }
-        ],
-        reflection: "TODO: What you learned and what you'd do differently."
-      }
-    },
-
-    {
-      id: "cancer-nutrition-app",
-      title: "AI-Powered Cancer Nutrition App",
-      subtitle: "Meal planning for cancer patients",
-      focus: "Health & UX",
-      approach: "Explore an AI-driven meal planning app",
-      summary: "Empowering caregivers and cancer patients with compassionate, AI-driven nutrition and treatment-based tools.",
-      ballColor: "#ffb020",
-      year: "2025",
-      tags: ["Healthcare", "Surveys", "Personas", "AI"],
-      role: "UX Designer & Researcher",
-      team: "Analysts, information architects and product managers",
-      timeline: "Aug – Nov 2025",
-      tools: "Surveys, interviews, personas, journey mapping, RICE prioritization, wireframes, prototypes",
-      hero: { src: "assets/img/nutrition-app-home.png", fit: "phone", caption: "The app's home screen: a warm welcome, a daily tip, and one-tap access to nutrition support." },
-
-      problem: {
-        statement:
-          "Caregivers and cancer patients often lack access to a specialized nutrition support system that provides personalized AI-driven guidance, community-driven meal planning, and professional 24/7 oncology support.",
-        context:
-          "Fragmented resources force families to navigate conflicting advice, unsafe food choices, and exhausting meal preparation without clear guidance. Caregivers, already under emotional and logistical strain, struggle to provide safe meals, while patients face serious risks from mismanaged nutrition, including medication interactions and hospital readmissions.",
-        goal:
-          "Design a compassionate, cancer-focused nutrition platform that lightens the daily burden: safe and personalized, supported by community, and available at any hour. TODO: add one line on your own contribution (e.g. which parts of the research and design you led)."
+          "Redesign the digital experience around three goals, listed below, so the website feels as vibrant and handcrafted as the shop."
       },
 
       research: {
         summary:
-          "Our first step was an online survey, distributed across several relevant communities. Within a few days we had 50 responses, and they helped us pinpoint five main pain points that guided every step after.",
+          "We audited the current Milk & Froth site, then compared four ice cream brands, two local and two nationwide, across eight site features: online ordering, mobile app, search bar, store locator, 404 pages, product catalog, menu navigation bar and contact us.",
         methods: [
+          { name: "Current-site review", detail: "Looked at the live homepage and About page to see how the brand, flavors and story were presented." },
+          { name: "Competitive analysis", detail: "Compared Milkshake Factory, Michigan Creamery, Jeni's and Van Leeuwen across eight features." },
+          { name: "TODO: User research", detail: "TODO: Any interviews, surveys or usability tests you ran (and how many people)." }
+        ],
+        insights: [
+          "All four brands offered online ordering and a store locator, so both are expected features rather than differentiators.",
+          "Only one of the four, Jeni's, had a mobile app, and one local brand had no search bar, so there was room to stand out on mobile and search.",
+          "TODO: What the current site did well or poorly for flavors, shops and browsing."
+        ],
+        image: [
+          { src: "assets/img/milk-competitive.jpg", caption: "Competitive analysis: two local and two nationwide brands across eight features." },
+          { src: "assets/img/milk-current-home.jpg", caption: "Starting point: the current homepage." },
+          { src: "assets/img/milk-current-about.jpg", caption: "Starting point: the current About page." }
+        ]
+      },
+
+      define: {
+        persona: "TODO: Primary visitor, such as a flavor-curious local or a gift buyer. Add goals and frustrations.",
+        journey: "TODO: Where finding a flavor or a shop breaks down on the current site.",
+        lists: [
           {
-            name: "Mixed-methods survey (50 responses)",
-            detail: "Open-ended questions, multiple-choice items, and ordinal scale prompts, capturing both quantitative patterns (like how often caregivers feel stressed, and their confidence levels) and qualitative stories about nutrition challenges, emotional strain and unmet needs."
-          },
-          {
-            name: "Customer journey mapping",
-            detail: "Five caregiving stages (Aware, Search, Plan & Prep, Check & Verify, Eat & Reflect) to surface emotional and logistical pain points and find opportunities to improve trust, usability and long-term engagement."
-          },
-          {
-            name: "User interviews",
-            detail: "TODO: how many people you spoke with, who they were, and what you asked (your resume lists interviews for this project)."
-          },
-          {
-            name: "Usability testing",
-            detail: "TODO: how many participants, what you tested (low-fi or high-fi), and the main finding."
+            heading: "Three goals",
+            items: [
+              "Goal 1: Promote Milk & Froth's distinctive flavor profiles and handcrafted ice cream process.",
+              "Goal 2: Design a location-focused feature that highlights Milk & Froth storefronts across Michigan, improving store discoverability and helping users quickly find relevant location information.",
+              "Goal 3: Design a more intuitive, image-forward website that highlights products visually."
+            ]
           }
         ],
-        insights: [
-          "88% of caregivers report moderate to severe exhaustion.",
-          "56% of cancer patients feel confused about the conflicting nutrition information they're given.",
-          "44% of caregivers report a high level of stress due to unmet needs."
-        ],
-        image: [
-          { src: "assets/img/nutrition-survey.png", caption: "The Cancer Care Planning Survey, run as a University of Michigan research study." },
-          { src: "assets/img/nutrition-quotes.png", caption: "In their words: pain points from caregivers and cancer patients." }
-        ]
-      },
-
-      define: {
-        persona:
-          "Daniel Morris, The Caregiver: 45, married with three kids, a tax manager in Detroit, MI. He worries about what food to cook for his dad (the patient) given his medication needs, and he's exhausted from balancing caregiving, work and family. His wishlist: a centralized dashboard, AI-powered assistance, cancer-specific resources, and simple communication tools.",
-        journey:
-          "Mapping the journey showed where it breaks: conflicting nutrition advice and unclear first steps (Aware); fear of choosing unsafe foods (Search); the daily burden of meal prep with limited help (Plan & Prep); no simple, reliable way to check food against medications (Check & Verify); and no one to ask at odd hours, leaving emotional and decision fatigue.",
-        painPointsHeading: "Five common pain points from the survey",
-        painPoints: [
-          "Nutrition confusion and safety risks: caregivers and patients struggled with conflicting information and unsafe food choices.",
-          "Emotional exhaustion and lack of personal time: caregivers felt isolated and overwhelmed.",
-          "Meal preparation burden: daily cooking and diet restrictions were mentally and physically draining.",
-          "Financial strain: the costs of care and meal planning added stress.",
-          "Need for clearer communication from healthcare providers: caregivers wanted upfront, practical guidance."
-        ],
-        image: [
-          { src: "assets/img/nutrition-persona.png", caption: "Primary persona: Daniel, the caregiver." },
-          { src: "assets/img/nutrition-journey-map.png", caption: "Cancer patient and caregiver journey map across five stages: goals, emotions, pain points and opportunities." }
-        ]
+        image: { src: "", caption: "TODO: Persona or journey map, if you made one" }
       },
 
       ideate: {
         summary:
-          "Persona hypotheses, interview questions and problem statements went onto a shared team board, along with candidate features that we scored with RICE (Reach, Impact, Confidence, Effort). The journey map's opportunities fed that list: personalized onboarding, an AI grocery list builder, a community meal train, meal delivery integrations, a food scanner with medication-compatibility checks, and a 24/7 AI assistant with oncology dietitian access. TODO: add two lines on how the team narrowed to the final feature set, and which idea you advocated for.",
-        image: [
-          { src: "", caption: "TODO: Ideation and RICE prioritization board. Save your board screenshot as assets/img/nutrition-board.jpg and set src to that path." },
-          { src: "", caption: "TODO: Your early sketches. Photograph or scan them, save as assets/img/nutrition-sketches.jpg, and set src." }
-        ]
+          "Wireframes mapped five pages and the content each one needs. Home: a hero, a creamy banner, best sellers, a marquee scroller, a customer quote, Scoop Shops (Ann Arbor and Detroit) and a Who We Are section. Menu: an All Flavors header, filter chips, a dripping-ice-cream banner and product cards. About Us: Who Is Milk & Froth, rotating images and process text. Contact Us: customer service, FAQs, partnerships, wholesale, find a shop, and a message form. Plus an e-commerce grid. TODO: add how you chose this structure.",
+        image: [{ src: "", caption: "TODO: Your wireframes (Home, Menu, About, Contact, E-commerce). Save as assets/img/milk-wireframes.jpg and set src." }]
       },
 
       iterations: [
         {
-          version: "Round 1 — Sketches & low-fidelity",
-          change: "TODO: What the first sketches or wireframes explored (for example the home screen, the nutrition hub, or the scanner).",
-          feedback: "TODO: What testing or critique showed (for example which screens confused people), and what you changed.",
-          image: { src: "", caption: "TODO: Low-fidelity wireframes. Save as assets/img/nutrition-lowfi.jpg and set src." }
+          version: "Round 1: Wireframes",
+          change: "Low-fidelity layouts for Home, Menu, About Us, Contact Us and E-commerce, with a shared header and footer (shop, company, customer service and email sign-up).",
+          feedback: "TODO: What feedback or testing showed, and what you changed.",
+          image: { src: "", caption: "TODO: Wireframes. Same file as above, or crop one page." }
         },
         {
-          version: "Round 2 — High-fidelity wireframes",
-          change: "Six core screens (Home, Nutrition Support, AI Grocery List Builder, AI Assistant, Partner Meal Delivery and Meal Train), tied together by a persistent bottom navigation: Home, Nutrition, Scanner, Dietitian, Profile.",
-          feedback: "TODO: What usability testing showed on the high-fidelity version, and the final changes it led to.",
-          image: { src: "", caption: "TODO: The six high-fidelity screens. Save your screenshot as assets/img/nutrition-wireframes.jpg and set src." }
+          version: "Round 2: Brand system & components",
+          change: "Defined the brand colors and type, then built a component library: primary, secondary and tertiary buttons in three sizes, each with default, hover, selected, focused and disabled states; navigation links; add-to-cart and quantity controls; and product cards in list, grid and quick-add layouts. Navigation (a desktop bar and a mobile menu with an Order Now button), the product, item and footer pages, and a shopping cart were designed in both a light (blush) and a dark (cocoa) theme. The cart shows the items, a \"buy 5, get one free\" nudge (\"Add 3 more pints to checkout\"), a gift-note option and a clear checkout button, on desktop and mobile.",
+          feedback: "TODO: What testing or review showed on the high-fidelity version.",
+          image: { src: "", caption: "TODO: Component library screenshot. Save as assets/img/milk-components.jpg and set src." }
         }
       ],
 
       execution: {
         summary:
-          "A compassionate platform designed to lighten the daily burdens faced by cancer patients and caregivers through smart, cancer-focused nutrition tools, built around features that matter in moments of vulnerability. Each feature answers a specific pain point from the journey map.",
+          "Each of the three goals became a concrete part of the site, built on the brand's red-and-cream look.",
+        palette: [
+          { name: "Roasted Strawberry", hex: "#E02B00" },
+          { name: "Blushed Froth", hex: "#FFD6D4" },
+          { name: "Midnight Cocoa", hex: "#000000" },
+          { name: "Sweet Cream", hex: "#FFFFFF" }
+        ],
+        typefaces: [
+          { role: "Primary typeface", name: "Nunito Sans" },
+          { role: "Secondary typeface", name: "Montserrat" }
+        ],
         decisions: [
           {
-            title: "AI Grocery List Builder",
-            why: "Provides personalized, safe shopping lists that adapt to individual treatment needs. Diagnosis and treatment type are optional, and symptoms like nausea or loss of appetite are one-tap choices, so a tired caregiver isn't typing. It answers the Search-stage fear of choosing unsafe foods."
+            title: "Goal 1: Flavors and the craft",
+            why: "The product page leads with a chocolate-drip banner and an \"Our Flavors\" grid of pints with a name, short description, price and add-to-cart. Filter chips (All Flavors, Most Popular, Seasonal Favorites, Dairy-Free, Gluten-Free) help people narrow down quickly. Each flavor has an item page with reviews, guaranteed frozen delivery, a \"real ingredients\" note and \"you may also like\" suggestions. The product and item pages were designed in horizontal (desktop) and vertical (mobile) views, each in a light and a dark theme."
           },
           {
-            title: "Community Meal Train",
-            why: "Lets families and friends coordinate meal support, with dietary notes, allergies and diagnosis kept in one place. It turns concern into meaningful action so no one feels alone, and eases the Plan & Prep burden and caregiver burnout."
+            title: "Goal 2: Finding a shop",
+            why: "A dedicated Find Pints page, headed \"Michigan's Sweetest Stops,\" invites people to find a Milk & Froth near them with a search box, and groups locations by city so people can quickly find relevant location information."
           },
           {
-            title: "Meal Delivery Partnerships",
-            why: "Gives access to nutritious, cancer-friendly meals delivered to the door. Filters such as Low Sodium and High Protein, plus an AI recommendation based on medications and treatment plan, reduce meal-prep stress during difficult times."
+            title: "Goal 3: Image-forward browsing",
+            why: "The homepage opens on a full-bleed strawberry hero with \"Sweet, Creamy & Back in Season\" and uses the pints and flavor photography as the main navigation cue, so the products are seen before they are read about."
           },
           {
-            title: "AI Food Scanner",
-            why: "Checks food and medication compatibility in seconds, so users can make safer choices and discover healthier options without anxiety. It addresses the Check & Verify gap: no simple, reliable point of truth."
-          },
-          {
-            title: "24/7 AI Assistant and dietitian access",
-            why: "Quick-question shortcuts and a path to an oncology dietitian mean expert advice is always within reach, at any hour, providing both reassurance and evidence-based support. It answers 'no one is available at odd hours'."
-          },
-          {
-            title: "A calm, warm visual language",
-            why: "TODO: Explain the choice of soft sage greens, warm cream and coral accents, and generous spacing, and why they suit people who are stressed and tired."
+            title: "Brand, type and color",
+            why: "TODO: Why Roasted Strawberry and Blushed Froth with Nunito Sans and Montserrat suit the playful, indulgent brand, and how the type scale adapts across desktop, tablet and mobile."
           }
         ],
-        images: [{ src: "", caption: "TODO: The final high-fidelity screens. Use the same assets/img/nutrition-wireframes.jpg as above, or crop individual screens." }],
+        images: [
+          { src: "assets/img/milk-locations.jpg", caption: "Goal 2: Find Pints, the location-focused page." },
+          { src: "assets/img/milk-homepage.jpg", caption: "Goal 3: the image-forward homepage." },
+          { src: "", caption: "TODO: Goal 1 product page. Save your product page screenshot as assets/img/milk-product.jpg and set src." }
+        ],
         prototypeUrl: ""
       },
 
       outcome: {
         results: [
-          { value: "50", label: "survey responses in a few days" },
-          { value: "88%", label: "of caregivers report moderate to severe exhaustion" },
-          { value: "5", label: "journey stages mapped" },
-          { value: "5", label: "core features, each tied to a pain point" }
+          { value: "3", label: "design goals, each with a feature" },
+          { value: "4", label: "brands compared" },
+          { value: "8", label: "features benchmarked" },
+          { value: "5", label: "pages designed" }
         ],
-        reflection: "TODO: What you learned about designing for health contexts, and what you'd do next (for example, testing with real caregivers or validating the food scanner's safety rules with dietitians)."
-      }
-    },
-
-    {
-      id: "root-insurance",
-      title: "Root Insurance",
-      subtitle: "Retention research for 500,000+ policyholders",
-      focus: "Retention research",
-      approach: "Find the drivers of churn and retention",
-      summary: "Improving retention for 500,000+ policyholders while empowering CS agents with the tools and insights to better support customers.",
-      ballColor: "#ff7a45",
-      year: "2026",
-      tags: ["Mixed-methods", "Journey maps", "Retention"],
-      role: "UX Research Intern",
-      team: "Cross-functional stakeholders, including the Director of Design and SVP of Product",
-      timeline: "Jun – Aug 2026",
-      tools: "User Interviews, Lookback, Figma",
-      hero: { src: "", caption: "TODO: Hero image — journey map or retention concepts" },
-
-      problem: {
-        statement: "How can Root improve retention for 500,000+ policyholders while giving customer-service agents better tools and insights to support them?",
-        context: "The work centered on retention, and on equipping CS agents with the tools and insights to better support customers.",
-        goal: "Identify churn drivers and turn them into research-backed retention opportunities for Product."
-      },
-      research: {
-        summary: "An end-to-end mixed-methods research strategy across 18 sessions.",
-        methods: [
-          { name: "Internal stakeholder interviews", detail: "12 interviews with internal stakeholders." },
-          { name: "Competitor policyholder interviews", detail: "6 interviews across key competitor cohorts, run through User Interviews and Lookback." },
-          { name: "Thematic coding & affinity mapping", detail: "Evaluated Lookback session recordings to surface patterns." }
-        ],
-        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
-        image: { src: "", caption: "TODO: Affinity map" }
-      },
-      define: {
-        persona: "DIG-based personas built from the research. TODO: name the primary persona.",
-        journey: "High-fidelity customer journey maps. TODO: name the moment where retention breaks down.",
-        image: { src: "", caption: "TODO: Journey map or persona" }
-      },
-      ideate: {
-        summary: "Translated research insights into 15 net-new retention concepts in Figma, each addressing an identified churn driver.",
-        image: { src: "", caption: "TODO: Retention concepts" }
-      },
-      iterations: [
-        { version: "Synthesis", change: "Built journey maps, personas and a prioritized Retention Levers Matrix from the coded session recordings.", feedback: "TODO: What leadership asked for or pushed back on.", image: { src: "", caption: "TODO: Retention Levers Matrix" } },
-        { version: "Concepts", change: "Developed high-fidelity experience recommendations in Figma.", feedback: "TODO: How Product stakeholders responded.", image: { src: "", caption: "TODO: High-fidelity concepts" } }
-      ],
-      execution: {
-        summary: "Delivered three executive research readouts to cross-functional stakeholders, including the Director of Design and SVP of Product, presenting progress, emerging insights, and strategic recommendations to align leadership on retention opportunities and product direction.",
-        decisions: [
-          { title: "TODO: Recommendation #1", why: "TODO: The evidence behind it." },
-          { title: "TODO: Recommendation #2", why: "TODO: The evidence behind it." }
-        ],
-        images: [{ src: "", caption: "TODO: Final readout slide" }],
-        prototypeUrl: ""
-      },
-      outcome: {
-        results: [
-          { value: "18", label: "research sessions" },
-          { value: "3", label: "executive readouts" },
-          { value: "15", label: "net-new retention concepts" }
-        ],
-        reflection: "TODO: What you learned and what you'd do next."
-      }
-    },
-
-    {
-      id: "milk-and-froth",
-      title: "Milk and Froth Redesign",
-      subtitle: "A Detroit-born ice cream brand, reimagined online",
-      focus: "Web redesign",
-      approach: "Showcase flavors and improve location discovery",
-      summary: "A website redesign concept for a Detroit-born ice cream brand, focused on showcasing distinctive flavors, improving location discovery, and creating a more visual browsing experience.",
-      ballColor: "#b388ff",
-      year: "",
-      tags: ["Web redesign", "Concept"],
-      role: "TODO: your role",
-      team: "TODO: team",
-      timeline: "TODO: timeline",
-      tools: "TODO: tools",
-      hero: { src: "", caption: "TODO: Hero image — redesigned homepage" },
-
-      problem: {
-        statement: "How might a Detroit-born ice cream brand showcase its distinctive flavors, make its locations easier to find, and offer a more visual browsing experience?",
-        context: "TODO: How you identified these gaps on the current site.",
-        goal: "Redesign the website around three goals: distinctive flavors, location discovery, and visual browsing."
-      },
-      research: {
-        summary: "TODO: What you looked at and how.",
-        methods: [
-          { name: "TODO: Method", detail: "TODO: Detail." },
-          { name: "TODO: Method", detail: "TODO: Detail." }
-        ],
-        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
-        image: { src: "", caption: "TODO: Research synthesis" }
-      },
-      define: {
-        persona: "TODO: Primary visitor — goals and frustrations.",
-        journey: "TODO: Where finding a flavor or location breaks down.",
-        image: { src: "", caption: "TODO: Persona or journey" }
-      },
-      ideate: {
-        summary: "TODO: How you explored layouts for flavors, locations and browsing.",
-        image: { src: "", caption: "TODO: Sketches or wireframes" }
-      },
-      iterations: [
-        { version: "V1", change: "TODO: What you built first.", feedback: "TODO: What you learned.", image: { src: "", caption: "TODO: V1" } },
-        { version: "V2", change: "TODO: What you changed.", feedback: "TODO: What improved.", image: { src: "", caption: "TODO: V2" } }
-      ],
-      execution: {
-        summary: "TODO: Walk through the redesigned site.",
-        decisions: [
-          { title: "Showcasing flavors", why: "TODO: The design choice and why." },
-          { title: "Location discovery", why: "TODO: The design choice and why." },
-          { title: "Visual browsing", why: "TODO: The design choice and why." }
-        ],
-        images: [{ src: "", caption: "TODO: Final screens" }],
-        prototypeUrl: ""
-      },
-      outcome: {
-        results: [{ value: "3", label: "redesign goals" }],
-        reflection: "TODO: What you learned and what you'd do next."
+        reflection: "TODO: What you learned about designing for a food brand, and what you'd do next (for example, testing the store locator with real customers)."
       }
     },
 
@@ -569,8 +300,8 @@ window.PORTFOLIO = {
       id: "crown-code",
       title: "Crown Code",
       subtitle: "Interview prep for pageant contestants",
-      focus: "Mobile app design",
-      approach: "Bring interview practice and prep into one place",
+      focus: "Mobile design",
+      approach: "Designed a prep app that brings flashcards, reminders and a readiness dashboard into one place",
       summary: "A mobile app that brings interview flashcards, text-based reminders and a full prep dashboard into one place, helping pageant contestants build a consistent preparation routine.",
       ballColor: "#c6f24a",
       year: "2026",
@@ -710,6 +441,348 @@ window.PORTFOLIO = {
           { value: "1", label: "place for all of pageant prep" }
         ],
         reflection: "TODO: What you learned about designing a focused, motivating prep tool, and what you'd do next (for example usability testing with contestants, or building the answer-feedback flow)."
+      }
+    },
+
+    {
+      id: "root-insurance",
+      title: "Root Insurance",
+      subtitle: "Retention research for 500,000+ policyholders",
+      focus: "Retention research",
+      approach: "Interviewed customers and stakeholders to find churn drivers, then turned them into 15 retention concepts",
+      summary: "Improving retention for 500,000+ policyholders while empowering CS agents with the tools and insights to better support customers.",
+      ballColor: "#ff7a45",
+      year: "2026",
+      tags: ["Mixed-methods", "Journey maps", "Retention"],
+      role: "UX Research Intern",
+      team: "Cross-functional stakeholders, including the Director of Design and SVP of Product",
+      timeline: "Jun – Aug 2026",
+      tools: "User Interviews, Lookback, Figma",
+      hero: { src: "", caption: "TODO: Hero image — journey map or retention concepts" },
+
+      problem: {
+        statement: "How can Root improve retention for 500,000+ policyholders while giving customer-service agents better tools and insights to support them?",
+        context: "The work centered on retention, and on equipping CS agents with the tools and insights to better support customers.",
+        goal: "Identify churn drivers and turn them into research-backed retention opportunities for Product."
+      },
+      research: {
+        summary: "An end-to-end mixed-methods research strategy across 18 sessions.",
+        methods: [
+          { name: "Internal stakeholder interviews", detail: "12 interviews with internal stakeholders." },
+          { name: "Competitor policyholder interviews", detail: "6 interviews across key competitor cohorts, run through User Interviews and Lookback." },
+          { name: "Thematic coding & affinity mapping", detail: "Evaluated Lookback session recordings to surface patterns." }
+        ],
+        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
+        image: { src: "", caption: "TODO: Affinity map" }
+      },
+      define: {
+        persona: "DIG-based personas built from the research. TODO: name the primary persona.",
+        journey: "High-fidelity customer journey maps. TODO: name the moment where retention breaks down.",
+        image: { src: "", caption: "TODO: Journey map or persona" }
+      },
+      ideate: {
+        summary: "Translated research insights into 15 net-new retention concepts in Figma, each addressing an identified churn driver.",
+        image: { src: "", caption: "TODO: Retention concepts" }
+      },
+      iterations: [
+        { version: "Synthesis", change: "Built journey maps, personas and a prioritized Retention Levers Matrix from the coded session recordings.", feedback: "TODO: What leadership asked for or pushed back on.", image: { src: "", caption: "TODO: Retention Levers Matrix" } },
+        { version: "Concepts", change: "Developed high-fidelity experience recommendations in Figma.", feedback: "TODO: How Product stakeholders responded.", image: { src: "", caption: "TODO: High-fidelity concepts" } }
+      ],
+      execution: {
+        summary: "Delivered three executive research readouts to cross-functional stakeholders, including the Director of Design and SVP of Product, presenting progress, emerging insights, and strategic recommendations to align leadership on retention opportunities and product direction.",
+        decisions: [
+          { title: "TODO: Recommendation #1", why: "TODO: The evidence behind it." },
+          { title: "TODO: Recommendation #2", why: "TODO: The evidence behind it." }
+        ],
+        images: [{ src: "", caption: "TODO: Final readout slide" }],
+        prototypeUrl: ""
+      },
+      outcome: {
+        results: [
+          { value: "18", label: "research sessions" },
+          { value: "3", label: "executive readouts" },
+          { value: "15", label: "net-new retention concepts" }
+        ],
+        reflection: "TODO: What you learned and what you'd do next."
+      }
+    },
+
+    {
+      id: "cancer-nutrition-app",
+      title: "AI-Powered Cancer Nutrition App",
+      subtitle: "Meal planning for cancer patients",
+      focus: "Health UX design",
+      approach: "Surveyed 50 caregivers and patients, then designed AI tools for safer, easier meals",
+      summary: "Empowering caregivers and cancer patients with compassionate, AI-driven nutrition and treatment-based tools.",
+      ballColor: "#ffb020",
+      year: "2025",
+      tags: ["Healthcare", "Surveys", "Personas", "AI"],
+      role: "UX Designer & Researcher",
+      team: "Analysts, information architects and product managers",
+      timeline: "Aug – Nov 2025",
+      tools: "Surveys, interviews, personas, journey mapping, RICE prioritization, wireframes, prototypes",
+      hero: { src: "assets/img/nutrition-app-home.png", fit: "phone", caption: "The app's home screen: a warm welcome, a daily tip, and one-tap access to nutrition support." },
+
+      problem: {
+        statement:
+          "Caregivers and cancer patients often lack access to a specialized nutrition support system that provides personalized AI-driven guidance, community-driven meal planning, and professional 24/7 oncology support.",
+        context:
+          "Fragmented resources force families to navigate conflicting advice, unsafe food choices, and exhausting meal preparation without clear guidance. Caregivers, already under emotional and logistical strain, struggle to provide safe meals, while patients face serious risks from mismanaged nutrition, including medication interactions and hospital readmissions.",
+        goal:
+          "Design a compassionate, cancer-focused nutrition platform that lightens the daily burden: safe and personalized, supported by community, and available at any hour. TODO: add one line on your own contribution (e.g. which parts of the research and design you led)."
+      },
+
+      research: {
+        summary:
+          "Our first step was an online survey, distributed across several relevant communities. Within a few days we had 50 responses, and they helped us pinpoint five main pain points that guided every step after.",
+        methods: [
+          {
+            name: "Mixed-methods survey (50 responses)",
+            detail: "Open-ended questions, multiple-choice items, and ordinal scale prompts, capturing both quantitative patterns (like how often caregivers feel stressed, and their confidence levels) and qualitative stories about nutrition challenges, emotional strain and unmet needs."
+          },
+          {
+            name: "Customer journey mapping",
+            detail: "Five caregiving stages (Aware, Search, Plan & Prep, Check & Verify, Eat & Reflect) to surface emotional and logistical pain points and find opportunities to improve trust, usability and long-term engagement."
+          },
+          {
+            name: "User interviews",
+            detail: "TODO: how many people you spoke with, who they were, and what you asked (your resume lists interviews for this project)."
+          },
+          {
+            name: "Usability testing",
+            detail: "TODO: how many participants, what you tested (low-fi or high-fi), and the main finding."
+          }
+        ],
+        insights: [
+          "88% of caregivers report moderate to severe exhaustion.",
+          "56% of cancer patients feel confused about the conflicting nutrition information they're given.",
+          "44% of caregivers report a high level of stress due to unmet needs."
+        ],
+        image: [
+          { src: "assets/img/nutrition-survey.png", caption: "The Cancer Care Planning Survey, run as a University of Michigan research study." },
+          { src: "assets/img/nutrition-quotes.png", caption: "In their words: pain points from caregivers and cancer patients." }
+        ]
+      },
+
+      define: {
+        persona:
+          "Daniel Morris, The Caregiver: 45, married with three kids, a tax manager in Detroit, MI. He worries about what food to cook for his dad (the patient) given his medication needs, and he's exhausted from balancing caregiving, work and family. His wishlist: a centralized dashboard, AI-powered assistance, cancer-specific resources, and simple communication tools.",
+        journey:
+          "Mapping the journey showed where it breaks: conflicting nutrition advice and unclear first steps (Aware); fear of choosing unsafe foods (Search); the daily burden of meal prep with limited help (Plan & Prep); no simple, reliable way to check food against medications (Check & Verify); and no one to ask at odd hours, leaving emotional and decision fatigue.",
+        painPointsHeading: "Five common pain points from the survey",
+        painPoints: [
+          "Nutrition confusion and safety risks: caregivers and patients struggled with conflicting information and unsafe food choices.",
+          "Emotional exhaustion and lack of personal time: caregivers felt isolated and overwhelmed.",
+          "Meal preparation burden: daily cooking and diet restrictions were mentally and physically draining.",
+          "Financial strain: the costs of care and meal planning added stress.",
+          "Need for clearer communication from healthcare providers: caregivers wanted upfront, practical guidance."
+        ],
+        image: [
+          { src: "assets/img/nutrition-persona.png", caption: "Primary persona: Daniel, the caregiver." },
+          { src: "assets/img/nutrition-journey-map.png", caption: "Cancer patient and caregiver journey map across five stages: goals, emotions, pain points and opportunities." }
+        ]
+      },
+
+      ideate: {
+        summary:
+          "Persona hypotheses, interview questions and problem statements went onto a shared team board, along with candidate features that we scored with RICE (Reach, Impact, Confidence, Effort). The journey map's opportunities fed that list: personalized onboarding, an AI grocery list builder, a community meal train, meal delivery integrations, a food scanner with medication-compatibility checks, and a 24/7 AI assistant with oncology dietitian access. TODO: add two lines on how the team narrowed to the final feature set, and which idea you advocated for.",
+        image: [
+          { src: "", caption: "TODO: Ideation and RICE prioritization board. Save your board screenshot as assets/img/nutrition-board.jpg and set src to that path." },
+          { src: "", caption: "TODO: Your early sketches. Photograph or scan them, save as assets/img/nutrition-sketches.jpg, and set src." }
+        ]
+      },
+
+      iterations: [
+        {
+          version: "Round 1 — Sketches & low-fidelity",
+          change: "TODO: What the first sketches or wireframes explored (for example the home screen, the nutrition hub, or the scanner).",
+          feedback: "TODO: What testing or critique showed (for example which screens confused people), and what you changed.",
+          image: { src: "", caption: "TODO: Low-fidelity wireframes. Save as assets/img/nutrition-lowfi.jpg and set src." }
+        },
+        {
+          version: "Round 2 — High-fidelity wireframes",
+          change: "Six core screens (Home, Nutrition Support, AI Grocery List Builder, AI Assistant, Partner Meal Delivery and Meal Train), tied together by a persistent bottom navigation: Home, Nutrition, Scanner, Dietitian, Profile.",
+          feedback: "TODO: What usability testing showed on the high-fidelity version, and the final changes it led to.",
+          image: { src: "", caption: "TODO: The six high-fidelity screens. Save your screenshot as assets/img/nutrition-wireframes.jpg and set src." }
+        }
+      ],
+
+      execution: {
+        summary:
+          "A compassionate platform designed to lighten the daily burdens faced by cancer patients and caregivers through smart, cancer-focused nutrition tools, built around features that matter in moments of vulnerability. Each feature answers a specific pain point from the journey map.",
+        decisions: [
+          {
+            title: "AI Grocery List Builder",
+            why: "Provides personalized, safe shopping lists that adapt to individual treatment needs. Diagnosis and treatment type are optional, and symptoms like nausea or loss of appetite are one-tap choices, so a tired caregiver isn't typing. It answers the Search-stage fear of choosing unsafe foods."
+          },
+          {
+            title: "Community Meal Train",
+            why: "Lets families and friends coordinate meal support, with dietary notes, allergies and diagnosis kept in one place. It turns concern into meaningful action so no one feels alone, and eases the Plan & Prep burden and caregiver burnout."
+          },
+          {
+            title: "Meal Delivery Partnerships",
+            why: "Gives access to nutritious, cancer-friendly meals delivered to the door. Filters such as Low Sodium and High Protein, plus an AI recommendation based on medications and treatment plan, reduce meal-prep stress during difficult times."
+          },
+          {
+            title: "AI Food Scanner",
+            why: "Checks food and medication compatibility in seconds, so users can make safer choices and discover healthier options without anxiety. It addresses the Check & Verify gap: no simple, reliable point of truth."
+          },
+          {
+            title: "24/7 AI Assistant and dietitian access",
+            why: "Quick-question shortcuts and a path to an oncology dietitian mean expert advice is always within reach, at any hour, providing both reassurance and evidence-based support. It answers 'no one is available at odd hours'."
+          },
+          {
+            title: "A calm, warm visual language",
+            why: "TODO: Explain the choice of soft sage greens, warm cream and coral accents, and generous spacing, and why they suit people who are stressed and tired."
+          }
+        ],
+        images: [{ src: "", caption: "TODO: The final high-fidelity screens. Use the same assets/img/nutrition-wireframes.jpg as above, or crop individual screens." }],
+        prototypeUrl: ""
+      },
+
+      outcome: {
+        results: [
+          { value: "50", label: "survey responses in a few days" },
+          { value: "88%", label: "of caregivers report moderate to severe exhaustion" },
+          { value: "5", label: "journey stages mapped" },
+          { value: "5", label: "core features, each tied to a pain point" }
+        ],
+        reflection: "TODO: What you learned about designing for health contexts, and what you'd do next (for example, testing with real caregivers or validating the food scanner's safety rules with dietitians)."
+      }
+    },
+
+    {
+      id: "usda-acir",
+      title: "USDA ACIR Portal",
+      subtitle: "Search, navigation & mobile usability",
+      focus: "Usability research",
+      approach: "Ran usability tests and interviews to find where search, navigation and mobile use break down",
+      summary: "Helping 360,000+ USDA ACIR users navigate complex agricultural import requirements with greater speed, clarity, and confidence.",
+      ballColor: "#ff2fb4",
+      year: "2026",
+      tags: ["Usability testing", "Interviews", "Surveys"],
+      role: "UX Researcher",
+      team: "4 USDA stakeholders, weekly check-ins",
+      timeline: "Jan – Apr 2026",
+      tools: "Usability studies, interviews, surveys",
+      hero: { src: "", caption: "TODO: Hero image — portal screens or research artifact" },
+
+      problem: {
+        statement:
+          "How can importers, brokers, and government officials find — and feel confident interpreting — what they need in USDA's ACIR portal?",
+        context:
+          "ACIR serves 360,000+ users working through complex agricultural import requirements. Working weekly with 4 USDA stakeholders, I looked for usability pain points in navigation, search filters, and help resources, with a focus on search functionality and the mobile experience.",
+        goal:
+          "Understand where search, navigation, and help resources break down for each group, and recommend changes that improve findability and interpretive confidence."
+      },
+      research: {
+        summary: "A mixed-methods study that combined testing, interviews and surveys across three user groups.",
+        methods: [
+          { name: "Usability testing", detail: "Led sessions with 10+ employees nationwide to identify interaction challenges and workflow inefficiencies." },
+          { name: "User interviews", detail: "15+ importers, brokers, and government officials evaluating search functionality and the mobile experience." },
+          { name: "Surveys", detail: "Designed and deployed surveys to assess findability and interpretive confidence across users." },
+          { name: "Stakeholder check-ins", detail: "Weekly with 4 USDA stakeholders on navigation, search filters, and help resources." }
+        ],
+        insights: [
+          "TODO: Key insight #1 — what surprised you? Add a quote or number.",
+          "TODO: Key insight #2",
+          "TODO: Key insight #3"
+        ],
+        image: { src: "", caption: "TODO: Affinity map or research synthesis" }
+      },
+      define: {
+        persona: "TODO: Primary user (e.g. an importer or broker) — goals and frustrations.",
+        journey: "TODO: The moment in the journey where search or help breaks down.",
+        image: { src: "", caption: "TODO: Persona or journey map" }
+      },
+      ideate: {
+        summary: "TODO: How you turned findings into recommendations for search filters, navigation and help content.",
+        image: { src: "", caption: "TODO: Sketches or recommendation map" }
+      },
+      iterations: [
+        { version: "Round 1", change: "TODO: What you tested first.", feedback: "TODO: What participants struggled with.", image: { src: "", caption: "TODO: Round 1 artifact" } },
+        { version: "Round 2", change: "TODO: What you changed or recommended.", feedback: "TODO: What improved.", image: { src: "", caption: "TODO: Round 2 artifact" } }
+      ],
+      execution: {
+        summary: "TODO: Walk through your final deliverable (report, readout, prototype).",
+        decisions: [
+          { title: "TODO: Recommendation #1", why: "TODO: The evidence behind it." },
+          { title: "TODO: Recommendation #2", why: "TODO: The evidence behind it." }
+        ],
+        images: [{ src: "", caption: "TODO: Final deliverable" }],
+        prototypeUrl: ""
+      },
+      outcome: {
+        results: [
+          { value: "10+", label: "employees in usability tests" },
+          { value: "15+", label: "stakeholder interviews" },
+          { value: "360,000+", label: "ACIR users the portal serves" }
+        ],
+        reflection: "TODO: What you learned and what you'd do next."
+      }
+    },
+
+    {
+      id: "instructure-elevated",
+      title: "Instructure ElevateED",
+      subtitle: "Exploring AI in education",
+      focus: "Strategy research",
+      approach: "Interviewed stakeholders and synthesized access barriers to make the case for an AI-powered learning initiative",
+      summary: "Research that built the case for an AI-powered initiative advancing inclusive, alternative education pathways.",
+      ballColor: "#27d9f5",
+      year: "2025",
+      tags: ["Stakeholder interviews", "Affinity mapping", "Wireframes"],
+      role: "UX Researcher",
+      team: "Researchers, designers and organization stakeholders",
+      timeline: "Aug – Dec 2025",
+      tools: "Interviews, affinity walls, prototypes, high-fidelity wireframes",
+      hero: { src: "", caption: "TODO: Hero image — ElevateED wireframes" },
+
+      problem: {
+        statement:
+          "Non-traditional learners face barriers in access, credentialing, and experience — and Instructure needed evidence to expand into inclusive, alternative education pathways.",
+        context:
+          "The EdTech landscape is evolving quickly. UX research was used to build the case for ElevateED, a strategic AI-powered initiative for Instructure.",
+        goal: "Identify the barriers non-traditional learners face and turn them into design recommendations aligned with Instructure's long-term strategy."
+      },
+      research: {
+        summary: "Stakeholder interviews and qualitative synthesis, built up with a cross-functional team.",
+        methods: [
+          { name: "Stakeholder interviews", detail: "Conducted interviews and analyzed needs across the organization." },
+          { name: "Qualitative synthesis", detail: "Synthesized data to identify barriers in access, credentialing, and user experience." },
+          { name: "Affinity walls", detail: "Built with researchers, designers and stakeholders to surface patterns." }
+        ],
+        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
+        image: { src: "", caption: "TODO: Affinity wall" }
+      },
+      define: {
+        persona: "TODO: Non-traditional learner persona — goals and barriers.",
+        journey: "TODO: The step in the journey where access or credentialing breaks down.",
+        image: { src: "", caption: "TODO: Persona or journey map" }
+      },
+      ideate: {
+        summary: "Prototypes and actionable design recommendations, developed cross-functionally. TODO: add how you narrowed down ideas.",
+        image: { src: "", caption: "TODO: Prototype sketches" }
+      },
+      iterations: [
+        { version: "Prototype", change: "TODO: What the first prototype explored.", feedback: "TODO: Feedback from stakeholders.", image: { src: "", caption: "TODO: Early prototype" } },
+        { version: "High-fidelity wireframes", change: "Final high-fidelity wireframes presented to all stakeholders.", feedback: "TODO: How stakeholders responded.", image: { src: "", caption: "TODO: High-fidelity wireframes" } }
+      ],
+      execution: {
+        summary: "Presented final deliverables, including high-fidelity wireframes, to drive alignment with Instructure's long-term strategic goals. Recommendations were shared with over 200 students and corporate employees.",
+        decisions: [
+          { title: "TODO: Design decision #1", why: "TODO: The research behind it." },
+          { title: "TODO: Design decision #2", why: "TODO: The research behind it." }
+        ],
+        images: [{ src: "", caption: "TODO: Final wireframes" }],
+        prototypeUrl: ""
+      },
+      outcome: {
+        results: [
+          { value: "200+", label: "students & employees presented to" },
+          { value: "Hi-fi", label: "wireframes delivered" }
+        ],
+        reflection: "TODO: What you learned and what you'd do differently."
       }
     }
   ],
