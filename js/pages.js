@@ -146,7 +146,7 @@
                   const up = i % 2 === 0;
                   return `<li class="jstep jstep--${up ? "up" : "down"}${i === A.path.steps.length - 1 ? " jstep--now" : ""}" style="--i:${i + 1}">
                     <div class="jcard"><h3>${esc(st.label)}</h3><p class="jorg">${esc(st.org)}</p><p>${esc(st.text)}</p></div>
-                    <div class="jmark"><span class="jwhen">${esc(st.when)}</span><i class="jdot" aria-hidden="true"><b>${i + 1}</b></i></div>
+                    <div class="jmark"><i class="jdot" aria-hidden="true"><b>${i + 1}</b></i></div>
                   </li>`;
                 })
                 .join("")}

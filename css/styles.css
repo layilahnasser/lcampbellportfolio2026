@@ -637,7 +637,7 @@ body.opener-open { overflow: hidden; }
 
 /* ---------- Journey map (About, Frame 1) ---------- */
 .jmap-wrap { position: relative; margin: 8px 0 28px; }
-.jmap { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--n), 1fr); grid-template-rows: auto 150px auto; column-gap: 14px; }
+.jmap { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--n), 1fr); grid-template-rows: auto 110px auto; column-gap: 14px; }
 .jline { grid-column: 1 / -1; grid-row: 2; list-style: none; pointer-events: none; z-index: 0; }
 .jline svg { display: block; width: 100%; height: 100%; }
 .path-section .path-lead, .path-section .path-quote, .path-section .path-bridge, .path-section .path-turn, .path-section .path-extra { max-width: 860px; }
@@ -660,10 +660,7 @@ body.opener-open { overflow: hidden; }
 .jstep--up .jdot { top: 30%; }
 .jstep--down .jdot { top: 70%; }
 .jstep--now .jdot { border-color: var(--cyan); box-shadow: 0 0 16px rgba(39, 217, 245, 0.7); }
-.jwhen { position: absolute; left: 0; right: 0; text-align: center; font-weight: 700; font-size: 1.02rem; color: #fff; }
-.jstep--up .jwhen { top: calc(30% - 52px); }
-.jstep--down .jwhen { top: calc(70% + 28px); }
-@media (max-width: 960px) {
+.jstep--up .jstep--down @media (max-width: 960px) {
   .jline { display: none; }
   .jmap { display: block; position: relative; padding-left: 52px; }
   .jmap::before { content: ""; position: absolute; left: 17px; top: 6px; bottom: 6px; width: 5px; border-radius: 3px; background: linear-gradient(to bottom, var(--pink), var(--cyan)); }
@@ -671,6 +668,5 @@ body.opener-open { overflow: hidden; }
   .jstep .jcard { margin: 0 !important; }
   .jstep .jcard::before, .jstep .jcard::after { display: none; }
   .jmark { display: contents; }
-  .jwhen { position: static !important; order: -1; margin: 0 0 6px 2px; text-align: left; color: var(--cyan); font-size: 0.95rem; }
-  .jdot { top: 52px !important; left: -33px; }
+    .jdot { top: 30px !important; left: -33px; }
 }
