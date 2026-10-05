@@ -101,28 +101,31 @@
 
     about() {
       const A = P.about;
+      const pill = (t) => `<span class="frame-pill">${t}</span>`;
       return `
         <section class="page-head page-head--split">
           <div>
             <p class="eyebrow">About Me · ${esc(A.kicker)}</p>
-            <h1>Hi, I'm ${esc(me.firstName)}</h1>
-            <p class="lede lede--big">${esc(A.headline)}</p>
-            ${A.paragraphs.map((p) => `<p class="about-p">${t(p)}</p>`).join("")}
+            <h1>${esc(A.title)} <span class="h1-sub">(${esc(A.pronunciation)})</span></h1>
+            <p class="lede lede--big">${esc(A.lede)}</p>
+            <ul class="trio" aria-label="Three sides of product work">
+              ${A.perspective.map((x, i) => `<li><b>${i + 1}</b>${esc(x)}</li>`).join("")}
+            </ul>
           </div>
-          ${portrait({ cls: "player-card--about", ballColor: "#ff2fb4" })}
+          ${portrait({ cls: "player-card--about", header: A.card.header, title: A.card.title, lines: A.card.lines, photo: A.card.photo, alt: A.card.photoAlt })}
         </section>
 
-        <section class="section" aria-label="Highlights">
-          <div class="card-grid">
-            ${A.highlights
-              .map(
-                (h) => `<article class="card"><p class="card-k">${esc(h.label)}</p><h2 class="card-v">${esc(h.value)}</h2><p>${esc(h.text)}</p></article>`
-              )
-              .join("")}
-          </div>
+        <section class="section narrow-wide" aria-labelledby="path-title">
+          ${pill("Frame 1")}
+          <h2 id="path-title" class="h-md">${esc(A.path.heading)}</h2>
+          <p class="path-lead">${esc(A.path.lead)}</p>
+          <blockquote class="path-quote"><p>${esc(A.path.quote)}</p></blockquote>
+          <p class="path-turn">${esc(A.path.turn)}</p>
+          <p class="path-extra">${esc(A.path.extra)}</p>
         </section>
 
         <section class="section" aria-labelledby="how-title">
+          ${pill("Frame 2")}
           <h2 id="how-title" class="h-md">${esc(A.toolsHeading)}</h2>
           <ul class="tool-row" aria-label="Tools I use">${A.tools.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
           <div class="cap-grid">
@@ -130,15 +133,41 @@
           </div>
         </section>
 
-        ${
-          A.whyLanes
-            ? `<section class="section narrow"><p class="callout"><strong>Why The Lanes?</strong> ${t(A.whyLanes)}</p></section>`
-            : ""
-        }
+        <section class="section" aria-labelledby="edu-title">
+          ${pill("Frame 3")}
+          <h2 id="edu-title" class="h-md">${esc(A.educationHeading)}</h2>
+          <div class="edu-grid">
+            ${A.education
+              .map((e) => `<article class="edu"><h3>${esc(e.school)}</h3><p class="edu-program">${esc(e.program)}</p><p>${esc(e.text)}</p></article>`)
+              .join("")}
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="more-title">
+          ${pill("Bonus frame")}
+          <h2 id="more-title" class="h-md">${esc(A.moreHeading)}</h2>
+          <div class="more-grid">
+            ${A.more
+              .map((m) => `<article class="more"><p class="more-v">${esc(m.value)}</p><h3>${esc(m.title)}</h3><p>${esc(m.text)}</p></article>`)
+              .join("")}
+          </div>
+          <article class="league">
+            <figure class="league-photo"><img src="${esc(A.league.image.src)}" alt="${esc(A.league.image.alt)}" width="536" height="524" loading="lazy"></figure>
+            <div class="league-body">
+              ${ballSVG("#ff2fb4", "league-ball")}
+              <h3>${esc(A.league.title)}</h3>
+              <p>${esc(A.league.text)}</p>
+              <p class="league-tie">${esc(A.league.tie)}</p>
+            </div>
+          </article>
+        </section>
 
         <section class="section cta-band">
-          <p>Want to see the process in action?</p>
-          <a class="btn btn--pink" href="work.html">See my work</a>
+          <p>Care to join me for a game?</p>
+          <div class="cta-actions">
+            <a class="btn btn--ghost" href="contact.html">Get in touch</a>
+            <a class="btn btn--pink" href="work.html">See my work</a>
+          </div>
         </section>`;
     },
 

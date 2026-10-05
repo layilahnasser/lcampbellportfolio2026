@@ -35,31 +35,33 @@ window.PORTFOLIO = {
       "Portrait of Layilah Campbell smiling with long curly dark hair, wearing a navy University of Michigan sweatshirt with her hands on her hips"
   },
 
-  /* ---------- About Me (from your UXfolio) ---------- */
+  /* ---------- About Me (your UXfolio words, laid out as frames) ----------
+     Kept separate from the home page on purpose: the home page has the "7 years
+     recruiting" story, so About leads with your perspective, your why, and you. */
   about: {
-    kicker: "From talent to product",
-    headline: "I spent 7 years finding the people who build technology. Now I research and design what gets built.",
-    paragraphs: [
-      "I'm Layilah, a UX Research & Design graduate student at the University of Michigan. After seven years recruiting UX talent, I now pair user research with prototyping and iteration to make products clearer and easier to use."
-    ],
-    highlights: [
-      {
-        label: "Big tech perspective",
-        value: "7 years in tech",
-        text: "Recruited designers, researchers, and engineers at Meta, Adobe, Google, and Southwest Airlines."
-      },
-      {
-        label: "Founder mindset",
-        value: "1 global business",
-        text: "Built a client-centered coaching brand serving people across the United States and internationally."
-      },
-      {
-        label: "Cross-industry UX",
-        value: "4 industries",
-        text: "Research and design experience across insurance, healthcare, education technology, and government."
-      }
-    ],
-    // "How I turn insight into product direction"
+    kicker: "Player profile",
+    title: "Meet Layilah",
+    pronunciation: "Lay-La",
+    lede: "I bring a rare perspective to product work: I understand the people who build technology, the teams making product decisions, and the people who ultimately use those experiences.",
+    perspective: ["The people who build technology", "The teams making product decisions", "The people who use those experiences"],
+    card: {
+      header: "Meet the player",
+      title: "Layilah Campbell",
+      lines: ["Pronounced Lay-La", "Ann Arbor, MI"],
+      photo: "assets/img/layilah-about.jpg",
+      photoAlt: "Portrait of Layilah Campbell in a green blazer, one hand resting near her chin"
+    },
+
+    // Frame 1
+    path: {
+      heading: "My path into UX",
+      lead: "It began with a simple realization:",
+      quote: "When tools are confusing or inaccessible, people are often expected to adapt to the product.",
+      turn: "I want to reverse that relationship through research, thoughtful design, and solutions that work for more people.",
+      extra: "Outside of UX, I also run a global pageant consulting business, which has strengthened my skills in communication, strategy, leadership, and understanding people."
+    },
+
+    // Frame 2
     toolsHeading: "How I turn insight into product direction",
     tools: ["Figma", "Claude", "VS Code", "Lovable", "Gemini"],
     capabilities: [
@@ -80,8 +82,47 @@ window.PORTFOLIO = {
         text: "Executive storytelling, workshops, product recommendations, prioritization, and cross-functional alignment."
       }
     ],
-    // A personal note that connects you to Roblox — write 1–2 sentences (or delete this line).
-    whyLanes: "TODO: Write 1–2 sentences on why you love the game and what it taught you about social, player-first design."
+
+    // Frame 3
+    educationHeading: "Where I trained",
+    education: [
+      {
+        school: "University of Michigan",
+        program: "Master of Science in UX Research & Design · May 2027",
+        text: "I'm developing my research and design practice through coursework and client projects in usability testing, interaction design, accessibility, and data analysis. My work connects insights about people with practical product decisions."
+      },
+      {
+        school: "Spelman College",
+        program: "Bachelor of Arts in Psychology · 2017",
+        text: "My psychology background shaped how I understand human behavior, motivation, and decision-making. Studying positive psychology in Copenhagen expanded my perspective on how context and culture influence people's experiences."
+      }
+    ],
+
+    // Bonus frame
+    moreHeading: "A little more about me",
+    more: [
+      {
+        value: "$5,000+",
+        title: "in scholarships",
+        text: "Through my consulting business, I've supported young women across the country in pursuing their goals."
+      },
+      {
+        value: "#1",
+        title: "Award-winning entrepreneur",
+        text: "Named Pageant Planet's #1 pageant coach in 2023 and ranked among the Top 5 for interview and overall coaching in 2024."
+      },
+      {
+        value: "25+",
+        title: "countries explored",
+        text: "Travel is one of my favorite ways to experience different cultures and perspectives."
+      }
+    ],
+    league: {
+      title: "A little friendly competition",
+      text: "I joined a bowling league, adding another kind of practice to my weekly routine.",
+      tie: "Which may explain why The Lanes is my favorite game on Roblox.",
+      image: { src: "assets/img/bowling.jpg", alt: "Layilah releasing a bowling ball down the lane at a bowling alley" }
+    }
   },
 
   /* ---------- Projects (scoreboard + My Work) ----------

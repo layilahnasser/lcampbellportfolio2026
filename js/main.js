@@ -119,17 +119,18 @@
     </a>`;
 
   // Player card: your photo with the school above and your program below, like a Roblox/Lanes player screen.
-  const portrait = (opts = {}) =>
-    `<figure class="player-card ${opts.cls || ""}">
-      <p class="pc-school"><span>${esc(me.school)}</span></p>
-      <div class="pc-photo"><img src="${esc(me.photo)}" alt="${esc(me.photoAlt)}" width="900" height="900" decoding="async"></div>
+  const portrait = (opts = {}) => {
+    const lines = opts.lines || [me.degreeLine, me.gradLine];
+    return `<figure class="player-card ${opts.cls || ""}">
+      <p class="pc-school"><span>${esc(opts.header ?? me.school)}</span></p>
+      <div class="pc-photo"><img src="${esc(opts.photo || me.photo)}" alt="${esc(opts.alt || me.photoAlt)}" width="900" height="900" decoding="async"></div>
       <figcaption class="pc-info">
-        <strong>${esc(me.title)}</strong>
-        <span>${esc(me.degreeLine)}</span>
-        <span>${esc(me.gradLine)}</span>
+        <strong>${esc(opts.title ?? me.title)}</strong>
+        ${lines.map((l) => `<span>${esc(l)}</span>`).join("")}
       </figcaption>
       ${ballSVG(opts.ballColor || "#ff2fb4", "pc-ball")}
     </figure>`;
+  };
 
   const star = (color, cls = "") =>
     `<svg class="neon-star ${cls}" viewBox="0 0 100 100" aria-hidden="true" style="--c:${color}"><path d="M50 6l12.6 28.4 30.9 3.2-23.1 20.8 6.6 30.4L50 73.2 23 88.8l6.6-30.4L6.5 37.6l30.9-3.2z" fill="none" stroke="${color}" stroke-width="5" stroke-linejoin="round"/></svg>`;
