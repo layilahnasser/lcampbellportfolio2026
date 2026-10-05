@@ -31,7 +31,7 @@ assets/         photo (img/layilah.jpg), resume.pdf, fonts, favicon
 
 ## Common edits
 
-- **Photo:** replace `assets/img/layilah.jpg` with a higher-resolution portrait (about 1200×1100 px works well, roughly square). Keep the same file name.
+- **Photo:** replace `assets/img/layilah.jpg` with a higher-resolution portrait (a square image around 900×900 px works well). Keep the same file name.
 - **Home headline and player card text:** `heroTitle`, `headline`, `school`, `degreeLine` and `gradLine` at the top of `js/data.js`.
 - **LinkedIn:** set `linkedin` in `js/data.js`. It appears on the Contact page and in the footer.
 - **Resume PDF:** replace `assets/resume.pdf`.

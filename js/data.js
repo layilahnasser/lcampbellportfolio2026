@@ -32,7 +32,7 @@ window.PORTFOLIO = {
     resumePdf: "assets/resume.pdf",
     photo: "assets/img/layilah.jpg", // swap this file for a higher-resolution photo any time
     photoAlt:
-      "Portrait of Layilah Campbell smiling, with long curly dark hair, wearing a black blazer"
+      "Portrait of Layilah Campbell smiling with long curly dark hair, wearing a navy University of Michigan sweatshirt with her hands on her hips"
   },
 
   /* ---------- About Me (from your UXfolio) ---------- */

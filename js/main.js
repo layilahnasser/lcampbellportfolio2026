@@ -122,7 +122,7 @@
   const portrait = (opts = {}) =>
     `<figure class="player-card ${opts.cls || ""}">
       <p class="pc-school"><span>${esc(me.school)}</span></p>
-      <div class="pc-photo"><img src="${esc(me.photo)}" alt="${esc(me.photoAlt)}" width="612" height="560" decoding="async"></div>
+      <div class="pc-photo"><img src="${esc(me.photo)}" alt="${esc(me.photoAlt)}" width="900" height="900" decoding="async"></div>
       <figcaption class="pc-info">
         <strong>${esc(me.title)}</strong>
         <span>${esc(me.degreeLine)}</span>
