@@ -108,9 +108,9 @@
             <p class="eyebrow">About Me · ${esc(A.kicker)}</p>
             <h1>${esc(A.title)} <span class="h1-sub">(${esc(A.pronunciation)})</span></h1>
             <p class="lede lede--big">${esc(A.lede)}</p>
-            <ul class="trio" aria-label="Three sides of product work">
-              ${A.perspective.map((x, i) => `<li><b>${i + 1}</b>${esc(x)}</li>`).join("")}
-            </ul>
+            <ol class="trio" aria-label="My story in three moves">
+              ${A.story.map((x, i) => `<li><b>${i + 1}</b><span><strong>${esc(x.title)}</strong>${esc(x.text)}</span></li>`).join("")}
+            </ol>
           </div>
           ${portrait({ cls: "player-card--about", header: A.card.header, title: A.card.title, lines: A.card.lines, photo: A.card.photo, alt: A.card.photoAlt })}
         </section>
@@ -120,6 +120,12 @@
           <h2 id="path-title" class="h-md">${esc(A.path.heading)}</h2>
           <p class="path-lead">${esc(A.path.lead)}</p>
           <blockquote class="path-quote"><p>${esc(A.path.quote)}</p></blockquote>
+          <p class="path-bridge">${esc(A.path.bridge)}</p>
+          <ol class="path-steps">
+            ${A.path.steps
+              .map((st, i) => `<li class="path-step"><b aria-hidden="true">${i + 1}</b><div><h3>${esc(st.label)}</h3><p class="path-meta">${esc(st.meta)}</p><p>${esc(st.text)}</p></div></li>`)
+              .join("")}
+          </ol>
           <p class="path-turn">${esc(A.path.turn)}</p>
           <p class="path-extra">${esc(A.path.extra)}</p>
         </section>

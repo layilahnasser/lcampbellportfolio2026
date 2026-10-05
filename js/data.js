@@ -43,7 +43,12 @@ window.PORTFOLIO = {
     title: "Meet Layilah",
     pronunciation: "Lay-La",
     lede: "I bring a rare perspective to product work: I understand the people who build technology, the teams making product decisions, and the people who ultimately use those experiences.",
-    perspective: ["The people who build technology", "The teams making product decisions", "The people who use those experiences"],
+    // Three-move version of your story (the full path is Frame 1 below)
+    story: [
+      { title: "Spotted the talent gap", text: "Took the research to Adobe's CEO." },
+      { title: "Fixed it from the hiring side", text: "Opened UX pipelines for product and research roles." },
+      { title: "Became the practitioner", text: "Self-taught, then Michigan-trained." }
+    ],
     card: {
       header: "Meet the player",
       title: "Layilah Campbell",
@@ -52,12 +57,40 @@ window.PORTFOLIO = {
       photoAlt: "Portrait of Layilah Campbell in a green blazer, one hand resting near her chin"
     },
 
-    // Frame 1
+    // Frame 1 — your path, told as: find the problem, fix it from the hiring side, learn the craft
     path: {
       heading: "My path into UX",
       lead: "It began with a simple realization:",
       quote: "When tools are confusing or inaccessible, people are often expected to adapt to the product.",
-      turn: "I want to reverse that relationship through research, thoughtful design, and solutions that work for more people.",
+      bridge: "I started where I already was: in hiring, finding problems and fixing them.",
+      steps: [
+        {
+          label: "Spot the problem",
+          meta: "Adobe · 2020–21",
+          text: "As Adobe's DEI Program Lead, I ran qualitative and quantitative research to find our talent gaps and presented it to the CEO. The findings supported a $3M donation to HBCUs and HSIs."
+        },
+        {
+          label: "Fix it from the hiring side",
+          meta: "Adobe · 2020–21",
+          text: "I partnered with design teams to add 200+ diverse UX design candidates, widening the pipelines for product and research roles, and trained 500+ recruiters and hiring managers on inclusive hiring."
+        },
+        {
+          label: "Run the research myself",
+          meta: "Southwest Airlines · 2023–25",
+          text: "I interviewed hiring managers and candidates to find process pain points, redesigned the recruiting workflow, and built tracking tools that improved recruiter efficiency by 25%."
+        },
+        {
+          label: "Teach myself the craft",
+          meta: "Google UX Design Course · 2025",
+          text: "I built the Crowning Calendar, a scheduling app, end to end: 10+ structured interviews across five states, personas, journey maps and affinity diagrams, then low-fidelity wireframes in Figma refined with usability feedback to improve task success."
+        },
+        {
+          label: "Go all in",
+          meta: "University of Michigan · Now",
+          text: "I'm completing an M.S. in UX Research & Design while doing the work: usability research for the USDA, an AI-powered education initiative at Instructure, and research internships at Root Insurance and UK Digital Health Systems."
+        }
+      ],
+      turn: "Now I want to reverse that relationship, through research, thoughtful design, and solutions that work for more people.",
       extra: "Outside of UX, I also run a global pageant consulting business, which has strengthened my skills in communication, strategy, leadership, and understanding people."
     },
 
