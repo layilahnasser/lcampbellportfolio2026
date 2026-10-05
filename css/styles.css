@@ -557,7 +557,11 @@ main > * { width: min(var(--maxw), 100% - 2 * var(--gutter)); margin-inline: aut
 .opener-card .logo-mark { width: 84px; margin: 0 auto 8px; display: block; }
 .opener-k { margin: 0 0 4px; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan); }
 .opener-card h2 { margin: 0 0 14px; font-family: var(--script); font-weight: 400; font-size: clamp(2.4rem, 8vw, 3.2rem); line-height: 1.05; color: #fff; -webkit-text-stroke: 0.07em var(--pink); paint-order: stroke fill; text-shadow: var(--neon-pink); }
-.opener-card p:not(.opener-k) { margin: 0 0 22px; font-size: 1.08rem; color: #e9e3f6; }
+.opener-card p:not(.opener-k) { margin: 0 0 16px; font-size: 1.08rem; color: #e9e3f6; }
+.opener-card .opener-fine { margin-bottom: 24px; font-size: 0.92rem; color: #cfc6e6; }
+.opener-link { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+.opener-card .opener-link strong { color: inherit; }
+.opener-link:hover { color: #fff; }
 .opener-card strong { color: #fff; }
 .opener-go { font-size: 1.05rem; padding: 13px 28px; }
 body.opener-open { overflow: hidden; }

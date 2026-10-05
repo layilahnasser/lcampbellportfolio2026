@@ -361,10 +361,11 @@
     ov.innerHTML = `
       <div class="opener-card">
         ${logoMark()}
-        <p class="opener-k">A quick note before you roll</p>
+        <p class="opener-k">Every game has a backstory</p>
         <h2 id="opener-title">Welcome to my lane</h2>
-        <p id="opener-text">This portfolio is inspired by my favorite Roblox game, <strong>The Lanes Bowling</strong>. The look and feel are my fan-made tribute to it, and this site isn't affiliated with Roblox or the game's creators.</p>
-        <button type="button" class="btn btn--pink opener-go">Enter the lanes <span aria-hidden="true">▸</span></button>
+        <p id="opener-text">Inspired by the Roblox game <a class="opener-link" href="https://www.roblox.com/games/1333478699/The-Lanes-Bowling" target="_blank" rel="noopener"><strong>The Lanes Bowling</strong><span class="sr-only"> (opens the game on Roblox in a new tab)</span></a>, this portfolio brings a playful bowling theme to my UX research and design work.</p>
+        <p class="opener-fine">This site is an independent tribute and is not affiliated with Roblox or the game’s creators.</p>
+        <button type="button" class="btn btn--pink opener-go">Enter the lanes <span aria-hidden="true">→</span></button>
       </div>`;
     const bg = [...document.querySelectorAll("#hud, #main, #footer")];
     const previous = document.activeElement;
@@ -384,7 +385,13 @@
     };
     const onKey = (e) => {
       if (e.key === "Escape") { e.preventDefault(); close(); }
-      else if (e.key === "Tab") { e.preventDefault(); btn.focus(); } // the button is the only control
+      else if (e.key === "Tab") {
+        // keep keyboard focus inside the dialog: cycle between the game link and the button
+        e.preventDefault();
+        const items = [...ov.querySelectorAll("a[href], button")];
+        const i = items.indexOf(document.activeElement);
+        items[(i + (e.shiftKey ? items.length - 1 : 1)) % items.length].focus();
+      }
     };
     document.addEventListener("keydown", onKey, true);
     btn.addEventListener("click", close);
