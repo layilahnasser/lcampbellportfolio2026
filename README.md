@@ -1,6 +1,6 @@
 # Layilah Campbell — Portfolio (The Lanes edition)
 
-A UX research & design portfolio themed after **The Lanes – Ten Pin Bowling** on Roblox. Your photo is on a player card beside the lane, your projects are on the scoreboard, and clicking one rolls a ball down the lane (and knocks down the pins) before the case study opens.
+A UX research & design portfolio themed after **The Lanes – Ten Pin Bowling** on Roblox. A short opener (shown once per visit) explains the Lanes inspiration. Your photo is on a player card beside the lane, your projects are in a "Choose a lane" table, and clicking one rolls a ball down the lane (and knocks down the pins) before the case study opens.
 
 It's plain HTML, CSS and JavaScript. There's nothing to install and no build step.
 
@@ -36,6 +36,8 @@ assets/         photo (img/layilah.jpg), resume.pdf, fonts, favicon
 - **LinkedIn:** set `linkedin` in `js/data.js`. It appears on the Contact page and in the footer.
 - **Resume PDF:** replace `assets/resume.pdf`.
 - **Case studies:** the facts from your resume are already in. Replace each dashed-pink `TODO:` line with your own words, and add screenshots to `assets/img/` (`src: "assets/img/your-file.png"`).
+- **Opener text:** edit `showOpener()` in `js/main.js`. It appears once per browser tab session and can be closed with the button or Esc.
+- **Scoreboard wording:** each project has `subtitle`, `focus`, `approach` and `summary` in `js/data.js`.
 - **Add or remove a project:** copy or delete a block inside `projects: [ … ]` and give it a unique `id`.
 
 ## Design notes

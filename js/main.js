@@ -126,7 +126,7 @@
       <div class="pc-photo"><img src="${esc(opts.photo || me.photo)}" alt="${esc(opts.alt || me.photoAlt)}" width="900" height="900" decoding="async"></div>
       <figcaption class="pc-info">
         <strong>${esc(opts.title ?? me.title)}</strong>
-        ${lines.map((l) => `<span>${esc(l)}</span>`).join("")}
+        ${lines.filter(Boolean).map((l) => `<span>${esc(l)}</span>`).join("")}
       </figcaption>
       ${ballSVG(opts.ballColor || "#ff2fb4", "pc-ball")}
     </figure>`;
@@ -151,12 +151,8 @@
       header.innerHTML = `
         <a class="skip" href="#main">Skip to content</a>
         <nav class="hud-bar" aria-label="Main">
-          <a class="hud-home" href="index.html" aria-label="Home"${page === "home" ? ' aria-current="page"' : ""}>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" transform="rotate(15 12 12)" fill="none" stroke="currentColor" stroke-width="2.4"/><rect x="10" y="10" width="4" height="4" transform="rotate(15 12 12)" fill="currentColor"/></svg>
-          </a>
           <ul class="hud-links">
-            ${NAV.filter((n) => n.key !== "home")
-              .map(
+            ${NAV.map(
                 (n) =>
                   `<li><a href="${n.href}" class="hud-pill${page === n.key || (page === "project" && n.key === "work") ? " is-active" : ""}"${
                     page === n.key ? ' aria-current="page"' : ""
@@ -325,6 +321,49 @@
     document.querySelectorAll(".lanecam").forEach((n) => n.remove());
   });
 
+  /* ---------- Opener: a quick note shown once per visit ---------- */
+  function showOpener() {
+    try { if (sessionStorage.getItem("lanes-opener-seen")) return; } catch (e) { /* storage blocked: just show it */ }
+    const ov = document.createElement("div");
+    ov.className = "opener";
+    ov.setAttribute("role", "dialog");
+    ov.setAttribute("aria-modal", "true");
+    ov.setAttribute("aria-labelledby", "opener-title");
+    ov.setAttribute("aria-describedby", "opener-text");
+    ov.innerHTML = `
+      <div class="opener-card">
+        ${logoMark()}
+        <p class="opener-k">A quick note before you roll</p>
+        <h2 id="opener-title">Welcome to my lane</h2>
+        <p id="opener-text">This portfolio is inspired by my favorite Roblox game, <strong>The Lanes Bowling</strong>. The look and feel are my fan-made tribute to it, and this site isn't affiliated with Roblox or the game's creators.</p>
+        <button type="button" class="btn btn--pink opener-go">Enter the lanes <span aria-hidden="true">▸</span></button>
+      </div>`;
+    const bg = [...document.querySelectorAll("#hud, #main, #footer")];
+    const previous = document.activeElement;
+    document.body.appendChild(ov);
+    document.body.classList.add("opener-open");
+    bg.forEach((n) => n.setAttribute("inert", ""));
+    const btn = ov.querySelector(".opener-go");
+    btn.focus({ preventScroll: true });
+    const close = () => {
+      try { sessionStorage.setItem("lanes-opener-seen", "1"); } catch (e) { /* ignore */ }
+      document.removeEventListener("keydown", onKey, true);
+      bg.forEach((n) => n.removeAttribute("inert"));
+      document.body.classList.remove("opener-open");
+      ov.classList.add("is-closing");
+      setTimeout(() => ov.remove(), reduceMotion ? 0 : 250);
+      if (previous && previous.focus) previous.focus({ preventScroll: true });
+    };
+    const onKey = (e) => {
+      if (e.key === "Escape") { e.preventDefault(); close(); }
+      else if (e.key === "Tab") { e.preventDefault(); btn.focus(); } // the button is the only control
+    };
+    document.addEventListener("keydown", onKey, true);
+    btn.addEventListener("click", close);
+    requestAnimationFrame(() => ov.classList.add("is-open"));
+  }
+
   window.LANES = { esc, t, isTodo, plain, img, pinSVG, ballSVG, logo, portrait, star, bowl };
   renderChrome();
+  showOpener();
 })();

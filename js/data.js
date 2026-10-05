@@ -22,7 +22,7 @@ window.PORTFOLIO = {
     // Text on the player card (home page + About)
     school: "University of Michigan",
     degreeLine: "Master's Candidate - School of Information",
-    gradLine: "Expected May 2027",
+    gradLine: "", // leave empty to hide the third card line
     status: "Open to opportunities", // HUD pill
     location: "Ann Arbor, MI",
     email: "layilah@umich.edu",
@@ -167,11 +167,12 @@ window.PORTFOLIO = {
     {
       id: "usda-acir",
       title: "USDA ACIR Portal",
-      subtitle: "Usability research on search, navigation and mobile",
+      subtitle: "Search, navigation & mobile usability",
+      focus: "Usability research",
+      approach: "Evaluate the portal experience",
+      summary: "Helping 360,000+ USDA ACIR users navigate complex agricultural import requirements with greater speed, clarity, and confidence.",
       ballColor: "#ff2fb4",
       year: "2026",
-      score: "15+",
-      scoreLabel: "interviews",
       tags: ["Usability testing", "Interviews", "Surveys"],
       role: "UX Researcher",
       team: "4 USDA stakeholders, weekly check-ins",
@@ -183,7 +184,7 @@ window.PORTFOLIO = {
         statement:
           "How can importers, brokers, and government officials find — and feel confident interpreting — what they need in USDA's ACIR portal?",
         context:
-          "Working weekly with 4 USDA stakeholders, I looked for usability pain points in navigation, search filters, and help resources, with a focus on search functionality and the mobile experience.",
+          "ACIR serves 360,000+ users working through complex agricultural import requirements. Working weekly with 4 USDA stakeholders, I looked for usability pain points in navigation, search filters, and help resources, with a focus on search functionality and the mobile experience.",
         goal:
           "Understand where search, navigation, and help resources break down for each group, and recommend changes that improve findability and interpretive confidence."
       },
@@ -228,7 +229,7 @@ window.PORTFOLIO = {
         results: [
           { value: "10+", label: "employees in usability tests" },
           { value: "15+", label: "stakeholder interviews" },
-          { value: "4", label: "stakeholders, weekly" }
+          { value: "360,000+", label: "ACIR users the portal serves" }
         ],
         reflection: "TODO: What you learned and what you'd do next."
       }
@@ -237,11 +238,12 @@ window.PORTFOLIO = {
     {
       id: "instructure-elevated",
       title: "Instructure ElevateED",
-      subtitle: "Research that built the case for an AI-powered education initiative",
+      subtitle: "Exploring AI in education",
+      focus: "Product strategy",
+      approach: "Build the case for an education initiative",
+      summary: "Research that built the case for an AI-powered initiative advancing inclusive, alternative education pathways.",
       ballColor: "#27d9f5",
       year: "2025",
-      score: "200+",
-      scoreLabel: "presented to",
       tags: ["Stakeholder interviews", "Affinity mapping", "Wireframes"],
       role: "UX Researcher",
       team: "Researchers, designers and organization stakeholders",
@@ -300,11 +302,12 @@ window.PORTFOLIO = {
     {
       id: "robin-nest",
       title: "Robin Nest",
-      subtitle: "An AI-driven meal planning app for cancer patients",
+      subtitle: "Meal planning for cancer patients",
+      focus: "Health & UX",
+      approach: "Explore an AI-driven meal planning app",
+      summary: "Empowering caregivers and cancer patients with compassionate, AI-driven nutrition and treatment-based tools.",
       ballColor: "#ffb020",
       year: "2025",
-      score: "5",
-      scoreLabel: "research methods",
       tags: ["Healthcare", "Accessibility", "Prototyping"],
       role: "UX Designer & Researcher",
       team: "Analysts, information architects and product managers",
@@ -364,11 +367,12 @@ window.PORTFOLIO = {
     {
       id: "crowning-calendar",
       title: "Crowning Calendar",
-      subtitle: "A scheduling app built from end-to-end UX research",
+      subtitle: "Scheduling for pageant preparation",
+      focus: "End-to-end UX",
+      approach: "Research a scheduling experience",
+      summary: "A scheduling app built from end-to-end UX research.",
       ballColor: "#61f29a",
       year: "2025",
-      score: "10+",
-      scoreLabel: "interviews",
       tags: ["Google UX course", "Figma", "Scheduling"],
       role: "UX Designer & Researcher",
       team: "TODO: e.g. solo project",
@@ -419,6 +423,187 @@ window.PORTFOLIO = {
           { value: "5", label: "states represented" }
         ],
         reflection: "TODO: What you learned and what you'd do differently."
+      }
+    },
+
+    {
+      id: "root-insurance",
+      title: "Root Insurance",
+      subtitle: "Retention research for 500,000+ policyholders",
+      focus: "Retention research",
+      approach: "Find the drivers of churn and retention",
+      summary: "Improving retention for 500,000+ policyholders while empowering CS agents with the tools and insights to better support customers.",
+      ballColor: "#ff7a45",
+      year: "2026",
+      tags: ["Mixed-methods", "Journey maps", "Retention"],
+      role: "UX Research Intern",
+      team: "Cross-functional stakeholders, including the Director of Design and SVP of Product",
+      timeline: "Jun – Aug 2026",
+      tools: "User Interviews, Lookback, Figma",
+      hero: { src: "", caption: "TODO: Hero image — journey map or retention concepts" },
+
+      problem: {
+        statement: "How can Root improve retention for 500,000+ policyholders while giving customer-service agents better tools and insights to support them?",
+        context: "The work centered on retention, and on equipping CS agents with the tools and insights to better support customers.",
+        goal: "Identify churn drivers and turn them into research-backed retention opportunities for Product."
+      },
+      research: {
+        summary: "An end-to-end mixed-methods research strategy across 18 sessions.",
+        methods: [
+          { name: "Internal stakeholder interviews", detail: "12 interviews with internal stakeholders." },
+          { name: "Competitor policyholder interviews", detail: "6 interviews across key competitor cohorts, run through User Interviews and Lookback." },
+          { name: "Thematic coding & affinity mapping", detail: "Evaluated Lookback session recordings to surface patterns." }
+        ],
+        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
+        image: { src: "", caption: "TODO: Affinity map" }
+      },
+      define: {
+        persona: "DIG-based personas built from the research. TODO: name the primary persona.",
+        journey: "High-fidelity customer journey maps. TODO: name the moment where retention breaks down.",
+        image: { src: "", caption: "TODO: Journey map or persona" }
+      },
+      ideate: {
+        summary: "Translated research insights into 15 net-new retention concepts in Figma, each addressing an identified churn driver.",
+        image: { src: "", caption: "TODO: Retention concepts" }
+      },
+      iterations: [
+        { version: "Synthesis", change: "Built journey maps, personas and a prioritized Retention Levers Matrix from the coded session recordings.", feedback: "TODO: What leadership asked for or pushed back on.", image: { src: "", caption: "TODO: Retention Levers Matrix" } },
+        { version: "Concepts", change: "Developed high-fidelity experience recommendations in Figma.", feedback: "TODO: How Product stakeholders responded.", image: { src: "", caption: "TODO: High-fidelity concepts" } }
+      ],
+      execution: {
+        summary: "Delivered three executive research readouts to cross-functional stakeholders, including the Director of Design and SVP of Product, presenting progress, emerging insights, and strategic recommendations to align leadership on retention opportunities and product direction.",
+        decisions: [
+          { title: "TODO: Recommendation #1", why: "TODO: The evidence behind it." },
+          { title: "TODO: Recommendation #2", why: "TODO: The evidence behind it." }
+        ],
+        images: [{ src: "", caption: "TODO: Final readout slide" }],
+        prototypeUrl: ""
+      },
+      outcome: {
+        results: [
+          { value: "18", label: "research sessions" },
+          { value: "3", label: "executive readouts" },
+          { value: "15", label: "net-new retention concepts" }
+        ],
+        reflection: "TODO: What you learned and what you'd do next."
+      }
+    },
+
+    {
+      id: "milk-and-froth",
+      title: "Milk and Froth Redesign",
+      subtitle: "A Detroit-born ice cream brand, reimagined online",
+      focus: "Web redesign",
+      approach: "Showcase flavors and improve location discovery",
+      summary: "A website redesign concept for a Detroit-born ice cream brand, focused on showcasing distinctive flavors, improving location discovery, and creating a more visual browsing experience.",
+      ballColor: "#b388ff",
+      year: "",
+      tags: ["Web redesign", "Concept"],
+      role: "TODO: your role",
+      team: "TODO: team",
+      timeline: "TODO: timeline",
+      tools: "TODO: tools",
+      hero: { src: "", caption: "TODO: Hero image — redesigned homepage" },
+
+      problem: {
+        statement: "How might a Detroit-born ice cream brand showcase its distinctive flavors, make its locations easier to find, and offer a more visual browsing experience?",
+        context: "TODO: How you identified these gaps on the current site.",
+        goal: "Redesign the website around three goals: distinctive flavors, location discovery, and visual browsing."
+      },
+      research: {
+        summary: "TODO: What you looked at and how.",
+        methods: [
+          { name: "TODO: Method", detail: "TODO: Detail." },
+          { name: "TODO: Method", detail: "TODO: Detail." }
+        ],
+        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
+        image: { src: "", caption: "TODO: Research synthesis" }
+      },
+      define: {
+        persona: "TODO: Primary visitor — goals and frustrations.",
+        journey: "TODO: Where finding a flavor or location breaks down.",
+        image: { src: "", caption: "TODO: Persona or journey" }
+      },
+      ideate: {
+        summary: "TODO: How you explored layouts for flavors, locations and browsing.",
+        image: { src: "", caption: "TODO: Sketches or wireframes" }
+      },
+      iterations: [
+        { version: "V1", change: "TODO: What you built first.", feedback: "TODO: What you learned.", image: { src: "", caption: "TODO: V1" } },
+        { version: "V2", change: "TODO: What you changed.", feedback: "TODO: What improved.", image: { src: "", caption: "TODO: V2" } }
+      ],
+      execution: {
+        summary: "TODO: Walk through the redesigned site.",
+        decisions: [
+          { title: "Showcasing flavors", why: "TODO: The design choice and why." },
+          { title: "Location discovery", why: "TODO: The design choice and why." },
+          { title: "Visual browsing", why: "TODO: The design choice and why." }
+        ],
+        images: [{ src: "", caption: "TODO: Final screens" }],
+        prototypeUrl: ""
+      },
+      outcome: {
+        results: [{ value: "3", label: "redesign goals" }],
+        reflection: "TODO: What you learned and what you'd do next."
+      }
+    },
+
+    {
+      id: "crown-code",
+      title: "Crown Code",
+      subtitle: "A preparation routine for pageant contestants",
+      focus: "Mobile app concept",
+      approach: "Bring interview practice and prep into one place",
+      summary: "A mobile app concept that brings interview practice, preparation tasks, and progress sharing into one place, helping pageant contestants build a consistent preparation routine.",
+      ballColor: "#c6f24a",
+      year: "",
+      tags: ["Mobile app", "Concept"],
+      role: "TODO: your role",
+      team: "TODO: team",
+      timeline: "TODO: timeline",
+      tools: "TODO: tools",
+      hero: { src: "", caption: "TODO: Hero image — Crown Code screens" },
+
+      problem: {
+        statement: "How might pageant contestants build a consistent preparation routine when interview practice, preparation tasks, and progress live in different places?",
+        context: "TODO: How you identified this need (your pageant coaching work may be the story).",
+        goal: "Bring interview practice, preparation tasks, and progress sharing into one mobile app."
+      },
+      research: {
+        summary: "TODO: What you learned and how.",
+        methods: [
+          { name: "TODO: Method", detail: "TODO: Detail." },
+          { name: "TODO: Method", detail: "TODO: Detail." }
+        ],
+        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
+        image: { src: "", caption: "TODO: Research synthesis" }
+      },
+      define: {
+        persona: "TODO: Contestant persona — goals and frustrations.",
+        journey: "TODO: Where preparation falls apart.",
+        image: { src: "", caption: "TODO: Persona or journey" }
+      },
+      ideate: {
+        summary: "TODO: How you explored the app's structure.",
+        image: { src: "", caption: "TODO: Sketches or flows" }
+      },
+      iterations: [
+        { version: "V1", change: "TODO: What you built first.", feedback: "TODO: What you learned.", image: { src: "", caption: "TODO: V1" } },
+        { version: "V2", change: "TODO: What you changed.", feedback: "TODO: What improved.", image: { src: "", caption: "TODO: V2" } }
+      ],
+      execution: {
+        summary: "TODO: Walk through the final app.",
+        decisions: [
+          { title: "Interview practice", why: "TODO: The design choice and why." },
+          { title: "Preparation tasks", why: "TODO: The design choice and why." },
+          { title: "Progress sharing", why: "TODO: The design choice and why." }
+        ],
+        images: [{ src: "", caption: "TODO: Final screens" }],
+        prototypeUrl: ""
+      },
+      outcome: {
+        results: [{ value: "3", label: "tools in one place" }],
+        reflection: "TODO: What you learned and what you'd do next."
       }
     }
   ],

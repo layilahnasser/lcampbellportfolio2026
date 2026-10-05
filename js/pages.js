@@ -19,32 +19,31 @@
   const ext = (href, label) =>
     `<a href="${esc(href)}" target="_blank" rel="noopener">${label}<span class="sr-only"> (opens in a new tab)</span></a>`;
 
-  /* ---------- Scoreboard (home) ---------- */
+  /* ---------- Scoreboard (home): Focus / Approach / Case study ---------- */
+  const pad = (n) => String(n).padStart(2, "0");
   function scoreboard() {
     return `
       <div class="scoreboard">
         <div class="sb-head" aria-hidden="true">
-          <span class="sb-lane">Lane</span>
-          <span class="sb-player">Project</span>
-          ${FRAMES.map((f, i) => `<span class="sb-frame"><b>${i + 1}</b><small>${f.label}</small></span>`).join("")}
-          <span class="sb-total">Total</span>
-          <span class="sb-go"></span>
+          <span class="sb-h-project">Lane / Project</span>
+          <span class="sb-h"><b>1</b><small>Focus</small></span>
+          <span class="sb-h"><b>2</b><small>Approach</small></span>
+          <span class="sb-h"><b>3</b><small>Case study</small></span>
         </div>
         <ol class="sb-list">
         ${P.projects
           .map(
             (p, i) => `
           <li><a class="sb-row" href="project.html?p=${esc(p.id)}" data-roll="${esc(p.id)}" style="--ball:${esc(p.ballColor)}">
-            <span class="sb-lane">${ballSVG(p.ballColor, "sb-ball")}<b><span class="sr-only">Lane </span>${i + 1}</b></span>
-            <span class="sb-player"><strong>${t(p.title)}</strong><small>${t(p.subtitle)}</small></span>
-            ${FRAMES.map(() => `<span class="sb-frame" aria-hidden="true"><i class="strike"></i></span>`).join("")}
-            <span class="sb-total"><strong>${t(p.score)}</strong><small>${esc(p.scoreLabel || "")}</small></span>
-            <span class="sb-go">Bowl <span aria-hidden="true">▸</span><span class="sr-only">— open case study</span></span>
+            <span class="sb-project">${ballSVG(p.ballColor, "sb-ball")}<b class="sb-num"><span class="sr-only">Lane </span>${pad(i + 1)}</b><span class="sb-title"><strong>${t(p.title)}</strong><small>${t(p.subtitle)}</small></span></span>
+            <span class="sb-cell" data-label="Focus">${t(p.focus)}</span>
+            <span class="sb-cell" data-label="Approach">${t(p.approach)}</span>
+            <span class="sb-go"><span class="sb-btn">View case study <span aria-hidden="true">→</span></span></span>
           </a></li>`
           )
           .join("")}
         </ol>
-        <div class="sb-foot"><span class="sb-pins" aria-hidden="true">${"▼".repeat(10)}</span><span>Every project is scored frame by frame: problem, research, iteration, final design.</span></div>
+        <div class="sb-foot"><span class="sb-pins" aria-hidden="true">${"▼".repeat(10)}</span><span>Each case study is scored frame by frame: problem, research, iteration, final design.</span></div>
       </div>`;
   }
 
@@ -85,7 +84,7 @@
           <header class="section-head">
             <p class="eyebrow">Scoreboard</p>
             <h2 id="sb-title">Choose a lane</h2>
-            <p class="lede">Click a project to bowl it down the lane and open the full case study.</p>
+            <p class="lede">Explore my UX research and design case studies. Click a lane to bowl it down and open the case study.</p>
           </header>
           ${scoreboard()}
         </section>
@@ -193,9 +192,9 @@
               <a class="rack-card" href="project.html?p=${esc(p.id)}" data-roll="${esc(p.id)}" style="--ball:${esc(p.ballColor)}">
                 <div class="rack-media" aria-hidden="true">${p.hero?.src ? `<img src="${esc(p.hero.src)}" alt="" loading="lazy">` : ""}${ballSVG(p.ballColor, "rack-ball")}</div>
                 <div class="rack-body">
-                  <p class="rack-lane">Lane ${i + 1} · ${esc(p.year)}</p>
+                  <p class="rack-lane">Lane ${i + 1}${p.year ? " · " + esc(p.year) : ""}</p>
                   <h2>${t(p.title)}</h2>
-                  <p>${t(p.subtitle)}</p>
+                  <p>${t(p.summary || p.subtitle)}</p>
                   <ul class="tags">${p.tags.map((tg) => `<li>${esc(tg)}</li>`).join("")}</ul>
                   <dl class="rack-meta"><div><dt>Role</dt><dd>${t(p.role)}</dd></div><div><dt>Timeline</dt><dd>${t(p.timeline)}</dd></div></dl>
                   <span class="rack-go">Bowl this case study <span aria-hidden="true">▸</span></span>
@@ -292,7 +291,7 @@
             <div class="case-title">
               ${ballSVG(p.ballColor, "case-ball")}
               <div>
-                <p class="eyebrow">Lane ${idx + 1} · ${esc(p.year)}</p>
+                <p class="eyebrow">Lane ${idx + 1}${p.year ? " · " + esc(p.year) : ""}</p>
                 <h1>${t(p.title)}</h1>
                 <p class="lede">${t(p.subtitle)}</p>
               </div>
