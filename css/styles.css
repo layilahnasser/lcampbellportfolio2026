@@ -626,3 +626,11 @@ body.opener-open { overflow: hidden; }
 
 .iteration-wide:has(.shot--wide) { grid-template-columns: 1fr; }
 .shot--wide img { width: 100%; }
+
+.iteration-brand h4 { margin: 0 0 10px; color: var(--pink-soft); }
+.cmp-after--multi { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; align-items: start; }
+.cmp-after .shot { margin: 0; }
+.compare--page .shot--full img { max-height: none; object-fit: initial; background: transparent; }
+@media (max-width: 700px) { .cmp-after--multi { grid-template-columns: 1fr; } }
+
+.iteration-wide.iteration-brand { grid-template-columns: 1fr; }

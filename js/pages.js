@@ -25,6 +25,11 @@
     return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
   };
 
+  const brandBlock = (palette, typefaces) =>
+    `<ul class="swatches" aria-label="Brand colors">${(palette || [])
+      .map((c) => `<li style="--sw:${esc(c.hex)};--on:${(lum(c.hex) + 0.05) / 0.054 > 1.05 / (lum(c.hex) + 0.05) ? "#0d0a14" : "#fff"}"><b>${esc(c.name)}</b><span>${esc(c.hex)}</span></li>`)
+      .join("")}</ul>${(typefaces || []).length ? `<ul class="typefaces">${typefaces.map((f) => `<li><span>${esc(f.role)}</span><strong>${esc(f.name)}</strong></li>`).join("")}</ul>` : ""}`;
+
   const ext = (href, label) =>
     `<a href="${esc(href)}" target="_blank" rel="noopener">${label}<span class="sr-only"> (opens in a new tab)</span></a>`;
 
@@ -379,6 +384,7 @@
                       <div class="iteration-text"><h3>${t(it.version)}</h3>
                         <p><b>What changed:</b> ${t(it.change)}</p>
                         <p><b>What testing showed:</b> ${t(it.feedback)}</p></div>
+                      ${it.palette ? `<div class="iteration-wide iteration-brand"><div><h4>Brand system</h4>${brandBlock(it.palette, it.typefaces)}</div></div>` : ""}
                       ${Array.isArray(it.image) && it.image.length > 1 ? `<div class="iteration-wide">${imgs(it.image)}</div>` : imgs(it.image)}
                     </li>`
                   )
@@ -406,15 +412,7 @@ ${(p.execution.goals || [])
                         .join("")}`
                     : ""
                 }
-                ${
-                  p.execution.palette
-                    ? `<h3>Brand system</h3>
-                <ul class="swatches" aria-label="Brand colors">${p.execution.palette
-                  .map((c) => `<li style="--sw:${esc(c.hex)};--on:${(lum(c.hex) + 0.05) / 0.054 > 1.05 / (lum(c.hex) + 0.05) ? "#0d0a14" : "#fff"}"><b>${esc(c.name)}</b><span>${esc(c.hex)}</span></li>`)
-                  .join("")}</ul>
-                ${(p.execution.typefaces || []).length ? `<ul class="typefaces">${p.execution.typefaces.map((f) => `<li><span>${esc(f.role)}</span><strong>${esc(f.name)}</strong></li>`).join("")}</ul>` : ""}`
-                    : ""
-                }
+                ${p.execution.palette ? `<h3>Brand system</h3>${brandBlock(p.execution.palette, p.execution.typefaces)}` : ""}
                 <h3>Why it looks &amp; works this way</h3>
                 <div class="decision-grid">${p.execution.decisions
                   .map((d, i) => `<div class="decision"><span class="card-num">0${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.why)}</p></div>`)
@@ -432,7 +430,7 @@ ${(p.execution.goals || [])
                             <p class="compare-label">${c.goal ? `<span class="frame-no">${esc(c.goal)}</span> ` : ""}${esc(c.label)}</p>
                             <div class="compare-pair${c.before ? "" : " compare-pair--single"}">
                               ${c.before ? `<div class="cmp-col"><p class="cmp-tag">Before</p>${img(c.before)}</div>` : ""}
-                              <div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p>${img(c.after)}</div>
+                              <div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p><div class="cmp-after${Array.isArray(c.after) ? " cmp-after--multi" : ""}">${imgs(c.after)}</div></div>
                             </div>
                           </div>`
                         )

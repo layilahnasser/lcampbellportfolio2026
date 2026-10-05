@@ -211,15 +211,6 @@ window.PORTFOLIO = {
         callout: "The shop already feels vibrant, playful and indulgent. The redesign's job was to carry that same energy, and the craft behind it, into the website.",
         lists: [
           {
-            heading: "What makes the brand distinctive",
-            items: [
-              "Small-batch ice creams made with real ingredients.",
-              "Every flavor made from scratch in the Eastern Market kitchen.",
-              "Fresh dairy and premium ingredients, with in-house pasteurization for a rich, ultra-creamy texture.",
-              "A bold red interior and modern design that reflect an energetic, indulgent approach."
-            ]
-          },
-          {
             heading: "Three goals",
             items: [
               "Goal 1: Promote Milk & Froth's distinctive flavor profiles and handcrafted ice cream process.",
@@ -241,6 +232,16 @@ window.PORTFOLIO = {
           version: "Round 1: Wireframes to a design system",
           change: "Moved from the grey wireframes above to a design system built on the brand: Roasted Strawberry as the primary color, plus a golden secondary, success green, error red and a greyscale. Each color has a 10-step primitive scale and semantic roles (surface, border, text and icon in subtle, lighter, default and darker steps). Type pairs Nunito Sans with Montserrat, with a scale for desktop, tablet and mobile.",
           feedback: "TODO: What feedback or testing showed, and what you changed.",
+          palette: [
+            { name: "Roasted Strawberry", hex: "#E02B00" },
+            { name: "Blushed Froth", hex: "#FFD6D4" },
+            { name: "Midnight Cocoa", hex: "#000000" },
+            { name: "Sweet Cream", hex: "#FFFFFF" }
+          ],
+          typefaces: [
+            { role: "Primary typeface", name: "Nunito Sans" },
+            { role: "Secondary typeface", name: "Montserrat" }
+          ],
           image: [
             { src: "assets/img/milk-color-system.jpg", caption: "Color system: primitives and semantic tokens for primary, secondary, success, error and greyscale." },
             { src: "assets/img/milk-type-scale.png", caption: "Type system: Nunito Sans and Montserrat, with a scale for desktop, tablet and mobile." }
@@ -269,23 +270,13 @@ window.PORTFOLIO = {
           {
             tag: "Goal 2",
             title: "Finding a shop",
-            why: "A dedicated Find Pints page, headed \"Michigan's Sweetest Stops,\" opens with a search box for a city or zip code. Each shop (Ann Arbor, Detroit and Royal Oak) then gets its own large city heading, a short description, hours of operation, the address, a storefront photo, and two clear actions: Get Directions and Order Now. The ticker separates the shops and keeps the brand voice playful."
+            why: "A dedicated Find Pints page gives each shop (Ann Arbor, Detroit and Royal Oak) its own large city heading, a short description, hours of operation, the address, a storefront photo, and two clear actions: Get Directions and Order Now. The ticker separates the shops and keeps the brand voice playful."
           },
           {
             tag: "Goal 3",
             title: "Image-forward browsing",
             why: "The homepage opens on a full-bleed strawberry hero, \"Sweet, Creamy & Back in Season,\" then the ticker and a Shop Bestsellers row of pints. Below, a \"Thoughtfully scooped, just for you\" story, customer quotes beside flavor photography, the team behind the shop and an Instagram call-out keep every section led by a photo, so products are seen before they are read about."
           }
-        ],
-        palette: [
-          { name: "Roasted Strawberry", hex: "#E02B00" },
-          { name: "Blushed Froth", hex: "#FFD6D4" },
-          { name: "Midnight Cocoa", hex: "#000000" },
-          { name: "Sweet Cream", hex: "#FFFFFF" }
-        ],
-        typefaces: [
-          { role: "Primary typeface", name: "Nunito Sans" },
-          { role: "Secondary typeface", name: "Montserrat" }
         ],
         decisions: [
           {
@@ -311,18 +302,16 @@ window.PORTFOLIO = {
             label: "Homepage",
             goal: "Goal 3",
             before: { src: "assets/img/milk-current-home.jpg", caption: "Before: the current homepage." },
-            after: { src: "assets/img/milk-homepage.jpg", caption: "After: an image-forward homepage." }
+            after: [
+              { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "After: desktop. A full-bleed hero, bestsellers, the story, customer quotes and the team." },
+              { src: "assets/img/milk-homepage-mobile.jpg", fit: "full", caption: "After: mobile." }
+            ]
           },
           {
-            label: "Find Pints: search",
+            label: "Find Pints: the new locations page",
             goal: "Goal 2",
             before: { src: "assets/img/milk-current-locations.jpg", caption: "Before: the current Find Pints page, a text list of markets by city." },
-            after: { src: "assets/img/milk-locations.jpg", caption: "After: a search by city or zip code." }
-          },
-          {
-            label: "Find Pints: shop pages",
-            goal: "Goal 2",
-            after: { src: "assets/img/milk-locations-page.jpg", caption: "After: Ann Arbor, Detroit and Royal Oak, each with hours, address, photo and directions." }
+            after: { src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "After: Ann Arbor, Detroit and Royal Oak, each with hours, address, photo and directions. Desktop and mobile." }
           },
           {
             label: "About",

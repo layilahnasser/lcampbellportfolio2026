@@ -26,6 +26,7 @@
     if (im && im.fit === "phone") cls += " shot--phone";
     if (im && im.fit === "tall") cls += " shot--tall";
     if (im && im.fit === "wide") cls += " shot--wide";
+    if (im && im.fit === "full") cls += " shot--full";
     if (im && im.src) {
       return `<figure class="shot ${cls}"><img src="${esc(im.src)}" alt="${esc(plain(im.caption))}" loading="lazy">${
         im.caption ? `<figcaption>${esc(plain(im.caption))}</figcaption>` : ""
