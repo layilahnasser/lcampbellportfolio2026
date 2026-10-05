@@ -240,7 +240,7 @@ window.PORTFOLIO = {
         },
         {
           version: "Round 2: Brand system & components",
-          change: "Defined the brand colors and type, then built a component library: primary, secondary and tertiary buttons in three sizes, each with default, hover, selected, focused and disabled states; navigation links; add-to-cart and quantity controls; and product cards in list, grid and quick-add layouts. Navigation (a desktop bar and a mobile menu with an Order Now button), the product, item and footer pages, and a shopping cart were designed in both a light (blush) and a dark (cocoa) theme. The cart shows the items, a \"buy 5, get one free\" nudge (\"Add 3 more pints to checkout\"), a gift-note option and a clear checkout button, on desktop and mobile.",
+          change: "Defined the brand colors and type, then built a component library: primary, secondary and tertiary buttons in three sizes, each with default, hover, selected, focused and disabled states; navigation links; add-to-cart and quantity controls; and product cards in list, grid and quick-add layouts. Navigation (a desktop bar and a mobile menu with an Order Now button), the product, item and footer pages, and a shopping cart were designed in both a light (blush) and a dark (cocoa) theme. A slide-out cart shows the items, a \"buy 5, get one free\" nudge (\"Add 3 more pints to checkout\"), a gift-note option and a clear checkout button. Full cart, checkout, location, product, e-commerce and 404 pages were then designed for both desktop and mobile.",
           feedback: "TODO: What testing or review showed on the high-fidelity version.",
           image: { src: "", caption: "TODO: Component library screenshot. Save as assets/img/milk-components.jpg and set src." }
         }
@@ -266,11 +266,19 @@ window.PORTFOLIO = {
           },
           {
             title: "Goal 2: Finding a shop",
-            why: "A dedicated Find Pints page, headed \"Michigan's Sweetest Stops,\" invites people to find a Milk & Froth near them with a search box, and groups locations by city so people can quickly find relevant location information."
+            why: "A dedicated Find Pints page, headed \"Michigan's Sweetest Stops,\" invites people to find a Milk & Froth near them. Each shop (Ann Arbor, Detroit and Royal Oak) gets its own large city heading, a short description, hours of operation, the address, a photo of the storefront, and two clear actions: Get Directions and Order Now. A \"Churned, Scooped, Chilled, Repeat\" ticker separates the shops and keeps the brand voice playful, so people can quickly find the location information they need."
           },
           {
             title: "Goal 3: Image-forward browsing",
-            why: "The homepage opens on a full-bleed strawberry hero with \"Sweet, Creamy & Back in Season\" and uses the pints and flavor photography as the main navigation cue, so the products are seen before they are read about."
+            why: "The homepage opens on a full-bleed strawberry hero with \"Sweet, Creamy & Back in Season,\" followed by the Churned, Scooped, Chilled, Repeat ticker and a Shop Bestsellers row of pints, one tagged Seasonal. Below, a \"Thoughtfully scooped, just for you\" story, customer quotes set beside flavor photography, the team behind the shop and an Instagram call-out keep every section led by a photo, so the products are seen before they are read about. A mobile version stacks the same sections in one column."
+          },
+          {
+            title: "Cart and checkout",
+            why: "The shopping cart pairs an item list (quantity controls, a coupon field) with an order summary showing subtotal, estimated shipping and taxes, and a clear Checkout button. It points out free delivery over $50 and shows the accepted payment methods up front. Checkout adds a Delivery or Pick Up toggle, a short address form and a single Pay Now button, so people always know what they will pay."
+          },
+          {
+            title: "A 404 that stays on brand",
+            why: "A broken link shows a melted ice cream cone and the line \"Oops! The page you're looking for must have melted,\" with a Back Home button, turning a dead end into a moment of brand personality while still getting people back on track."
           },
           {
             title: "Brand, type and color",
@@ -280,7 +288,8 @@ window.PORTFOLIO = {
         images: [
           { src: "assets/img/milk-locations.jpg", caption: "Goal 2: Find Pints, the location-focused page." },
           { src: "assets/img/milk-homepage.jpg", caption: "Goal 3: the image-forward homepage." },
-          { src: "", caption: "TODO: Goal 1 product page. Save your product page screenshot as assets/img/milk-product.jpg and set src." }
+          { src: "", caption: "TODO: Goal 1 product page (desktop and mobile). Save as assets/img/milk-product.jpg and set src." },
+          { src: "", caption: "TODO: Cart, checkout and 404 screens. Save as assets/img/milk-cart-checkout.jpg and set src." }
         ],
         prototypeUrl: ""
       },
@@ -290,7 +299,7 @@ window.PORTFOLIO = {
           { value: "3", label: "design goals, each with a feature" },
           { value: "4", label: "brands compared" },
           { value: "8", label: "features benchmarked" },
-          { value: "5", label: "pages designed" }
+          { value: "2", label: "layouts designed: desktop and mobile" }
         ],
         reflection: "TODO: What you learned about designing for a food brand, and what you'd do next (for example, testing the store locator with real customers)."
       }
