@@ -226,6 +226,7 @@ main > * { width: min(var(--maxw), 100% - 2 * var(--gutter)); margin-inline: aut
 .hero-lane-plane { position: absolute; left: 93%; bottom: -150px; width: 420px; margin-left: -210px; height: 1250px; transform-origin: 50% 100%; transform: rotateX(70deg); transform-style: preserve-3d; box-shadow: 0 0 80px rgba(91, 60, 255, 0.35); }
 .hero-lane-plane::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, transparent 6%, rgba(255, 255, 255, 0.16) 26%, transparent 42%, transparent 62%, rgba(255, 255, 255, 0.09) 78%, transparent 92%); }
 .hero-lane .pin-wrap { width: 54px; height: 158px; left: calc(50% + var(--x) * 30px - 27px); bottom: calc(100% - 230px + var(--r) * 64px); transform: rotateX(-70deg); }
+.hero-stats { display: flex; flex-direction: column; margin: 0 0 18px; font: italic 500 0.95rem var(--font); color: rgba(255, 255, 255, 0.9); line-height: 1.5; }
 .hero-copy { position: relative; z-index: 2; }
 .hero-title {
   max-width: 13em; margin: 0.45em 0 0.4em; padding: 0; transform: none; -webkit-text-stroke: 0; paint-order: normal;

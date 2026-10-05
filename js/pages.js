@@ -66,12 +66,13 @@
         <section class="hero" aria-labelledby="hero-title">
           <div class="hero-bg" aria-hidden="true">${homeLane()}</div>
           <div class="hero-copy">
+            <div class="hero-stats"><span>Location: ${esc(me.location)}</span><span>Final frame: M.S., May 2027</span></div>
             ${logo("logo--xl")}
             <h1 id="hero-title" class="hero-title"><span class="sr-only">${esc(me.firstName)} ${esc(me.lastName)}: </span>${esc(me.heroTitle)}</h1>
             <p class="hero-tagline">${esc(me.headline)}</p>
             <div class="hero-ctas">
-              <a class="btn btn--pink" href="#scoreboard">View my work <span aria-hidden="true">→</span></a>
-              <a class="btn btn--ghost" href="about.html">About me <span aria-hidden="true">→</span></a>
+              <a class="btn btn--pink" href="#scoreboard">Pick a project</a>
+              <a class="btn btn--ghost" href="about.html">Meet the player</a>
             </div>
           </div>
           <div class="hero-scene">
