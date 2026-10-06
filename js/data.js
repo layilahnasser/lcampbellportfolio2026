@@ -568,7 +568,14 @@ window.PORTFOLIO = {
         }
       ],
       execution: {
-        summary: "Research only matters if it changes how the business works. These are the places where the work reached people beyond the readouts.",
+        summary: "Five of the concepts from the final shareout. Each one answers something customers told us in the interviews: they want to feel seen, rewarded for staying, and clearly informed. Research only matters if it changes how the business works, so the second half of this frame shows where the work reached people beyond the readouts.",
+        designs: [
+          { label: "Gamified Tenure Rewards", images: [{ src: "assets/img/root-concept-tenure.png", fit: "full", caption: "Provide customers with discounts and rewards based off their tenure." }] },
+          { label: "Drive for Rewards", images: [{ src: "assets/img/root-concept-drive.png", fit: "full", caption: "A driving score based reward system where customers can gain benefits based on their driving." }] },
+          { label: "Sympathetic Proactive Communication", images: [{ src: "assets/img/root-concept-sympathy.png", fit: "full", caption: "Make customers feel valued by showing sympathy through benefits and rewards." }] },
+          { label: "Discount Opportunities", images: [{ src: "assets/img/root-concept-discounts.png", fit: "full", caption: "Provide customers with opportunities to lower their rate by showcasing the different discounts that are available." }] },
+          { label: "Updated Email Comms", images: [{ src: "assets/img/root-concept-email.png", fit: "full", caption: "Rewording existing email communications to make them more personable and friendly." }] }
+        ],
         decisions: [
           { title: "Updated frontline CS scripts", why: "Worked with the Customer Service team to turn research findings into immediate operational improvements, by updating the scripts agents use today." },
           { title: "Made research visible", why: "After feedback about broader team engagement, I published 7 insights posts in the team's research Slack channel, on top of the required weekly update." },
