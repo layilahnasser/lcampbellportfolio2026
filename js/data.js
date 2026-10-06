@@ -603,6 +603,8 @@ window.PORTFOLIO = {
 
       designSystem: {
         intro: "Built from the ground up: the brand's colors and type first, then the components the screens are built from.",
+        colorImage: { src: "assets/img/crown-color-system.jpg", fit: "wide", caption: "Color system: primitives and semantic tokens for teal, gold, success green, error red and greyscale." },
+        typography: { src: "assets/img/crown-typography.jpg", fit: "wide", caption: "Type scale: headings, paragraphs, buttons and labels." },
         components: { src: "assets/img/crown-components.jpg", fit: "wide", caption: "Component library: buttons, navigation, flashcards, progress and readiness cards." }
       },
 
