@@ -860,3 +860,6 @@ body { overflow-x: clip; }
 .design-cell--phones .phone-row { grid-template-columns: repeat(auto-fill, minmax(190px, 230px)); justify-content: center; padding: 18px 12px; }
 .design-cell--phones .phone-row .shot--phone img { height: 460px; width: 100%; object-fit: cover; object-position: top; max-height: none; cursor: zoom-in; }
 .design-cell--phones .phone-row figcaption { font-size: 0.8rem; }
+
+.design-cell--phones .phone-row { align-items: start; }
+.design-cell--phones .phone-row .shot--phone img { height: auto; max-height: none; object-fit: contain; }

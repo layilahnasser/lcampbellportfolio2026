@@ -689,9 +689,7 @@ window.PORTFOLIO = {
             ]
           }
         ],
-        images: [
-          { src: "assets/img/crown-screens-light.png", fit: "wide", caption: "Screen set, light mode: profile pages, home and progress pages, and flashcards." }
-        ],
+        images: [],
         prototypeUrl: ""
       },
 
