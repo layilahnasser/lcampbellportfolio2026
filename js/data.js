@@ -283,7 +283,8 @@ window.PORTFOLIO = {
           {
             label: "Homepage",
             images: [
-              { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "Desktop" }
+              { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "Desktop" },
+              { src: "assets/img/milk-homepage-mobile.jpg", fit: "full", caption: "Mobile" }
             ]
           },
           {
@@ -326,7 +327,8 @@ window.PORTFOLIO = {
             label: "Homepage",
             before: { src: "assets/img/milk-current-home.jpg", caption: "Before: the current homepage." },
             after: [
-              { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "After: desktop. A full-bleed hero, bestsellers, the story, customer quotes and the team." }
+              { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "After: desktop. A full-bleed hero, bestsellers, the story, customer quotes and the team." },
+              { src: "assets/img/milk-homepage-mobile.jpg", fit: "full", caption: "After: mobile." }
             ]
           },
           {
