@@ -707,3 +707,8 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 @media (max-width: 860px) { .league { grid-template-columns: 1fr; } .league-photo { min-height: 0; aspect-ratio: auto; } }
 
 .rack-media img.rack-img--contain { object-fit: contain; padding: 10px; }
+
+/* Video and embeds */
+.shot--video video { display: block; width: 100%; max-height: 640px; border-radius: 12px; border: 1px solid var(--line); background: #000; }
+.shot--embed .embed-wrap { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #000; }
+.shot--embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }

@@ -27,6 +27,17 @@
     if (im && im.fit === "tall") cls += " shot--tall";
     if (im && im.fit === "wide") cls += " shot--wide";
     if (im && im.fit === "full") cls += " shot--full";
+    const cap = im && im.caption ? `<figcaption>${esc(plain(im.caption))}</figcaption>` : "";
+    // Video file: { video: "assets/video/demo.mp4", poster: "assets/img/poster.jpg", captions: "assets/video/demo.vtt", caption: "…" }
+    if (im && im.video) {
+      return `<figure class="shot shot--video ${cls}"><video controls playsinline preload="metadata"${im.poster ? ` poster="${esc(im.poster)}"` : ""}${im.loop ? " loop muted autoplay" : ""} aria-label="${esc(plain(im.caption || "Video"))}"><source src="${esc(im.video)}">${
+        im.captions ? `<track kind="captions" src="${esc(im.captions)}" srclang="en" label="English" default>` : ""
+      }Your browser can't play this video.</video>${cap}</figure>`;
+    }
+    // Embed (Figma prototype, YouTube, Vimeo, Loom…): { embed: "https://…", caption: "…" }
+    if (im && im.embed && /^https:\/\//.test(im.embed)) {
+      return `<figure class="shot shot--embed ${cls}"><div class="embed-wrap"><iframe src="${esc(im.embed)}" title="${esc(plain(im.caption || "Embedded media"))}" loading="lazy" allow="fullscreen; autoplay; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>${cap}</figure>`;
+    }
     if (im && im.src) {
       return `<figure class="shot ${cls}"><img src="${esc(im.src)}" alt="${esc(plain(im.caption))}" loading="lazy">${
         im.caption ? `<figcaption>${esc(plain(im.caption))}</figcaption>` : ""
@@ -43,7 +54,7 @@
     "error",
     (e) => {
       const i = e.target;
-      if (!i || i.tagName !== "IMG" || !i.closest(".shot")) return;
+      if (!i || !(i.tagName === "IMG" || i.tagName === "SOURCE") || !i.closest(".shot")) return;
       const fig = i.closest(".shot");
       const name = (i.getAttribute("src") || "").split("/").pop();
       const cap = fig.querySelector("figcaption");
@@ -51,9 +62,9 @@
       ph.className = "shot-ph";
       ph.setAttribute("role", "img");
       ph.setAttribute("aria-label", "Image placeholder");
-      ph.innerHTML = `<span>Add image</span><small>${esc(cap ? cap.textContent : "")}</small><small class="ph-file">Save the file as assets/img/${esc(name)}</small>`;
+      ph.innerHTML = `<span>Add ${i.tagName === "SOURCE" ? "video" : "image"}</span><small>${esc(cap ? cap.textContent : "")}</small><small class="ph-file">Save the file as assets/${i.tagName === "SOURCE" ? "video" : "img"}/${esc(name)}</small>`;
       fig.classList.add("shot--empty");
-      fig.classList.remove("shot--phone", "shot--tall");
+      fig.classList.remove("shot--phone", "shot--tall", "shot--video");
       fig.replaceChildren(ph);
     },
     true

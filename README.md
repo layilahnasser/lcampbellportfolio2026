@@ -40,6 +40,7 @@ assets/         photo (img/layilah.jpg), resume.pdf, fonts, favicon
 - **Home stat readouts:** `stats` in `js/data.js` (use the value `"projects"` to show the live number of case studies).
 - **Scoreboard wording:** each project has `subtitle`, `focus`, `approach` and `summary` in `js/data.js`.
 - **Case-study images:** each frame can take one image or a list (`image: [ {src, caption}, {src, caption} ]`). Empty `src` shows a placeholder.
+- **Video:** any image slot can be a video instead. Put the file in `assets/video/` and use `{ video: "assets/video/demo.mp4", poster: "assets/img/demo.jpg", caption: "…" }` (add `loop: true` for a silent looping clip, and `captions: "assets/video/demo.vtt"` for subtitles). For long videos or a **Figma prototype**, use an embed link instead: `{ embed: "https://www.youtube.com/embed/…", caption: "…" }`. Keep uploaded files under about 25 MB each (GitHub's web upload limit); use an embed for anything bigger.
 - **Add or remove a project:** copy or delete a block inside `projects: [ … ]` and give it a unique `id`.
 
 ## Missing screenshots: drop-in slots
