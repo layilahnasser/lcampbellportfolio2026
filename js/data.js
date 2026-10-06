@@ -288,6 +288,10 @@ window.PORTFOLIO = {
             ]
           },
           {
+            label: "About",
+            images: [{ src: "assets/img/milk-about-after.jpg", fit: "full", caption: "The About story, now on the homepage: small batches, big flavor, and the team." }]
+          },
+          {
             label: "Our Flavors", isNew: true,
             images: [{ src: "assets/img/milk-flavors.jpg", fit: "full", caption: "Desktop and mobile, light theme." }]
           },
@@ -335,7 +339,7 @@ window.PORTFOLIO = {
           {
             label: "About, now on the homepage",
             before: { src: "assets/img/milk-current-about.jpg", caption: "Before: the current About page." },
-            after: { src: "assets/img/milk-about-after.jpg", fit: "full", caption: "After: the About story, now part of the homepage: small batches, big flavor, and \"Hey, let's get scooping\" with the team." }
+            after: { src: "assets/img/milk-about-after.jpg", fit: "full", caption: "After: the About story, now part of the homepage: small batches, big flavor, and the team." }
           }
         ],
         newPagesHeading: "New pages the original site didn't have",
