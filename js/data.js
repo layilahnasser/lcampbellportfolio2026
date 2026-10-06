@@ -897,19 +897,6 @@ window.PORTFOLIO = {
           { value: "3", label: "patterns across every method" },
           { value: "100,000+", label: "country-commodity combinations in the portal" }
         ],
-        documents: [
-          { title: "Final report (PDF)", file: "assets/docs/usda-final-report.pdf", note: "Summary of all five methods" },
-          { title: "Interviews: report", file: "assets/docs/usda-report-interviews.pdf", note: "Written paper" },
-          { title: "Survey: report", file: "assets/docs/usda-report-survey.pdf", note: "Written paper" },
-          { title: "Comparative evaluation: report", file: "assets/docs/usda-report-comparative-evaluation.pdf", note: "ACIR vs. eCFR, APHIS, Microsoft Learn, GOV.UK" },
-          { title: "Heuristic evaluation: report", file: "assets/docs/usda-report-heuristic-evaluation.pdf", note: "6 heuristics, 60+ issues" },
-          { title: "Usability test: report", file: "assets/docs/usda-report-usability-test.pdf", note: "3 tasks, 7 moderated sessions" },
-          { title: "Interviews: deck", file: "assets/docs/usda-interviews.pdf", note: "Slides, with personas" },
-          { title: "Comparative evaluation: deck", file: "assets/docs/usda-comparative-evaluation.pdf", note: "Slides" },
-          { title: "Heuristic evaluation: deck", file: "assets/docs/usda-heuristic-evaluation.pdf", note: "Slides" },
-          { title: "Usability test: deck", file: "assets/docs/usda-usability-test.pdf", note: "Slides" },
-          { title: "Interaction map (PDF)", file: "assets/docs/usda-interaction-map.pdf", note: "Search journey with friction marked" }
-        ],
         reflection: "TODO: What the research changed, what you learned, and what you'd do next."
       }
     },
@@ -1025,11 +1012,6 @@ window.PORTFOLIO = {
           { value: "5", label: "research findings" },
           { value: "3", label: "product recommendations" },
           { value: "180+", label: "students and the strategy team presented to" }
-        ],
-        documents: [
-          { title: "Research deck (PDF)", file: "assets/docs/elevated-research-deck.pdf", note: "24 slides, in-depth research version" },
-          { title: "Final presentation (PDF)", file: "assets/docs/elevated-deck.pdf", note: "27 slides, including the appendix" },
-          { title: "Final report (PDF)", file: "assets/docs/elevated-paper.pdf", note: "Milestone 5 report" }
         ],
         reflection: "TODO: What you learned and what you'd do differently. One true thing from the paper: sorting hundreds of notes into themes was the hardest and most valuable part, and the feedback to add an American participant changed what we learned."
       }
