@@ -335,7 +335,7 @@ window.PORTFOLIO = {
           {
             label: "About, now on the homepage",
             before: { src: "assets/img/milk-current-about.jpg", caption: "Before: the current About page." },
-            after: { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "After: the About story now lives on the homepage, in the \"Hey, let's get scooping\" section with the team." }
+            after: { src: "assets/img/milk-about-after.jpg", fit: "full", caption: "After: the About story, now part of the homepage: small batches, big flavor, and \"Hey, let's get scooping\" with the team." }
           }
         ],
         newPagesHeading: "New pages the original site didn't have",
