@@ -9,7 +9,7 @@
 .rk .lead{color:#cfc8e6;font-size:19px;margin:6px 0 18px}
 /* the rack */
 .rk-rack{position:relative;margin:10px 0 0;padding:26px 24px 0;border-radius:22px 22px 0 0;background:linear-gradient(#17112b,#0e0a1b);border:2px solid #2b2443;border-bottom:0}
-.rk-rack::before{content:"BALL RETURN";position:absolute;top:10px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.3em;color:#7d6fb0;font-weight:700}
+.rk-rack::before{content:"";position:absolute;top:10px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.3em;color:#7d6fb0;font-weight:700}
 .rk-balls{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;padding-top:18px}
 .rk-bw{display:flex;flex-direction:column;align-items:center;gap:8px;background:none;border:0;color:#fff;cursor:pointer;font:inherit;padding:0 0 12px}
 .rk-ball{position:relative;width:min(120px,100%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff9 0 6%,transparent 18%),radial-gradient(circle at 40% 35%,color-mix(in srgb,var(--c) 70%,#fff),var(--c) 55%,color-mix(in srgb,var(--c) 55%,#000) 100%);box-shadow:0 14px 22px #0009,0 0 0 0 var(--c);transition:transform .25s cubic-bezier(.3,1.6,.5,1),box-shadow .25s}
@@ -23,7 +23,7 @@
 .rk-shelf{height:26px;background:linear-gradient(#5b3a1c,#3a2310);border-radius:0 0 12px 12px;box-shadow:0 10px 24px #000a;margin:0 -2px}
 .rk-rails{height:8px;background:repeating-linear-gradient(90deg,#2b2443 0 40px,#1a1530 40px 80px)}
 /* lane preview */
-.rk-lane{margin-top:26px;display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:center;background:var(--panel);border:2px solid var(--c);border-radius:20px;padding:18px;box-shadow:0 0 36px color-mix(in srgb,var(--c) 35%,transparent)}
+.rk-lane{margin-top:26px;display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:center;background:var(--panel);border:2px solid var(--c);border-radius:20px;padding:18px;box-shadow:0 0 36px color-mix(in srgb,var(--c) 35%,transparent)}
 .rk-lane .rk-pic{border-radius:14px;overflow:hidden;background:#120f1c;aspect-ratio:16/9;display:grid;place-items:center}
 .rk-lane .rk-pic img{width:100%;height:100%;object-fit:cover}
 .rk-lane .rk-eyebrow{color:var(--c);font-weight:700;letter-spacing:.12em;font-size:13px}
@@ -39,22 +39,14 @@
 @media(max-width:800px){.rk-balls{grid-template-columns:repeat(3,1fr)}.rk-lane{grid-template-columns:1fr}.rk-tt{grid-template-columns:1fr}}
 </style></head><body>
 <main class="rk">
-<span class="mkbadge">MOCK-UP · not live · click a ball</span>
-<p style="color:#4de3ff;font-weight:700;letter-spacing:.1em;margin:14px 0 0">MY WORK</p>
+<span class="mkbadge">MOCK-UP · click a ball</span>
 <h1>The ball rack</h1>
-<p class="lead">Six balls, six lanes. Pick one up and send it down the lane.</p>
 
 <div class="rk-rack"><div class="rk-balls" id="balls"></div></div>
 <div class="rk-shelf"></div><div class="rk-rails"></div>
 
 <section class="rk-lane" id="lane" aria-live="polite"></section>
 
-<section class="rk-alt"><h3>HOW IT DIFFERS FROM THE HOME SCOREBOARD</h3>
-<div class="rk-tt">
- <div class="rk-note"><b>Home = scoreboard</b>A table: lane, focus, approach. Fast to scan for a recruiter.</div>
- <div class="rk-note"><b>My Work = ball rack</b>Physical and playful: pick up a ball, see the lane's cover and one line, then bowl.</div>
- <div class="rk-note"><b>Same destination</b>Both end in the ball roll, so nothing about the case studies changes.</div>
-</div></section>
 </main>
 <script>
 const P=[
@@ -69,7 +61,7 @@ const B=document.getElementById('balls'),L=document.getElementById('lane');
 B.innerHTML=P.map((p,i)=>`<button class="rk-bw" style="--c:${p.c}" data-i="${i}" aria-pressed="false"><span class="rk-ball" aria-hidden="true"><i></i><i></i><i></i><b>${i+1}</b></span><span class="rk-nm">${p.n}</span></button>`).join('');
 function pick(i){const p=P[i];document.querySelectorAll('.rk-bw').forEach((b,k)=>b.setAttribute('aria-pressed',k===i));
 L.style.setProperty('--c',p.c);
-L.innerHTML=`<div class="rk-pic"><img src="${p.img}" alt=""></div><div><div class="rk-eyebrow">LANE ${i+1} · ${p.y}</div><h2>${p.n}</h2><p>${p.s}</p><div class="rk-tags">${p.t.map(t=>`<span>${t}</span>`).join('')}</div><button class="rk-go">Bowl this lane ▸</button><div class="rk-pins" aria-hidden="true">${'<s></s>'.repeat(10)}</div></div>`}
+L.innerHTML=`<div class="rk-pic"><img src="${p.img}" alt=""></div><div><div class="rk-eyebrow">LANE ${i+1} · ${p.y}</div><h2>${p.n}</h2><p>${p.s}</p><button class="rk-go">Bowl this lane ▸</button></div>`}
 B.addEventListener('click',e=>{const b=e.target.closest('.rk-bw');if(b)pick(+b.dataset.i)});
 pick(2);
 </script></body></html>
