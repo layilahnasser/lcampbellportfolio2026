@@ -228,8 +228,10 @@
           <p class="lede">Pick a ball to explore my UX research and design work, frame by frame. See how I turn questions into insights and insights into better experiences.</p>
         </section>
         <section class="section" aria-label="Case studies">
-          <div class="rack">
+          <h2 class="work-label">Featured lanes</h2>
+          <div class="rack rack--featured">
             ${P.projects
+              .slice(0, 3)
               .map(
                 (p, i) => `
               <a class="rack-card" href="project.html?p=${esc(p.id)}" data-roll="${esc(p.id)}" style="--ball:${esc(p.ballColor)}">
@@ -238,15 +240,34 @@
                   <div class="rack-head">
                     <span class="rack-ballwrap" aria-hidden="true"><span class="rack-ball"><i></i><i></i><i></i></span><b class="rack-num">${i + 1}</b></span>
                     <div>
-                      <p class="rack-lane">Lane ${i + 1}${p.year ? " · " + esc(p.year) : ""}</p>
-                      <h2>${t(p.title)}</h2>
+                      <p class="rack-lane"><span aria-hidden="true">★ </span>Lane ${i + 1}${p.year ? " · " + esc(p.year) : ""}</p>
+                      <h3>${t(p.title)}</h3>
                     </div>
                   </div>
                   <p>${t(p.summary || p.subtitle)}</p>
-                  <ul class="tags">${p.tags.map((tg) => `<li>${esc(tg)}</li>`).join("")}</ul>
-                  <dl class="rack-meta"><div><dt>Role</dt><dd>${t(p.role)}</dd></div><div><dt>Timeline</dt><dd>${t(p.timeline)}</dd></div></dl>
-                  <span class="rack-go">Bowl this case study <span aria-hidden="true">▸</span></span>
+                  <span class="rack-go">Bowl this lane <span aria-hidden="true">▸</span></span>
                 </div>
+              </a>`
+              )
+              .join("")}
+          </div>
+          <h2 class="work-label work-label--more">More research</h2>
+          <div class="work-rows">
+            ${P.projects
+              .slice(3)
+              .map(
+                (p, k) => `
+              <a class="work-row" href="project.html?p=${esc(p.id)}" data-roll="${esc(p.id)}" style="--ball:${esc(p.ballColor)}">
+                <div class="work-row-img" aria-hidden="true">${p.hero?.src ? `<img src="${esc(p.hero.src)}" alt="" loading="lazy">` : ""}</div>
+                <div class="work-row-tx">
+                  <span class="rack-ballwrap" aria-hidden="true"><span class="rack-ball"><i></i><i></i><i></i></span><b class="rack-num">${k + 4}</b></span>
+                  <div>
+                    <p class="rack-lane">Lane ${k + 4}${p.year ? " · " + esc(p.year) : ""}</p>
+                    <h3>${t(p.title)}</h3>
+                    <p>${t(p.summary || p.subtitle)}</p>
+                  </div>
+                </div>
+                <span class="work-row-go">Bowl <span aria-hidden="true">▸</span></span>
               </a>`
               )
               .join("")}
