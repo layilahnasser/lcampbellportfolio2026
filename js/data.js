@@ -664,13 +664,17 @@ window.PORTFOLIO = {
             phones: true,
             images: [
               { src: "assets/img/crown-home-full.jpg", caption: "Home: readiness score, mastery streak, answer bank and pageant checklist." },
-              { src: "assets/img/crown-dashboard.png", caption: "Readiness dashboard: readiness score, mastery streak and practice streak." }
+              { src: "assets/img/crown-dashboard.png", caption: "Readiness dashboard: readiness score, mastery streak and practice streak." },
+              { src: "assets/img/crown-road.jpg", caption: "Competition readiness: a countdown to the next milestone, packing progress, coach notes and paperwork status." },
+              { src: "assets/img/crown-tips.jpg", caption: "Daily reminders and tips: strategy, daily intentions and digital representation." }
             ]
           },
           {
             label: "Interview flashcards",
             phones: true,
             images: [
+              { src: "assets/img/crown-decks.jpg", caption: "Your decks: a daily drill and a deck for each level, with progress on every one." },
+              { src: "assets/img/crown-flashcards-reveal.jpg", caption: "Flashcards practice: card 1 of 24, tap to reveal." },
               { src: "assets/img/crown-flashcards.png", caption: "Flashcards: tap to reveal, with a clear answer structure." }
             ]
           },
