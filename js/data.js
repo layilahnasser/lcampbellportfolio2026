@@ -329,7 +329,7 @@ window.PORTFOLIO = {
             ]
           },
           {
-            label: "Find Pints: the new locations page",
+            label: "Find Pints",
             goal: "Goal 2",
             before: { src: "assets/img/milk-current-locations.jpg", caption: "Before: the current Find Pints page, a text list of markets by city." },
             after: { src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "After: Ann Arbor, Detroit and Royal Oak, each with hours, address, photo and directions. Desktop and mobile." }
