@@ -498,7 +498,7 @@
                 ${frameHead(6, FRAMES[5].label)}
                 ${ok(ex.summary) ? `<p class="glance">${t(first(ex.summary))}</p>` : ""}
                 ${(ex.newPages || []).length ? `<h3>${esc(ex.newPagesHeading || "New pages")}</h3>${ex.newPagesNote ? `<p>${t(ex.newPagesNote)}</p>` : ""}<ul class="chips" role="list">${ex.newPages.map((n) => `<li class="chip"><span class="frame-no">New</span> ${esc(n)}</li>`).join("")}</ul>` : ""}
-                ${(ex.designs || []).length ? `<div class="design-grid">${(ex.designs || []).map((d) => `<article class="design-cell"><h3 class="design-label">${d.isNew ? `<span class="frame-no">New</span> ` : ""}${esc(d.label)}</h3>${imgs(d.images)}</article>`).join("")}</div><p class="hint">Tap a screen to open it full size.</p>` : ""}
+                ${(ex.designs || []).length ? `<div class="design-grid">${(ex.designs || []).map((d) => d.phones ? `<article class="design-cell design-cell--phones"><h3 class="design-label">${d.isNew ? `<span class="frame-no">New</span> ` : ""}${esc(d.label)}</h3>${img({ row: d.images })}</article>` : `<article class="design-cell"><h3 class="design-label">${d.isNew ? `<span class="frame-no">New</span> ` : ""}${esc(d.label)}</h3>${imgs(d.images)}</article>`).join("")}</div><p class="hint">Tap a screen to open it full size.</p>` : ""}
                 ${(ex.goals || []).map((g) => `<article class="goal-card"><header class="goal-head"><span class="frame-no">${esc(g.tag)}</span><p class="goal-statement">${esc(g.title || g.statement)}</p></header><div class="goal-body${g.images ? " goal-body--shot" : ""}"><p class="goal-why">${t(g.why)}</p>${g.images ? `<div class="goal-shots">${imgs(g.images)}</div>` : ""}</div>${g.before && g.after ? `<div class="compare-pair"><div class="cmp-col"><p class="cmp-tag">Before</p>${img(g.before)}</div><div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p>${img(g.after)}</div></div>` : ""}</article>`).join("")}
                 ${(ex.images || []).length ? `<div class="shots">${ex.images.map((im) => img(im)).join("")}</div>` : ""}
                 ${ex.compare ? `<h3>Before and after</h3>${ex.compare.map((c) => `<div class="compare"><p class="compare-label">${esc(c.label)}</p><div class="compare-pair">${img(c.before)}${img(c.after)}</div></div>`).join("")}` : ""}
@@ -567,7 +567,7 @@
 
   /* ---------- Page behaviours ---------- */
   if (page === "project") {
-    document.querySelectorAll(".design-grid .shot img, .ds-type .shot img").forEach((im) => { im.style.cursor = "zoom-in"; im.addEventListener("click", () => window.open(im.src, "_blank", "noopener")); });
+    document.querySelectorAll(".design-grid .shot img, .ds-type .shot img, .phone-row .shot img").forEach((im) => { im.style.cursor = "zoom-in"; im.addEventListener("click", () => window.open(im.src, "_blank", "noopener")); });
     const links = [...document.querySelectorAll(".fstrip a")];
     const frames = [...document.querySelectorAll(".frame")];
     const paint = (cur) => {

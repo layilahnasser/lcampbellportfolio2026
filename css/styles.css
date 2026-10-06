@@ -855,3 +855,8 @@ body { overflow-x: clip; }
 .work-row { grid-template-columns: 150px minmax(0, 1fr) auto; }
 @media (max-width: 800px) { .work-row { grid-template-columns: 90px minmax(0, 1fr); } }
 @media (max-width: 340px) { .hud-links { flex-wrap: wrap; } .hud-pill { padding: 4px 6px; font-size: 0.7rem; } }
+
+.design-cell--phones { grid-column: 1 / -1; }
+.design-cell--phones .phone-row { grid-template-columns: repeat(auto-fill, minmax(190px, 230px)); justify-content: center; padding: 18px 12px; }
+.design-cell--phones .phone-row .shot--phone img { height: 460px; width: 100%; object-fit: cover; object-position: top; max-height: none; cursor: zoom-in; }
+.design-cell--phones .phone-row figcaption { font-size: 0.8rem; }

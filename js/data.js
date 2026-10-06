@@ -658,10 +658,34 @@ window.PORTFOLIO = {
             why: "TODO: Why teal and gold, and why a Manrope and Newsreader pairing, suit confident, polished prep."
           }
         ],
+        designs: [
+          {
+            label: "Readiness dashboard",
+            phones: true,
+            images: [
+              { src: "assets/img/crown-home-full.jpg", caption: "Home: readiness score, mastery streak, answer bank and pageant checklist." },
+              { src: "assets/img/crown-dashboard.png", caption: "Readiness dashboard: readiness score, mastery streak and practice streak." }
+            ]
+          },
+          {
+            label: "Interview flashcards",
+            phones: true,
+            images: [
+              { src: "assets/img/crown-flashcards.png", caption: "Flashcards: tap to reveal, with a clear answer structure." }
+            ]
+          },
+          {
+            label: "Progress sharing",
+            phones: true,
+            images: [
+              { src: "assets/img/crown-profile.jpg", caption: "Profile: readiness score, personal information and competition focus." },
+              { src: "assets/img/crown-share-journey.jpg", caption: "Share Your Journey: a readiness profile, checklist and strategic feedback from coaches." },
+              { src: "assets/img/crown-submitted.jpg", caption: "Submitted for Review: a paperwork summary and a 48-hour turnaround." },
+              { src: "assets/img/crown-email.jpg", caption: "Email notifications: control daily reminders, weekly reports and pageant-week check-ins." }
+            ]
+          }
+        ],
         images: [
-          { src: "assets/img/crown-dashboard.png", fit: "phone", caption: "Readiness dashboard: readiness score, mastery streak and practice streak." },
-          { src: "assets/img/crown-flashcards.png", fit: "phone", caption: "Flashcards: tap to reveal, with a clear answer structure." },
-          { src: "assets/img/crown-share.png", fit: "phone", caption: "Share Your Journey: a readiness profile to share with coaches." },
           { src: "assets/img/crown-screens-light.png", fit: "wide", caption: "Screen set, light mode: profile pages, home and progress pages, and flashcards." }
         ],
         prototypeUrl: ""
