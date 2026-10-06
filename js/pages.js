@@ -10,7 +10,9 @@
   const FRAME_KEYS = ["problem", "research", "define", "ideate", "iterate", "execution", "outcome"];
   const FRAME_SETS = {
     design: ["Problem", "Research", "Design Goals", "Wireframes", "Design System", "Final Design", "Outcome"],
-    research: ["Problem", "Research", "Define", "Ideate", "Iterate", "Execution", "Outcome"]
+    research: ["Problem", "Research", "Define", "Ideate", "Iterate", "Execution", "Outcome"],
+    // Research projects: how the research was run, and how it shaped the design
+    influence: ["Problem", "Research Plan", "Synthesis", "Insights", "Concept Testing", "Design Influence", "Impact"]
   };
   const framesFor = (p) => FRAME_KEYS.map((key, i) => ({ key, label: FRAME_SETS[p.frames || "design"][i] }));
 
@@ -27,6 +29,15 @@
     `<ul class="swatches" aria-label="Brand colors">${(palette || [])
       .map((c) => `<li style="--sw:${esc(c.hex)};--on:${(lum(c.hex) + 0.05) / 0.054 > 1.05 / (lum(c.hex) + 0.05) ? "#0d0a14" : "#fff"}"><b>${esc(c.name)}</b><span>${esc(c.hex)}</span></li>`)
       .join("")}</ul>${(typefaces || []).length ? `<ul class="typefaces">${typefaces.map((f) => `<li><span>${esc(f.role)}</span><strong>${esc(f.name)}</strong></li>`).join("")}</ul>` : ""}`;
+
+  const listsBlock = (lists) =>
+    (lists || []).map((l) => `<h3>${esc(l.heading)}</h3><ol class="insights">${l.items.map((x) => `<li>${t(x)}</li>`).join("")}</ol>`).join("");
+  const mapBlock = (m) =>
+    m
+      ? `<h3>${esc(m.heading)}</h3><div class="goal-map">${m.rows
+          .map((r) => `<div class="gm-row"><b>${esc(r.tag)}</b><div><p class="gm-need">${t(r.need)}</p><p class="gm-do">${t(r.design)}</p></div><span class="gm-where">${esc(r.where)}</span></div>`)
+          .join("")}</div>`
+      : "";
 
   const ext = (href, label) =>
     `<a href="${esc(href)}" target="_blank" rel="noopener">${label}<span class="sr-only"> (opens in a new tab)</span></a>`;
@@ -341,8 +352,7 @@
                 <div class="method-grid">${p.research.methods
                   .map((m) => `<div class="method"><h3>${t(m.name)}</h3><p>${t(m.detail)}</p></div>`)
                   .join("")}</div>
-                <h3>Key insights</h3>
-                <ol class="insights">${p.research.insights.map((x) => `<li>${t(x)}</li>`).join("")}</ol>
+                ${(p.research.insights || []).length ? `<h3>Key insights</h3><ol class="insights">${p.research.insights.map((x) => `<li>${t(x)}</li>`).join("")}</ol>` : ""}
                 ${imgs(p.research.image)}
               </section>
 
@@ -375,6 +385,8 @@
               <section id="ideate" class="frame">
                 ${frameHead(4, FRAMES[3].label)}
                 <p>${t(p.ideate.summary)}</p>
+                ${p.ideate.callout ? `<p class="callout">${t(p.ideate.callout)}</p>` : ""}
+                ${listsBlock(p.ideate.lists)}
                 ${imgs(p.ideate.image)}
               </section>
 
@@ -384,8 +396,8 @@
                   .map(
                     (it) => `<li class="iteration">
                       <div class="iteration-text"><h3>${t(it.version)}</h3>
-                        <p><b>What changed:</b> ${t(it.change)}</p>
-                        <p><b>What testing showed:</b> ${t(it.feedback)}</p></div>
+                        <p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[0])}:</b> ${t(it.change)}</p>
+                        <p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[1])}:</b> ${t(it.feedback)}</p></div>
                       ${it.palette ? `<div class="iteration-wide iteration-brand"><div><h4>Brand system</h4>${brandBlock(it.palette, it.typefaces)}</div></div>` : ""}
                       ${Array.isArray(it.image) && it.image.length > 1 ? `<div class="iteration-wide">${imgs(it.image)}</div>` : imgs(it.image)}
                     </li>`
@@ -396,6 +408,7 @@
               <section id="execution" class="frame">
                 ${frameHead(6, FRAMES[5].label)}
                 <p>${t(p.execution.summary)}</p>
+                ${mapBlock(p.execution.map)}
                 ${(p.execution.designs || [])
                   .map(
                     (d) => `<article class="design-block">
@@ -427,7 +440,7 @@ ${(p.execution.goals || [])
                 ${p.execution.palette ? `<h3>Brand system</h3>${brandBlock(p.execution.palette, p.execution.typefaces)}` : ""}
                 ${
                   (p.execution.decisions || []).length
-                    ? `<h3>Why it looks &amp; works this way</h3><div class="decision-grid">${p.execution.decisions
+                    ? `<h3>${esc(p.execution.decisionsHeading || "Why it looks & works this way")}</h3><div class="decision-grid">${p.execution.decisions
                         .map((d, i) => `<div class="decision"><span class="card-num">0${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.why)}</p></div>`)
                         .join("")}</div>`
                     : ""

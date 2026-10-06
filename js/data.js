@@ -500,7 +500,8 @@ window.PORTFOLIO = {
 
     {
       id: "root-insurance",
-      frames: "research", // frame names: "design" (default) or "research"
+      frames: "influence", // frame names: "design" (default), "research" or "influence"
+      iterLabels: ["What we did", "What came of it"],
       title: "Root Insurance",
       subtitle: "Retention research for 500,000+ policyholders",
       focus: "Retention research",
@@ -521,55 +522,86 @@ window.PORTFOLIO = {
         goal: "Identify the customer-service touchpoints, non-price benefits and retention levers customers value, and deliver actionable UX recommendations that equip frontline agents with proactive \"save\" levers and un-break the digital self-service experience."
       },
       research: {
-        summary: "An end-to-end, mixed-methods plan that started with desk research and stakeholder interviews, then moved to live customer interviews. I was the research lead on the plan, and partnered with a product design intern.",
+        summary: "The objective: identify exactly which customer-service touchpoints, non-price benefits and retention levers Root customers value and desire. Using foundational discovery interviews, the goal was actionable UX recommendations that equip frontline agents and the business with proactive \"save\" levers, and un-break the digital self-service experience. I wrote the research plan and led the work, partnering with a product design intern.",
         methods: [
-          { name: "Desk research", detail: "Audited the support approaches of top carriers and Root's own voice-of-customer data to map where service breaks down." },
-          { name: "Stakeholder interviews", detail: "12 interviews across the business. We more than doubled the original plan of four, to get deeper cross-functional alignment." },
-          { name: "Customer interviews", detail: "6 live, moderated interviews with competitor policyholders on Lookback, supported by a pilot session first." },
-          { name: "Synthesis", detail: "Thematic coding and affinity mapping of the interview recordings and notes, organized by pain points, behaviors, quotes, reactions to concepts and ideas." }
+          { name: "Desk research", detail: "Audited the support approaches of top carriers and Root's own voice-of-customer data, plus cancellation, retention and rate-shock data by customer segment." },
+          { name: "Competitor benchmarking", detail: "Collected screenshots of competitor experiences, grouped under one question: what does it mean to be a member beyond just pricing?" },
+          { name: "Stakeholder interviews", detail: "12 interviews with internal stakeholders, more than double the four we first planned, to get deeper cross-functional alignment." },
+          { name: "Customer interviews", detail: "6 live, moderated interviews with competitor policyholders on Lookback, after a pilot session." },
+          { name: "Scoping the plan", detail: "Brainstormed ideas, sized them as pebbles, rocks and boulders, and plotted them by how sure we were of the solution and of its value to customers. The most uncertain, highest-value quadrant set the scope." }
         ],
-        insights: [
-          "Price is the biggest loyalty driver, but it isn't the only one: \"I'm more loyal to pricing than anything.\"",
-          "Customers want to be recognized for staying. Several liked the idea of rewards tied to tenure, and one wouldn't leave a reputable brand for a small saving.",
-          "Customer service decides whether people stay: participants described it as a major factor in staying with a provider."
-        ],
+        insights: [],
         image: [
           { src: "assets/img/root-benchmark.jpg", caption: "Screenshots from competitor experiences, grouped under the question \"What does it mean to be a member beyond just pricing?\"" },
+          { src: "assets/img/root-data.jpg", caption: "Quantitative data reviewed alongside the interviews: cancellations, 30-day retention, rate changes and rate shock by customer segment." },
           { src: "assets/img/root-stakeholder-notes.jpg", caption: "Notes from every stakeholder conversation organized per person, then read across columns to surface the general patterns and hypotheses shared between teams." },
-          { src: "assets/img/root-interview-notes.jpg", caption: "Every interview transcribed into a shared matrix (participants anonymized): one column per participant, rows for pain points, behaviors, quotes and concept reactions, so patterns read across the group instead of living in individual sessions." }
-        ]
-      },
-      define: {
-        persona: "Two customer segments guided the work. Stressful Survivors need support and flexibility when money or life gets hard. Achievers in Control value transparency and want to see the math behind their price.",
-        journey: "A single poster map follows an auto policyholder after they buy: first bind, first drive, the 30-day grace period, payments, claims, renewal and cancellation. It shows the actions at each stage and the emotional curve, so we could see where feelings dip and where a better service moment could keep them.",
-        image: { src: "assets/img/root-journey-map.jpg", caption: "The Root auto policyholder post-bind experience as a single poster map: stages, actions and the emotional curve." }
-      },
-      ideate: {
-        summary: "Research insights became 15 net-new retention concepts, built in Figma. Ideas were clustered into themes (Transparency, User Flow Improvements, Partnerships + Loyalty, Pricing, Staffing, Brand, CS Communication, Personalization, Social and Gamification) and sized as pebbles, rocks and boulders. Then each was placed on a grid of how sure we were it would be valuable to users against how sure we were of the solution, to decide what belonged in the research plan.",
-        image: [
           { src: "assets/img/root-ideas.jpg", caption: "Every idea from the brainstorms grouped into themed clusters, then sized as pebbles, rocks, and boulders so we could weigh effort against impact before choosing directions." },
           { src: "assets/img/root-prioritization.jpg", caption: "Ideas plotted against how sure we were of the solution and of its value to customers. The most uncertain, highest-value quadrant became the scope of the research plan." }
         ]
       },
+      define: {
+        callout: "Every interview went into one shared matrix, one column per participant, so patterns could be read across the group instead of living in individual sessions.",
+        persona: "Two customer segments guided the work. Stressful Survivors need support and flexibility when money or life gets hard. Achievers in Control value transparency and want to see the math behind their price.",
+        journey: "A single poster map follows an auto policyholder after they buy: first bind, first drive, the 30-day grace period, payments, claims, renewal and cancellation. It shows the actions at each stage and the emotional curve, so we could see where feelings dip and where a better service moment could keep them.",
+        image: [
+          { src: "assets/img/root-interview-notes.jpg", caption: "Interview notes in a shared matrix (participants anonymized): pain points, behaviors, quotes and concept reactions, one column per participant." },
+          { src: "assets/img/root-journey-map.jpg", caption: "The Root auto policyholder post-bind experience as a single poster map: stages, actions and the emotional curve." }
+        ]
+      },
+      ideate: {
+        summary: "Coding the interviews and the data surfaced a small set of patterns. We turned each pattern into how-might-we questions, grouped under five themes: Balancing Value and Communication, Tailoring and Personalization, Timing and Contextual Messaging, Simplifying the Complex, and Community and Social Proof. The four we prioritized for design are below.",
+        lists: [
+          {
+            heading: "What we heard",
+            items: [
+              "Price is the biggest loyalty driver, but not the only one: \"I'm more loyal to pricing than anything.\"",
+              "Customers want to be recognized for staying. Several liked rewards tied to tenure, and one wouldn't leave a reputable brand for a small saving.",
+              "Customers want to see the math. One participant liked seeing discounts broken out, and disliked a competitor's list that didn't show the breakdown.",
+              "Reactions to tracking were mixed: some liked earning more for driving well, others were wary of being watched.",
+              "Customer service decides whether people stay: participants described it as a major reason to stay with a provider."
+            ]
+          },
+          {
+            heading: "How-might-we questions the research produced",
+            items: [
+              "How might we gamify the customer experience so that discovering new benefits feels like a reward in itself?",
+              "How might we allow customers to curate their own benefit packages, so they inherently understand the value of what they chose?",
+              "How might we create an annual \"Year in Review\" that quantifies and visualizes all the benefits a customer used?",
+              "How might we visually map out the whole benefit ecosystem so a customer can grasp the full scope of value in under 10 seconds?"
+            ]
+          }
+        ],
+        image: [{ src: "assets/img/root-coding.jpg", caption: "Coding the research into themes, then turning each theme into how-might-we questions." }]
+      },
       iterations: [
         {
           version: "Mid-point stakeholder readout",
-          change: "Partnered with the product design intern on a readout for stakeholders, including the Director of Product Design. I opened the presentation by compiling and synthesizing additional research findings and key quantitative metrics. The intern turned them into high-fidelity charts and a concept matrix.",
-          feedback: "Stakeholders got a data-driven, easy-to-digest view of the problem space, operational gaps and first concepts before we launched customer interviews."
+          change: "Partnered with the product design intern on a readout for stakeholders, including the Director of Product Design. I opened the presentation by compiling and synthesizing additional research findings and key quantitative metrics, and the intern turned them into high-fidelity charts and a concept matrix.",
+          feedback: "Stakeholders got a data-driven, easy-to-digest view of the problem space, operational gaps and first concepts before we started customer interviews."
         },
         {
           version: "Concept testing (out of scope)",
-          change: "Owned the full lifecycle of a full-time researcher for CS and retention concept testing: drafted the research plan, led review meetings with team leads and research partners, supported the intern on stimuli and moderator guides, ran pilot sessions, moderated six live customer interviews, synthesized findings and scheduled the final readouts.",
+          change: "Owned the full lifecycle of a full-time researcher for CS and retention concept testing: drafted the research plan, led review meetings with team leads and research partners, supported the intern on stimuli and moderator guides, ran pilot sessions, moderated six live customer interviews, synthesized the findings and scheduled the final readouts.",
           feedback: "When audio and system outages hit a live session, I switched from Lookback to Google Meet right away and kept the participant's trust."
-        }
-        ,{
+        },
+        {
           version: "Scope pivot: from static maps to a living tool",
           change: "The first scope for the project included a static journey map and a sitemap. After stakeholder interviews and talks with leadership, it was clear a production-ready version needed more time than the internship allowed. We pivoted to deliver a high-fidelity first draft, led by three interns (I was one), as a foundation for future work.",
           feedback: "Stakeholders and product managers pointed out that static journey maps and sitemaps go out of date almost as soon as they ship. So we started an initiative for a dynamic internal tool that gives visibility into the end-to-end customer experience, which today's staging environment, often disconnected from the live experience, can't."
         }
       ],
       execution: {
-        summary: "Five of the concepts from the final shareout. Each one answers something customers told us in the interviews: they want to feel seen, rewarded for staying, and clearly informed. Research only matters if it changes how the business works, so the second half of this frame shows where the work reached people beyond the readouts.",
+        summary: "The design concepts came straight out of the research. Here is what we heard from customers and stakeholders, and the concept it became. Each concept below is from the final shareout.",
+        map: {
+          heading: "From research to design",
+          rows: [
+            { tag: "Gamified Tenure Rewards", need: "Participants responded to rewards that grow with how long they stay, and wanted proof they're actually saving money.", design: "A rewards screen with years with Root, total savings and perks that unlock at each milestone.", where: "Interviews" },
+            { tag: "Drive for Rewards", need: "Customers liked earning more the better they do, but some were wary of being tracked.", design: "A driving-score reward system where benefits are earned by driving well, with a score customers can see and retake.", where: "Interviews" },
+            { tag: "Sympathetic Proactive Communication", need: "Customers noticed when the company showed it cared, and wanted help before they had to ask.", design: "Birthday and renewal gifts, plus gentle payment reminders and one-time passes, that show sympathy through benefits.", where: "Interviews, CS data" },
+            { tag: "Discount Opportunities", need: "Customers wanted to see exactly which discounts they have and how much each saves, without doing the math.", design: "A renewal screen that lists every discount (applied, not applied, expired) with total savings.", where: "Interviews" },
+            { tag: "Updated Email Comms", need: "Rate-increase and billing messages felt generic and opaque, a pain point in the voice-of-customer data.", design: "Reworded renewal and payment emails that explain why the price changed and point to ways to save.", where: "Voice of customer" }
+          ]
+        },
         designs: [
           { label: "Gamified Tenure Rewards", images: [{ src: "assets/img/root-concept-tenure.png", fit: "full", caption: "Provide customers with discounts and rewards based off their tenure." }] },
           { label: "Drive for Rewards", images: [{ src: "assets/img/root-concept-drive.png", fit: "full", caption: "A driving score based reward system where customers can gain benefits based on their driving." }] },
@@ -577,6 +609,7 @@ window.PORTFOLIO = {
           { label: "Discount Opportunities", images: [{ src: "assets/img/root-concept-discounts.png", fit: "full", caption: "Provide customers with opportunities to lower their rate by showcasing the different discounts that are available." }] },
           { label: "Updated Email Comms", images: [{ src: "assets/img/root-concept-email.png", fit: "full", caption: "Rewording existing email communications to make them more personable and friendly." }] }
         ],
+        decisionsHeading: "Where the research reached the business",
         decisions: [
           { title: "Updated frontline CS scripts", why: "Worked with the Customer Service team to turn research findings into immediate operational improvements, by updating the scripts agents use today." },
           { title: "Made research visible", why: "After feedback about broader team engagement, I published 7 insights posts in the team's research Slack channel, on top of the required weekly update." },
