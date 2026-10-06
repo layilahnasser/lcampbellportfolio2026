@@ -548,7 +548,7 @@ window.PORTFOLIO = {
         summary: "Research insights became 15 net-new retention concepts, built in Figma. Ideas were clustered into themes (Transparency, User Flow Improvements, Partnerships + Loyalty, Pricing, Staffing, Brand, CS Communication, Personalization, Social and Gamification) and sized as pebbles, rocks and boulders. Then each was placed on a grid of how sure we were it would be valuable to users against how sure we were of the solution, to decide what belonged in the research plan.",
         image: [
           { src: "assets/img/root-ideas.jpg", caption: "Every idea from the brainstorms grouped into themed clusters, then sized as pebbles, rocks, and boulders so we could weigh effort against impact before choosing directions." },
-          { src: "assets/img/root-prioritization.jpg", caption: "What's going in the research plan: value to users against confidence in the solution." }
+          { src: "assets/img/root-prioritization.jpg", caption: "Ideas plotted against how sure we were of the solution and of its value to customers. The most uncertain, highest-value quadrant became the scope of the research plan." }
         ]
       },
       iterations: [
