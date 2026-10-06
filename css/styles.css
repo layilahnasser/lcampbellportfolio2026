@@ -863,3 +863,7 @@ body { overflow-x: clip; }
 
 .design-cell--phones .phone-row { align-items: start; }
 .design-cell--phones .phone-row .shot--phone img { height: auto; max-height: none; object-fit: contain; }
+
+.mode-h { display: flex; align-items: center; gap: 10px; margin: 26px 0 8px; font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan, #4de3ff); }
+.mode-h::after { content: ""; flex: 1; height: 2px; background: linear-gradient(90deg, rgba(77, 227, 255, 0.4), transparent); }
+.ds-dark .shot img { cursor: zoom-in; width: 100%; }

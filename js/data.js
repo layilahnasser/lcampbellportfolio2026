@@ -690,6 +690,7 @@ window.PORTFOLIO = {
           }
         ],
         images: [],
+        darkMode: { src: "assets/img/crown-dark-mode.jpg", fit: "wide", caption: "Dark mode: the profile, home and progress, and flashcard screens, each redesigned for dark." },
         prototypeUrl: ""
       },
 
