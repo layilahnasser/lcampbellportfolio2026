@@ -513,52 +513,79 @@ window.PORTFOLIO = {
       team: "Cross-functional stakeholders, including the Director of Design and SVP of Product",
       timeline: "Jun – Aug 2026",
       tools: "User Interviews, Lookback, Figma",
-      hero: { src: "", caption: "TODO: Hero image — journey map or retention concepts" },
+      hero: { src: "assets/img/root-ideas.jpg", caption: "Retention ideas, clustered into themes and sized as pebbles, rocks and boulders." },
 
       problem: {
-        statement: "How can Root improve retention for 500,000+ policyholders while giving customer-service agents better tools and insights to support them?",
-        context: "The work centered on retention, and on equipping CS agents with the tools and insights to better support customers.",
-        goal: "Identify churn drivers and turn them into research-backed retention opportunities for Product."
+        statement: "Which customer-service moments, non-price benefits and retention levers do Root customers actually value, and how can Root use them to keep customers from leaving?",
+        context: "Root's customer-service structure was exposed against nationwide market leaders, in an industry where operational consistency is the real advantage. Voice-of-customer data pointed to the same friction again and again: rigid automated loops, opaque billing messages, little flexibility in support (for example no partial payments), boilerplate explanations for rate increases and app login roadblocks. Each one could trigger a customer's decision to leave. The work focused on two customer groups: Stressful Survivors and Achievers in Control.",
+        goal: "Identify the customer-service touchpoints, non-price benefits and retention levers customers value, and deliver actionable UX recommendations that equip frontline agents with proactive \"save\" levers and un-break the digital self-service experience."
       },
       research: {
-        summary: "An end-to-end mixed-methods research strategy across 18 sessions.",
+        summary: "An end-to-end, mixed-methods plan that started with desk research and stakeholder interviews, then moved to live customer interviews. I was the research lead on the plan, and partnered with a product design intern.",
         methods: [
-          { name: "Internal stakeholder interviews", detail: "12 interviews with internal stakeholders." },
-          { name: "Competitor policyholder interviews", detail: "6 interviews across key competitor cohorts, run through User Interviews and Lookback." },
-          { name: "Thematic coding & affinity mapping", detail: "Evaluated Lookback session recordings to surface patterns." }
+          { name: "Desk research", detail: "Audited the support approaches of top carriers and Root's own voice-of-customer data to map where service breaks down." },
+          { name: "Stakeholder interviews", detail: "12 interviews across the business. We more than doubled the original plan of four, to get deeper cross-functional alignment." },
+          { name: "Customer interviews", detail: "6 live, moderated interviews with competitor policyholders on Lookback, supported by a pilot session first." },
+          { name: "Synthesis", detail: "Thematic coding and affinity mapping of the interview recordings and notes, organized by pain points, behaviors, quotes, reactions to concepts and ideas." }
         ],
-        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
-        image: { src: "", caption: "TODO: Affinity map" }
+        insights: [
+          "Price is the biggest loyalty driver, but it isn't the only one: \"I'm more loyal to pricing than anything.\"",
+          "Customers want to be recognized for staying. Several liked the idea of rewards tied to tenure, and one wouldn't leave a reputable brand for a small saving.",
+          "Customer service decides whether people stay: participants described it as a major factor in staying with a provider."
+        ],
+        image: [
+          { src: "assets/img/root-benchmark.jpg", caption: "Benchmarking board: what it means to be a member beyond pricing, across loyalty, bundling, upfront discounts, personalization, digital platforms, gamification and more." },
+          { src: "assets/img/root-interview-notes.jpg", caption: "Every interview transcribed into a shared matrix (participants anonymized): one column per participant, rows for pain points, behaviors, quotes and concept reactions, so patterns read across the group instead of living in individual sessions." }
+        ]
       },
       define: {
-        persona: "DIG-based personas built from the research. TODO: name the primary persona.",
-        journey: "High-fidelity customer journey maps. TODO: name the moment where retention breaks down.",
-        image: { src: "", caption: "TODO: Journey map or persona" }
+        persona: "Two customer segments guided the work. Stressful Survivors need support and flexibility when money or life gets hard. Achievers in Control value transparency and want to see the math behind their price.",
+        journey: "A single poster map follows an auto policyholder after they buy: first bind, first drive, the 30-day grace period, payments, claims, renewal and cancellation. It shows the actions at each stage and the emotional curve, so we could see where feelings dip and where a better service moment could keep them.",
+        image: { src: "assets/img/root-journey-map.jpg", caption: "The Root auto policyholder post-bind experience as a single poster map: stages, actions and the emotional curve." }
       },
       ideate: {
-        summary: "Translated research insights into 15 net-new retention concepts in Figma, each addressing an identified churn driver.",
-        image: { src: "", caption: "TODO: Retention concepts" }
+        summary: "Research insights became 15 net-new retention concepts, built in Figma. Ideas were clustered into themes (Transparency, User Flow Improvements, Partnerships + Loyalty, Pricing, Staffing, Brand, CS Communication, Personalization, Social and Gamification) and sized as pebbles, rocks and boulders. Then each was placed on a grid of how sure we were it would be valuable to users against how sure we were of the solution, to decide what belonged in the research plan.",
+        image: [
+          { src: "assets/img/root-ideas.jpg", caption: "Ideas clustered into themes and sized as pebbles, rocks and boulders." },
+          { src: "assets/img/root-prioritization.jpg", caption: "What's going in the research plan: value to users against confidence in the solution." }
+        ]
       },
       iterations: [
-        { version: "Synthesis", change: "Built journey maps, personas and a prioritized Retention Levers Matrix from the coded session recordings.", feedback: "TODO: What leadership asked for or pushed back on.", image: { src: "", caption: "TODO: Retention Levers Matrix" } },
-        { version: "Concepts", change: "Developed high-fidelity experience recommendations in Figma.", feedback: "TODO: How Product stakeholders responded.", image: { src: "", caption: "TODO: High-fidelity concepts" } }
+        {
+          version: "Mid-point stakeholder readout",
+          change: "Partnered with the product design intern on a readout for stakeholders, including the Director of Product Design. I opened the presentation by compiling and synthesizing additional research findings and key quantitative metrics. The intern turned them into high-fidelity charts and a concept matrix.",
+          feedback: "Stakeholders got a data-driven, easy-to-digest view of the problem space, operational gaps and first concepts before we launched customer interviews."
+        },
+        {
+          version: "Concept testing (out of scope)",
+          change: "Owned the full lifecycle of a full-time researcher for CS and retention concept testing: drafted the research plan, led review meetings with team leads and research partners, supported the intern on stimuli and moderator guides, ran pilot sessions, moderated six live customer interviews, synthesized findings and scheduled the final readouts.",
+          feedback: "When audio and system outages hit a live session, I switched from Lookback to Google Meet right away and kept the participant's trust."
+        }
+        ,{
+          version: "Scope pivot: from static maps to a living tool",
+          change: "The first scope for the project included a static journey map and a sitemap. After stakeholder interviews and talks with leadership, it was clear a production-ready version needed more time than the internship allowed. We pivoted to deliver a high-fidelity first draft, led by three interns (I was one), as a foundation for future work.",
+          feedback: "Stakeholders and product managers pointed out that static journey maps and sitemaps go out of date almost as soon as they ship. So we started an initiative for a dynamic internal tool that gives visibility into the end-to-end customer experience, which today's staging environment, often disconnected from the live experience, can't."
+        }
       ],
       execution: {
-        summary: "Delivered three executive research readouts to cross-functional stakeholders, including the Director of Design and SVP of Product, presenting progress, emerging insights, and strategic recommendations to align leadership on retention opportunities and product direction.",
+        summary: "Research only matters if it changes how the business works. These are the places where the work reached people beyond the readouts.",
         decisions: [
-          { title: "TODO: Recommendation #1", why: "TODO: The evidence behind it." },
-          { title: "TODO: Recommendation #2", why: "TODO: The evidence behind it." }
+          { title: "Updated frontline CS scripts", why: "Worked with the Customer Service team to turn research findings into immediate operational improvements, by updating the scripts agents use today." },
+          { title: "Made research visible", why: "After feedback about broader team engagement, I published 7 insights posts in the team's research Slack channel, on top of the required weekly update." },
+          { title: "\"New to Root Research\" onboarding guide", why: "Co-authored the onboarding guide for incoming UX researchers: auto insurance basics, cross-functional partners and a structured first-week path." },
+          { title: "Supported other research", why: "Partnered with a fellow design team member on note-taking across 4 independent-agent research sessions, and supported user testing for several other projects." }
         ],
-        images: [{ src: "", caption: "TODO: Final readout slide" }],
+        images: [],
         prototypeUrl: ""
       },
       outcome: {
         results: [
           { value: "18", label: "research sessions" },
           { value: "3", label: "executive readouts" },
-          { value: "15", label: "net-new retention concepts" }
+          { value: "15", label: "net-new retention concepts" },
+          { value: "7", label: "insights posts shared" }
         ],
-        reflection: "TODO: What you learned and what you'd do next."
+        reflection: "All of the project's goals were met. If I did it again, I'd plan for the unexpected in live fielding. During an outage I kept the session going by moving from Lookback to Google Meet, but I'd rather not depend on a fast fix. Next time I'd set up a Plan B in advance, with backup video links already in the calendar invites and a second recording tool running locally. I'm also keen to track the long-term impact of the CS script updates."
       }
     },
 
