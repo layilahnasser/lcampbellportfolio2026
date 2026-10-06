@@ -331,63 +331,78 @@
         (items || []).length
           ? `<div class="decision-grid">${items.map((d, i) => `<div class="decision"><span class="card-num">0${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.why)}</p></div>`).join("")}</div>`
           : "";
+      /* Concise, screenshot-led research layout: one line + chips + images up top, full write-up folded under "Read the details". */
+      const first = (x) => String(x || "").split(/(?<=[.?!])\s+/)[0];
+      const more = (html) => (html.trim() ? `<details class="more"><summary>Read the details</summary><div class="more-body">${html}</div></details>` : "");
+      const chips = (arr) => ((arr || []).length ? `<ul class="chips" role="list">${arr.map((c) => `<li class="chip">${t(c)}</li>`).join("")}</ul>` : "");
+      const grid = (x) => {
+        const list = !x ? [] : Array.isArray(x) ? x : [x];
+        return list.length ? `<div class="glance-grid glance-grid--${Math.min(list.length, 3)}">${list.map((i) => img(i, "")).join("")}</div>` : "";
+      };
       const researchBody = isResearch
-        ? `
+        ? (() => {
+            const rec = p.recommendations || {};
+            const imp = p.impact || {};
+            const mapRows = (rec.map && rec.map.rows) || [];
+            const designs = (rec.designs || []).map((d) => {
+              const row = mapRows.find((r) => r.tag === d.label);
+              return `<figure class="concept"><div class="concept-img">${imgs(d.images)}</div><figcaption>${row ? `<span class="heard">${t(first(row.need))}</span>` : ""}<strong>${esc(d.label)}</strong></figcaption></figure>`;
+            });
+            const decisions = imp.decisions || [];
+            return `
               <section id="problem" class="frame">
                 ${frameHead(1, FRAMES[0].label)}
                 <p class="callout">${t(p.problem.statement)}</p>
-                <h3>Context</h3><p>${t(p.problem.context)}</p>
-                ${p.problem.challenge ? `<h3>The challenge</h3><p>${t(p.problem.challenge)}</p>` : ""}
-                <h3>My role</h3><p>${t(p.problem.role)}</p>
+                ${more(`<h3>Context</h3><p>${t(p.problem.context)}</p>${p.problem.challenge ? `<h3>The challenge</h3><p>${t(p.problem.challenge)}</p>` : ""}<h3>My role</h3><p>${t(p.problem.role)}</p>`)}
               </section>
 
               <section id="objectives" class="frame">
                 ${frameHead(2, FRAMES[1].label)}
-                <p>${t(p.objectives.summary)}</p>
-                <h3>What we needed to learn</h3>
-                <ol class="insights">${p.objectives.items.map((x) => `<li>${t(x)}</li>`).join("")}</ol>
+                <p class="glance">${t(first(p.objectives.summary))}</p>
+                <ol class="obj-grid">${p.objectives.items.map((x, i) => `<li><span class="card-num">0${i + 1}</span>${t(x)}</li>`).join("")}</ol>
               </section>
 
               <section id="methods" class="frame">
                 ${frameHead(3, FRAMES[2].label)}
-                <p>${t(p.methods.summary)}</p>
-                <div class="method-grid">${p.methods.items.map((m) => `<div class="method"><h3>${t(m.name)}</h3><p>${t(m.detail)}</p></div>`).join("")}</div>
-                ${imgs(p.methods.image)}
+                <p class="glance">${t(first(p.methods.summary))}</p>
+                ${chips(p.methods.items.map((m) => m.name))}
+                ${grid(p.methods.image)}
+                ${more(`<div class="method-grid">${p.methods.items.map((m) => `<div class="method"><h3>${t(m.name)}</h3><p>${t(m.detail)}</p></div>`).join("")}</div>`)}
               </section>
 
               <section id="findings" class="frame">
                 ${frameHead(4, FRAMES[3].label)}
-                <p>${t(p.findings.summary)}</p>
+                <p class="glance">${t(first(p.findings.summary))}</p>
                 ${p.findings.callout ? `<p class="callout">${t(p.findings.callout)}</p>` : ""}
-                <h3>What we observed</h3>
-                <ol class="insights">${p.findings.items.map((x) => `<li>${t(x)}</li>`).join("")}</ol>
-                ${imgs(p.findings.image)}
+                ${grid(p.findings.image)}
+                ${more(`<p>${t(p.findings.summary)}</p><h3>What we observed</h3><ol class="insights">${p.findings.items.map((x) => `<li>${t(x)}</li>`).join("")}</ol>`)}
               </section>
 
               <section id="insights" class="frame">
                 ${frameHead(5, FRAMES[4].label)}
-                <p>${t(p.insights.summary)}</p>
-                ${listsBlock(p.insights.lists)}
-                ${imgs(p.insights.image)}
+                <p class="glance">${t(first(p.insights.summary))}</p>
+                ${chips(((p.insights.lists || [])[0] || { items: [] }).items.map(first))}
+                ${grid(p.insights.image)}
+                ${more(`<p>${t(p.insights.summary)}</p>${listsBlock(p.insights.lists)}`)}
               </section>
 
               <section id="recommendations" class="frame">
                 ${frameHead(6, FRAMES[5].label)}
-                <p>${t(p.recommendations.summary)}</p>
-                ${mapBlock(p.recommendations.map)}
-                ${gallery(p.recommendations.designs)}
-                ${imgs(p.recommendations.image)}
+                <p class="glance">${t(first(rec.summary))}</p>
+                ${designs.length ? `<div class="concept-grid">${designs.join("")}</div>` : ""}
+                ${grid(rec.image)}
+                ${more(`${mapBlock(rec.map)}`)}
               </section>
 
               <section id="impact" class="frame">
-                ${frameHead(7, FRAMES[6].label + " &amp; reflection")}
-                ${imgs(p.impact.image)}
-                ${(p.impact.decisions || []).length ? `<h3>${esc(p.impact.decisionsHeading || "Decisions influenced")}</h3>${cards(p.impact.decisions)}` : ""}
-                <div class="results">${p.impact.results.map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`).join("")}</div>
-                <h3>Reflection</h3>
-                <p>${t(p.impact.reflection)}</p>
+                ${frameHead(7, FRAMES[6].label)}
+                <div class="results">${(imp.results || []).map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`).join("")}</div>
+                ${chips(decisions.map((d) => d.title))}
+                ${grid(imp.image)}
+                ${more(`${decisions.length ? `<h3>${esc(imp.decisionsHeading || "Decisions influenced")}</h3>${cards(decisions)}` : ""}${imp.reflection ? `<h3>Reflection</h3><p>${t(imp.reflection)}</p>` : ""}`)}
               </section>
-`
+`;
+          })()
         : "";
 
       return `

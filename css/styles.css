@@ -706,3 +706,25 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .shot--phones { padding: 28px 18px; }
 .shot--phones img { width: min(1000px, 100%); border-radius: 0; box-shadow: none; }
 .rack-media img.rack-img--contain { object-fit: contain; padding: 14px 10px 0; }
+
+/* ---------- Concise research layout ---------- */
+.glance { font-size: 1.15rem; margin: 0 0 12px; }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 16px; }
+.chip { background: #1d1733; border: 1px solid #3a2f5e; border-radius: 999px; padding: 6px 14px; font-size: 0.95rem; color: #fff; }
+.glance-grid { display: grid; gap: 14px; margin: 8px 0 16px; align-items: start; }
+.glance-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.glance-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.glance-grid .shot { margin: 0; }
+.obj-grid { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0; margin: 0 0 12px; }
+.obj-grid li { background: var(--panel); border: 2px solid #2b2443; border-radius: 14px; padding: 14px 16px; font-weight: 600; }
+.obj-grid .card-num { display: block; color: var(--cyan, #4de3ff); margin-bottom: 4px; }
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 8px 0 16px; }
+.concept { margin: 0; background: var(--panel); border: 2px solid #2b2443; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.concept-img .shot { margin: 0; border: 0; border-radius: 0; padding: 0; }
+.concept figcaption { padding: 10px 12px; display: grid; gap: 6px; font-size: 0.95rem; }
+.concept .heard { background: #1d1733; border-radius: 8px; padding: 6px 8px; font-size: 0.85rem; }
+.more { margin-top: 14px; border: 2px solid #2b2443; border-radius: 12px; background: rgba(255,255,255,0.02); }
+.more > summary { cursor: pointer; padding: 10px 16px; font-weight: 700; color: var(--cyan, #4de3ff); }
+.more > summary:focus-visible { outline: 3px solid #ffd24a; outline-offset: 2px; }
+.more-body { padding: 0 16px 16px; }
+@media (max-width: 700px) { .glance-grid--2, .glance-grid--3, .obj-grid { grid-template-columns: 1fr; } }
