@@ -442,7 +442,7 @@
           ${ds.intro ? `<p class="glance">${t(ds.intro)}</p>` : ""}
           ${sec("Brand colors", "", ds.brand ? brandBlock(ds.brand, ds.typefaces) : "")}
           ${sec("Color system", "primitives and semantic tokens", one(ds.colorImage))}
-          ${sec("Typography", "", one(ds.typography))}
+          ${sec("Typography", "tap to open full size", ds.typography && (ds.typography.src) ? `<div class="ds-type">${img(ds.typography)}</div>` : "")}
           ${sec("Buttons", "", one(ds.buttons))}
           ${sec("Components", "", one(ds.components))}
         </div>`;
@@ -567,7 +567,7 @@
 
   /* ---------- Page behaviours ---------- */
   if (page === "project") {
-    document.querySelectorAll(".design-grid .shot img").forEach((im) => { im.style.cursor = "zoom-in"; im.addEventListener("click", () => window.open(im.src, "_blank", "noopener")); });
+    document.querySelectorAll(".design-grid .shot img, .ds-type .shot img").forEach((im) => { im.style.cursor = "zoom-in"; im.addEventListener("click", () => window.open(im.src, "_blank", "noopener")); });
     const links = [...document.querySelectorAll(".fstrip a")];
     const frames = [...document.querySelectorAll(".frame")];
     const paint = (cur) => {

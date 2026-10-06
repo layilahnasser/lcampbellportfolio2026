@@ -846,3 +846,7 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .comp-table td.no { color: var(--muted); }
 .comp-us { background: rgba(198, 242, 74, 0.12); color: #c6f24a !important; }
 .comp-wrap:focus-visible { outline: 3px solid #ffd24a; outline-offset: 2px; }
+
+.ds-type { display: flex; justify-content: center; }
+.ds-type .shot { margin: 0; width: auto; max-width: 100%; }
+.ds-type .shot img { width: auto; max-width: 100%; max-height: 560px; margin: 0 auto; display: block; }
