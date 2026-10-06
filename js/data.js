@@ -903,7 +903,9 @@ window.PORTFOLIO = {
         image: [
           { src: "assets/img/elevated-process.jpg", fit: "full", caption: "The five-step research process." },
           { src: "assets/img/elevated-interviews.jpg", fit: "full", caption: "Interview recruitment, protocol and who we spoke to." },
-          { src: "assets/img/elevated-affinity.jpg", fit: "full", caption: "The affinity wall: interview notes clustered into themes." }
+          { src: "assets/img/elevated-competitor.jpg", fit: "full", caption: "Competitor analysis: what D2L Brightspace, Cornerstone and Blackboard offer, and the gap it leaves." },
+          { src: "assets/img/elevated-affinity.jpg", fit: "full", caption: "The affinity wall: interview notes clustered into themes." },
+          { src: "assets/img/elevated-pugh.jpg", fit: "full", caption: "Prioritization matrix: the top three recommendations." }
         ]
       },
       findings: {
@@ -934,6 +936,7 @@ window.PORTFOLIO = {
           }
         ],
         image: [
+          { src: "assets/img/elevated-keyinsights.jpg", fit: "full", caption: "Three key insights: a flexible, learner-centered opportunity; soft skills and connections; and high motivation with low structure." },
           { src: "assets/img/elevated-persona.jpg", fit: "full", caption: "Primary persona, Lauren Case: pain points, motivations and goals." },
           { src: "assets/img/elevated-persona2.jpg", fit: "full", caption: "Secondary persona, an HR professional hiring without degree filters." }
         ]
@@ -956,20 +959,21 @@ window.PORTFOLIO = {
         image: [{ src: "assets/img/elevated-conclusion.jpg", fit: "full", caption: "Together the three functions are scalable, feasible and a market differentiator." }]
       },
       impact: {
-        image: { src: "assets/img/elevated-hmw.jpg", fit: "full", caption: "The How Might We question we answered." },
+        image: { src: "assets/img/elevated-clientfeedback.jpg", fit: "full", caption: "Feedback from Instructure's client consultant." },
         decisionsHeading: "Where the research reached people",
         decisions: [
-          { title: "Presented to stakeholders", why: "Presented final deliverables, including high-fidelity wireframes, to all stakeholders to drive alignment with Instructure's long-term strategic goals amid a fast-changing EdTech landscape." },
-          { title: "Shared with 200+ people", why: "The recommendations were presented to over 200 students and corporate employees." },
+          { title: "Presented to Instructure's strategy team", why: "Presented the final strategy and high-fidelity wireframes to Instructure's full strategy team, and to over 180 University of Michigan students, to drive alignment with Instructure's long-term strategic goals." },
+          { title: "Client consultant feedback", why: "\"Your team delivered one of the strongest, most future-focused strategies we've seen.\" The consultant also flagged constraints to plan for: content partnerships for the modular platform, and how to measure soft skills." },
           { title: "Widened who we design for", why: "Interviews showed that alternative-pathway learners are often already working, so the design covers in-career learners and not only recent high-school graduates." }
         ],
         results: [
           { value: "10", label: "interviews across stakeholder groups" },
           { value: "5", label: "research findings" },
           { value: "3", label: "product recommendations" },
-          { value: "200+", label: "students and employees presented to" }
+          { value: "180+", label: "students and the strategy team presented to" }
         ],
         documents: [
+          { title: "Research deck (PDF)", file: "assets/docs/elevated-research-deck.pdf", note: "24 slides, in-depth research version" },
           { title: "Final presentation (PDF)", file: "assets/docs/elevated-deck.pdf", note: "27 slides, including the appendix" },
           { title: "Final report (PDF)", file: "assets/docs/elevated-paper.pdf", note: "Milestone 5 report" }
         ],
