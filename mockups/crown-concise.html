@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mock-up: Crown Code concise</title>
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+.mk{max-width:1100px;margin:0 auto;padding:28px 20px 80px}
+.mk h1{font-family:Damion,cursive;font-weight:400;font-size:56px;color:#fff;text-shadow:0 0 18px #ff2fb4;margin:6px 0}
+.mk .sub{color:var(--text-dim,#cfc8e6);font-size:20px;margin:0 0 20px}
+.mkbadge{display:inline-block;background:#ffd24a;color:#1a1200;font-weight:700;border-radius:999px;padding:4px 12px;font-size:13px;margin-bottom:8px}
+.stage{display:grid;grid-template-columns:230px 1fr;gap:22px;padding:26px 0;border-top:2px solid #2b2443}
+.stage .lab{position:sticky;top:12px;align-self:start}
+.stage .num{font-size:13px;letter-spacing:.12em;color:#4de3ff;font-weight:700}
+.stage h2{font-size:28px;margin:2px 0 8px;color:#fff}
+.stage .one{font-size:18px;line-height:1.4;color:#e9e4f7;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{background:#1d1733;border:1px solid #3a2f5e;border-radius:999px;padding:6px 12px;font-size:15px;color:#fff}
+.fig{margin:0;background:#120f1c;border:2px solid #2b2443;border-radius:14px;overflow:hidden}
+.fig img{display:block;width:100%;height:auto}
+.fig figcaption{padding:8px 12px;font-size:15px;color:#e9e4f7;background:#1a1530}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.g5 .fig figcaption{font-size:13px;padding:6px 8px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+.stat{background:#1a1530;border:2px solid #2b2443;border-radius:14px;padding:14px;text-align:center}
+.stat b{display:block;font-size:40px;color:#4de3ff;line-height:1}
+.stat span{font-size:14px;color:#e9e4f7}
+.quote{border-left:4px solid #ff2fb4;padding:6px 14px;margin:0 0 14px;font-size:20px;color:#fff}
+.arrow{display:grid;grid-template-columns:1fr 26px 1fr;align-items:center;gap:6px;font-size:14px}
+.arrow i{color:#ffd24a;font-style:normal;font-size:20px;text-align:center}
+.heard{background:#1d1733;border-radius:8px;padding:6px 8px}
+@media(max-width:800px){.stage{grid-template-columns:1fr}.stage .lab{position:static}.g5{grid-template-columns:repeat(2,1fr)}.g3,.stats{grid-template-columns:1fr 1fr}}
+.ba{display:grid;grid-template-columns:1fr 34px 1fr;gap:8px;align-items:center}.ba .tag{font-weight:700;font-size:13px;letter-spacing:.1em;padding:6px 12px;color:#fff;background:#3a2f5e}.ba .tag.after{background:#0b6b3a}.ba .mid{color:#ffd24a;font-size:26px;text-align:center}.fig.crop img{max-height:360px;object-fit:cover;object-position:top}.goal{background:#1a1530;border:2px solid #2b2443;border-radius:14px;padding:14px}.goal b{color:#4de3ff;font-size:13px;letter-spacing:.1em}.goal p{margin:4px 0 0;font-size:17px;color:#fff;font-weight:600}.sw{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}.sw span{display:flex;flex-direction:column;justify-content:flex-end;width:130px;height:64px;border-radius:12px;padding:8px;font-size:13px;font-weight:700;border:2px solid #fff3}.ph{padding:60px 14px;text-align:center;color:#ffd24a;font-size:14px;background:repeating-linear-gradient(45deg,#17122a,#17122a 10px,#1d1733 10px,#1d1733 20px)}.fig.phones{background:#fff}</style></head><body>
+<main class="mk">
+<span class="mkbadge">MOCK-UP · not live</span>
+<p style="color:#4de3ff;font-weight:700;letter-spacing:.1em;margin:0">LANE 2 · 2026</p>
+<h1>Crown Code</h1>
+<p class="sub">Interview prep for pageant contestants</p>
+<figure class="fig phones" style="margin-bottom:18px"><img src="../assets/img/crown-cover.png" alt=""></figure>
+<div class="stats">
+ <div class="stat"><b>7</b><span>core features</span></div>
+ <div class="stat"><b>10</b><span>requirements</span></div>
+ <div class="stat"><b>2</b><span>modes: light + dark</span></div>
+ <div class="stat"><b>1</b><span>design system, from scratch</span></div>
+</div>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 1</div><h2>Problem</h2></div>
+ <div>
+  <p class="quote" style="font-size:22px;font-weight:600">Pageant contestants prepare with scattered tools like paper notes, screenshots, texts and PDFs, which makes it hard to stay organized, practice consistently, and know whether their answers are improving.</p>
+  <p class="one" style="margin:0 0 14px">Crown Code already sells interview flashcards. The app extends the brand into one place for practice, reminders and readiness tracking.</p>
+  <div class="goal" style="border-color:#4de3ff"><b>MY CONTRIBUTION</b><p>Solo designer. I built the Crown Code design system from the ground up: color, type, buttons, navigation and cards, in light and dark mode.</p></div>
+ </div></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 2</div><h2>Research</h2>
+ <p class="one">A design brief defined the product.</p>
+ <div class="chips"><span class="chip">7 core features</span><span class="chip">10 requirements</span><span class="chip">iOS + Android</span></div></div>
+ <figure class="fig"><div class="ph">Add image<br><b>crown-research.jpg</b></div><figcaption>Brief, notes or competitor review</figcaption></figure></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 3</div><h2>Design Goals</h2>
+ <p class="one">Three decisions, one goal: consistent prep.</p></div>
+ <div class="g3">
+  <div class="goal"><b>DASHBOARD</b><p>Deadlines, practice and action items in one place</p></div>
+  <div class="goal"><b>FLASHCARDS</b><p>Practice answers with a clear structure</p></div>
+  <div class="goal"><b>SHARING</b><p>Coaches get feedback tied to real progress</p></div>
+ </div></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 4</div><h2>Wireframes</h2>
+ <p class="one">Sketches to low-fi, four tabs.</p>
+ <div class="chips"><span class="chip">Home</span><span class="chip">Cards</span><span class="chip">Progress</span><span class="chip">Profile</span></div></div>
+ <div class="g2"><figure class="fig"><div class="ph">Add image<br><b>crown-sketches.jpg</b></div><figcaption>Sketches</figcaption></figure><figure class="fig"><div class="ph">Add image<br><b>crown-lowfi.jpg</b></div><figcaption>Low-fi wireframes</figcaption></figure></div></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 5</div><h2>Design System</h2>
+ <p class="one">Built from the ground up: color, type, buttons and components.</p>
+ <div class="chips"><span class="chip">Manrope</span><span class="chip">Newsreader</span></div></div>
+ <div><div class="sw">
+  <span style="background:#00878A;color:#fff">Crowning Blue</span><span style="background:#E4BD3C;color:#000">Golden Rush</span><span style="background:#000;color:#fff">Stunning Black</span><span style="background:#fff;color:#000">Sweet White</span></div>
+ <figure class="fig"><img src="../assets/img/crown-components.jpg" alt=""><figcaption>Component library: buttons, navigation, flashcards, progress and readiness cards</figcaption></figure></div></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 6</div><h2>Final Design</h2>
+ <p class="one">Light mode screen set, each tied to a goal.</p></div>
+ <figure class="fig"><img src="../assets/img/crown-screens-light.png" alt=""><figcaption>Profile, home, progress and flashcards</figcaption></figure></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 7</div><h2>Outcome</h2>
+ <p class="one">Light and dark, same screens.</p></div>
+ <div class="ba"><figure class="fig"><span class="tag">LIGHT</span><img src="../assets/img/crown-screens-light.png" alt=""></figure><span class="mid">/</span><figure class="fig"><div class="ph">Add image<br><b>crown-screens-dark.png</b></div><figcaption><b>DARK</b> · dark mode screens</figcaption></figure></div></section>
+</main></body></html>
