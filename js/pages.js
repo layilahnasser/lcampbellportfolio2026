@@ -433,22 +433,20 @@
 
       const ok = (x) => (x && !/^TODO/.test(x) ? x : "");
       const swatch = (c, extra = "") => `<li class="ds-sw" style="--sw:${esc(c.hex)};--on:${(lum(c.hex) + 0.05) / 0.054 > 1.05 / (lum(c.hex) + 0.05) ? "#0d0a14" : "#fff"}"><b>${esc(c.step || c.name)}</b><span>${esc(c.hex)}</span></li>`;
-      const dsBlock = (ds) =>
-        !ds
-          ? ""
-          : `<div class="ds">
-              ${ds.intro ? `<p class="glance">${t(ds.intro)}</p>` : ""}
-              <h3 class="ds-h"><span class="ds-n">1</span> Brand colors</h3>
-              ${brandBlock(ds.brand, ds.typefaces)}
-              <h3 class="ds-h"><span class="ds-n">2</span> Color system <small>primitives and semantic tokens</small></h3>
-              ${img(ds.colorImage)}
-              <h3 class="ds-h"><span class="ds-n">3</span> Typography</h3>
-              ${img(ds.typography)}
-              <h3 class="ds-h"><span class="ds-n">4</span> Buttons</h3>
-              ${img(ds.buttons)}
-              <h3 class="ds-h"><span class="ds-n">5</span> Components</h3>
-              ${img(ds.components)}
-            </div>`;
+      const dsBlock = (ds) => {
+        if (!ds) return "";
+        let n = 0;
+        const sec = (title, small, body) => (body ? `<h3 class="ds-h"><span class="ds-n">${++n}</span> ${title}${small ? ` <small>${small}</small>` : ""}</h3>${body}` : "");
+        const one = (im) => (im && (im.src || im.video || im.embed) ? img(im) : "");
+        return `<div class="ds">
+          ${ds.intro ? `<p class="glance">${t(ds.intro)}</p>` : ""}
+          ${sec("Brand colors", "", ds.brand ? brandBlock(ds.brand, ds.typefaces) : "")}
+          ${sec("Color system", "primitives and semantic tokens", one(ds.colorImage))}
+          ${sec("Typography", "", one(ds.typography))}
+          ${sec("Buttons", "", one(ds.buttons))}
+          ${sec("Components", "", one(ds.components))}
+        </div>`;
+      };
       const designBody = isResearch ? "" : (() => {
         const ex = p.execution || {};
         const goalCards = p.define.goalCards || [];

@@ -601,6 +601,11 @@ window.PORTFOLIO = {
         image: [{ src: "assets/img/crown-sketches.jpg", fit: "wide", caption: "Ten paper sketches: profile, home dashboard, daily tips, decks, flashcards (reveal and answer structure), competition readiness, submission confirmation, strategic feedback and email notifications." }]
       },
 
+      designSystem: {
+        intro: "Built from the ground up: the brand's colors and type first, then the components the screens are built from.",
+        components: { src: "assets/img/crown-components.jpg", fit: "wide", caption: "Component library: buttons, navigation, flashcards, progress and readiness cards." }
+      },
+
       iterations: [
         {
           version: "Round 1 — Sketches & low-fidelity",
@@ -654,7 +659,8 @@ window.PORTFOLIO = {
         images: [
           { src: "assets/img/crown-dashboard.png", fit: "phone", caption: "Readiness dashboard: readiness score, mastery streak and practice streak." },
           { src: "assets/img/crown-flashcards.png", fit: "phone", caption: "Flashcards: tap to reveal, with a clear answer structure." },
-          { src: "assets/img/crown-share.png", fit: "phone", caption: "Share Your Journey: a readiness profile to share with coaches." }
+          { src: "assets/img/crown-share.png", fit: "phone", caption: "Share Your Journey: a readiness profile to share with coaches." },
+          { src: "assets/img/crown-screens-light.png", fit: "wide", caption: "Screen set, light mode: profile pages, home and progress pages, and flashcards." }
         ],
         prototypeUrl: ""
       },
