@@ -406,7 +406,7 @@
         : "";
 
       const ok = (x) => (x && !/^TODO/.test(x) ? x : "");
-      const designBody = (() => {
+      const designBody = isResearch ? "" : (() => {
         const ex = p.execution || {};
         const goalCards = p.define.goalCards || [];
         const rIters = p.iterations || [];
