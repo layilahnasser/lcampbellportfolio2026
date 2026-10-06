@@ -489,6 +489,7 @@
                 <p class="eyebrow">Lane ${idx + 1}${p.year ? " · " + esc(p.year) : ""}</p>
                 <h1>${t(p.title)}</h1>
                 <p class="lede">${t(p.subtitle)}</p>
+                ${p.intro ? `<p class="case-intro">${t(p.intro)}</p>` : ""}
               </div>
             </div>
             <dl class="case-meta">

@@ -911,23 +911,24 @@ window.PORTFOLIO = {
       layout: "research",
       title: "Instructure ElevateED",
       subtitle: "Research for learners on alternative pathways",
+      intro: "Instructure's products mostly serve traditional schools, while 79% of people in the US do not attend a traditional university. For a client project at the University of Michigan, my team of four asked how Instructure could serve learners on alternative pathways. We interviewed learners, HR professionals and Instructure staff, found five barriers, and turned them into three product recommendations. I led the research and built the interactive prototype in Figma Make.",
       focus: "Strategy research",
       approach: "Interviewed 10 learners, HR professionals and Instructure staff, then turned five barriers into three product recommendations",
       summary: "Research that built the case for an AI-powered learning initiative advancing inclusive, alternative education pathways.",
       ballColor: "#27d9f5",
       year: "2025",
-      tags: ["Stakeholder interviews", "Affinity mapping", "Wireframes"],
+      tags: ["Stakeholder interviews", "Affinity mapping", "Prototyping"],
       role: "Lead Researcher",
       team: "Team of four: UX research and design, agile development and big data analysis (SI 500, Prof. Tawanna Dillahunt)",
       timeline: "Aug – Dec 2025",
-      tools: "Interviews, affinity wall, personas, Pugh matrix, high-fidelity wireframes",
+      tools: "Interviews, affinity wall, personas, Pugh matrix, Figma Make prototype",
       hero: { src: "assets/img/elevated-cover.jpg", fit: "full", caption: "Instructure: Life Changing Education, the final presentation to the client." },
 
       problem: {
         statement: "How might Instructure refine its products, or build a new one, to include learners on alternative pathways and strengthen their lifelong learning and employability?",
         context: "79% of people in the US do not attend traditional universities, and 61% are on alternative pathways. 29% say they are negatively affected by the lack of a reliable learning platform. Instructure's products (Canvas, Mastery, Parchment) mostly serve traditional institutions, while competitors such as D2L Brightspace have started to serve non-traditional learners.",
         challenge: "Find out what learners on alternative pathways actually struggle with, and turn it into product recommendations that fit Instructure's long-term strategy.",
-        role: "Lead Researcher. I led the live project plan and research process: interview protocols, interviews, the affinity analysis and the final presentation, with a team of three others."
+        role: "Lead Researcher. I led the live project plan and research process: interview protocols, interviews, the affinity analysis and the final presentation, with a team of three others. I also built the interactive prototype in Figma Make, so the three recommendations could be shown as working screens, not only described."
       },
       objectives: {
         summary: "The research set out to find where alternative-pathway learners get stuck and what a better pathway could look like.",
@@ -988,7 +989,7 @@ window.PORTFOLIO = {
         ]
       },
       recommendations: {
-        summary: "Three recommendations, each aimed at one pain point and shown as a prototype in the ElevateED app.",
+        summary: "Three recommendations, each aimed at one pain point and shown as a prototype I built in Figma Make.",
         map: {
           heading: "From research to recommendation",
           rows: [
@@ -1008,7 +1009,7 @@ window.PORTFOLIO = {
         image: { src: "assets/img/elevated-clientfeedback.jpg", fit: "full", caption: "Feedback from Instructure's client consultant." },
         decisionsHeading: "Where the research reached people",
         decisions: [
-          { title: "Presented to Instructure's strategy team", why: "Presented the final strategy and high-fidelity wireframes to Instructure's full strategy team, and to over 180 University of Michigan students, to drive alignment with Instructure's long-term strategic goals." },
+          { title: "Presented to Instructure's strategy team", why: "Presented the final strategy and the Figma Make prototype to Instructure's full strategy team, and to over 180 University of Michigan students, to drive alignment with Instructure's long-term strategic goals." },
           { title: "Client consultant feedback", why: "\"Your team delivered one of the strongest, most future-focused strategies we've seen.\" The consultant also flagged constraints to plan for: content partnerships for the modular platform, and how to measure soft skills." },
           { title: "Widened who we design for", why: "Interviews showed that alternative-pathway learners are often already working, so the design covers in-career learners and not only recent high-school graduates." }
         ],
