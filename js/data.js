@@ -281,7 +281,7 @@ window.PORTFOLIO = {
           },
           {
             label: "Our Flavors",
-            images: [{ src: "assets/img/milk-flavors.jpg", fit: "full", caption: "Light (blush) and dark (cocoa) themes." }]
+            images: [{ src: "assets/img/milk-flavors.jpg", fit: "full", caption: "Desktop and mobile, light theme." }]
           },
           {
             label: "Find Pints",
@@ -289,7 +289,7 @@ window.PORTFOLIO = {
           },
           {
             label: "Product pages",
-            images: [{ src: "assets/img/milk-product.jpg", fit: "full", caption: "Flavor and item pages, desktop and mobile, light and dark." }]
+            images: [{ src: "assets/img/milk-product.jpg", fit: "full", caption: "Flavor and item page, desktop." }]
           },
           {
             label: "About",
@@ -330,7 +330,7 @@ window.PORTFOLIO = {
           {
             label: "Flavors and product pages",
             goal: "Goal 1",
-            after: { src: "assets/img/milk-product.jpg", caption: "After: flavor and item pages, desktop and mobile, light and dark." }
+            after: { src: "assets/img/milk-product.jpg", caption: "After: the flavors page (desktop and mobile) and a flavor page (desktop)." }
           },
           {
             label: "Cart, checkout and 404",
