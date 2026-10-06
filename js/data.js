@@ -279,6 +279,9 @@ window.PORTFOLIO = {
 
       execution: {
         summary: "The final screens, desktop and mobile. Before and afters are at the end.",
+        newPagesHeading: "New pages the original site didn't have",
+        newPagesNote: "The original site had no flavors page, product pages, cart, checkout or 404 page. All five are designed from scratch and shown below.",
+        newPages: ["Our Flavors", "Product page", "Cart", "Checkout", "404 page"],
         designs: [
           {
             label: "Homepage",
@@ -342,9 +345,6 @@ window.PORTFOLIO = {
             after: { src: "assets/img/milk-about-after.jpg", fit: "full", caption: "After: the About story, now part of the homepage: small batches, big flavor, and the team." }
           }
         ],
-        newPagesHeading: "New pages the original site didn't have",
-        newPagesNote: "The original site had no flavors page, product pages, cart, checkout or 404 page. All five are designed from scratch and shown in Final Design.",
-        newPages: ["Our Flavors", "Product page", "Cart", "Checkout", "404 page"],
         results: [
           { value: "3", label: "design goals, each with a feature" },
           { value: "4", label: "brands compared" },

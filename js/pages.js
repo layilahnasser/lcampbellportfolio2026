@@ -498,6 +498,7 @@
               <section id="execution" class="frame">
                 ${frameHead(6, FRAMES[5].label)}
                 ${ok(ex.summary) ? `<p class="glance">${t(first(ex.summary))}</p>` : ""}
+                ${(ex.newPages || []).length ? `<h3>${esc(ex.newPagesHeading || "New pages")}</h3>${ex.newPagesNote ? `<p>${t(ex.newPagesNote)}</p>` : ""}<ul class="chips" role="list">${ex.newPages.map((n) => `<li class="chip"><span class="frame-no">New</span> ${esc(n)}</li>`).join("")}</ul>` : ""}
                 ${(ex.designs || []).length ? `<div class="design-grid">${(ex.designs || []).map((d) => `<article class="design-cell"><h3 class="design-label">${d.isNew ? `<span class="frame-no">New</span> ` : ""}${esc(d.label)}</h3>${imgs(d.images)}</article>`).join("")}</div><p class="hint">Tap a screen to open it full size.</p>` : ""}
                 ${(ex.goals || []).map((g) => `<article class="goal-card"><header class="goal-head"><span class="frame-no">${esc(g.tag)}</span><p class="goal-statement">${esc(g.title || g.statement)}</p></header><div class="goal-body${g.images ? " goal-body--shot" : ""}"><p class="goal-why">${t(g.why)}</p>${g.images ? `<div class="goal-shots">${imgs(g.images)}</div>` : ""}</div>${g.before && g.after ? `<div class="compare-pair"><div class="cmp-col"><p class="cmp-tag">Before</p>${img(g.before)}</div><div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p>${img(g.after)}</div></div>` : ""}</article>`).join("")}
                 ${(ex.images || []).length ? `<div class="shots">${ex.images.map((im) => img(im)).join("")}</div>` : ""}
@@ -510,7 +511,6 @@
                 ${frameHead(7, FRAMES[6].label)}
                 ${ok(p.outcome.reflection) ? `<p class="glance">${t(p.outcome.reflection)}</p>` : ""}
                 <div class="results">${p.outcome.results.map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`).join("")}</div>
-                ${(p.outcome.newPages || []).length ? `<h3>${esc(p.outcome.newPagesHeading || "New pages")}</h3>${p.outcome.newPagesNote ? `<p>${t(p.outcome.newPagesNote)}</p>` : ""}<ul class="chips" role="list">${p.outcome.newPages.map((n) => `<li class="chip"><span class="frame-no">New</span> ${esc(n)}</li>`).join("")}</ul>` : ""}
                 ${p.outcome.compare ? p.outcome.compare.map((c) => `<div class="compare compare--page"><p class="compare-label">${c.goal ? `<span class="frame-no">${esc(c.goal)}</span> ` : ""}${esc(c.label)}</p><div class="compare-pair${c.before ? "" : " compare-pair--single"}">${c.before ? `<div class="cmp-col"><p class="cmp-tag">Before</p>${img(c.before)}</div>` : ""}<div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p><div class="cmp-after${Array.isArray(c.after) ? " cmp-after--multi" : ""}">${imgs(c.after)}</div></div></div></div>`).join("") : ""}
                 
               </section>
