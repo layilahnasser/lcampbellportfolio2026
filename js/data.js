@@ -654,7 +654,12 @@ window.PORTFOLIO = {
       team: "Analysts, information architects and product managers",
       timeline: "Aug – Nov 2025",
       tools: "Surveys, interviews, personas, journey mapping, RICE prioritization, wireframes, prototypes",
-      hero: { src: "assets/img/nutrition-app-home.png", fit: "phone", caption: "The app's home screen: a warm welcome, a daily tip, and one-tap access to nutrition support." },
+      hero: { row: [
+        { src: "assets/img/nutrition-app-home.png", caption: "Home" },
+        { src: "assets/img/nutrition-app-nutrition.png", caption: "Nutrition" },
+        { src: "assets/img/nutrition-app-scanner.png", caption: "Scanner" },
+        { src: "assets/img/nutrition-app-dietitian.png", caption: "Dietitian" }
+      ], caption: "Home, nutrition, scanner and dietitian screens of the app." },
 
       problem: {
         statement:

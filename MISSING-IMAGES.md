@@ -36,3 +36,11 @@ Save each file into `assets/img/` with exactly this name, then refresh the page.
 - [ ] `nutrition-sketches.jpg`: Early sketches.
 - [ ] `nutrition-lowfi.jpg`: Low-fidelity wireframes.
 - [ ] `nutrition-wireframes.jpg`: The six high-fidelity screens.
+
+## Cancer Nutrition App: side-by-side cover (3 more app screens)
+
+Save into `assets/img/` (phone screenshots, about 320 × 720 px each):
+
+- `nutrition-app-nutrition.png`: the Nutrition tab
+- `nutrition-app-scanner.png`: the Scanner tab
+- `nutrition-app-dietitian.png`: the Dietitian tab

@@ -745,3 +745,12 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .doc-list { list-style: none; display: flex; flex-wrap: wrap; gap: 14px 22px; padding: 0; margin: 0 0 14px; }
 .doc-list li { display: grid; gap: 4px; }
 .doc-list span { font-size: 0.9rem; color: var(--text-dim, #cfc8e6); }
+.phone-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; align-items: start; padding: 22px 18px; }
+.shot--rowwrap { background: radial-gradient(circle at 50% 120%, color-mix(in srgb, var(--ball) 35%, transparent), transparent 70%), #120f1c; }
+.phone-row .shot { margin: 0; background: transparent; border: 0; padding: 0; }
+.phone-row .shot img { width: 100%; max-height: 560px; object-fit: contain; }
+.phone-row .shot--empty .shot-ph { min-height: 320px; }
+.phone-row .shot--phone { min-width: 0; padding: 0; background: transparent; display: block; }
+.phone-row .shot--phone img { width: 100%; box-shadow: none; border-radius: 14px; }
+.phone-row .shot--empty .shot-ph { aspect-ratio: 9 / 16; min-height: 0; overflow: hidden; padding: 8px; font-size: 0.8rem; word-break: break-word; }
+.phone-row .shot--empty .shot-ph .ph-file { font-size: 0.7rem; }

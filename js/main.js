@@ -23,6 +23,10 @@
   const plain = (s) => String(s ?? "").replace(/^TODO:?\s*/, "");
 
   const img = (im, cls = "") => {
+    // Side-by-side phones: { row: [ {src, caption}, … ], caption: "…" }; each phone can be missing and shows its own slot.
+    if (im && Array.isArray(im.row)) {
+      return `<figure class="shot shot--rowwrap ${cls}"><div class="phone-row">${im.row.map((r) => img(r, "shot--phone")).join("")}</div>${im.caption ? `<figcaption>${esc(plain(im.caption))}</figcaption>` : ""}</figure>`;
+    }
     if (im && im.fit === "phone") cls += " shot--phone";
     if (im && im.fit === "phones") cls += " shot--phone shot--phones";
     if (im && im.fit === "tall") cls += " shot--tall";
