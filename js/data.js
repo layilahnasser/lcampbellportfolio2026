@@ -580,7 +580,7 @@ window.PORTFOLIO = {
         decisions: [
           { title: "Updated frontline CS scripts", why: "Worked with the Customer Service team to turn research findings into immediate operational improvements, by updating the scripts agents use today." },
           { title: "Made research visible", why: "After feedback about broader team engagement, I published 7 insights posts in the team's research Slack channel, on top of the required weekly update." },
-          { title: "\"New to Root Research\" onboarding guide", why: "Co-authored the onboarding guide for incoming UX researchers: auto insurance basics, cross-functional partners and a structured first-week path." },
+          { title: "\"New to Root Research\" onboarding playbook", why: "Co-developed with a teammate so future researchers don't have to rebuild critical context from scattered conversations, Slack history and repository searches. It covers Root and auto-insurance context for researchers new to the domain; key research partners and communication channels; standard operating procedures from intake and planning through evidence handling, analysis, review and handoff; the Voice of the Customer program and how quarterly evidence is processed; a worked NPS example that keeps small samples visible; the customer quote library and retention context; Slack directories and knowledge repositories; and a governed workflow for applying AI research skills to a new dataset. It also exists as an interactive project for future review and use." },
           { title: "Supported other research", why: "Partnered with a fellow design team member on note-taking across 4 independent-agent research sessions, and supported user testing for several other projects." }
         ],
         images: [],
