@@ -54,7 +54,6 @@ Some case-study images are wired to file names but don't exist yet. Until you ad
 | `root-data.jpg`, `root-stakeholder-notes.jpg`, `root-coding.jpg` | Root Insurance: the cancellation-data board, the stakeholder-notes board, and the coding / how-might-we board |
 | `root-concept-tenure.png`, `root-concept-drive.png`, `root-concept-sympathy.png`, `root-concept-discounts.png`, `root-concept-email.png` | Root Insurance: the five concept slides from the final shareout |
 | `crown-sketches.jpg`, `crown-lowfi.jpg`, `crown-screens-dark.png` | Crown Code: sketches, low-fi, dark mode screens |
-| `nutrition-board.jpg`, `nutrition-sketches.jpg`, `nutrition-lowfi.jpg`, `nutrition-wireframes.jpg` | Cancer Nutrition App: RICE board, sketches, low-fi, six high-fi screens |
 
 ## Design notes
 

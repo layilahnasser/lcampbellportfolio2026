@@ -2,7 +2,7 @@
 
 Save each file into `assets/img/` with exactly this name, then refresh the page. Nothing else needs to change.
 
-**20 images missing.**
+**16 images missing.**
 
 
 ## Milk and Froth Redesign (5)
@@ -30,17 +30,3 @@ Save each file into `assets/img/` with exactly this name, then refresh the page.
 - [ ] `root-concept-discounts.png`: Provide customers with opportunities to lower their rate by showcasing the different discounts that are available.
 - [ ] `root-concept-email.png`: Rewording existing email communications to make them more personable and friendly.
 
-## AI-Powered Cancer Nutrition App (4)
-
-- [ ] `nutrition-board.jpg`: Ideation and RICE prioritization board.
-- [ ] `nutrition-sketches.jpg`: Early sketches.
-- [ ] `nutrition-lowfi.jpg`: Low-fidelity wireframes.
-- [ ] `nutrition-wireframes.jpg`: The six high-fidelity screens.
-
-## Cancer Nutrition App: side-by-side cover (3 more app screens)
-
-Save into `assets/img/` (phone screenshots, about 320 × 720 px each):
-
-- `nutrition-app-nutrition.png`: the Nutrition tab
-- `nutrition-app-scanner.png`: the Scanner tab
-- `nutrition-app-dietitian.png`: the Dietitian tab
