@@ -728,3 +728,17 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .more > summary:focus-visible { outline: 3px solid #ffd24a; outline-offset: 2px; }
 .more-body { padding: 0 16px 16px; }
 @media (max-width: 700px) { .glance-grid--2, .glance-grid--3, .obj-grid { grid-template-columns: 1fr; } }
+.contrib { border: 2px solid var(--cyan, #4de3ff); border-radius: 14px; padding: 12px 16px; background: var(--panel); margin: 0 0 12px; }
+.contrib b { color: var(--cyan, #4de3ff); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.contrib p { margin: 4px 0 0; font-weight: 600; }
+.goal-mini { background: var(--panel); border: 2px solid #2b2443; border-radius: 14px; padding: 14px 16px; font-weight: 600; }
+.goal-mini .card-num { display: block; color: var(--cyan, #4de3ff); margin-bottom: 4px; }
+.obj-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.design-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 8px 0 8px; align-items: start; }
+.design-cell { min-width: 0; }
+.design-cell .design-label { margin: 0 0 6px; font-size: 1rem; }
+.design-cell .shot { margin: 0; }
+.design-cell .shot img { max-height: 460px; width: 100%; object-fit: cover; object-position: top; }
+.design-cell .shot--missing, .design-cell .shot .missing { min-height: 0; }
+.hint { font-size: 0.9rem; color: var(--text-dim, #cfc8e6); margin: 0 0 12px; }
+@media (max-width: 700px) { .obj-grid--3, .design-grid { grid-template-columns: 1fr; } }

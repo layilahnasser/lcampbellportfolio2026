@@ -190,7 +190,9 @@ window.PORTFOLIO = {
         context:
           "Milk & Froth is a Detroit-born ice cream brand focused on small-batch ice creams made with real ingredients. Every flavor is made from scratch in the Eastern Market kitchen with fresh dairy, premium ingredients and in-house pasteurization, and the shop's bold red interior reflects an energetic, indulgent approach. We started by reviewing the current site and comparing it with other ice cream brands.",
         goal:
-          "Redesign the digital experience around three goals, listed below, so the website feels as vibrant and handcrafted as the shop."
+          "Redesign the digital experience around three goals, listed below, so the website feels as vibrant and handcrafted as the shop.",
+        contribution:
+          "The brand had no design system, so I built one from the ground up: color tokens, type scale, buttons and components, before designing a single page."
       },
 
       research: {
@@ -212,6 +214,11 @@ window.PORTFOLIO = {
       },
 
       define: {
+        goalCards: [
+          { tag: "Goal 1", text: "Show off distinctive flavors and the handcrafted process" },
+          { tag: "Goal 2", text: "Make shops easy to find across Michigan" },
+          { tag: "Goal 3", text: "Make browsing image-forward and intuitive" }
+        ],
         callout: "The shop already feels vibrant, playful and indulgent. The redesign's job was to carry that same energy, and the craft behind it, into the website.",
         lists: [
           {
@@ -362,6 +369,8 @@ window.PORTFOLIO = {
           "Pageant contestants often prepare for interviews with scattered tools like paper notes, screenshots, text messages, PDFs and social media advice, which makes it hard to stay organized, practice consistently, and know whether their answers are improving.",
         context:
           "The app is an extension of the Crown Code brand, which already sells interview flashcards. Many contestants also need support beyond interview questions: reminders, readiness tracking, and personalized practice that matches their pageant system and division. TODO: add one line on how you saw this need first-hand (for example through your pageant coaching).",
+        contribution:
+          "Solo designer. I built the Crown Code design system from the ground up: color, type, buttons, navigation and cards, in light and dark mode.",
         goal:
           "Create a single, easy-to-use platform that combines interview preparation, accountability and competition organization, so pageant prep feels manageable, consistent and effective."
       },
@@ -379,6 +388,11 @@ window.PORTFOLIO = {
       },
 
       define: {
+        goalCards: [
+          { tag: "Dashboard", text: "Deadlines, practice and action items in one place" },
+          { tag: "Flashcards", text: "Practice answers with a clear structure" },
+          { tag: "Sharing", text: "Coaches get feedback tied to real progress" }
+        ],
         persona:
           "A pageant contestant preparing for interviews and competition, often busy, who needs quick, efficient prep tools and wants support beyond interview questions: reminders, readiness tracking, and practice that matches her pageant system and division.",
         journey:

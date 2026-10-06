@@ -405,6 +405,74 @@
           })()
         : "";
 
+      const ok = (x) => (x && !/^TODO/.test(x) ? x : "");
+      const designBody = (() => {
+        const ex = p.execution || {};
+        const goalCards = p.define.goalCards || [];
+        const rIters = p.iterations || [];
+        const iterImgs = rIters.flatMap((it) => (Array.isArray(it.image) ? it.image : it.image ? [it.image] : [])).filter((i) => i && (i.src || i.video || i.embed));
+        const rMethods = ((p.research && p.research.methods) || []).filter((m) => ok(m.name));
+        const rInsights = ((p.research && p.research.insights) || []).filter(ok);
+        const palette = ex.palette || (rIters.find((it) => it.palette) || {}).palette;
+        const typefaces = ex.typefaces || (rIters.find((it) => it.typefaces) || {}).typefaces;
+        return `
+              <section id="problem" class="frame">
+                ${frameHead(1, FRAMES[0].label)}
+                <p class="callout">${t(p.problem.statement)}</p>
+                ${p.problem.contribution ? `<div class="contrib"><b>My contribution</b><p>${t(p.problem.contribution)}</p></div>` : ""}
+                ${more(`<h3>How I identified it</h3><p>${t(p.problem.context)}</p><h3>Goal</h3><p>${t(p.problem.goal)}</p>`)}
+              </section>
+
+              <section id="research" class="frame">
+                ${frameHead(2, FRAMES[1].label)}
+                ${ok(p.research.summary) ? `<p class="glance">${t(first(p.research.summary))}</p>` : ""}
+                ${chips(rMethods.map((m) => m.name))}
+                ${grid(p.research.image)}
+                ${more(`<p>${t(p.research.summary)}</p><div class="method-grid">${p.research.methods.map((m) => `<div class="method"><h3>${t(m.name)}</h3><p>${t(m.detail)}</p></div>`).join("")}</div>${rInsights.length ? `<h3>Key insights</h3><ol class="insights">${rInsights.map((x) => `<li>${t(x)}</li>`).join("")}</ol>` : ""}`)}
+              </section>
+
+              <section id="define" class="frame">
+                ${frameHead(3, FRAMES[2].label)}
+                ${goalCards.length ? `<div class="obj-grid obj-grid--3">${goalCards.map((g) => `<div class="goal-mini"><span class="card-num">${esc(g.tag)}</span>${t(g.text)}</div>`).join("")}</div>` : p.define.callout ? `<p class="callout">${t(p.define.callout)}</p>` : ""}
+                ${grid(p.define.image)}
+                ${more(`${p.define.callout && goalCards.length ? `<p class="callout">${t(p.define.callout)}</p>` : ""}${p.define.persona || p.define.journey ? `<div class="two-col"><div><h3>Who we're designing for</h3><p>${t(p.define.persona)}</p></div><div><h3>Where it breaks down</h3><p>${t(p.define.journey)}</p></div></div>` : ""}${p.define.painPoints ? `<h3>${esc(p.define.painPointsHeading || "Common pain points")}</h3><ol class="insights">${p.define.painPoints.map((x) => `<li>${t(x)}</li>`).join("")}</ol>` : ""}${listsBlock(p.define.lists)}${mapBlock(p.define.map)}`)}
+              </section>
+
+              <section id="ideate" class="frame">
+                ${frameHead(4, FRAMES[3].label)}
+                ${ok(p.ideate.summary) ? `<p class="glance">${t(first(p.ideate.summary))}</p>` : ""}
+                ${p.ideate.callout ? `<p class="callout">${t(p.ideate.callout)}</p>` : ""}
+                ${grid(p.ideate.image)}
+                ${more(`${ok(p.ideate.summary) ? `<p>${t(p.ideate.summary)}</p>` : ""}${listsBlock(p.ideate.lists)}`)}
+              </section>
+
+              <section id="iterate" class="frame">
+                ${frameHead(5, FRAMES[4].label)}
+                ${palette ? brandBlock(palette, typefaces) : ""}
+                ${grid(iterImgs)}
+                ${more(`<ol class="iterations">${rIters.map((it) => `<li class="iteration"><div class="iteration-text"><h3>${t(it.version)}</h3><p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[0])}:</b> ${t(it.change)}</p><p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[1])}:</b> ${t(it.feedback)}</p></div></li>`).join("")}</ol>`)}
+              </section>
+
+              <section id="execution" class="frame">
+                ${frameHead(6, FRAMES[5].label)}
+                ${ok(ex.summary) ? `<p class="glance">${t(first(ex.summary))}</p>` : ""}
+                ${(ex.designs || []).length ? `<div class="design-grid">${(ex.designs || []).map((d) => `<article class="design-cell"><h3 class="design-label">${esc(d.label)}</h3>${imgs(d.images)}</article>`).join("")}</div><p class="hint">Tap a screen to open it full size.</p>` : ""}
+                ${(ex.goals || []).map((g) => `<article class="goal-card"><header class="goal-head"><span class="frame-no">${esc(g.tag)}</span><p class="goal-statement">${esc(g.title || g.statement)}</p></header><div class="goal-body${g.images ? " goal-body--shot" : ""}"><p class="goal-why">${t(g.why)}</p>${g.images ? `<div class="goal-shots">${imgs(g.images)}</div>` : ""}</div>${g.before && g.after ? `<div class="compare-pair"><div class="cmp-col"><p class="cmp-tag">Before</p>${img(g.before)}</div><div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p>${img(g.after)}</div></div>` : ""}</article>`).join("")}
+                ${(ex.images || []).length ? `<div class="shots">${ex.images.map((im) => img(im)).join("")}</div>` : ""}
+                ${ex.compare ? `<h3>Before and after</h3>${ex.compare.map((c) => `<div class="compare"><p class="compare-label">${esc(c.label)}</p><div class="compare-pair">${img(c.before)}${img(c.after)}</div></div>`).join("")}` : ""}
+                ${ex.prototypeUrl ? `<p>${ext(ex.prototypeUrl, "Open prototype ↗").replace("<a ", '<a class="btn btn--ghost" ')}</p>` : ""}
+                ${more(`${ok(ex.summary) ? `<p>${t(ex.summary)}</p>` : ""}${mapBlock(ex.map)}${(ex.decisions || []).length ? `<h3>${esc(ex.decisionsHeading || "Why it looks & works this way")}</h3><div class="decision-grid">${ex.decisions.map((d, i) => `<div class="decision"><span class="card-num">0${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.why)}</p></div>`).join("")}</div>` : ""}`)}
+              </section>
+
+              <section id="outcome" class="frame">
+                ${frameHead(7, FRAMES[6].label)}
+                <div class="results">${p.outcome.results.map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`).join("")}</div>
+                ${p.outcome.compare ? p.outcome.compare.map((c) => `<div class="compare compare--page"><p class="compare-label">${c.goal ? `<span class="frame-no">${esc(c.goal)}</span> ` : ""}${esc(c.label)}</p><div class="compare-pair${c.before ? "" : " compare-pair--single"}">${c.before ? `<div class="cmp-col"><p class="cmp-tag">Before</p>${img(c.before)}</div>` : ""}<div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p><div class="cmp-after${Array.isArray(c.after) ? " cmp-after--multi" : ""}">${imgs(c.after)}</div></div></div></div>`).join("") : ""}
+                ${more(`<h3>Reflection</h3><p>${t(p.outcome.reflection)}</p>`)}
+              </section>
+`;
+      })();
+
       return `
         <article class="case" style="--ball:${esc(p.ballColor)}">
           <header class="case-hero">
@@ -432,139 +500,7 @@
 
           <div class="case-layout">
             <div class="case-body">
-              ${isResearch ? researchBody : `
-              <section id="problem" class="frame">
-                ${frameHead(1, FRAMES[0].label)}
-                <p class="callout">${t(p.problem.statement)}</p>
-                <h3>How I identified it</h3><p>${t(p.problem.context)}</p>
-                <h3>Goal</h3><p>${t(p.problem.goal)}</p>
-              </section>
-
-              <section id="research" class="frame">
-                ${frameHead(2, FRAMES[1].label)}
-                <p>${t(p.research.summary)}</p>
-                <div class="method-grid">${p.research.methods
-                  .map((m) => `<div class="method"><h3>${t(m.name)}</h3><p>${t(m.detail)}</p></div>`)
-                  .join("")}</div>
-                ${(p.research.insights || []).length ? `<h3>Key insights</h3><ol class="insights">${p.research.insights.map((x) => `<li>${t(x)}</li>`).join("")}</ol>` : ""}
-                ${imgs(p.research.image)}
-              </section>
-
-              <section id="define" class="frame">
-                ${frameHead(3, FRAMES[2].label)}
-                ${p.define.callout ? `<p class="callout">${t(p.define.callout)}</p>` : ""}
-                ${
-                  p.define.persona || p.define.journey
-                    ? `<div class="two-col"><div><h3>Who we're designing for</h3><p>${t(p.define.persona)}</p></div><div><h3>Where it breaks down</h3><p>${t(p.define.journey)}</p></div></div>`
-                    : ""
-                }
-                ${
-                  p.define.painPoints
-                    ? `<h3>${esc(p.define.painPointsHeading || "Common pain points")}</h3><ol class="insights">${p.define.painPoints.map((x) => `<li>${t(x)}</li>`).join("")}</ol>`
-                    : ""
-                }
-                ${(p.define.lists || [])
-                  .map((l) => `<h3>${esc(l.heading)}</h3><ol class="insights">${l.items.map((x) => `<li>${t(x)}</li>`).join("")}</ol>`)
-                  .join("")}
-                ${
-                  p.define.map
-                    ? `<h3>${esc(p.define.map.heading)}</h3><div class="goal-map">${p.define.map.rows
-                        .map((r) => `<div class="gm-row"><b>${esc(r.tag)}</b><div><p class="gm-need">${t(r.need)}</p><p class="gm-do">${t(r.design)}</p></div><span class="gm-where">${esc(r.where)}</span></div>`)
-                        .join("")}</div>`
-                    : ""
-                }
-                ${imgs(p.define.image)}
-              </section>
-
-              <section id="ideate" class="frame">
-                ${frameHead(4, FRAMES[3].label)}
-                <p>${t(p.ideate.summary)}</p>
-                ${p.ideate.callout ? `<p class="callout">${t(p.ideate.callout)}</p>` : ""}
-                ${listsBlock(p.ideate.lists)}
-                ${imgs(p.ideate.image)}
-              </section>
-
-              <section id="iterate" class="frame">
-                ${frameHead(5, FRAMES[4].label)}
-                <ol class="iterations">${p.iterations
-                  .map(
-                    (it) => `<li class="iteration">
-                      <div class="iteration-text"><h3>${t(it.version)}</h3>
-                        <p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[0])}:</b> ${t(it.change)}</p>
-                        <p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[1])}:</b> ${t(it.feedback)}</p></div>
-                      ${it.palette ? `<div class="iteration-wide iteration-brand"><div><h4>Brand system</h4>${brandBlock(it.palette, it.typefaces)}</div></div>` : ""}
-                      ${Array.isArray(it.image) && it.image.length > 1 ? `<div class="iteration-wide">${imgs(it.image)}</div>` : imgs(it.image)}
-                    </li>`
-                  )
-                  .join("")}</ol>
-              </section>
-
-              <section id="execution" class="frame">
-                ${frameHead(6, FRAMES[5].label)}
-                <p>${t(p.execution.summary)}</p>
-                ${mapBlock(p.execution.map)}
-                ${(p.execution.designs || [])
-                  .map(
-                    (d) => `<article class="design-block">
-                      <h3 class="design-label">${esc(d.label)}</h3>
-                      <div class="design-shots${d.images.length > 1 ? " design-shots--multi" : ""}">${imgs(d.images)}</div>
-                    </article>`
-                  )
-                  .join("")}
-${(p.execution.goals || [])
-                  .map(
-                    (g) => `<article class="goal-card">
-                      <header class="goal-head"><span class="frame-no">${esc(g.tag)}</span><p class="goal-statement">${esc(g.title || g.statement)}</p></header>
-                      <div class="goal-body${g.images ? " goal-body--shot" : ""}">
-                        <p class="goal-why">${t(g.why)}</p>
-                        ${g.images ? `<div class="goal-shots">${imgs(g.images)}</div>` : ""}
-                      </div>
-                      ${g.before && g.after ? `<div class="compare-pair"><div class="cmp-col"><p class="cmp-tag">Before</p>${img(g.before)}</div><div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p>${img(g.after)}</div></div>` : ""}
-                    </article>`
-                  )
-                  .join("")}
-                ${(p.execution.images || []).length ? `<div class="shots">${p.execution.images.map((im) => img(im)).join("")}</div>` : ""}
-                ${
-                  p.execution.compare
-                    ? `<h3>Before and after</h3>${p.execution.compare
-                        .map((c) => `<div class="compare"><p class="compare-label">${esc(c.label)}</p><div class="compare-pair">${img(c.before)}${img(c.after)}</div></div>`)
-                        .join("")}`
-                    : ""
-                }
-                ${p.execution.palette ? `<h3>Brand system</h3>${brandBlock(p.execution.palette, p.execution.typefaces)}` : ""}
-                ${
-                  (p.execution.decisions || []).length
-                    ? `<h3>${esc(p.execution.decisionsHeading || "Why it looks & works this way")}</h3><div class="decision-grid">${p.execution.decisions
-                        .map((d, i) => `<div class="decision"><span class="card-num">0${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.why)}</p></div>`)
-                        .join("")}</div>`
-                    : ""
-                }
-                ${p.execution.prototypeUrl ? `<p>${ext(p.execution.prototypeUrl, "Open prototype ↗").replace("<a ", '<a class="btn btn--ghost" ')}</p>` : ""}
-              </section>
-
-              <section id="outcome" class="frame">
-                ${frameHead(7, FRAMES[6].label + " &amp; reflection")}
-                ${
-                  p.outcome.compare
-                    ? `<h3>Before and after, page by page</h3>${p.outcome.compare
-                        .map(
-                          (c) => `<div class="compare compare--page">
-                            <p class="compare-label">${c.goal ? `<span class="frame-no">${esc(c.goal)}</span> ` : ""}${esc(c.label)}</p>
-                            <div class="compare-pair${c.before ? "" : " compare-pair--single"}">
-                              ${c.before ? `<div class="cmp-col"><p class="cmp-tag">Before</p>${img(c.before)}</div>` : ""}
-                              <div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p><div class="cmp-after${Array.isArray(c.after) ? " cmp-after--multi" : ""}">${imgs(c.after)}</div></div>
-                            </div>
-                          </div>`
-                        )
-                        .join("")}`
-                    : ""
-                }
-                <div class="results">${p.outcome.results
-                  .map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`)
-                  .join("")}</div>
-                <p>${t(p.outcome.reflection)}</p>
-              </section>
-`}
+              ${isResearch ? researchBody : designBody}
 
               <section class="strike-panel" id="strike" aria-labelledby="strike-title">
                 <div class="sp-pins" aria-hidden="true">${Array.from({ length: 10 }, (_, k) => `<span class="sp-pin" style="--k:${k}">${pinSVG()}</span>`).join("")}</div>
@@ -587,6 +523,7 @@ ${(p.execution.goals || [])
 
   /* ---------- Page behaviours ---------- */
   if (page === "project") {
+    document.querySelectorAll(".design-grid .shot img").forEach((im) => { im.style.cursor = "zoom-in"; im.addEventListener("click", () => window.open(im.src, "_blank", "noopener")); });
     const links = [...document.querySelectorAll(".fstrip a")];
     const frames = [...document.querySelectorAll(".frame")];
     const paint = (cur) => {
