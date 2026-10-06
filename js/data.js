@@ -288,7 +288,7 @@ window.PORTFOLIO = {
             ]
           },
           {
-            label: "Our Flavors",
+            label: "Our Flavors", isNew: true,
             images: [{ src: "assets/img/milk-flavors.jpg", fit: "full", caption: "Desktop and mobile, light theme." }]
           },
           {
@@ -296,19 +296,19 @@ window.PORTFOLIO = {
             images: [{ src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "A card for each shop with hours, address, directions and order now. Desktop and mobile." }]
           },
           {
-            label: "Product pages",
+            label: "Product page", isNew: true,
             images: [{ src: "assets/img/milk-product.jpg", fit: "full", caption: "A product page with reviews, delivery details and suggestions, desktop." }]
           },
           {
-            label: "Cart",
+            label: "Cart", isNew: true,
             images: [{ src: "assets/img/milk-cart.jpg", fit: "full", caption: "Shopping cart and order summary, desktop and mobile." }]
           },
           {
-            label: "Checkout",
+            label: "Checkout", isNew: true,
             images: [{ src: "assets/img/milk-checkout.jpg", fit: "full", caption: "Delivery or pick up, payment options and pay now, desktop and mobile." }]
           },
           {
-            label: "404 page",
+            label: "404 page", isNew: true,
             images: [{ src: "assets/img/milk-404.jpg", fit: "full", caption: "A 404 page that stays on brand: a melted cone and a way back home. Desktop and mobile." }]
           }
         ],
@@ -339,13 +339,8 @@ window.PORTFOLIO = {
           }
         ],
         newPagesHeading: "New pages the original site didn't have",
-        newPages: [
-          { label: "Our Flavors", images: [{ src: "assets/img/milk-flavors.jpg", fit: "full", caption: "The flavors page, desktop and mobile." }] },
-          { label: "Product page", images: [{ src: "assets/img/milk-product.jpg", fit: "full", caption: "A page for each product, with reviews, delivery details and suggestions." }] },
-          { label: "Cart", images: [{ src: "assets/img/milk-cart.jpg", fit: "full", caption: "Cart and order summary, desktop and mobile." }] },
-          { label: "Checkout", images: [{ src: "assets/img/milk-checkout.jpg", fit: "full", caption: "Delivery or pick up, payment options and pay now, desktop and mobile." }] },
-          { label: "404 page", images: [{ src: "assets/img/milk-404.jpg", fit: "full", caption: "An on-brand page for broken links." }] }
-        ],
+        newPagesNote: "The original site had no flavors page, product pages, cart, checkout or 404 page. All five are designed from scratch and shown in Final Design.",
+        newPages: ["Our Flavors", "Product page", "Cart", "Checkout", "404 page"],
         results: [
           { value: "3", label: "design goals, each with a feature" },
           { value: "4", label: "brands compared" },
