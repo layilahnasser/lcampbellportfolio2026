@@ -24,6 +24,7 @@
 
   const img = (im, cls = "") => {
     if (im && im.fit === "phone") cls += " shot--phone";
+    if (im && im.fit === "phones") cls += " shot--phone shot--phones";
     if (im && im.fit === "tall") cls += " shot--tall";
     if (im && im.fit === "wide") cls += " shot--wide";
     if (im && im.fit === "full") cls += " shot--full";

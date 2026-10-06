@@ -701,3 +701,8 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .shot--video video { display: block; width: 100%; max-height: 640px; border-radius: 12px; border: 1px solid var(--line); background: #000; }
 .shot--embed .embed-wrap { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #000; }
 .shot--embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* Several phone screens side by side (cover) */
+.shot--phones { padding: 28px 18px; }
+.shot--phones img { width: min(1000px, 100%); border-radius: 0; box-shadow: none; }
+.rack-media img.rack-img--contain { object-fit: contain; padding: 14px 10px 0; }
