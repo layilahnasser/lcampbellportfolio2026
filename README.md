@@ -50,7 +50,7 @@ Some case-study images are wired to file names but don't exist yet. Until you ad
 | File | Where it appears |
 |---|---|
 | `milk-flavors.jpg` | Milk and Froth, Goal 1: the "Our Flavors" page in light and dark |
-| `milk-homepage-mobile.jpg`, `milk-product.jpg` | Milk and Froth: the "after" screens for the mobile homepage, About, flavors/product, and cart/checkout/404 |
+| `milk-product.jpg` | Milk and Froth: the "after" screens for the mobile homepage, About, flavors/product, and cart/checkout/404 |
 | `root-data.jpg`, `root-stakeholder-notes.jpg`, `root-coding.jpg` | Root Insurance: the cancellation-data board, the stakeholder-notes board, and the coding / how-might-we board |
 | `root-concept-tenure.png`, `root-concept-drive.png`, `root-concept-sympathy.png`, `root-concept-discounts.png`, `root-concept-email.png` | Root Insurance: the five concept slides from the final shareout |
 | `crown-sketches.jpg`, `crown-lowfi.jpg`, `crown-screens-dark.png` | Crown Code: sketches, low-fi, dark mode screens |
