@@ -432,6 +432,23 @@
         : "";
 
       const ok = (x) => (x && !/^TODO/.test(x) ? x : "");
+      const swatch = (c, extra = "") => `<li class="ds-sw" style="--sw:${esc(c.hex)};--on:${(lum(c.hex) + 0.05) / 0.054 > 1.05 / (lum(c.hex) + 0.05) ? "#0d0a14" : "#fff"}"><b>${esc(c.step || c.name)}</b><span>${esc(c.hex)}</span></li>`;
+      const dsBlock = (ds) =>
+        !ds
+          ? ""
+          : `<div class="ds">
+              ${ds.intro ? `<p class="glance">${t(ds.intro)}</p>` : ""}
+              <h3 class="ds-h"><span class="ds-n">1</span> Brand colors</h3>
+              ${brandBlock(ds.brand, ds.typefaces)}
+              <h3 class="ds-h"><span class="ds-n">2</span> Color primitives <small>raw steps, light to dark</small></h3>
+              ${(ds.primitives || []).map((r) => `<div class="ds-ramp"><h4>${esc(r.name)}</h4><ul class="ds-row" aria-label="${esc(r.name)} steps">${r.steps.map((s) => swatch(s)).join("")}</ul></div>`).join("")}
+              <h3 class="ds-h"><span class="ds-n">3</span> Semantic tokens <small>what each color is used for</small></h3>
+              <div class="ds-tokens">${(ds.tokens || []).map((g) => `<section class="ds-card" aria-label="${esc(g.name)} tokens"><h4>${esc(g.name)}</h4>${g.groups.map((r) => `<div class="ds-trow"><p>${esc(r.name)}</p><ul class="ds-row ds-row--s">${r.items.map((s) => swatch(s)).join("")}</ul></div>`).join("")}</section>`).join("")}</div>
+              <h3 class="ds-h"><span class="ds-n">4</span> Typography</h3>
+              ${img(ds.typography)}
+              <h3 class="ds-h"><span class="ds-n">5</span> Buttons and components</h3>
+              <div class="ds-comp">${(ds.components || []).map((i) => img(i)).join("")}</div>
+            </div>`;
       const designBody = isResearch ? "" : (() => {
         const ex = p.execution || {};
         const goalCards = p.define.goalCards || [];
@@ -474,8 +491,7 @@
 
               <section id="iterate" class="frame">
                 ${frameHead(5, FRAMES[4].label)}
-                ${palette ? brandBlock(palette, typefaces) : ""}
-                ${grid(iterImgs)}
+                ${p.designSystem ? dsBlock({ ...p.designSystem, brand: palette, typefaces }) : `${palette ? brandBlock(palette, typefaces) : ""}${grid(iterImgs)}`}
                 ${more(`<ol class="iterations">${rIters.map((it) => `<li class="iteration"><div class="iteration-text"><h3>${t(it.version)}</h3>${ok(it.change) ? `<p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[0])}:</b> ${t(it.change)}</p>` : ""}${ok(it.feedback) ? `<p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[1])}:</b> ${t(it.feedback)}</p>` : ""}</div></li>`).join("")}</ol>`)}
               </section>
 

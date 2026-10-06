@@ -238,6 +238,50 @@ window.PORTFOLIO = {
         image: [{ src: "assets/img/milk-wireframes.jpg", fit: "wide", caption: "Wireframes: Home, Menu, About Us and E-commerce, and Contact Us." }]
       },
 
+      designSystem: {
+        intro: "Built from the ground up, in three layers: raw color steps (primitives), meaningful tokens that point at them (surface, border, text), then type, buttons and components on top.",
+        primitives: [
+          { name: "Color 1 (Primary)", steps: [{ step: "50", hex: "#FEE9E8" }, { step: "100", hex: "#FFD6D4" }, { step: "200", hex: "#FEAFAB" }, { step: "300", hex: "#FF847D" }, { step: "400", hex: "#FF4E3C" }, { step: "500", hex: "#E02B00" }, { step: "600", hex: "#B32000" }, { step: "700", hex: "#8A1600" }, { step: "800", hex: "#600C01" }, { step: "900", hex: "#3E0400" }, { step: "950", hex: "#2A0200" }] },
+          { name: "Color 2 (Secondary)", steps: [{ step: "50", hex: "#FFF9EE" }, { step: "100", hex: "#FFF6E7" }, { step: "200", hex: "#F5C302" }, { step: "300", hex: "#D4AA00" }, { step: "400", hex: "#B48F00" }, { step: "500", hex: "#957601" }, { step: "600", hex: "#775E01" }, { step: "700", hex: "#5A4702" }, { step: "800", hex: "#3F3100" }, { step: "900", hex: "#261D00" }, { step: "950", hex: "#171000" }] },
+          { name: "Green (Success)", steps: [{ step: "50", hex: "#D5FFD1" }, { step: "100", hex: "#8BFF78" }, { step: "200", hex: "#4BE700" }, { step: "300", hex: "#40C901" }, { step: "400", hex: "#35A900" }, { step: "500", hex: "#2A8C01" }, { step: "600", hex: "#207000" }, { step: "700", hex: "#155501" }, { step: "800", hex: "#0E3B00" }, { step: "900", hex: "#062100" }, { step: "950", hex: "#021501" }] },
+          { name: "Red (Error)", steps: [{ step: "50", hex: "#FFF1F0" }, { step: "100", hex: "#FFDDDC" }, { step: "200", hex: "#FFB7B8" }, { step: "300", hex: "#FF8D8D" }, { step: "400", hex: "#FF5959" }, { step: "500", hex: "#F40000" }, { step: "600", hex: "#C60001" }, { step: "700", hex: "#980000" }, { step: "800", hex: "#6E0001" }, { step: "900", hex: "#460000" }, { step: "950", hex: "#320001" }] },
+          { name: "Greyscale", steps: [{ step: "00", hex: "#FFFFFF" }, { step: "50", hex: "#F6F6F6" }, { step: "100", hex: "#EBEBEB" }, { step: "200", hex: "#D4D4D4" }, { step: "300", hex: "#B6B6B6" }, { step: "400", hex: "#989898" }, { step: "500", hex: "#7C7C7C" }, { step: "600", hex: "#636363" }, { step: "700", hex: "#494949" }, { step: "800", hex: "#323232" }, { step: "900", hex: "#1B1B1B" }, { step: "950", hex: "#111111" }] },
+        ],
+        tokens: [
+          { name: "Greyscale", groups: [
+            { name: "Surface", items: [{ name: "default", hex: "#FFFFFF" }, { name: "subtle", hex: "#F1F1F1" }, { name: "elevated", hex: "#D4D4D4" }, { name: "disabled", hex: "#B6B6B6" }, { name: "negative", hex: "#1B1B1B" }] },
+            { name: "Button", items: [{ name: "default", hex: "#F1F1F1" }, { name: "subtle", hex: "#F1F1F1" }, { name: "elevated", hex: "#494949" }, { name: "disabled", hex: "#B6B6B6" }, { name: "negative", hex: "#1B1B1B" }] },
+            { name: "Border", items: [{ name: "default", hex: "#B6B6B6" }, { name: "disabled", hex: "#D4D4D4" }, { name: "darker", hex: "#7C7C7C" }] },
+            { name: "Text / icon", items: [{ name: "title", hex: "#1B1B1B" }, { name: "subtitle", hex: "#323232" }, { name: "body", hex: "#494949" }, { name: "caption", hex: "#7C7C7C" }, { name: "negative", hex: "#1B1B1B" }, { name: "disabled", hex: "#636363" }, { name: "button", hex: "#323232" }, { name: "button-negative", hex: "#FFFFFF" }] },
+          ] },
+          { name: "Color1 / Primary", groups: [
+            { name: "Surface", items: [{ name: "subtle", hex: "#FEE9E8" }, { name: "lighter", hex: "#FFD6D4" }, { name: "default", hex: "#F4B6B7" }, { name: "darker", hex: "#FEAFAB" }] },
+            { name: "Border", items: [{ name: "subtle", hex: "#FFD6D4" }, { name: "lighter", hex: "#FEAFAB" }, { name: "default", hex: "#FF847D" }, { name: "darker", hex: "#E02B00" }] },
+            { name: "Text / icon", items: [{ name: "label", hex: "#FEAFAB" }] },
+          ] },
+          { name: "Color2 / Secondary", groups: [
+            { name: "Surface", items: [{ name: "subtle", hex: "#FFF6E7" }, { name: "lighter", hex: "#FFF6E7" }, { name: "default", hex: "#F5C300" }, { name: "darker", hex: "#D4AA00" }] },
+            { name: "Border", items: [{ name: "subtle", hex: "#FFF6E7" }, { name: "lighter", hex: "#F5C300" }, { name: "default", hex: "#D4AA00" }, { name: "darker", hex: "#957601" }] },
+            { name: "Text / icon", items: [{ name: "label", hex: "#F5C300" }] },
+          ] },
+          { name: "Green (Success)", groups: [
+            { name: "Surface", items: [{ name: "subtle", hex: "#8BFF78" }, { name: "lighter", hex: "#4BE700" }, { name: "default", hex: "#40C901" }, { name: "darker", hex: "#2A8C01" }] },
+            { name: "Border", items: [{ name: "subtle", hex: "#D5FFD1" }, { name: "lighter", hex: "#8BFF78" }, { name: "default", hex: "#4BE700" }, { name: "darker", hex: "#40C901" }] },
+            { name: "Text / icon", items: [{ name: "label", hex: "#4BE700" }] },
+          ] },
+          { name: "Red (Error)", groups: [
+            { name: "Surface", items: [{ name: "subtle", hex: "#FFD6D4" }, { name: "lighter", hex: "#FFDDDC" }, { name: "default", hex: "#FFB7B8" }, { name: "darker", hex: "#FF8D8D" }] },
+            { name: "Border", items: [{ name: "subtle", hex: "#FFDDDC" }, { name: "lighter", hex: "#FFB7B8" }, { name: "default", hex: "#FF8D8D" }, { name: "darker", hex: "#F40000" }] },
+            { name: "Text / icon", items: [{ name: "label", hex: "#FF8D8D" }] },
+          ] },
+        ],
+        typography: { src: "assets/img/milk-typography.jpg", fit: "wide", caption: "Type system: Nunito Sans and Montserrat, with a scale for desktop, tablet and mobile." },
+        components: [
+          { src: "assets/img/milk-buttons.jpg", fit: "wide", caption: "Buttons: primary, secondary and tertiary, in three sizes and five states." },
+          { src: "assets/img/milk-components.jpg", fit: "wide", caption: "Components: logo lockups, product cards (list, grid and quick-add), order summary, add button and the ticker." }
+        ]
+      },
+
       iterations: [
         {
           version: "Round 1: Wireframes to a design system",
@@ -252,10 +296,6 @@ window.PORTFOLIO = {
           typefaces: [
             { role: "Primary typeface", name: "Nunito Sans" },
             { role: "Secondary typeface", name: "Montserrat" }
-          ],
-          image: [
-            { src: "assets/img/milk-color-system.jpg", fit: "wide", caption: "Color system: primitives and semantic tokens for primary, secondary, success, error and greyscale." },
-            { src: "assets/img/milk-type-scale.png", caption: "Type system: Nunito Sans and Montserrat, with a scale for desktop, tablet and mobile." }
           ]
         },
         {
