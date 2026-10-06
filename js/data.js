@@ -819,11 +819,11 @@ window.PORTFOLIO = {
       methods: {
         summary: "Five methods in sequence, so each one tested what the last one found. A finding counted only if it showed up in at least three of them.",
         items: [
-          { name: "Interviews", detail: "6 semi-structured interviews of 45 to 60 minutes with policy managers, PPQ officers, a training specialist and an importer, recruited by USDA across departments and states." },
-          { name: "Survey", detail: "A 9-question survey in four sections (background, findability, interpretation, help and support), piloted in Google Forms in 3 to 5 minutes." },
+          { name: "Interviews", detail: "7 semi-structured interviews of 45 to 60 minutes (one withdrawn at the participant's request, so 6 in the synthesis) with USDA staff across departments and states, plus a private-sector seed importer." },
+          { name: "Survey", detail: "A 9-question survey in four sections (background, findability, interpretation, help and support). Piloted with 3 USDA staff, which led to four changes, such as asking about how requirements are organized rather than how they are worded." },
           { name: "Comparative evaluation", detail: "Compared ACIR with eCFR, APHIS Manuals, Microsoft Learn and GOV.UK on navigation, search, hierarchy, scannability and terminology." },
           { name: "Heuristic evaluation", detail: "Five evaluators each scored the portal on six of Nielsen's heuristics, merged 60+ issues and agreed severity on a 0 to 4 scale." },
-          { name: "Usability testing", detail: "Moderated think-aloud sessions on Zoom after a pilot. Three tasks: search workflow, cross-referencing manuals to documents, and taxonomy and name resolution." },
+          { name: "Usability testing", detail: "7 moderated think-aloud sessions on Zoom after a client pilot, with participants of varying ACIR experience. Three tasks: search workflow, cross-referencing manuals to documents, and taxonomy and name resolution." },
           { name: "Interaction map", detail: "Mapped the main search journey in Figma and marked friction in red, then reviewed it with stakeholders." }
         ],
         image: [
@@ -843,6 +843,7 @@ window.PORTFOLIO = {
         image: [
           { src: "assets/img/usda-finding1.jpg", fit: "full", caption: "Finding 1: search fails on imperfect input." },
           { src: "assets/img/usda-finding2.jpg", fit: "full", caption: "Finding 2: help is disconnected from the task." },
+          { src: "assets/img/usda-banner.jpg", fit: "wide", caption: "Even announcements live in a homepage carousel, one more place users must look for guidance." },
           { src: "assets/img/usda-finding3.jpg", fit: "full", caption: "Finding 3: small inconsistencies misplace user trust." },
           { src: "assets/img/usda-annotated.jpg", fit: "full", caption: "Heuristic evaluation: search rigidity, scattered help and no breadcrumbs, marked on the portal." }
         ]
@@ -898,10 +899,15 @@ window.PORTFOLIO = {
         ],
         documents: [
           { title: "Final report (PDF)", file: "assets/docs/usda-final-report.pdf", note: "Summary of all five methods" },
-          { title: "Interviews (PDF)", file: "assets/docs/usda-interviews.pdf", note: "Method, findings, personas" },
-          { title: "Comparative evaluation (PDF)", file: "assets/docs/usda-comparative-evaluation.pdf", note: "ACIR vs. eCFR, APHIS, Microsoft Learn, GOV.UK" },
-          { title: "Heuristic evaluation (PDF)", file: "assets/docs/usda-heuristic-evaluation.pdf", note: "6 heuristics, 60+ issues" },
-          { title: "Usability test (PDF)", file: "assets/docs/usda-usability-test.pdf", note: "3 tasks, moderated sessions" },
+          { title: "Interviews: report", file: "assets/docs/usda-report-interviews.pdf", note: "Written paper" },
+          { title: "Survey: report", file: "assets/docs/usda-report-survey.pdf", note: "Written paper" },
+          { title: "Comparative evaluation: report", file: "assets/docs/usda-report-comparative-evaluation.pdf", note: "ACIR vs. eCFR, APHIS, Microsoft Learn, GOV.UK" },
+          { title: "Heuristic evaluation: report", file: "assets/docs/usda-report-heuristic-evaluation.pdf", note: "6 heuristics, 60+ issues" },
+          { title: "Usability test: report", file: "assets/docs/usda-report-usability-test.pdf", note: "3 tasks, 7 moderated sessions" },
+          { title: "Interviews: deck", file: "assets/docs/usda-interviews.pdf", note: "Slides, with personas" },
+          { title: "Comparative evaluation: deck", file: "assets/docs/usda-comparative-evaluation.pdf", note: "Slides" },
+          { title: "Heuristic evaluation: deck", file: "assets/docs/usda-heuristic-evaluation.pdf", note: "Slides" },
+          { title: "Usability test: deck", file: "assets/docs/usda-usability-test.pdf", note: "Slides" },
           { title: "Interaction map (PDF)", file: "assets/docs/usda-interaction-map.pdf", note: "Search journey with friction marked" }
         ],
         reflection: "TODO: What the research changed, what you learned, and what you'd do next."
