@@ -225,7 +225,7 @@
         <section class="page-head">
           <p class="eyebrow">My Work</p>
           <h1>The ball rack</h1>
-          <p class="lede">Pick a ball. Each case study walks frame by frame through the problem, the research, the iterations and the final design decisions.</p>
+          <p class="lede">Pick a ball to explore my UX research and design work, frame by frame. See how I turn questions into insights and insights into better experiences.</p>
         </section>
         <section class="section" aria-label="Case studies">
           <div class="rack">
