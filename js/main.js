@@ -59,6 +59,13 @@
     true
   );
 
+  // Never stretch a screenshot past its real pixel size (stretching is what makes images look blurry).
+  const capWidth = (i) => {
+    if (i && i.tagName === "IMG" && i.naturalWidth && i.closest(".shot, .league-photo")) i.style.maxWidth = i.naturalWidth + "px";
+  };
+  document.addEventListener("load", (e) => capWidth(e.target), true);
+  window.addEventListener("DOMContentLoaded", () => document.querySelectorAll(".shot img, .league-photo img").forEach((i) => i.complete && capWidth(i)));
+
   /* ---------- SVG pieces ---------- */
   const PIN_PATH =
     "M12 0C6.5 0 5.6 6 6.4 12c.7 5 1.8 8-.6 14C2.2 35 .4 45 1.8 55 3 64 6.4 70 12 70s9-6 10.2-15c1.4-10-.4-20-4-29-2.4-6-1.3-9-.6-14C18.4 6 17.5 0 12 0Z";
