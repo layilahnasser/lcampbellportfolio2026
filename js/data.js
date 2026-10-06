@@ -925,17 +925,17 @@ window.PORTFOLIO = {
       hero: { src: "assets/img/elevated-cover.jpg", fit: "full", caption: "Instructure: Life Changing Education, the final presentation to the client." },
 
       problem: {
-        statement: "How might Instructure refine its products, or build a new one, to include learners on alternative pathways and strengthen their lifelong learning and employability?",
-        context: "79% of people in the US do not attend traditional universities, and 61% are on alternative pathways. 29% say they are negatively affected by the lack of a reliable learning platform. Instructure's products (Canvas, Mastery, Parchment) mostly serve traditional institutions, while competitors such as D2L Brightspace have started to serve non-traditional learners.",
-        challenge: "Find out what learners on alternative pathways actually struggle with, and turn it into product recommendations that fit Instructure's long-term strategy.",
-        role: "Lead Researcher. I led the live project plan and research process: interview protocols, interviews, the affinity analysis and the final presentation, with a team of three others. I also built the interactive prototype in Figma Make, so the three recommendations could be shown as working screens, not only described."
+        statement: "How might Instructure better support learners pursuing bootcamps, micro-credentials, and self-directed learning to build skills and improve their career opportunities?",
+        context: "Our project explored how Instructure could support learning beyond traditional academic pathways. We examined the needs of alternative-pathway learners, including clearer learning roadmaps, soft-skill development, and ways to communicate their skills to employers.",
+        challenge: "Understand the barriers these learners face and translate the findings into actionable product recommendations aligned with Instructure's strategy.",
+        role: "As Lead Researcher on a four-person team, I led research planning, interview protocol development, interviews, and affinity analysis. I also helped translate our findings into recommendations and present the team's work."
       },
       objectives: {
-        summary: "The research set out to find where alternative-pathway learners get stuck and what a better pathway could look like.",
+        summary: "Understand learners' needs and identify opportunities for Instructure to support their learning and career goals.",
         items: [
-          "What barriers do learners on alternative pathways face in time, guidance and employability?",
-          "How do they learn today, and where does it fall apart?",
-          "Which product ideas would fit Instructure's ecosystem and long-term strategy?"
+          { title: "Identify barriers", text: "Explore challenges with time, guidance, and career readiness." },
+          { title: "Understand learning journeys", text: "Learn how people navigate alternative pathways and where they need support." },
+          { title: "Guide product opportunities", text: "Recommend solutions aligned with learner needs and Instructure's strategy." }
         ]
       },
       methods: {

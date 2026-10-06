@@ -778,3 +778,8 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .rack-ballwrap .rack-ball i:nth-child(3) { left: 46%; top: 27%; }
 .rack-num { padding-top: 26px; font-size: 1.05rem; }
 .case-intro { max-width: 62ch; margin: 12px 0 0; font-size: 1.05rem; line-height: 1.6; color: var(--text); }
+.callout-label { display: block; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan, #4de3ff); margin-bottom: 4px; }
+.obj-grid .obj-title { display: block; font-size: 1.1rem; margin-bottom: 4px; }
+.obj-grid .obj-text { display: block; font-weight: 400; color: var(--text-dim, #cfc8e6); }
+.obj-grid--three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 700px) { .obj-grid--three { grid-template-columns: 1fr; } }

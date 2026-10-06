@@ -357,14 +357,14 @@
             return `
               <section id="problem" class="frame">
                 ${frameHead(1, FRAMES[0].label)}
-                <p class="callout">${t(p.problem.statement)}</p>
+                <p class="callout"><span class="callout-label">Research question</span>${t(p.problem.statement)}</p>
                 ${more(`<h3>Context</h3><p>${t(p.problem.context)}</p>${p.problem.challenge ? `<h3>The challenge</h3><p>${t(p.problem.challenge)}</p>` : ""}<h3>My role</h3><p>${t(p.problem.role)}</p>`)}
               </section>
 
               <section id="objectives" class="frame">
                 ${frameHead(2, FRAMES[1].label)}
                 <p class="glance">${t(first(p.objectives.summary))}</p>
-                <ol class="obj-grid">${p.objectives.items.map((x, i) => `<li><span class="card-num">0${i + 1}</span>${t(x)}</li>`).join("")}</ol>
+                <ol class="obj-grid${p.objectives.items.length === 3 ? " obj-grid--three" : ""}">${p.objectives.items.map((x, i) => `<li><span class="card-num">0${i + 1}</span>${typeof x === "string" ? t(x) : `<strong class="obj-title">${t(x.title)}</strong><span class="obj-text">${t(x.text)}</span>`}</li>`).join("")}</ol>
               </section>
 
               <section id="methods" class="frame">
