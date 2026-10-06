@@ -241,7 +241,7 @@ window.PORTFOLIO = {
       designSystem: {
         intro: "Built from the ground up: the brand's colors and type first, then the buttons and components built on top of them.",
         colorImage: { src: "assets/img/milk-color-system.jpg", fit: "wide", caption: "Color system: primitives and semantic tokens for primary, secondary, success, error and greyscale." },
-        typography: { src: "assets/img/milk-type-scale.png", caption: "Type system: Nunito Sans and Montserrat, with a scale for desktop, tablet and mobile." },
+        typography: { src: "assets/img/milk-typography.jpg", fit: "wide", caption: "Type system: Nunito Sans and Montserrat, with a scale for desktop, tablet and mobile." },
         buttons: { src: "assets/img/milk-buttons.jpg", fit: "wide", caption: "Buttons: primary, secondary and tertiary, in three sizes and five states." },
         components: { src: "assets/img/milk-components.jpg", fit: "wide", caption: "Components: logo lockups, product cards (list, grid and quick-add), order summary, add button and the ticker." }
       },
@@ -263,7 +263,7 @@ window.PORTFOLIO = {
           ],
           image: [
             { src: "assets/img/milk-color-system.jpg", fit: "wide", caption: "Color system: primitives and semantic tokens for primary, secondary, success, error and greyscale." },
-            { src: "assets/img/milk-type-scale.png", caption: "Type system: Nunito Sans and Montserrat, with a scale for desktop, tablet and mobile." }
+            { src: "assets/img/milk-typography.jpg", fit: "wide", caption: "Type system: Nunito Sans and Montserrat, with a scale for desktop, tablet and mobile." }
           ]
         },
         {
