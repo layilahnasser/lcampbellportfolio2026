@@ -300,10 +300,6 @@ window.PORTFOLIO = {
             images: [{ src: "assets/img/milk-product.jpg", fit: "full", caption: "Flavor and item page, desktop." }]
           },
           {
-            label: "About",
-            images: [{ src: "assets/img/milk-about-after.jpg", fit: "full", caption: "The redesigned About page." }]
-          },
-          {
             label: "Cart",
             images: [{ src: "assets/img/milk-cart.jpg", fit: "full", caption: "Shopping cart and order summary, desktop and mobile." }]
           },
@@ -339,9 +335,9 @@ window.PORTFOLIO = {
             after: { src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "After: Ann Arbor, Detroit and Royal Oak, each with hours, address, photo and directions. Desktop and mobile." }
           },
           {
-            label: "About",
+            label: "About, now on the homepage",
             before: { src: "assets/img/milk-current-about.jpg", caption: "Before: the current About page." },
-            after: { src: "assets/img/milk-about-after.jpg", caption: "After: the redesigned About page." }
+            after: { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "After: the About story now lives on the homepage, in the \"Hey, let's get scooping\" section with the team." }
           },
           {
             label: "Flavors and product pages",
