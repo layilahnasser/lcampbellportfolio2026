@@ -216,7 +216,7 @@
               .map(
                 (p, i) => `
               <a class="rack-card" href="project.html?p=${esc(p.id)}" data-roll="${esc(p.id)}" style="--ball:${esc(p.ballColor)}">
-                <div class="rack-media" aria-hidden="true">${p.hero?.src ? `<img class="${p.hero.fit === "phone" ? "rack-img--contain" : ""}" src="${esc(p.hero.src)}" alt="" loading="lazy">` : ""}${ballSVG(p.ballColor, "rack-ball")}</div>
+                <div class="rack-media" aria-hidden="true">${p.hero?.src ? `<img src="${esc(p.hero.src)}" alt="" loading="lazy">` : ""}${ballSVG(p.ballColor, "rack-ball")}</div>
                 <div class="rack-body">
                   <p class="rack-lane">Lane ${i + 1}${p.year ? " · " + esc(p.year) : ""}</p>
                   <h2>${t(p.title)}</h2>

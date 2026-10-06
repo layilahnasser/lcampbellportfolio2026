@@ -697,17 +697,6 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .design-shots .shot { margin: 0; }
 .design-shots .shot--full img { width: 100%; max-height: none; background: transparent; }
 @media (max-width: 700px) { .design-shots--multi { grid-template-columns: 1fr; } }
-
-/* Crisp images: centered, never stretched past their native size (capped in js/main.js) */
-.shot img { display: block; margin-inline: auto; height: auto; }
-.shot--phone img { margin-inline: auto; }
-.league { grid-template-columns: minmax(200px, 268px) 1fr; }
-.league-photo { display: grid; place-items: center; background: #0d0a14; }
-.league-photo img { width: auto; height: auto; max-width: 100%; object-fit: initial; }
-@media (max-width: 860px) { .league { grid-template-columns: 1fr; } .league-photo { min-height: 0; aspect-ratio: auto; } }
-
-.rack-media img.rack-img--contain { object-fit: contain; padding: 10px; }
-
 /* Video and embeds */
 .shot--video video { display: block; width: 100%; max-height: 640px; border-radius: 12px; border: 1px solid var(--line); background: #000; }
 .shot--embed .embed-wrap { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #000; }
