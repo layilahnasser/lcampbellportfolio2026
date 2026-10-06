@@ -9,7 +9,7 @@
   // Section ids stay the same; only the visible names change per kind of project.
   const FRAME_KEYS = ["problem", "research", "define", "ideate", "iterate", "execution", "outcome"];
   const FRAME_SETS = {
-    design: ["Problem", "Research", "Design Goals", "Wireframes", "Design System", "Final Design", "Outcome"]
+    design: ["Problem", "Research", "Design Goals", "Wireframes", "Design System", "Final Design", "Reflection"]
   };
   // Research projects use their own seven frames and their own content fields (layout: "research")
   const RESEARCH_FRAMES = [
@@ -476,7 +476,7 @@
                 ${frameHead(5, FRAMES[4].label)}
                 ${palette ? brandBlock(palette, typefaces) : ""}
                 ${grid(iterImgs)}
-                ${more(`<ol class="iterations">${rIters.map((it) => `<li class="iteration"><div class="iteration-text"><h3>${t(it.version)}</h3><p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[0])}:</b> ${t(it.change)}</p><p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[1])}:</b> ${t(it.feedback)}</p></div></li>`).join("")}</ol>`)}
+                ${more(`<ol class="iterations">${rIters.map((it) => `<li class="iteration"><div class="iteration-text"><h3>${t(it.version)}</h3>${ok(it.change) ? `<p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[0])}:</b> ${t(it.change)}</p>` : ""}${ok(it.feedback) ? `<p><b>${esc((p.iterLabels || ["What changed", "What testing showed"])[1])}:</b> ${t(it.feedback)}</p>` : ""}</div></li>`).join("")}</ol>`)}
               </section>
 
               <section id="execution" class="frame">
@@ -492,9 +492,10 @@
 
               <section id="outcome" class="frame">
                 ${frameHead(7, FRAMES[6].label)}
+                ${ok(p.outcome.reflection) ? `<p class="glance">${t(p.outcome.reflection)}</p>` : ""}
                 <div class="results">${p.outcome.results.map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`).join("")}</div>
                 ${p.outcome.compare ? p.outcome.compare.map((c) => `<div class="compare compare--page"><p class="compare-label">${c.goal ? `<span class="frame-no">${esc(c.goal)}</span> ` : ""}${esc(c.label)}</p><div class="compare-pair${c.before ? "" : " compare-pair--single"}">${c.before ? `<div class="cmp-col"><p class="cmp-tag">Before</p>${img(c.before)}</div>` : ""}<div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p><div class="cmp-after${Array.isArray(c.after) ? " cmp-after--multi" : ""}">${imgs(c.after)}</div></div></div></div>`).join("") : ""}
-                ${more(`<h3>Reflection</h3><p>${t(p.outcome.reflection)}</p>`)}
+                
               </section>
 `;
       })();

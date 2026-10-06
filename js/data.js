@@ -265,7 +265,6 @@ window.PORTFOLIO = {
           image: [
             { src: "assets/img/milk-buttons.jpg", fit: "wide", caption: "Buttons: primary, secondary and tertiary, in three sizes and five states." },
             { src: "assets/img/milk-components.jpg", fit: "wide", caption: "Components: logo lockups, product cards (list, grid and quick-add), order summary, add button and the ticker." },
-            { src: "assets/img/milk-cart-mobile.jpg", fit: "phone", caption: "Mobile cart in light mode: a buy-5-get-1-free nudge, quantity controls, a gift-note option and a clear checkout button." }
           ]
         }
       ],
