@@ -513,7 +513,7 @@ window.PORTFOLIO = {
       team: "Cross-functional stakeholders, including the Director of Design and SVP of Product",
       timeline: "Jun – Aug 2026",
       tools: "User Interviews, Lookback, Figma",
-      hero: { src: "assets/img/root-ideas.jpg", caption: "Retention ideas, clustered into themes and sized as pebbles, rocks and boulders." },
+      hero: { src: "assets/img/root-ideas.jpg", caption: "Every idea from the brainstorms grouped into themed clusters, then sized as pebbles, rocks, and boulders so we could weigh effort against impact before choosing directions." },
 
       problem: {
         statement: "Which customer-service moments, non-price benefits and retention levers do Root customers actually value, and how can Root use them to keep customers from leaving?",
@@ -534,7 +534,8 @@ window.PORTFOLIO = {
           "Customer service decides whether people stay: participants described it as a major factor in staying with a provider."
         ],
         image: [
-          { src: "assets/img/root-benchmark.jpg", caption: "Benchmarking board: what it means to be a member beyond pricing, across loyalty, bundling, upfront discounts, personalization, digital platforms, gamification and more." },
+          { src: "assets/img/root-benchmark.jpg", caption: "Screenshots from competitor experiences, grouped under the question \"What does it mean to be a member beyond just pricing?\"" },
+          { src: "assets/img/root-stakeholder-notes.jpg", caption: "Notes from every stakeholder conversation organized per person, then read across columns to surface the general patterns and hypotheses shared between teams." },
           { src: "assets/img/root-interview-notes.jpg", caption: "Every interview transcribed into a shared matrix (participants anonymized): one column per participant, rows for pain points, behaviors, quotes and concept reactions, so patterns read across the group instead of living in individual sessions." }
         ]
       },
@@ -546,7 +547,7 @@ window.PORTFOLIO = {
       ideate: {
         summary: "Research insights became 15 net-new retention concepts, built in Figma. Ideas were clustered into themes (Transparency, User Flow Improvements, Partnerships + Loyalty, Pricing, Staffing, Brand, CS Communication, Personalization, Social and Gamification) and sized as pebbles, rocks and boulders. Then each was placed on a grid of how sure we were it would be valuable to users against how sure we were of the solution, to decide what belonged in the research plan.",
         image: [
-          { src: "assets/img/root-ideas.jpg", caption: "Ideas clustered into themes and sized as pebbles, rocks and boulders." },
+          { src: "assets/img/root-ideas.jpg", caption: "Every idea from the brainstorms grouped into themed clusters, then sized as pebbles, rocks, and boulders so we could weigh effort against impact before choosing directions." },
           { src: "assets/img/root-prioritization.jpg", caption: "What's going in the research plan: value to users against confidence in the solution." }
         ]
       },
