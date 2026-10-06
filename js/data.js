@@ -607,6 +607,7 @@ window.PORTFOLIO = {
         ]
       },
       impact: {
+        image: { src: "assets/img/root-final-shareout.jpg", fit: "full", caption: "Presenting the CS & Retention Levers final shareout." },
         decisionsHeading: "Where the research reached the business",
         decisions: [
           { title: "Mid-point stakeholder readout", why: "Partnered with the product design intern on a readout for stakeholders, including the Director of Product Design. I opened by synthesizing additional findings and key metrics, and the intern turned them into high-fidelity charts and a concept matrix, giving a data-driven view before customer interviews began." },

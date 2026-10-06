@@ -381,6 +381,7 @@
 
               <section id="impact" class="frame">
                 ${frameHead(7, FRAMES[6].label + " &amp; reflection")}
+                ${imgs(p.impact.image)}
                 ${(p.impact.decisions || []).length ? `<h3>${esc(p.impact.decisionsHeading || "Decisions influenced")}</h3>${cards(p.impact.decisions)}` : ""}
                 <div class="results">${p.impact.results.map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`).join("")}</div>
                 <h3>Reflection</h3>
