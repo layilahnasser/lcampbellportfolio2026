@@ -824,3 +824,5 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .ds-row--s .ds-sw { min-height: 52px; padding-top: 10px; font-size: 0.62rem; }
 .ds-row--s .ds-sw b { font-size: 0.66rem; }
 .ds-comp { display: grid; gap: 14px; }
+.newpages { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+.newpage .shot img { max-height: 460px; object-fit: cover; object-position: top; width: 100%; }

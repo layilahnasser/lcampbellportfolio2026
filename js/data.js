@@ -321,7 +321,6 @@ window.PORTFOLIO = {
         compare: [
           {
             label: "Homepage",
-            goal: "Goal 3",
             before: { src: "assets/img/milk-current-home.jpg", caption: "Before: the current homepage." },
             after: [
               { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "After: desktop. A full-bleed hero, bestsellers, the story, customer quotes and the team." },
@@ -330,7 +329,6 @@ window.PORTFOLIO = {
           },
           {
             label: "Find Pints",
-            goal: "Goal 2",
             before: { src: "assets/img/milk-current-locations.jpg", caption: "Before: the current Find Pints page, a text list of markets by city." },
             after: { src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "After: Ann Arbor, Detroit and Royal Oak, each with hours, address, photo and directions. Desktop and mobile." }
           },
@@ -338,19 +336,15 @@ window.PORTFOLIO = {
             label: "About, now on the homepage",
             before: { src: "assets/img/milk-current-about.jpg", caption: "Before: the current About page." },
             after: { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "After: the About story now lives on the homepage, in the \"Hey, let's get scooping\" section with the team." }
-          },
-          {
-            label: "Flavors and product pages",
-            goal: "Goal 1",
-            after: { src: "assets/img/milk-product.jpg", caption: "After: the flavors page (desktop and mobile) and a flavor page (desktop)." }
-          },
-          {
-            label: "Cart and checkout",
-            after: [
-              { src: "assets/img/milk-cart.jpg", fit: "full", caption: "After: the cart, desktop and mobile." },
-              { src: "assets/img/milk-checkout.jpg", fit: "full", caption: "After: checkout, desktop and mobile." }
-            ]
           }
+        ],
+        newPagesHeading: "New pages the original site didn't have",
+        newPages: [
+          { label: "Our Flavors", images: [{ src: "assets/img/milk-flavors.jpg", fit: "full", caption: "The flavors page, desktop and mobile." }] },
+          { label: "Flavor page", images: [{ src: "assets/img/milk-product.jpg", fit: "full", caption: "A page for each flavor, with reviews, delivery details and suggestions." }] },
+          { label: "Cart", images: [{ src: "assets/img/milk-cart.jpg", fit: "full", caption: "Cart and order summary, desktop and mobile." }] },
+          { label: "Checkout", images: [{ src: "assets/img/milk-checkout.jpg", fit: "full", caption: "Delivery or pick up, payment options and pay now, desktop and mobile." }] },
+          { label: "404 page", images: [{ src: "assets/img/milk-404.jpg", fit: "full", caption: "An on-brand page for broken links." }] }
         ],
         results: [
           { value: "3", label: "design goals, each with a feature" },
