@@ -513,7 +513,7 @@ window.PORTFOLIO = {
       team: "Cross-functional stakeholders, including the Director of Design and SVP of Product",
       timeline: "Jun – Aug 2026",
       tools: "User Interviews, Lookback, Figma",
-      hero: { src: "assets/img/root-ideas.jpg", caption: "Every idea from the brainstorms grouped into themed clusters, then sized as pebbles, rocks, and boulders so we could weigh effort against impact before choosing directions." },
+      hero: { src: "assets/img/root-final-shareout.jpg", fit: "full", caption: "Presenting the CS & Retention Levers final shareout." },
 
       problem: {
         statement: "Which customer-service moments, non-price benefits and retention levers do Root customers actually value, and how can Root use them to keep customers from leaving?",
