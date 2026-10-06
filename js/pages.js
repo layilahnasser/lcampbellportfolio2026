@@ -234,10 +234,15 @@
               .map(
                 (p, i) => `
               <a class="rack-card" href="project.html?p=${esc(p.id)}" data-roll="${esc(p.id)}" style="--ball:${esc(p.ballColor)}">
-                <div class="rack-media" aria-hidden="true">${(p.hero?.src || p.hero?.row?.[0]?.src) ? `<img src="${esc(p.hero.src || p.hero.row[0].src)}" alt="" loading="lazy"${(p.hero.row || ["phone", "phones"].includes(p.hero.fit)) ? ' class="rack-img--contain"' : ""}>` : ""}${ballSVG(p.ballColor, "rack-ball")}</div>
+                <div class="rack-media" aria-hidden="true">${(p.hero?.src || p.hero?.row?.[0]?.src) ? `<img src="${esc(p.hero.src || p.hero.row[0].src)}" alt="" loading="lazy"${(p.hero.row || ["phone", "phones"].includes(p.hero.fit)) ? ' class="rack-img--contain"' : ""}>` : ""}</div>
                 <div class="rack-body">
-                  <p class="rack-lane">Lane ${i + 1}${p.year ? " · " + esc(p.year) : ""}</p>
-                  <h2>${t(p.title)}</h2>
+                  <div class="rack-head">
+                    <span class="rack-ballwrap" aria-hidden="true"><span class="rack-ball"><i></i><i></i><i></i></span><b class="rack-num">${i + 1}</b></span>
+                    <div>
+                      <p class="rack-lane">Lane ${i + 1}${p.year ? " · " + esc(p.year) : ""}</p>
+                      <h2>${t(p.title)}</h2>
+                    </div>
+                  </div>
                   <p>${t(p.summary || p.subtitle)}</p>
                   <ul class="tags">${p.tags.map((tg) => `<li>${esc(tg)}</li>`).join("")}</ul>
                   <dl class="rack-meta"><div><dt>Role</dt><dd>${t(p.role)}</dd></div><div><dt>Timeline</dt><dd>${t(p.timeline)}</dd></div></dl>

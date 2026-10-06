@@ -754,3 +754,26 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .phone-row .shot--phone img { width: 100%; box-shadow: none; border-radius: 14px; }
 .phone-row .shot--empty .shot-ph { aspect-ratio: 9 / 16; min-height: 0; overflow: hidden; padding: 8px; font-size: 0.8rem; word-break: break-word; }
 .phone-row .shot--empty .shot-ph .ph-file { font-size: 0.7rem; }
+
+/* Ball is the lane number (My Work cards) */
+.rack-head { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.rack-head h2 { margin: 0; }
+.rack-head .rack-lane { margin: 0 0 2px; }
+.rack-ballwrap { position: relative; flex: none; width: 54px; height: 54px; display: block; }
+.rack-ballwrap .rack-ball { position: absolute; inset: 0; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.25, 0.6, 0.35, 1); filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.55)); }
+.rack-num { position: absolute; inset: 0; display: grid; place-items: center; padding-top: 14px; font-size: 1.15rem; font-weight: 700; color: #1a0f26; pointer-events: none; }
+.rack-card:hover .rack-ballwrap .rack-ball, .rack-card:focus-visible .rack-ballwrap .rack-ball { transform: rotate(240deg); }
+@media (prefers-reduced-motion: reduce) { .rack-ballwrap .rack-ball { transition: none; } }
+
+.rack-ballwrap .rack-ball { border-radius: 50%; background: radial-gradient(circle at 32% 28%, rgba(255,255,255,0.6) 0 6%, transparent 18%), radial-gradient(circle at 40% 35%, color-mix(in srgb, var(--ball) 70%, #fff), var(--ball) 55%, color-mix(in srgb, var(--ball) 55%, #000)); position: absolute; }
+.rack-ballwrap .rack-ball i { position: absolute; width: 13%; height: 13%; border-radius: 50%; background: #150f26; box-shadow: inset 0 1px 2px #000; }
+.rack-ballwrap .rack-ball i:nth-child(1) { left: 36%; top: 26%; }
+.rack-ballwrap .rack-ball i:nth-child(2) { left: 54%; top: 22%; }
+.rack-ballwrap .rack-ball i:nth-child(3) { left: 46%; top: 42%; }
+.rack-num { padding-top: 16px; }
+.rack-ballwrap { width: 58px; height: 58px; }
+.rack-ballwrap .rack-ball i { width: 11%; height: 11%; }
+.rack-ballwrap .rack-ball i:nth-child(1) { left: 38%; top: 15%; }
+.rack-ballwrap .rack-ball i:nth-child(2) { left: 53%; top: 12%; }
+.rack-ballwrap .rack-ball i:nth-child(3) { left: 46%; top: 27%; }
+.rack-num { padding-top: 26px; font-size: 1.05rem; }
