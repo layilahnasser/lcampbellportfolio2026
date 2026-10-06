@@ -60,7 +60,7 @@ Some case-study images are wired to file names but don't exist yet. Until you ad
 
 - **Type** comes from The Lanes logo. **Damion** is the neon script (name, page titles). **Fredoka** is the rounded sans (title, navigation, body text). Both are open-license fonts stored in `assets/fonts/`.
 - **Accessibility:** text and controls meet WCAG 2.2 AA contrast, including a worst-case check against the lightest part of the background glow. There is full keyboard support, a skip link, visible focus rings, labelled landmarks and link text that makes sense out of context. Press **Esc** or **Skip** to skip the ball roll. With *reduce motion* turned on in the operating system, the roll is skipped automatically.
-- **Frame names:** design projects use Problem, Research, Design Goals, Wireframes, Design System, Final Design, Outcome. Add `frames: "research"` to a project in `js/data.js` to use Define, Ideate, Iterate, Execution instead.
+- **Frame names:** design projects use Problem, Research, Design Goals, Wireframes, Design System, Final Design, Outcome. Research projects (`layout: "research"` in `js/data.js`) use Problem, Objectives, Methods, Findings, Insights, Recommendations, Impact.
 - **Case-study scorecard:** a sticky frame strip fills with strikes (X) as you read each section, and a "Strike!" panel at the end rolls you into the next lane.
 - **Lane look:** honey maple wood with white board lines, glowing royal-blue rails, blue target dots and pin-spot markers, and glossy red-necked pins, modeled on the lane in The Lanes.
 - **Ball motion:** the ball drops and bounces at release, then skids wide, hooks back toward the pocket and slows slightly. Its surface rolls forward in 3D as it travels.

@@ -9,11 +9,18 @@
   // Section ids stay the same; only the visible names change per kind of project.
   const FRAME_KEYS = ["problem", "research", "define", "ideate", "iterate", "execution", "outcome"];
   const FRAME_SETS = {
-    design: ["Problem", "Research", "Design Goals", "Wireframes", "Design System", "Final Design", "Outcome"],
-    research: ["Problem", "Research", "Define", "Ideate", "Iterate", "Execution", "Outcome"],
-    // Research projects: how the research was run, and how it shaped the design
-    influence: ["Problem", "Research Plan", "Synthesis", "Insights", "Concept Testing", "Design Influence", "Impact"]
+    design: ["Problem", "Research", "Design Goals", "Wireframes", "Design System", "Final Design", "Outcome"]
   };
+  // Research projects use their own seven frames and their own content fields (layout: "research")
+  const RESEARCH_FRAMES = [
+    { key: "problem", label: "Problem" },
+    { key: "objectives", label: "Objectives" },
+    { key: "methods", label: "Methods" },
+    { key: "findings", label: "Findings" },
+    { key: "insights", label: "Insights" },
+    { key: "recommendations", label: "Recommendations" },
+    { key: "impact", label: "Impact" }
+  ];
   const framesFor = (p) => FRAME_KEYS.map((key, i) => ({ key, label: FRAME_SETS[p.frames || "design"][i] }));
 
   // A frame can hold one image or a list of images
@@ -306,11 +313,81 @@
       const p = P.projects[idx];
       const next = P.projects[(idx + 1) % P.projects.length];
       const isLast = idx === P.projects.length - 1;
-      const FRAMES = framesFor(p);
+      const isResearch = p.layout === "research";
+      const FRAMES = isResearch ? RESEARCH_FRAMES : framesFor(p);
       document.title = `${plain(p.title)} — ${me.firstName} ${me.lastName}`;
 
       const frameHead = (n, title) =>
         `<header class="frame-head"><span class="frame-no">Frame ${n}</span><h2>${title}</h2></header>`;
+
+
+      const gallery = (designs) =>
+        (designs || [])
+          .map(
+            (d) => `<article class="design-block"><h3 class="design-label">${esc(d.label)}</h3><div class="design-shots${d.images.length > 1 ? " design-shots--multi" : ""}">${imgs(d.images)}</div></article>`
+          )
+          .join("");
+      const cards = (items) =>
+        (items || []).length
+          ? `<div class="decision-grid">${items.map((d, i) => `<div class="decision"><span class="card-num">0${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.why)}</p></div>`).join("")}</div>`
+          : "";
+      const researchBody = isResearch
+        ? `
+              <section id="problem" class="frame">
+                ${frameHead(1, FRAMES[0].label)}
+                <p class="callout">${t(p.problem.statement)}</p>
+                <h3>Context</h3><p>${t(p.problem.context)}</p>
+                ${p.problem.challenge ? `<h3>The challenge</h3><p>${t(p.problem.challenge)}</p>` : ""}
+                <h3>My role</h3><p>${t(p.problem.role)}</p>
+              </section>
+
+              <section id="objectives" class="frame">
+                ${frameHead(2, FRAMES[1].label)}
+                <p>${t(p.objectives.summary)}</p>
+                <h3>What we needed to learn</h3>
+                <ol class="insights">${p.objectives.items.map((x) => `<li>${t(x)}</li>`).join("")}</ol>
+              </section>
+
+              <section id="methods" class="frame">
+                ${frameHead(3, FRAMES[2].label)}
+                <p>${t(p.methods.summary)}</p>
+                <div class="method-grid">${p.methods.items.map((m) => `<div class="method"><h3>${t(m.name)}</h3><p>${t(m.detail)}</p></div>`).join("")}</div>
+                ${imgs(p.methods.image)}
+              </section>
+
+              <section id="findings" class="frame">
+                ${frameHead(4, FRAMES[3].label)}
+                <p>${t(p.findings.summary)}</p>
+                ${p.findings.callout ? `<p class="callout">${t(p.findings.callout)}</p>` : ""}
+                <h3>What we observed</h3>
+                <ol class="insights">${p.findings.items.map((x) => `<li>${t(x)}</li>`).join("")}</ol>
+                ${imgs(p.findings.image)}
+              </section>
+
+              <section id="insights" class="frame">
+                ${frameHead(5, FRAMES[4].label)}
+                <p>${t(p.insights.summary)}</p>
+                ${listsBlock(p.insights.lists)}
+                ${imgs(p.insights.image)}
+              </section>
+
+              <section id="recommendations" class="frame">
+                ${frameHead(6, FRAMES[5].label)}
+                <p>${t(p.recommendations.summary)}</p>
+                ${mapBlock(p.recommendations.map)}
+                ${gallery(p.recommendations.designs)}
+                ${imgs(p.recommendations.image)}
+              </section>
+
+              <section id="impact" class="frame">
+                ${frameHead(7, FRAMES[6].label + " &amp; reflection")}
+                ${(p.impact.decisions || []).length ? `<h3>${esc(p.impact.decisionsHeading || "Decisions influenced")}</h3>${cards(p.impact.decisions)}` : ""}
+                <div class="results">${p.impact.results.map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`).join("")}</div>
+                <h3>Reflection</h3>
+                <p>${t(p.impact.reflection)}</p>
+              </section>
+`
+        : "";
 
       return `
         <article class="case" style="--ball:${esc(p.ballColor)}">
@@ -339,6 +416,7 @@
 
           <div class="case-layout">
             <div class="case-body">
+              ${isResearch ? researchBody : `
               <section id="problem" class="frame">
                 ${frameHead(1, FRAMES[0].label)}
                 <p class="callout">${t(p.problem.statement)}</p>
@@ -470,6 +548,7 @@ ${(p.execution.goals || [])
                   .join("")}</div>
                 <p>${t(p.outcome.reflection)}</p>
               </section>
+`}
 
               <section class="strike-panel" id="strike" aria-labelledby="strike-title">
                 <div class="sp-pins" aria-hidden="true">${Array.from({ length: 10 }, (_, k) => `<span class="sp-pin" style="--k:${k}">${pinSVG()}</span>`).join("")}</div>

@@ -500,8 +500,7 @@ window.PORTFOLIO = {
 
     {
       id: "root-insurance",
-      frames: "influence", // frame names: "design" (default), "research" or "influence"
-      iterLabels: ["What we did", "What came of it"],
+      layout: "research",
       title: "Root Insurance",
       subtitle: "Retention research for 500,000+ policyholders",
       focus: "Retention research",
@@ -518,19 +517,29 @@ window.PORTFOLIO = {
 
       problem: {
         statement: "Which customer-service moments, non-price benefits and retention levers do Root customers actually value, and how can Root use them to keep customers from leaving?",
-        context: "Root's customer-service structure was exposed against nationwide market leaders, in an industry where operational consistency is the real advantage. Voice-of-customer data pointed to the same friction again and again: rigid automated loops, opaque billing messages, little flexibility in support (for example no partial payments), boilerplate explanations for rate increases and app login roadblocks. Each one could trigger a customer's decision to leave. The work focused on two customer groups: Stressful Survivors and Achievers in Control.",
-        goal: "Identify the customer-service touchpoints, non-price benefits and retention levers customers value, and deliver actionable UX recommendations that equip frontline agents with proactive \"save\" levers and un-break the digital self-service experience."
+        context: "Root's customer-service structure was exposed against nationwide market leaders, in an industry where operational consistency is the real advantage. Voice-of-customer data pointed to the same friction again and again: rigid automated loops, opaque billing messages, little flexibility in support (for example no partial payments), boilerplate explanations for rate increases and app login roadblocks. Each one could trigger a customer's decision to leave.",
+        challenge: "Improve retention for 500,000+ policyholders while giving customer-service agents better tools and insights to support them, focusing on two customer groups: Stressful Survivors and Achievers in Control.",
+        role: "UX Research Intern. I wrote the research plan and led the CS and retention work: planning, moderating customer interviews, synthesizing findings and presenting readouts, in partnership with a product design intern."
       },
-      research: {
-        summary: "The objective: identify exactly which customer-service touchpoints, non-price benefits and retention levers Root customers value and desire. Using foundational discovery interviews, the goal was actionable UX recommendations that equip frontline agents and the business with proactive \"save\" levers, and un-break the digital self-service experience. I wrote the research plan and led the work, partnering with a product design intern.",
-        methods: [
+      objectives: {
+        summary: "The objective: identify exactly which customer-service touchpoints, non-price benefits and retention levers Root customers value and desire, and use foundational discovery interviews to deliver actionable UX recommendations.",
+        items: [
+          "Which customer-service touchpoints do customers value, and where does service break down?",
+          "Which non-price benefits matter to customers beyond price?",
+          "Which retention levers could frontline agents use as proactive \"save\" moves for customers about to leave?",
+          "How do we un-break the digital self-service experience?"
+        ]
+      },
+      methods: {
+        summary: "A mixed-methods plan across 18 sessions: desk research and stakeholder interviews first, then live customer interviews and concept testing.",
+        items: [
           { name: "Desk research", detail: "Audited the support approaches of top carriers and Root's own voice-of-customer data, plus cancellation, retention and rate-shock data by customer segment." },
           { name: "Competitor benchmarking", detail: "Collected screenshots of competitor experiences, grouped under one question: what does it mean to be a member beyond just pricing?" },
           { name: "Stakeholder interviews", detail: "12 interviews with internal stakeholders, more than double the four we first planned, to get deeper cross-functional alignment." },
           { name: "Customer interviews", detail: "6 live, moderated interviews with competitor policyholders on Lookback, after a pilot session." },
+          { name: "Concept testing", detail: "Tested early concepts in those interviews, using stimuli and a moderator guide built with the design intern." },
           { name: "Scoping the plan", detail: "Brainstormed ideas, sized them as pebbles, rocks and boulders, and plotted them by how sure we were of the solution and of its value to customers. The most uncertain, highest-value quadrant set the scope." }
         ],
-        insights: [],
         image: [
           { src: "assets/img/root-benchmark.jpg", caption: "Screenshots from competitor experiences, grouped under the question \"What does it mean to be a member beyond just pricing?\"" },
           { src: "assets/img/root-data.jpg", caption: "Quantitative data reviewed alongside the interviews: cancellations, 30-day retention, rate changes and rate shock by customer segment." },
@@ -539,30 +548,34 @@ window.PORTFOLIO = {
           { src: "assets/img/root-prioritization.jpg", caption: "Ideas plotted against how sure we were of the solution and of its value to customers. The most uncertain, highest-value quadrant became the scope of the research plan." }
         ]
       },
-      define: {
-        callout: "Every interview went into one shared matrix, one column per participant, so patterns could be read across the group instead of living in individual sessions.",
-        persona: "Two customer segments guided the work. Stressful Survivors need support and flexibility when money or life gets hard. Achievers in Control value transparency and want to see the math behind their price.",
-        journey: "A single poster map follows an auto policyholder after they buy: first bind, first drive, the 30-day grace period, payments, claims, renewal and cancellation. It shows the actions at each stage and the emotional curve, so we could see where feelings dip and where a better service moment could keep them.",
+      findings: {
+        summary: "Every interview went into one shared matrix, one column per participant, so patterns could be read across the group instead of living in individual sessions. A poster journey map then followed an auto policyholder from first bind through cancellation, showing where emotions dip.",
+        items: [
+          "Price came up first: \"I'm more loyal to pricing than anything.\"",
+          "Participants liked rewards tied to how long they had stayed, and one wouldn't leave a reputable brand for a small saving.",
+          "One participant liked seeing discounts broken out, and disliked a competitor's list that didn't show the breakdown.",
+          "Reactions to driving tracking were mixed: some liked earning more for driving well, others were wary of being watched.",
+          "Service moments stood out, such as a free ride after an accident and attentive agents."
+        ],
         image: [
-          { src: "assets/img/root-interview-notes.jpg", caption: "Interview notes in a shared matrix (participants anonymized): pain points, behaviors, quotes and concept reactions, one column per participant." },
-          { src: "assets/img/root-journey-map.jpg", caption: "The Root auto policyholder post-bind experience as a single poster map: stages, actions and the emotional curve." }
+          { src: "assets/img/root-interview-notes.jpg", caption: "Every interview transcribed into a shared matrix (participants anonymized): one column per participant, rows for pain points, behaviors, quotes and concept reactions, so patterns read across the group instead of living in individual sessions." },
+          { src: "assets/img/root-journey-map.jpg", caption: "The Root auto policyholder post-bind experience as a single poster map: stages, actions and the emotional curve across first bind, first drive, the 30-day grace period, payments, claims, renewal and cancellation." }
         ]
       },
-      ideate: {
-        summary: "Coding the interviews and the data surfaced a small set of patterns. We turned each pattern into how-might-we questions, grouped under five themes: Balancing Value and Communication, Tailoring and Personalization, Timing and Contextual Messaging, Simplifying the Complex, and Community and Social Proof. The four we prioritized for design are below.",
+      insights: {
+        summary: "Two customer groups guided the reading of the data. Stressful Survivors need support and flexibility when money or life gets hard. Achievers in Control value transparency and want to see the math behind their price. Across both, the patterns pointed away from price alone. We turned them into how-might-we questions under five themes: Balancing Value and Communication, Tailoring and Personalization, Timing and Contextual Messaging, Simplifying the Complex, and Community and Social Proof.",
         lists: [
           {
-            heading: "What we heard",
+            heading: "Patterns and what they mean",
             items: [
-              "Price is the biggest loyalty driver, but not the only one: \"I'm more loyal to pricing than anything.\"",
-              "Customers want to be recognized for staying. Several liked rewards tied to tenure, and one wouldn't leave a reputable brand for a small saving.",
-              "Customers want to see the math. One participant liked seeing discounts broken out, and disliked a competitor's list that didn't show the breakdown.",
-              "Reactions to tracking were mixed: some liked earning more for driving well, others were wary of being watched.",
-              "Customer service decides whether people stay: participants described it as a major reason to stay with a provider."
+              "Loyalty isn't only price. Customers stay when they feel recognized and when service is attentive, so retention levers can go beyond a lower rate.",
+              "Transparency is a retention lever. Showing the math behind a price or a discount builds trust, especially for Achievers in Control.",
+              "Care that arrives before the customer asks is remembered. Proactive help around an accident or a renewal says the company is on their side.",
+              "Rewards have to feel earned, and tracking needs care. Tenure and good-driving rewards landed, but some customers disliked being watched."
             ]
           },
           {
-            heading: "How-might-we questions the research produced",
+            heading: "How-might-we questions we prioritized for design",
             items: [
               "How might we gamify the customer experience so that discovering new benefits feels like a reward in itself?",
               "How might we allow customers to curate their own benefit packages, so they inherently understand the value of what they chose?",
@@ -573,25 +586,8 @@ window.PORTFOLIO = {
         ],
         image: [{ src: "assets/img/root-coding.jpg", caption: "Coding the research into themes, then turning each theme into how-might-we questions." }]
       },
-      iterations: [
-        {
-          version: "Mid-point stakeholder readout",
-          change: "Partnered with the product design intern on a readout for stakeholders, including the Director of Product Design. I opened the presentation by compiling and synthesizing additional research findings and key quantitative metrics, and the intern turned them into high-fidelity charts and a concept matrix.",
-          feedback: "Stakeholders got a data-driven, easy-to-digest view of the problem space, operational gaps and first concepts before we started customer interviews."
-        },
-        {
-          version: "Concept testing (out of scope)",
-          change: "Owned the full lifecycle of a full-time researcher for CS and retention concept testing: drafted the research plan, led review meetings with team leads and research partners, supported the intern on stimuli and moderator guides, ran pilot sessions, moderated six live customer interviews, synthesized the findings and scheduled the final readouts.",
-          feedback: "When audio and system outages hit a live session, I switched from Lookback to Google Meet right away and kept the participant's trust."
-        },
-        {
-          version: "Scope pivot: from static maps to a living tool",
-          change: "The first scope for the project included a static journey map and a sitemap. After stakeholder interviews and talks with leadership, it was clear a production-ready version needed more time than the internship allowed. We pivoted to deliver a high-fidelity first draft, led by three interns (I was one), as a foundation for future work.",
-          feedback: "Stakeholders and product managers pointed out that static journey maps and sitemaps go out of date almost as soon as they ship. So we started an initiative for a dynamic internal tool that gives visibility into the end-to-end customer experience, which today's staging environment, often disconnected from the live experience, can't."
-        }
-      ],
-      execution: {
-        summary: "The design concepts came straight out of the research. Here is what we heard from customers and stakeholders, and the concept it became. Each concept below is from the final shareout.",
+      recommendations: {
+        summary: "The research shaped the concepts the design partner built. Here is what we heard and the concept it became, then the five concepts from the final shareout.",
         map: {
           heading: "From research to design",
           rows: [
@@ -608,18 +604,17 @@ window.PORTFOLIO = {
           { label: "Sympathetic Proactive Communication", images: [{ src: "assets/img/root-concept-sympathy.png", fit: "full", caption: "Make customers feel valued by showing sympathy through benefits and rewards." }] },
           { label: "Discount Opportunities", images: [{ src: "assets/img/root-concept-discounts.png", fit: "full", caption: "Provide customers with opportunities to lower their rate by showcasing the different discounts that are available." }] },
           { label: "Updated Email Comms", images: [{ src: "assets/img/root-concept-email.png", fit: "full", caption: "Rewording existing email communications to make them more personable and friendly." }] }
-        ],
+        ]
+      },
+      impact: {
         decisionsHeading: "Where the research reached the business",
         decisions: [
+          { title: "Mid-point stakeholder readout", why: "Partnered with the product design intern on a readout for stakeholders, including the Director of Product Design. I opened by synthesizing additional findings and key metrics, and the intern turned them into high-fidelity charts and a concept matrix, giving a data-driven view before customer interviews began." },
           { title: "Updated frontline CS scripts", why: "Worked with the Customer Service team to turn research findings into immediate operational improvements, by updating the scripts agents use today." },
+          { title: "Scope pivot: from static maps to a living tool", why: "The first scope included a static journey map and a sitemap. After stakeholder interviews and talks with leadership, it was clear a production-ready version needed more time than the internship allowed, so we delivered a high-fidelity first draft as a foundation. Stakeholders pointed out that static maps go stale almost as soon as they ship, which started an initiative for a dynamic internal tool for end-to-end visibility into the customer experience." },
           { title: "Made research visible", why: "After feedback about broader team engagement, I published 7 insights posts in the team's research Slack channel, on top of the required weekly update." },
-          { title: "\"New to Root Research\" onboarding playbook", why: "Co-developed with a teammate so future researchers don't have to rebuild critical context from scattered conversations, Slack history and repository searches. It covers Root and auto-insurance context for researchers new to the domain; key research partners and communication channels; standard operating procedures from intake and planning through evidence handling, analysis, review and handoff; the Voice of the Customer program and how quarterly evidence is processed; a worked NPS example that keeps small samples visible; the customer quote library and retention context; Slack directories and knowledge repositories; and a governed workflow for applying AI research skills to a new dataset. It also exists as an interactive project for future review and use." },
-          { title: "Supported other research", why: "Partnered with a fellow design team member on note-taking across 4 independent-agent research sessions, and supported user testing for several other projects." }
+          { title: "\"New to Root Research\" onboarding playbook", why: "Co-developed with a teammate so future researchers don't have to rebuild critical context from scattered conversations, Slack history and repository searches. It covers Root and auto-insurance context; key research partners and communication channels; standard operating procedures from intake and planning through evidence handling, analysis, review and handoff; the Voice of the Customer program; a worked NPS example that keeps small samples visible; the customer quote library and retention context; Slack directories and knowledge repositories; and a governed workflow for applying AI research skills to a new dataset." }
         ],
-        images: [],
-        prototypeUrl: ""
-      },
-      outcome: {
         results: [
           { value: "18", label: "research sessions" },
           { value: "3", label: "executive readouts" },
@@ -776,7 +771,7 @@ window.PORTFOLIO = {
 
     {
       id: "usda-acir",
-      frames: "research", // frame names: "design" (default) or "research"
+      layout: "research",
       title: "USDA ACIR Portal",
       subtitle: "Search, navigation & mobile usability",
       focus: "Usability research",
@@ -792,63 +787,67 @@ window.PORTFOLIO = {
       hero: { src: "", caption: "TODO: Hero image — portal screens or research artifact" },
 
       problem: {
-        statement:
-          "How can importers, brokers, and government officials find — and feel confident interpreting — what they need in USDA's ACIR portal?",
-        context:
-          "ACIR serves 360,000+ users working through complex agricultural import requirements. Working weekly with 4 USDA stakeholders, I looked for usability pain points in navigation, search filters, and help resources, with a focus on search functionality and the mobile experience.",
-        goal:
-          "Understand where search, navigation, and help resources break down for each group, and recommend changes that improve findability and interpretive confidence."
+        statement: "How can importers, brokers, and government officials find, and feel confident interpreting, what they need in USDA's ACIR portal?",
+        context: "ACIR serves 360,000+ users working through complex agricultural import requirements. I worked weekly with 4 USDA stakeholders to uncover usability pain points in navigation, search filters, and help resources, with a focus on search functionality and the mobile experience.",
+        challenge: "Where do search, navigation and help resources break down for each group, and what would improve findability and interpretive confidence?",
+        role: "UX Researcher. I led usability testing, conducted the interviews, and designed and deployed the surveys. TODO: add one line on what you presented or recommended."
       },
-      research: {
-        summary: "A mixed-methods study that combined testing, interviews and surveys across three user groups.",
-        methods: [
+      objectives: {
+        summary: "The goals were to find where the portal's search, navigation and help content get in people's way, and to recommend changes that improve speed, clarity and confidence.",
+        items: [
+          "Where do search and filters fail importers, brokers and government officials?",
+          "How well can users find the information they need, and how confident are they interpreting it?",
+          "What does the mobile experience get wrong?",
+          "Which help resources are missing or hard to find?"
+        ]
+      },
+      methods: {
+        summary: "A mixed-methods study that combined testing, interviews and surveys across three user groups, with weekly check-ins with stakeholders.",
+        items: [
           { name: "Usability testing", detail: "Led sessions with 10+ employees nationwide to identify interaction challenges and workflow inefficiencies." },
           { name: "User interviews", detail: "15+ importers, brokers, and government officials evaluating search functionality and the mobile experience." },
           { name: "Surveys", detail: "Designed and deployed surveys to assess findability and interpretive confidence across users." },
           { name: "Stakeholder check-ins", detail: "Weekly with 4 USDA stakeholders on navigation, search filters, and help resources." }
+        ]
+      },
+      findings: {
+        summary: "TODO: What you observed across the testing, interviews and surveys, with a quote or number for each finding.",
+        items: [
+          "TODO: Finding #1, with the evidence behind it (a quote, a task success rate, a survey result).",
+          "TODO: Finding #2",
+          "TODO: Finding #3"
         ],
-        insights: [
-          "TODO: Key insight #1 — what surprised you? Add a quote or number.",
-          "TODO: Key insight #2",
-          "TODO: Key insight #3"
-        ],
-        image: { src: "", caption: "TODO: Affinity map or research synthesis" }
+        image: [{ src: "", caption: "TODO: Affinity map, findings summary or survey chart" }]
       },
-      define: {
-        persona: "TODO: Primary user (e.g. an importer or broker) — goals and frustrations.",
-        journey: "TODO: The moment in the journey where search or help breaks down.",
-        image: { src: "", caption: "TODO: Persona or journey map" }
+      insights: {
+        summary: "TODO: The patterns across groups, and what they mean for the portal.",
+        lists: [{ heading: "Patterns and what they mean", items: ["TODO: Insight #1", "TODO: Insight #2", "TODO: Insight #3"] }]
       },
-      ideate: {
-        summary: "TODO: How you turned findings into recommendations for search filters, navigation and help content.",
-        image: { src: "", caption: "TODO: Sketches or recommendation map" }
+      recommendations: {
+        summary: "TODO: The changes you recommended for search filters, navigation and help content, and how you prioritized them.",
+        map: {
+          heading: "From research to recommendation",
+          rows: [
+            { tag: "Search", need: "TODO: What users struggled with", design: "TODO: What you recommended", where: "Usability tests" },
+            { tag: "Navigation", need: "TODO: What users struggled with", design: "TODO: What you recommended", where: "Interviews" },
+            { tag: "Help resources", need: "TODO: What users struggled with", design: "TODO: What you recommended", where: "Surveys" }
+          ]
+        }
       },
-      iterations: [
-        { version: "Round 1", change: "TODO: What you tested first.", feedback: "TODO: What participants struggled with.", image: { src: "", caption: "TODO: Round 1 artifact" } },
-        { version: "Round 2", change: "TODO: What you changed or recommended.", feedback: "TODO: What improved.", image: { src: "", caption: "TODO: Round 2 artifact" } }
-      ],
-      execution: {
-        summary: "TODO: Walk through your final deliverable (report, readout, prototype).",
-        decisions: [
-          { title: "TODO: Recommendation #1", why: "TODO: The evidence behind it." },
-          { title: "TODO: Recommendation #2", why: "TODO: The evidence behind it." }
-        ],
-        images: [{ src: "", caption: "TODO: Final deliverable" }],
-        prototypeUrl: ""
-      },
-      outcome: {
+      impact: {
+        decisions: [],
         results: [
           { value: "10+", label: "employees in usability tests" },
           { value: "15+", label: "stakeholder interviews" },
           { value: "360,000+", label: "ACIR users the portal serves" }
         ],
-        reflection: "TODO: What you learned and what you'd do next."
+        reflection: "TODO: What the research changed, what you learned, and what you'd do next."
       }
     },
 
     {
       id: "instructure-elevated",
-      frames: "research", // frame names: "design" (default) or "research"
+      layout: "research",
       title: "Instructure ElevateED",
       subtitle: "Exploring AI in education",
       focus: "Strategy research",
@@ -864,47 +863,49 @@ window.PORTFOLIO = {
       hero: { src: "", caption: "TODO: Hero image — ElevateED wireframes" },
 
       problem: {
-        statement:
-          "Non-traditional learners face barriers in access, credentialing, and experience — and Instructure needed evidence to expand into inclusive, alternative education pathways.",
-        context:
-          "The EdTech landscape is evolving quickly. UX research was used to build the case for ElevateED, a strategic AI-powered initiative for Instructure.",
-        goal: "Identify the barriers non-traditional learners face and turn them into design recommendations aligned with Instructure's long-term strategy."
+        statement: "Non-traditional learners face barriers in access, credentialing and experience, and Instructure needed evidence to expand into inclusive, alternative education pathways.",
+        context: "The EdTech landscape is evolving quickly. UX research was used to build the case for ElevateED, a strategic AI-powered initiative for Instructure.",
+        challenge: "Identify the barriers non-traditional learners face and turn them into design recommendations aligned with Instructure's long-term strategy.",
+        role: "UX Researcher. I conducted stakeholder interviews, analyzed needs, synthesized the qualitative data, and presented the final deliverables. TODO: add one line on what you led."
       },
-      research: {
-        summary: "Stakeholder interviews and qualitative synthesis, built up with a cross-functional team.",
-        methods: [
+      objectives: {
+        summary: "The research needed to build a case for ElevateED by showing where learners get stuck and what a better pathway could look like.",
+        items: [
+          "What barriers do non-traditional learners face in access, credentialing and experience?",
+          "What do stakeholders need from an inclusive, alternative education pathway?",
+          "How can the findings be turned into recommendations that fit Instructure's long-term strategy?"
+        ]
+      },
+      methods: {
+        summary: "Stakeholder interviews and qualitative synthesis, built up with a cross-functional team of researchers, designers and organization stakeholders.",
+        items: [
           { name: "Stakeholder interviews", detail: "Conducted interviews and analyzed needs across the organization." },
-          { name: "Qualitative synthesis", detail: "Synthesized data to identify barriers in access, credentialing, and user experience." },
+          { name: "Qualitative synthesis", detail: "Synthesized the data to identify barriers in access, credentialing, and user experience for non-traditional learners." },
           { name: "Affinity walls", detail: "Built with researchers, designers and stakeholders to surface patterns." }
         ],
-        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
-        image: { src: "", caption: "TODO: Affinity wall" }
+        image: [{ src: "", caption: "TODO: Affinity wall" }]
       },
-      define: {
-        persona: "TODO: Non-traditional learner persona — goals and barriers.",
-        journey: "TODO: The step in the journey where access or credentialing breaks down.",
-        image: { src: "", caption: "TODO: Persona or journey map" }
+      findings: {
+        summary: "TODO: What you observed, with the evidence for each finding.",
+        items: ["TODO: Finding #1", "TODO: Finding #2", "TODO: Finding #3"],
+        image: [{ src: "", caption: "TODO: Findings summary or learner journey" }]
       },
-      ideate: {
-        summary: "Prototypes and actionable design recommendations, developed cross-functionally. TODO: add how you narrowed down ideas.",
-        image: { src: "", caption: "TODO: Prototype sketches" }
+      insights: {
+        summary: "TODO: The patterns across the barriers, and what they mean for the initiative.",
+        lists: [{ heading: "Patterns and what they mean", items: ["TODO: Insight #1", "TODO: Insight #2"] }]
       },
-      iterations: [
-        { version: "Prototype", change: "TODO: What the first prototype explored.", feedback: "TODO: Feedback from stakeholders.", image: { src: "", caption: "TODO: Early prototype" } },
-        { version: "High-fidelity wireframes", change: "Final high-fidelity wireframes presented to all stakeholders.", feedback: "TODO: How stakeholders responded.", image: { src: "", caption: "TODO: High-fidelity wireframes" } }
-      ],
-      execution: {
-        summary: "Presented final deliverables, including high-fidelity wireframes, to drive alignment with Instructure's long-term strategic goals. Recommendations were shared with over 200 students and corporate employees.",
+      recommendations: {
+        summary: "Prototypes and actionable design recommendations, developed with researchers, designers and organization stakeholders, then presented as high-fidelity wireframes to drive alignment with Instructure's long-term strategic goals.",
+        designs: [{ label: "High-fidelity wireframes", images: [{ src: "", caption: "TODO: High-fidelity wireframes" }] }]
+      },
+      impact: {
+        decisionsHeading: "Where the research reached people",
         decisions: [
-          { title: "TODO: Design decision #1", why: "TODO: The research behind it." },
-          { title: "TODO: Design decision #2", why: "TODO: The research behind it." }
+          { title: "Presented to stakeholders", why: "Presented final deliverables, including high-fidelity wireframes, to all stakeholders to drive alignment with Instructure's long-term strategic goals amid a fast-changing EdTech landscape." },
+          { title: "Shared with 200+ people", why: "The recommendations were presented to over 200 students and corporate employees." }
         ],
-        images: [{ src: "", caption: "TODO: Final wireframes" }],
-        prototypeUrl: ""
-      },
-      outcome: {
         results: [
-          { value: "200+", label: "students & employees presented to" },
+          { value: "200+", label: "students and employees presented to" },
           { value: "Hi-fi", label: "wireframes delivered" }
         ],
         reflection: "TODO: What you learned and what you'd do differently."
