@@ -636,7 +636,7 @@ body.opener-open { overflow: hidden; }
 .jstep--up .jdot { top: 30%; }
 .jstep--down .jdot { top: 70%; }
 .jstep--now .jdot { border-color: var(--cyan); box-shadow: 0 0 16px rgba(39, 217, 245, 0.7); }
-.jstep--up .jstep--down @media (max-width: 960px) {
+@media (max-width: 1100px) {
   .jline { display: none; }
   .jmap { display: block; position: relative; padding-left: 52px; }
   .jmap::before { content: ""; position: absolute; left: 17px; top: 6px; bottom: 6px; width: 5px; border-radius: 3px; background: linear-gradient(to bottom, var(--pink), var(--cyan)); }
@@ -835,7 +835,7 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .comp-card small { display: block; font-weight: 700; letter-spacing: 0.1em; font-size: 0.72rem; text-transform: uppercase; color: var(--cyan, #4de3ff); }
 .comp-card h4 { margin: 2px 0 6px; font-size: 1.1rem; }
 .comp-card p { margin: 0; font-size: 0.95rem; }
-.comp-wrap { overflow-x: auto; margin-bottom: 14px; }
+.comp-wrap { position: relative; overflow-x: auto; margin-bottom: 14px; }
 .comp-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--panel); border: 2px solid #2b2443; border-radius: 14px; overflow: hidden; min-width: 520px; }
 .comp-table caption { text-align: left; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; color: var(--cyan, #4de3ff); padding: 0 0 8px; caption-side: top; }
 .comp-table th, .comp-table td { padding: 10px 12px; text-align: center; border-bottom: 1px solid #2b2443; font-size: 0.95rem; }
@@ -850,3 +850,8 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .ds-type { display: flex; justify-content: center; }
 .ds-type .shot { margin: 0; width: auto; max-width: 100%; }
 .ds-type .shot img { width: auto; max-width: 100%; max-height: 560px; margin: 0 auto; display: block; }
+@media (max-width: 380px) { .hud { padding-inline: 8px; } .hud-bar, .hud-links { gap: 4px; } .hud-pill { padding: 5px 7px; font-size: 0.74rem; } }
+body { overflow-x: clip; }
+.work-row { grid-template-columns: 150px minmax(0, 1fr) auto; }
+@media (max-width: 800px) { .work-row { grid-template-columns: 90px minmax(0, 1fr); } }
+@media (max-width: 340px) { .hud-links { flex-wrap: wrap; } .hud-pill { padding: 4px 6px; font-size: 0.7rem; } }
