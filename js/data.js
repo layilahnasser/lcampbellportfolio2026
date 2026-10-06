@@ -512,14 +512,37 @@ window.PORTFOLIO = {
 
       research: {
         summary:
-          "The project began from a design brief with an executive summary, problem statement, scope and requirements. TODO: describe the research behind the brief (interviews with contestants or coaches, a competitor review, or your own coaching experience) and what it taught you.",
+          "The project began from a design brief with an executive summary, problem statement, scope and requirements. I then compared the tools contestants use today to find the gap Crown Code could fill. TODO: add the research behind the brief (interviews with contestants or coaches, or your own coaching experience) and what it taught you.",
         methods: [
           { name: "Design brief", detail: "A written brief defining the product, problem, seven core features and ten requirements, including iOS and Android support." },
-          { name: "TODO: User research", detail: "TODO: Who you talked to or observed, and how many." },
-          { name: "TODO: Competitive review", detail: "TODO: What other prep tools, flashcard apps or reminder apps you looked at." }
+          { name: "Competitor analysis", detail: "Compared Pageant Planet, Quizlet / PDFs and CrownChat across five features to find where the market falls short." },
+          { name: "TODO: User research", detail: "TODO: Who you talked to or observed, and how many." }
         ],
-        insights: ["TODO: Key insight #1", "TODO: Key insight #2", "TODO: Key insight #3"],
-        image: { src: "", caption: "TODO: Research synthesis, notes or competitor comparison" }
+        insights: [
+          "Most tools solve only one part of pageant interview prep.",
+          "CrownChat is the closest direct competitor, with AI feedback, but it is less focused on structured, season-long progress.",
+          "Crown Code can own the space between generic study tools and one-off coaching."
+        ],
+        competitors: {
+          heading: "Where the market falls short",
+          intro: "Most tools solve only one part of pageant interview prep.",
+          items: [
+            { name: "Pageant Planet", tag: "Content + coaching", text: "Strong pageant resources, but no built-in daily practice loop or readiness tracking." },
+            { name: "Quizlet / PDFs", tag: "Question review", text: "Easy to study with, but static and missing personalized feedback or accountability." },
+            { name: "CrownChat", tag: "AI interview practice", text: "Closest direct competitor, with AI feedback, but less focused on structured season-long progress." }
+          ],
+          matrixHeading: "Feature gap",
+          cols: ["Pageant Planet", "Quizlet", "CrownChat", "Crown Code"],
+          rows: [
+            { label: "Pageant-specific content", has: [true, false, true, true] },
+            { label: "Structured practice routine", has: [false, false, true, true] },
+            { label: "Personalized feedback", has: [false, false, true, true] },
+            { label: "Progress / readiness tracking", has: [false, false, false, true] },
+            { label: "Coach-guided ecosystem", has: [true, false, false, true] }
+          ],
+          differentiator: "One pageant-focused system for practice, feedback, accountability, and measurable competition readiness."
+        },
+        image: []
       },
 
       define: {
@@ -574,8 +597,8 @@ window.PORTFOLIO = {
 
       ideate: {
         summary:
-          "TODO: How you explored the app's structure: sketches, a flow for practice, feedback and progress, and how you decided on the four main tabs (Home, Cards, Progress, Profile).",
-        image: [{ src: "assets/img/crown-sketches.jpg", caption: "Early sketches." }]
+          "I started on paper, sketching ten screens: the profile, home dashboard, daily tips, decks, two flashcard states (reveal and answer structure), competition readiness, submission confirmation, strategic feedback and email notifications. All of them sit under the same four tabs: Home, Cards, Progress and Profile.",
+        image: [{ src: "assets/img/crown-sketches.jpg", fit: "wide", caption: "Ten paper sketches: profile, home dashboard, daily tips, decks, flashcards (reveal and answer structure), competition readiness, submission confirmation, strategic feedback and email notifications." }]
       },
 
       iterations: [

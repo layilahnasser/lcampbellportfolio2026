@@ -826,3 +826,23 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .ds-comp { display: grid; gap: 14px; }
 .newpages { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
 .newpage .shot img { max-height: 460px; object-fit: cover; object-position: top; width: 100%; }
+
+/* Competitor analysis */
+.comp { margin: 14px 0 18px; }
+.comp h3 { margin: 0 0 6px; }
+.comp-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 10px 0 16px; }
+.comp-card { background: var(--panel); border: 2px solid #2b2443; border-radius: 14px; padding: 14px 16px; }
+.comp-card small { display: block; font-weight: 700; letter-spacing: 0.1em; font-size: 0.72rem; text-transform: uppercase; color: var(--cyan, #4de3ff); }
+.comp-card h4 { margin: 2px 0 6px; font-size: 1.1rem; }
+.comp-card p { margin: 0; font-size: 0.95rem; }
+.comp-wrap { overflow-x: auto; margin-bottom: 14px; }
+.comp-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--panel); border: 2px solid #2b2443; border-radius: 14px; overflow: hidden; min-width: 520px; }
+.comp-table caption { text-align: left; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem; color: var(--cyan, #4de3ff); padding: 0 0 8px; caption-side: top; }
+.comp-table th, .comp-table td { padding: 10px 12px; text-align: center; border-bottom: 1px solid #2b2443; font-size: 0.95rem; }
+.comp-table thead th { font-size: 0.85rem; color: var(--muted); }
+.comp-table tbody th { text-align: left; font-weight: 600; color: var(--text); }
+.comp-table tr:last-child th, .comp-table tr:last-child td { border-bottom: 0; }
+.comp-table td.yes { color: #4de3ff; font-weight: 700; font-size: 1.15rem; }
+.comp-table td.no { color: var(--muted); }
+.comp-us { background: rgba(198, 242, 74, 0.12); color: #c6f24a !important; }
+.comp-wrap:focus-visible { outline: 3px solid #ffd24a; outline-offset: 2px; }
