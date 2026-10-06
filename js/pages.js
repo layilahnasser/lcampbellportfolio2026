@@ -494,9 +494,9 @@
             </div>
             <dl class="case-meta">
               <div><dt>Role</dt><dd>${t(p.role)}</dd></div>
-              <div><dt>Team</dt><dd>${t(p.team)}</dd></div>
+              <div><dt>Team</dt><dd>${String(p.team).split("\n").map((l) => t(l)).join("<br>")}</dd></div>
               <div><dt>Timeline</dt><dd>${t(p.timeline)}</dd></div>
-              <div><dt>Tools &amp; methods</dt><dd>${t(p.tools)}</dd></div>
+              <div><dt>${esc(p.toolsLabel || "Tools & methods")}</dt><dd>${String(p.tools).split("\n").map((l) => t(l)).join("<br>")}</dd></div>
             </dl>
             ${img(p.hero, "shot--hero" + (p.hero && p.hero.fit === "phone" ? " shot--phone" : ""))}
           </header>

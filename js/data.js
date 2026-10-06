@@ -909,26 +909,27 @@ window.PORTFOLIO = {
     {
       id: "instructure-elevated",
       layout: "research",
-      title: "Instructure ElevateED",
-      subtitle: "Research for learners on alternative pathways",
-      intro: "Instructure's products mostly serve traditional schools, while 79% of people in the US do not attend a traditional university. For a client project at the University of Michigan, my team of four asked how Instructure could serve learners on alternative pathways. We interviewed learners, HR professionals and Instructure staff, found five barriers, and turned them into three product recommendations. I led the research and built the interactive prototype in Figma Make.",
+      title: "Instructure: ElevateED",
+      subtitle: "Exploring how Instructure can support learning and career growth beyond traditional education.",
+      intro: "Instructure's products mostly serve traditional schools, while 79% of people in the US do not attend a traditional university. For a client project at the University of Michigan, my interdisciplinary team of four asked how Instructure could serve learners on alternative pathways. I was the only UX researcher on the team. We interviewed learners, HR professionals and Instructure staff, found five barriers, and turned them into three product recommendations. I led the research and built the interactive prototype in Figma Make.",
       focus: "Strategy research",
       approach: "Interviewed 10 learners, HR professionals and Instructure staff, then turned five barriers into three product recommendations",
       summary: "Research that built the case for an AI-powered learning initiative advancing inclusive, alternative education pathways.",
       ballColor: "#27d9f5",
       year: "2025",
       tags: ["Stakeholder interviews", "Affinity mapping", "Prototyping"],
-      role: "Lead Researcher",
-      team: "Team of four: UX research and design, agile development and big data analysis (SI 500, Prof. Tawanna Dillahunt)",
-      timeline: "Aug – Dec 2025",
-      tools: "Interviews, affinity wall, personas, Pugh matrix, Figma Make prototype",
+      role: "Lead UX Researcher",
+      team: "4-person interdisciplinary team\nUniversity of Michigan",
+      timeline: "Aug–Dec 2025",
+      toolsLabel: "Methods",
+      tools: "10 stakeholder interviews\nCompetitive analysis · Affinity mapping\nPersonas · Pugh matrix",
       hero: { src: "assets/img/elevated-cover.jpg", fit: "full", caption: "Instructure: Life Changing Education, the final presentation to the client." },
 
       problem: {
         statement: "How might Instructure better support learners pursuing bootcamps, micro-credentials, and self-directed learning to build skills and improve their career opportunities?",
         context: "Our project explored how Instructure could support learning beyond traditional academic pathways. We examined the needs of alternative-pathway learners, including clearer learning roadmaps, soft-skill development, and ways to communicate their skills to employers.",
         challenge: "Understand the barriers these learners face and translate the findings into actionable product recommendations aligned with Instructure's strategy.",
-        role: "As Lead Researcher on a four-person team, I led research planning, interview protocol development, interviews, and affinity analysis. I also helped translate our findings into recommendations and present the team's work."
+        role: "As the only UX researcher on a four-person interdisciplinary team, I led research planning, interview protocol development, interviews, and affinity analysis. I also helped translate our findings into recommendations and present the team's work."
       },
       objectives: {
         summary: "Understand learners' needs and identify opportunities for Instructure to support their learning and career goals.",
