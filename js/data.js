@@ -264,42 +264,37 @@ window.PORTFOLIO = {
       ],
 
       execution: {
-        summary:
-          "Each goal from Define became concrete features, built on the design system above. The screens for each are in the before and after at the end.",
-        goals: [
+        summary: "The final screens, desktop and mobile. Before and afters are at the end.",
+        designs: [
           {
-            tag: "Goal 1",
-            title: "Flavors and the craft",
-            images: [{ src: "assets/img/milk-flavors.jpg", fit: "full", caption: "Our Flavors, in light (blush) and dark (cocoa) themes." }],
-            why: "The flavor page leads with a chocolate-drip banner and an \"Our Flavors\" grid of pints, each with a name, short description, price and add-to-cart. Filter chips (All Flavors, Most Popular, Seasonal Favorites, Dairy-Free, Gluten-Free) help people narrow down quickly. Each flavor has an item page with reviews, guaranteed frozen delivery, a \"real ingredients\" note and \"you may also like\" suggestions."
+            label: "Homepage",
+            images: [
+              { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "Desktop" },
+              { src: "assets/img/milk-homepage-mobile.jpg", fit: "full", caption: "Mobile" }
+            ]
           },
           {
-            tag: "Goal 2",
-            title: "Finding a shop",
-            images: [{ src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "Find Pints: a card for each shop, on desktop and mobile." }],
-            why: "A dedicated Find Pints page gives each shop (Ann Arbor, Detroit and Royal Oak) its own large city heading, a short description, hours of operation, the address, a storefront photo, and two clear actions: Get Directions and Order Now. The ticker separates the shops and keeps the brand voice playful."
+            label: "Our Flavors",
+            images: [{ src: "assets/img/milk-flavors.jpg", fit: "full", caption: "Light (blush) and dark (cocoa) themes." }]
           },
           {
-            tag: "Goal 3",
-            title: "Image-forward browsing",
-            images: [{ src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "The homepage, desktop: every section led by a photo." }],
-            why: "The homepage opens on a full-bleed strawberry hero, \"Sweet, Creamy & Back in Season,\" then the ticker and a Shop Bestsellers row of pints. Below, a \"Thoughtfully scooped, just for you\" story, customer quotes beside flavor photography, the team behind the shop and an Instagram call-out keep every section led by a photo, so products are seen before they are read about."
+            label: "Find Pints",
+            images: [{ src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "A card for each shop, desktop and mobile." }]
+          },
+          {
+            label: "Product pages",
+            images: [{ src: "assets/img/milk-product.jpg", fit: "full", caption: "Flavor and item pages, desktop and mobile, light and dark." }]
+          },
+          {
+            label: "About",
+            images: [{ src: "assets/img/milk-about-after.jpg", fit: "full", caption: "The redesigned About page." }]
+          },
+          {
+            label: "Cart, checkout and 404",
+            images: [{ src: "assets/img/milk-cart-checkout.jpg", fit: "full", caption: "Cart, checkout and a 404 page that stays on brand, desktop and mobile." }]
           }
         ],
-        decisions: [
-          {
-            title: "Cart and checkout",
-            why: "The shopping cart pairs an item list (quantity controls, a coupon field) with an order summary showing subtotal, estimated shipping and taxes, and a clear Checkout button. It points out free delivery over $50 and shows the accepted payment methods up front. Checkout adds a Delivery or Pick Up toggle, a short address form and a single Pay Now button, so people always know what they will pay."
-          },
-          {
-            title: "A 404 that stays on brand",
-            why: "A broken link shows a melted ice cream cone and the line \"Oops! The page you're looking for must have melted,\" with a Back Home button, turning a dead end into a moment of brand personality while still getting people back on track."
-          },
-          {
-            title: "Brand, type and color",
-            why: "TODO: Why Roasted Strawberry and Blushed Froth with Nunito Sans and Montserrat suit the playful, indulgent brand, and how the type scale adapts across desktop, tablet and mobile."
-          }
-        ],
+        decisions: [],
         images: [],
         prototypeUrl: ""
       },

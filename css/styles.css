@@ -688,3 +688,12 @@ body.opener-open { overflow: hidden; }
 
 /* leave room for the sticky nav + frame strip when jumping to a frame */
 html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
+
+/* Final Design gallery */
+.design-block { margin: 0 0 30px; }
+.design-label { margin: 0 0 10px; color: #fff !important; font-size: 1.15rem; }
+.design-shots { display: grid; gap: 14px; }
+.design-shots--multi { grid-template-columns: 2fr 1fr; align-items: start; }
+.design-shots .shot { margin: 0; }
+.design-shots .shot--full img { width: 100%; max-height: none; background: transparent; }
+@media (max-width: 700px) { .design-shots--multi { grid-template-columns: 1fr; } }

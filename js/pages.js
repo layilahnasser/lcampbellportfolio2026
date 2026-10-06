@@ -396,6 +396,14 @@
               <section id="execution" class="frame">
                 ${frameHead(6, FRAMES[5].label)}
                 <p>${t(p.execution.summary)}</p>
+                ${(p.execution.designs || [])
+                  .map(
+                    (d) => `<article class="design-block">
+                      <h3 class="design-label">${esc(d.label)}</h3>
+                      <div class="design-shots${d.images.length > 1 ? " design-shots--multi" : ""}">${imgs(d.images)}</div>
+                    </article>`
+                  )
+                  .join("")}
 ${(p.execution.goals || [])
                   .map(
                     (g) => `<article class="goal-card">
@@ -408,7 +416,7 @@ ${(p.execution.goals || [])
                     </article>`
                   )
                   .join("")}
-                <div class="shots">${p.execution.images.map((im) => img(im)).join("")}</div>
+                ${(p.execution.images || []).length ? `<div class="shots">${p.execution.images.map((im) => img(im)).join("")}</div>` : ""}
                 ${
                   p.execution.compare
                     ? `<h3>Before and after</h3>${p.execution.compare
@@ -417,10 +425,13 @@ ${(p.execution.goals || [])
                     : ""
                 }
                 ${p.execution.palette ? `<h3>Brand system</h3>${brandBlock(p.execution.palette, p.execution.typefaces)}` : ""}
-                <h3>Why it looks &amp; works this way</h3>
-                <div class="decision-grid">${p.execution.decisions
-                  .map((d, i) => `<div class="decision"><span class="card-num">0${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.why)}</p></div>`)
-                  .join("")}</div>
+                ${
+                  (p.execution.decisions || []).length
+                    ? `<h3>Why it looks &amp; works this way</h3><div class="decision-grid">${p.execution.decisions
+                        .map((d, i) => `<div class="decision"><span class="card-num">0${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.why)}</p></div>`)
+                        .join("")}</div>`
+                    : ""
+                }
                 ${p.execution.prototypeUrl ? `<p>${ext(p.execution.prototypeUrl, "Open prototype ↗").replace("<a ", '<a class="btn btn--ghost" ')}</p>` : ""}
               </section>
 
