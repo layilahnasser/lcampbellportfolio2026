@@ -440,14 +440,14 @@
               ${ds.intro ? `<p class="glance">${t(ds.intro)}</p>` : ""}
               <h3 class="ds-h"><span class="ds-n">1</span> Brand colors</h3>
               ${brandBlock(ds.brand, ds.typefaces)}
-              <h3 class="ds-h"><span class="ds-n">2</span> Color primitives <small>raw steps, light to dark</small></h3>
-              ${(ds.primitives || []).map((r) => `<div class="ds-ramp"><h4>${esc(r.name)}</h4><ul class="ds-row" aria-label="${esc(r.name)} steps">${r.steps.map((s) => swatch(s)).join("")}</ul></div>`).join("")}
-              <h3 class="ds-h"><span class="ds-n">3</span> Semantic tokens <small>what each color is used for</small></h3>
-              <div class="ds-tokens">${(ds.tokens || []).map((g) => `<section class="ds-card" aria-label="${esc(g.name)} tokens"><h4>${esc(g.name)}</h4>${g.groups.map((r) => `<div class="ds-trow"><p>${esc(r.name)}</p><ul class="ds-row ds-row--s">${r.items.map((s) => swatch(s)).join("")}</ul></div>`).join("")}</section>`).join("")}</div>
-              <h3 class="ds-h"><span class="ds-n">4</span> Typography</h3>
+              <h3 class="ds-h"><span class="ds-n">2</span> Color system <small>primitives and semantic tokens</small></h3>
+              ${img(ds.colorImage)}
+              <h3 class="ds-h"><span class="ds-n">3</span> Typography</h3>
               ${img(ds.typography)}
-              <h3 class="ds-h"><span class="ds-n">5</span> Buttons and components</h3>
-              <div class="ds-comp">${(ds.components || []).map((i) => img(i)).join("")}</div>
+              <h3 class="ds-h"><span class="ds-n">4</span> Buttons</h3>
+              ${img(ds.buttons)}
+              <h3 class="ds-h"><span class="ds-n">5</span> Components</h3>
+              ${img(ds.components)}
             </div>`;
       const designBody = isResearch ? "" : (() => {
         const ex = p.execution || {};
