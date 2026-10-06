@@ -788,73 +788,121 @@ window.PORTFOLIO = {
       id: "usda-acir",
       layout: "research",
       title: "USDA ACIR Portal",
-      subtitle: "Search, navigation & mobile usability",
+      subtitle: "Search, help and trust in a federal import portal",
       focus: "Usability research",
-      approach: "Ran usability tests and interviews to find where search, navigation and mobile use break down",
-      summary: "Helping 360,000+ USDA ACIR users navigate complex agricultural import requirements with greater speed, clarity, and confidence.",
+      approach: "Combined interviews, a survey, a comparative and heuristic evaluation, and usability tests to find where the portal loses its users",
+      summary: "Helping importers, brokers and government officials find and trust agricultural import requirements in the USDA ACIR portal.",
       ballColor: "#ff2fb4",
       year: "2026",
-      tags: ["Usability testing", "Interviews", "Surveys"],
+      tags: ["Usability testing", "Interviews", "Heuristic evaluation"],
       role: "UX Researcher",
-      team: "4 USDA stakeholders, weekly check-ins",
+      team: "Apex Five: five UX researchers (SI 622), with USDA APHIS stakeholders",
       timeline: "Jan – Apr 2026",
-      tools: "Usability studies, interviews, surveys",
-      hero: { src: "", caption: "TODO: Hero image — portal screens or research artifact" },
+      tools: "Interviews, survey, comparative and heuristic evaluation, usability testing",
+      hero: { src: "assets/img/usda-overview.jpg", fit: "full", caption: "The ACIR portal: the public entry point for U.S. agricultural import rules." },
 
       problem: {
-        statement: "How can importers, brokers, and government officials find, and feel confident interpreting, what they need in USDA's ACIR portal?",
-        context: "ACIR serves 360,000+ users working through complex agricultural import requirements. I worked weekly with 4 USDA stakeholders to uncover usability pain points in navigation, search filters, and help resources, with a focus on search functionality and the mobile experience.",
-        challenge: "Where do search, navigation and help resources break down for each group, and what would improve findability and interpretive confidence?",
-        role: "UX Researcher. I led usability testing, conducted the interviews, and designed and deployed the surveys. TODO: add one line on what you presented or recommended."
+        statement: "How can importers, brokers and government officials find, and feel confident interpreting, the import requirements they need in USDA's ACIR portal?",
+        context: "ACIR is the public-facing entry point for U.S. agricultural import rules, with over 100,000 country and commodity combinations and about 16,000 Commodity Import Requirement documents. Its users are importers and customs brokers, CBP agriculture specialists, APHIS and PPQ staff, and the general public. They often need an answer in under five minutes.",
+        challenge: "Where do search, navigation and help content break down for each group, and what would improve findability and interpretive confidence?",
+        role: "UX Researcher on a five-person team. I co-led the interviews and usability tests, helped design and pilot the survey, and took part in the heuristic and comparative evaluations. TODO: confirm which parts you led."
       },
       objectives: {
-        summary: "The goals were to find where the portal's search, navigation and help content get in people's way, and to recommend changes that improve speed, clarity and confidence.",
+        summary: "The study set out to find where the portal's search, navigation and help content get in people's way.",
         items: [
-          "Where do search and filters fail importers, brokers and government officials?",
-          "How well can users find the information they need, and how confident are they interpreting it?",
-          "What does the mobile experience get wrong?",
-          "Which help resources are missing or hard to find?"
+          "How well can users find the right requirement for their shipment?",
+          "How confident are they that they interpreted it correctly?",
+          "Which help resources are missing or hard to find?",
+          "How does the portal hold up on mobile and small screens?"
         ]
       },
       methods: {
-        summary: "A mixed-methods study that combined testing, interviews and surveys across three user groups, with weekly check-ins with stakeholders.",
+        summary: "Five methods in sequence, so each one tested what the last one found. A finding counted only if it showed up in at least three of them.",
         items: [
-          { name: "Usability testing", detail: "Led sessions with 10+ employees nationwide to identify interaction challenges and workflow inefficiencies." },
-          { name: "User interviews", detail: "15+ importers, brokers, and government officials evaluating search functionality and the mobile experience." },
-          { name: "Surveys", detail: "Designed and deployed surveys to assess findability and interpretive confidence across users." },
-          { name: "Stakeholder check-ins", detail: "Weekly with 4 USDA stakeholders on navigation, search filters, and help resources." }
+          { name: "Interviews", detail: "6 semi-structured interviews of 45 to 60 minutes with policy managers, PPQ officers, a training specialist and an importer, recruited by USDA across departments and states." },
+          { name: "Survey", detail: "A 9-question survey in four sections (background, findability, interpretation, help and support), piloted in Google Forms in 3 to 5 minutes." },
+          { name: "Comparative evaluation", detail: "Compared ACIR with eCFR, APHIS Manuals, Microsoft Learn and GOV.UK on navigation, search, hierarchy, scannability and terminology." },
+          { name: "Heuristic evaluation", detail: "Five evaluators each scored the portal on six of Nielsen's heuristics, merged 60+ issues and agreed severity on a 0 to 4 scale." },
+          { name: "Usability testing", detail: "Moderated think-aloud sessions on Zoom after a pilot. Three tasks: search workflow, cross-referencing manuals to documents, and taxonomy and name resolution." },
+          { name: "Interaction map", detail: "Mapped the main search journey in Figma and marked friction in red, then reviewed it with stakeholders." }
+        ],
+        image: [
+          { src: "assets/img/usda-methods.jpg", fit: "full", caption: "Five methods, and the rule that a finding had to appear in at least three." },
+          { src: "assets/img/usda-survey.jpg", fit: "full", caption: "Survey design: the Findability section of the piloted survey." },
+          { src: "assets/img/usda-interaction.jpg", fit: "full", caption: "Interaction map: core search and organization, pre-filtering, and mobile layout." },
+          { src: "assets/img/usda-testmethods.jpg", fit: "full", caption: "Usability test design: three tasks and a debrief." }
         ]
       },
       findings: {
-        summary: "TODO: What you observed across the testing, interviews and surveys, with a quote or number for each finding.",
+        summary: "Three patterns held across every method. Each finding below came from at least three of them.",
         items: [
-          "TODO: Finding #1, with the evidence behind it (a quote, a task success rate, a survey result).",
-          "TODO: Finding #2",
-          "TODO: Finding #3"
+          "Search fails on imperfect input. Heuristic evaluators rated it severity 4 of 4, and it appeared in every method. Autocomplete dropped out on full names and there was no country-only search.",
+          "Help is disconnected from the task. Help lives across the Help page, the Videos and Guides Hub, the glossary and manuals. One participant called cross-referencing \"taxing.\"",
+          "Small inconsistencies misplace trust. In one documented case a plant was classified differently across tiles, and an officer gave incorrect guidance and had to call back to reverse it."
         ],
-        image: [{ src: "", caption: "TODO: Affinity map, findings summary or survey chart" }]
+        image: [
+          { src: "assets/img/usda-finding1.jpg", fit: "full", caption: "Finding 1: search fails on imperfect input." },
+          { src: "assets/img/usda-finding2.jpg", fit: "full", caption: "Finding 2: help is disconnected from the task." },
+          { src: "assets/img/usda-finding3.jpg", fit: "full", caption: "Finding 3: small inconsistencies misplace user trust." },
+          { src: "assets/img/usda-annotated.jpg", fit: "full", caption: "Heuristic evaluation: search rigidity, scattered help and no breadcrumbs, marked on the portal." }
+        ]
       },
       insights: {
-        summary: "TODO: The patterns across groups, and what they mean for the portal.",
-        lists: [{ heading: "Patterns and what they mean", items: ["TODO: Insight #1", "TODO: Insight #2", "TODO: Insight #3"] }]
+        summary: "ACIR is a thorough and authoritative source, and its heaviest users rely on it daily. The portal struggles in three places: it is hard to enter without insider knowledge, hard to get help mid-task, and small inconsistencies erode trust in the answer.",
+        lists: [
+          {
+            heading: "Patterns and what they mean",
+            items: [
+              "Experts are fine and new users are not. Exact scientific names work for veterans and lock out everyone else.",
+              "Help has to live inside the task. Users should never have to leave their work to understand it.",
+              "Trust is built on small details. Conflicting tiles, blank loading screens and a back button that loses the search all lower confidence."
+            ]
+          }
+        ],
+        image: [
+          { src: "assets/img/usda-users.jpg", fit: "full", caption: "Primary users and an example use case: Maria, a customs broker who needs an answer in under five minutes." },
+          { src: "assets/img/usda-persona1.jpg", fit: "full", caption: "Persona from the interviews." },
+          { src: "assets/img/usda-persona2.jpg", fit: "full", caption: "Persona from the interviews." },
+          { src: "assets/img/usda-persona3.jpg", fit: "full", caption: "Persona from the interviews." }
+        ]
       },
       recommendations: {
-        summary: "TODO: The changes you recommended for search filters, navigation and help content, and how you prioritized them.",
+        summary: "Three recommendations, one for each pattern, backed by what each method found.",
         map: {
           heading: "From research to recommendation",
           rows: [
-            { tag: "Search", need: "TODO: What users struggled with", design: "TODO: What you recommended", where: "Usability tests" },
-            { tag: "Navigation", need: "TODO: What users struggled with", design: "TODO: What you recommended", where: "Interviews" },
-            { tag: "Help resources", need: "TODO: What users struggled with", design: "TODO: What you recommended", where: "Surveys" }
+            { tag: "Make the portal forgive small mistakes", need: "Users fall out of search the moment their input is not an exact name.", design: "Forgiving autocomplete that accepts partial input, common names and synonyms, country-only and commodity-only queries, and plain-language sub-labels on the homepage tiles.", where: "All five methods" },
+            { tag: "Bring help into the task", need: "Help is scattered, and even experts cannot link manual guidance to the right document.", design: "A single Help Hub, hover tooltips for technical terms, and direct links between manual sections and matching CIR documents.", where: "Heuristics, comparison, usability tests" },
+            { tag: "Close the trust gaps", need: "Conflicting tiles, no breadcrumbs and no loading feedback lower confidence.", design: "Cross-reference checks for tile data, standard status language, breadcrumbs, consistent link behavior and loading indicators.", where: "Interviews, heuristics, usability tests" }
           ]
-        }
+        },
+        designs: [
+          { label: "Make the portal forgive small mistakes", images: [{ src: "assets/img/usda-testrecs.jpg", fit: "full", caption: "Usability test recommendations: flexible search, status banners and direct links." }] },
+          { label: "Bring help into the task", images: [{ src: "assets/img/usda-heurrecs.jpg", fit: "full", caption: "Heuristic evaluation recommendations: faceted search, a single Help Hub and breadcrumbs." }] },
+          { label: "Close the trust gaps", images: [{ src: "assets/img/usda-summary.jpg", fit: "full", caption: "Overall conclusions across all five methods." }] }
+        ]
       },
       impact: {
-        decisions: [],
+        image: { src: "assets/img/usda-discussion.jpg", fit: "full", caption: "What the study could not cover, and the next research steps." },
+        decisionsHeading: "Where the research went",
+        decisions: [
+          { title: "Delivered to USDA APHIS", why: "The full report, with the evidence (reports, presentations and videos) for every method, was sent to the USDA APHIS team." },
+          { title: "Weekly stakeholder check-ins", why: "Met weekly with USDA stakeholders to share emerging findings on navigation, search filters and help resources." },
+          { title: "Next research steps", why: "Recommended a card-sorting study to redesign the help architecture, a prototype of forgiving search, and a larger-scale survey. Mobile, accessibility and the general public were out of scope." }
+        ],
         results: [
-          { value: "10+", label: "employees in usability tests" },
-          { value: "15+", label: "stakeholder interviews" },
-          { value: "360,000+", label: "ACIR users the portal serves" }
+          { value: "5", label: "research methods" },
+          { value: "60+", label: "usability issues found, narrowed to 5" },
+          { value: "3", label: "patterns across every method" },
+          { value: "100,000+", label: "country-commodity combinations in the portal" }
+        ],
+        documents: [
+          { title: "Final report (PDF)", file: "assets/docs/usda-final-report.pdf", note: "Summary of all five methods" },
+          { title: "Interviews (PDF)", file: "assets/docs/usda-interviews.pdf", note: "Method, findings, personas" },
+          { title: "Comparative evaluation (PDF)", file: "assets/docs/usda-comparative-evaluation.pdf", note: "ACIR vs. eCFR, APHIS, Microsoft Learn, GOV.UK" },
+          { title: "Heuristic evaluation (PDF)", file: "assets/docs/usda-heuristic-evaluation.pdf", note: "6 heuristics, 60+ issues" },
+          { title: "Usability test (PDF)", file: "assets/docs/usda-usability-test.pdf", note: "3 tasks, moderated sessions" },
+          { title: "Interaction map (PDF)", file: "assets/docs/usda-interaction-map.pdf", note: "Search journey with friction marked" }
         ],
         reflection: "TODO: What the research changed, what you learned, and what you'd do next."
       }
