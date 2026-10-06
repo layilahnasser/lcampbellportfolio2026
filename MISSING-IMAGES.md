@@ -2,12 +2,11 @@
 
 Save each file into `assets/img/` with exactly this name, then refresh the page. Nothing else needs to change.
 
-**16 images missing.**
+**15 images missing.**
 
 
 ## Milk and Froth Redesign (5)
 
-- [ ] `milk-404.jpg`: 404 page, desktop and mobile.
 
 - [ ] `milk-homepage-mobile.jpg`: Mobile
 - [ ] `milk-flavors.jpg`: Light (blush) and dark (cocoa) themes.
