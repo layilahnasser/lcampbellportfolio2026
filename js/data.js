@@ -875,7 +875,7 @@ window.PORTFOLIO = {
       team: "Team of four: UX research and design, agile development and big data analysis (SI 500, Prof. Tawanna Dillahunt)",
       timeline: "Aug – Dec 2025",
       tools: "Interviews, affinity wall, personas, Pugh matrix, high-fidelity wireframes",
-      hero: { src: "assets/img/elevated-hero.jpg", fit: "full", caption: "Final presentation to Instructure: life-changing education for learners outside the traditional path." },
+      hero: { src: "assets/img/elevated-cover.jpg", fit: "full", caption: "Instructure: Life Changing Education, the final presentation to the client." },
 
       problem: {
         statement: "How might Instructure refine its products, or build a new one, to include learners on alternative pathways and strengthen their lifelong learning and employability?",
