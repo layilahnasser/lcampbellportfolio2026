@@ -293,7 +293,7 @@ window.PORTFOLIO = {
           },
           {
             label: "Find Pints",
-            images: [{ src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "A card for each shop, desktop and mobile." }]
+            images: [{ src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "A card for each shop with hours, address, directions and order now. Desktop and mobile." }]
           },
           {
             label: "Product pages",
