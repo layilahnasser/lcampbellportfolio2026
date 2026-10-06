@@ -399,6 +399,7 @@
                 <div class="results">${(imp.results || []).map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`).join("")}</div>
                 ${chips(decisions.map((d) => d.title))}
                 ${grid(imp.image)}
+                ${(imp.documents || []).length ? `<div class="docs"><h3>Deck and paper</h3><ul class="doc-list">${imp.documents.map((x) => `<li><a class="btn btn--ghost" href="${esc(x.file)}" target="_blank" rel="noopener">${esc(x.title)}<span class="sr-only"> (opens in a new tab)</span></a><span>${esc(x.note || "")}</span></li>`).join("")}</ul></div>` : ""}
                 ${more(`${decisions.length ? `<h3>${esc(imp.decisionsHeading || "Decisions influenced")}</h3>${cards(decisions)}` : ""}${imp.reflection ? `<h3>Reflection</h3><p>${t(imp.reflection)}</p>` : ""}`)}
               </section>
 `;

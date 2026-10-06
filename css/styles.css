@@ -742,3 +742,6 @@ html:has(body[data-page="project"]) { scroll-padding-top: 160px; }
 .design-cell .shot--missing, .design-cell .shot .missing { min-height: 0; }
 .hint { font-size: 0.9rem; color: var(--text-dim, #cfc8e6); margin: 0 0 12px; }
 @media (max-width: 700px) { .obj-grid--3, .design-grid { grid-template-columns: 1fr; } }
+.doc-list { list-style: none; display: flex; flex-wrap: wrap; gap: 14px 22px; padding: 0; margin: 0 0 14px; }
+.doc-list li { display: grid; gap: 4px; }
+.doc-list span { font-size: 0.9rem; color: var(--text-dim, #cfc8e6); }

@@ -864,66 +864,116 @@ window.PORTFOLIO = {
       id: "instructure-elevated",
       layout: "research",
       title: "Instructure ElevateED",
-      subtitle: "Exploring AI in education",
+      subtitle: "Research for learners on alternative pathways",
       focus: "Strategy research",
-      approach: "Interviewed stakeholders and synthesized access barriers to make the case for an AI-powered learning initiative",
-      summary: "Research that built the case for an AI-powered initiative advancing inclusive, alternative education pathways.",
+      approach: "Interviewed 10 learners, HR professionals and Instructure staff, then turned five barriers into three product recommendations",
+      summary: "Research that built the case for an AI-powered learning initiative advancing inclusive, alternative education pathways.",
       ballColor: "#27d9f5",
       year: "2025",
       tags: ["Stakeholder interviews", "Affinity mapping", "Wireframes"],
-      role: "UX Researcher",
-      team: "Researchers, designers and organization stakeholders",
+      role: "Lead Researcher",
+      team: "Team of four: UX research and design, agile development and big data analysis (SI 500, Prof. Tawanna Dillahunt)",
       timeline: "Aug – Dec 2025",
-      tools: "Interviews, affinity walls, prototypes, high-fidelity wireframes",
-      hero: { src: "", caption: "TODO: Hero image — ElevateED wireframes" },
+      tools: "Interviews, affinity wall, personas, Pugh matrix, high-fidelity wireframes",
+      hero: { src: "assets/img/elevated-hero.jpg", fit: "full", caption: "Final presentation to Instructure: life-changing education for learners outside the traditional path." },
 
       problem: {
-        statement: "Non-traditional learners face barriers in access, credentialing and experience, and Instructure needed evidence to expand into inclusive, alternative education pathways.",
-        context: "The EdTech landscape is evolving quickly. UX research was used to build the case for ElevateED, a strategic AI-powered initiative for Instructure.",
-        challenge: "Identify the barriers non-traditional learners face and turn them into design recommendations aligned with Instructure's long-term strategy.",
-        role: "UX Researcher. I conducted stakeholder interviews, analyzed needs, synthesized the qualitative data, and presented the final deliverables. TODO: add one line on what you led."
+        statement: "How might Instructure refine its products, or build a new one, to include learners on alternative pathways and strengthen their lifelong learning and employability?",
+        context: "79% of people in the US do not attend traditional universities, and 61% are on alternative pathways. 29% say they are negatively affected by the lack of a reliable learning platform. Instructure's products (Canvas, Mastery, Parchment) mostly serve traditional institutions, while competitors such as D2L Brightspace have started to serve non-traditional learners.",
+        challenge: "Find out what learners on alternative pathways actually struggle with, and turn it into product recommendations that fit Instructure's long-term strategy.",
+        role: "Lead Researcher. I led the live project plan and research process: interview protocols, interviews, the affinity analysis and the final presentation, with a team of three others."
       },
       objectives: {
-        summary: "The research needed to build a case for ElevateED by showing where learners get stuck and what a better pathway could look like.",
+        summary: "The research set out to find where alternative-pathway learners get stuck and what a better pathway could look like.",
         items: [
-          "What barriers do non-traditional learners face in access, credentialing and experience?",
-          "What do stakeholders need from an inclusive, alternative education pathway?",
-          "How can the findings be turned into recommendations that fit Instructure's long-term strategy?"
+          "What barriers do learners on alternative pathways face in time, guidance and employability?",
+          "How do they learn today, and where does it fall apart?",
+          "Which product ideas would fit Instructure's ecosystem and long-term strategy?"
         ]
       },
       methods: {
-        summary: "Stakeholder interviews and qualitative synthesis, built up with a cross-functional team of researchers, designers and organization stakeholders.",
+        summary: "A five-step research process: background research, a live project plan, recruitment and interviews, qualitative analysis, then recommendations.",
         items: [
-          { name: "Stakeholder interviews", detail: "Conducted interviews and analyzed needs across the organization." },
-          { name: "Qualitative synthesis", detail: "Synthesized the data to identify barriers in access, credentialing, and user experience for non-traditional learners." },
-          { name: "Affinity walls", detail: "Built with researchers, designers and stakeholders to surface patterns." }
+          { name: "Background research", detail: "Identified core problems, scanned the market (including D2L Brightspace and Coursera) and found gaps in Instructure's ecosystem." },
+          { name: "Live project plan", detail: "Defined context, stakeholders, methods and outputs, and divided tasks across the team." },
+          { name: "Interviews", detail: "10 semi-structured interviews with alternative-pathway learners, HR professionals and Instructure staff. After feedback that two early participants shared one cultural context, we recruited an American learner to close the gap." },
+          { name: "Affinity diagram", detail: "Clustered hundreds of interview notes into themes over several rounds, working from the raw notes rather than our own ideas." },
+          { name: "Pugh matrix", detail: "Scored ideas against scalability, feasibility and differentiation to choose the final recommendations." }
         ],
-        image: [{ src: "", caption: "TODO: Affinity wall" }]
+        image: [
+          { src: "assets/img/elevated-process.jpg", fit: "full", caption: "The five-step research process." },
+          { src: "assets/img/elevated-interviews.jpg", fit: "full", caption: "Interview recruitment, protocol and who we spoke to." },
+          { src: "assets/img/elevated-affinity.jpg", fit: "full", caption: "The affinity wall: interview notes clustered into themes." }
+        ]
       },
       findings: {
-        summary: "TODO: What you observed, with the evidence for each finding.",
-        items: ["TODO: Finding #1", "TODO: Finding #2", "TODO: Finding #3"],
-        image: [{ src: "", caption: "TODO: Findings summary or learner journey" }]
+        summary: "Five findings came out of the affinity wall. Each one is backed by what learners and stakeholders told us.",
+        items: [
+          "Structural incompatibility: learners have 20 minutes on a commute, not a 45-minute lecture. \"I don't have hours to study. I need effective learning.\"",
+          "Need-driven engagement: they learn what they need now. \"I learn because I need the skill.\"",
+          "Mid-journey disorientation: self-learners lose track of where they stand. \"I'm not sure where I stand in my progress.\"",
+          "The employability gap: certificates carry little weight with employers. \"Will this effort actually help me land a job?\"",
+          "Soft skill barrier: self-paced learning is isolating and skips teamwork and communication."
+        ],
+        image: [
+          { src: "assets/img/elevated-findings.jpg", fit: "full", caption: "The five research findings, each with a learner quote." },
+          { src: "assets/img/elevated-problem.jpg", fit: "full", caption: "The problem in numbers: 79%, 61% and 29%." }
+        ]
       },
       insights: {
-        summary: "TODO: The patterns across the barriers, and what they mean for the initiative.",
-        lists: [{ heading: "Patterns and what they mean", items: ["TODO: Insight #1", "TODO: Insight #2"] }]
+        summary: "Together the findings point to a flexible, guided, employability-focused learning ecosystem. We turned them into a persona and a clear target for each recommendation.",
+        lists: [
+          {
+            heading: "What the findings mean",
+            items: [
+              "Time is the first barrier. Learning has to fit into minutes, not hours.",
+              "Learners need a map. Without grades or classmates, they can't tell if they are ahead or behind.",
+              "Credentials only matter if employers trust them.",
+              "Soft skills are the missing half of alternative pathways."
+            ]
+          }
+        ],
+        image: [
+          { src: "assets/img/elevated-persona.jpg", fit: "full", caption: "Primary persona, Lauren Case: pain points, motivations and goals." },
+          { src: "assets/img/elevated-persona2.jpg", fit: "full", caption: "Secondary persona, an HR professional hiring without degree filters." }
+        ]
       },
       recommendations: {
-        summary: "Prototypes and actionable design recommendations, developed with researchers, designers and organization stakeholders, then presented as high-fidelity wireframes to drive alignment with Instructure's long-term strategic goals.",
-        designs: [{ label: "High-fidelity wireframes", images: [{ src: "", caption: "TODO: High-fidelity wireframes" }] }]
+        summary: "Three recommendations, each aimed at one pain point and shown as a prototype in the ElevateED app.",
+        map: {
+          heading: "From research to recommendation",
+          rows: [
+            { tag: "Personalized modular learning platform", need: "Learners have almost no time, so they need small, flexible pieces.", design: "A feed of bite-sized lessons personalized by search and recommendations, for curiosity-based learning with low pressure.", where: "Lack of time" },
+            { tag: "Skill tree roadmap", need: "Learners lose direction without a clear map of their progress.", design: "A tree-structured roadmap that visualizes progress and shows what to learn next.", where: "Lack of guidance" },
+            { tag: "Soft-skill development tool", need: "Soft skills are neglected, and learners freeze up in interviews.", design: "An AI chatbot that acts like an interviewer, helping learners reflect on and practice articulating their experience.", where: "Soft skills" }
+          ]
+        },
+        designs: [
+          { label: "Personalized modular learning platform", images: [{ src: "assets/img/elevated-rec1.jpg", fit: "full", caption: "Target pain point: lack of time." }] },
+          { label: "Skill tree roadmap", images: [{ src: "assets/img/elevated-rec2.jpg", fit: "full", caption: "Target pain point: lack of guidance." }] },
+          { label: "Soft-skill development tool", images: [{ src: "assets/img/elevated-rec3.jpg", fit: "full", caption: "Target pain point: lack of evaluation and practice of soft skills." }] }
+        ],
+        image: [{ src: "assets/img/elevated-conclusion.jpg", fit: "full", caption: "Together the three functions are scalable, feasible and a market differentiator." }]
       },
       impact: {
+        image: { src: "assets/img/elevated-hmw.jpg", fit: "full", caption: "The How Might We question we answered." },
         decisionsHeading: "Where the research reached people",
         decisions: [
           { title: "Presented to stakeholders", why: "Presented final deliverables, including high-fidelity wireframes, to all stakeholders to drive alignment with Instructure's long-term strategic goals amid a fast-changing EdTech landscape." },
-          { title: "Shared with 200+ people", why: "The recommendations were presented to over 200 students and corporate employees." }
+          { title: "Shared with 200+ people", why: "The recommendations were presented to over 200 students and corporate employees." },
+          { title: "Widened who we design for", why: "Interviews showed that alternative-pathway learners are often already working, so the design covers in-career learners and not only recent high-school graduates." }
         ],
         results: [
-          { value: "200+", label: "students and employees presented to" },
-          { value: "Hi-fi", label: "wireframes delivered" }
+          { value: "10", label: "interviews across stakeholder groups" },
+          { value: "5", label: "research findings" },
+          { value: "3", label: "product recommendations" },
+          { value: "200+", label: "students and employees presented to" }
         ],
-        reflection: "TODO: What you learned and what you'd do differently."
+        documents: [
+          { title: "Final presentation (PDF)", file: "assets/docs/elevated-deck.pdf", note: "27 slides, including the appendix" },
+          { title: "Final report (PDF)", file: "assets/docs/elevated-paper.pdf", note: "Milestone 5 report" }
+        ],
+        reflection: "TODO: What you learned and what you'd do differently. One true thing from the paper: sorting hundreds of notes into themes was the hardest and most valuable part, and the feedback to add an American participant changed what we learned."
       }
     }
   ],
