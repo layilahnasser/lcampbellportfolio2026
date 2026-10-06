@@ -7,11 +7,12 @@ Save each file into `assets/img/` with exactly this name, then refresh the page.
 
 ## Milk and Froth Redesign (5)
 
+- [ ] `milk-404.jpg`: 404 page, desktop and mobile.
+
 - [ ] `milk-homepage-mobile.jpg`: Mobile
 - [ ] `milk-flavors.jpg`: Light (blush) and dark (cocoa) themes.
 - [ ] `milk-product.jpg`: Flavor and item pages, desktop and mobile, light and dark.
 - [ ] `milk-about-after.jpg`: The redesigned About page.
-- [ ] `milk-cart-checkout.jpg`: Cart, checkout and a 404 page that stays on brand, desktop and mobile.
 
 ## Crown Code (3)
 

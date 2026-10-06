@@ -296,8 +296,16 @@ window.PORTFOLIO = {
             images: [{ src: "assets/img/milk-about-after.jpg", fit: "full", caption: "The redesigned About page." }]
           },
           {
-            label: "Cart, checkout and 404",
-            images: [{ src: "assets/img/milk-cart-checkout.jpg", fit: "full", caption: "Cart, checkout and a 404 page that stays on brand, desktop and mobile." }]
+            label: "Cart",
+            images: [{ src: "assets/img/milk-cart.jpg", fit: "full", caption: "Shopping cart and order summary, desktop and mobile." }]
+          },
+          {
+            label: "Checkout",
+            images: [{ src: "assets/img/milk-checkout.jpg", fit: "full", caption: "Delivery or pick up, payment options and pay now, desktop and mobile." }]
+          },
+          {
+            label: "404 page",
+            images: [{ src: "assets/img/milk-404.jpg", fit: "full", caption: "A 404 page that stays on brand: a melted cone and a way back home. Desktop and mobile." }]
           }
         ],
         decisions: [],
@@ -333,8 +341,11 @@ window.PORTFOLIO = {
             after: { src: "assets/img/milk-product.jpg", caption: "After: the flavors page (desktop and mobile) and a flavor page (desktop)." }
           },
           {
-            label: "Cart, checkout and 404",
-            after: { src: "assets/img/milk-cart-checkout.jpg", caption: "After: cart, checkout and 404 pages, desktop and mobile." }
+            label: "Cart and checkout",
+            after: [
+              { src: "assets/img/milk-cart.jpg", fit: "full", caption: "After: the cart, desktop and mobile." },
+              { src: "assets/img/milk-checkout.jpg", fit: "full", caption: "After: checkout, desktop and mobile." }
+            ]
           }
         ],
         results: [
