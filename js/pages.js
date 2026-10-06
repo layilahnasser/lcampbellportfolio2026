@@ -73,7 +73,6 @@
           )
           .join("")}
         </ol>
-        <div class="sb-foot"><span class="sb-pins" aria-hidden="true">${"▼".repeat(10)}</span><span>Each case study is scored frame by frame: problem, research, iteration, final design.</span></div>
       </div>`;
   }
 
