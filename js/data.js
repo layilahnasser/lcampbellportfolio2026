@@ -512,7 +512,7 @@ window.PORTFOLIO = {
       team: "Solo project",
       timeline: "Jan–Apr 2026",
       toolsLabel: "Deliverables",
-      tools: "Design brief · Component library\nLight & dark mode prototypes",
+      tools: "Design brief · Component library\nLight & dark mode",
       iterLabels: ["What changed", "How I checked it"],
       hero: { src: "assets/img/crown-cover.png", fit: "phones", caption: "Crown Code's home, readiness dashboard, flashcards and Share Your Journey screens." },
 
