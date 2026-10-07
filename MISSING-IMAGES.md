@@ -2,7 +2,7 @@
 
 Save each file into `assets/img/` with exactly this name, then refresh the page. Nothing else needs to change.
 
-**10 images missing.**
+**9 images missing.**
 
 
 ## Milk and Froth Redesign (5)
@@ -21,7 +21,6 @@ Save each file into `assets/img/` with exactly this name, then refresh the page.
 
 - [ ] `root-concept-tenure.png`: Provide customers with discounts and rewards based off their tenure.
 - [ ] `root-concept-drive.png`: A driving score based reward system where customers can gain benefits based on their driving.
-- [ ] `root-concept-sympathy.png`: Make customers feel valued by showing sympathy through benefits and rewards.
 - [ ] `root-concept-discounts.png`: Provide customers with opportunities to lower their rate by showcasing the different discounts that are available.
 - [ ] `root-concept-email.png`: Rewording existing email communications to make them more personable and friendly.
 
