@@ -490,7 +490,7 @@ window.PORTFOLIO = {
     {
       id: "crown-code",
       title: "Crown Code",
-      subtitle: "Interview prep for pageant contestants",
+      subtitle: "Designed a pageant interview prep app that combines flashcards, practice reminders, and progress tracking to help contestants prepare with confidence.",
       focus: "Mobile design",
       approach: "Designed a prep app that brings flashcards, reminders and a readiness dashboard into one place",
       summary: "A mobile app that brings interview flashcards, text-based reminders and a full prep dashboard into one place, helping pageant contestants build a consistent preparation routine.",
@@ -498,9 +498,10 @@ window.PORTFOLIO = {
       year: "2026",
       tags: ["Mobile app", "Design system", "Light & dark mode"],
       role: "UX Designer",
-      team: "Solo project (Layilah Campbell)",
-      timeline: "Jan – Apr 2026",
-      tools: "Design brief, component library, light and dark mode prototypes",
+      team: "Solo project",
+      timeline: "Jan–Apr 2026",
+      toolsLabel: "Deliverables",
+      tools: "Design brief · Component library\nLight & dark mode prototypes",
       hero: { src: "assets/img/crown-cover.png", fit: "phones", caption: "Crown Code's home, readiness dashboard, flashcards and Share Your Journey screens." },
 
       problem: {
