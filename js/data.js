@@ -388,19 +388,21 @@ window.PORTFOLIO = {
         ]
       },
       methods: {
-        summary: "A mixed-methods plan across 18 sessions: desk research and stakeholder interviews first, then live customer interviews and concept testing.",
+        summary: "A mixed-methods plan across 17 sessions: desk research and stakeholder interviews first, then live customer interviews and concept testing.",
         items: [
-          { name: "Desk research", detail: "Audited the support approaches of top carriers and Root's own voice-of-customer data, plus cancellation, retention and rate-shock data by customer segment." },
+          { name: "Desk research", detail: "Audited the support approaches of top carriers and Root's own voice-of-customer data, plus cancellation, retention and rate-shock data by customer segment, written up as a desk research report with separate reports on CS levers and retention levers." },
           { name: "Competitor benchmarking", detail: "Collected screenshots of competitor experiences, grouped under one question: what does it mean to be a member beyond just pricing?" },
-          { name: "Stakeholder interviews", detail: "12 interviews with internal stakeholders, more than double the four we first planned, to get deeper cross-functional alignment." },
-          { name: "Customer interviews", detail: "6 live, moderated interviews with competitor policyholders on Lookback, after a pilot session." },
+          { name: "Stakeholder interviews", detail: "11 interviews with internal stakeholders, more than double the four we first planned, to get deeper cross-functional alignment. Notes were captured per person on a shared board." },
+          { name: "Customer interviews", detail: "6 live, moderated interviews with people insured across different insurance companies, run on Lookback after a pilot session, from a written research plan, moderator guide and screener." },
           { name: "Concept testing", detail: "Tested early concepts in those interviews, using stimuli and a moderator guide built with the design intern." },
           { name: "Scoping the plan", detail: "Brainstormed ideas, sized them as pebbles, rocks and boulders, and plotted them by how sure we were of the solution and of its value to customers. The most uncertain, highest-value quadrant set the scope." }
         ],
         image: [
+          { src: "assets/img/root-desk-report.jpg", fit: "full", caption: "The desk research report: context and findings on customer service levers and retention levers, with oversight, research lead and design lead named." },
           { src: "assets/img/root-benchmark.jpg", caption: "Screenshots from competitor experiences, grouped under the question \"What does it mean to be a member beyond just pricing?\"" },
           { src: "assets/img/root-data.jpg", caption: "Quantitative data reviewed alongside the interviews: cancellations, 30-day retention, rate changes and rate shock by customer segment." },
           { src: "assets/img/root-stakeholder-notes.jpg", caption: "Notes from every stakeholder conversation organized per person, then read across columns to surface the general patterns and hypotheses shared between teams." },
+          { src: "assets/img/root-test-plan.jpg", fit: "full", caption: "The research plan for the six customer interviews: objective, related documents, moderator guide, screener and pilot notes." },
           { src: "assets/img/root-ideas.jpg", caption: "Every idea from the brainstorms grouped into themed clusters, then sized as pebbles, rocks, and boulders so we could weigh effort against impact before choosing directions." },
           { src: "assets/img/root-prioritization.jpg", caption: "Ideas plotted against how sure we were of the solution and of its value to customers. The most uncertain, highest-value quadrant became the scope of the research plan." }
         ]
@@ -474,7 +476,7 @@ window.PORTFOLIO = {
           { title: "\"New to Root Research\" onboarding playbook", why: "Co-developed with a teammate so future researchers don't have to rebuild critical context from scattered conversations, Slack history and repository searches. It covers Root and auto-insurance context; key research partners and communication channels; standard operating procedures from intake and planning through evidence handling, analysis, review and handoff; the Voice of the Customer program; a worked NPS example that keeps small samples visible; the customer quote library and retention context; Slack directories and knowledge repositories; and a governed workflow for applying AI research skills to a new dataset." }
         ],
         results: [
-          { value: "18", label: "research sessions" },
+          { value: "17", label: "research sessions" },
           { value: "3", label: "executive readouts" },
           { value: "15", label: "net-new retention concepts" },
           { value: "7", label: "insights posts shared" }

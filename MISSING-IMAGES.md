@@ -2,7 +2,7 @@
 
 Save each file into `assets/img/` with exactly this name, then refresh the page. Nothing else needs to change.
 
-**13 images missing.**
+**12 images missing.**
 
 
 ## Milk and Froth Redesign (5)
@@ -20,7 +20,6 @@ Save each file into `assets/img/` with exactly this name, then refresh the page.
 ## Root Insurance (8)
 
 - [ ] `root-data.jpg`: Quantitative data reviewed alongside the interviews: cancellations, 30-day retention, rate changes and rate shock by customer segment.
-- [ ] `root-stakeholder-notes.jpg`: Notes from every stakeholder conversation organized per person, then read across columns to surface the general patterns and hypotheses shared between teams.
 - [ ] `root-coding.jpg`: Coding the research into themes, then turning each theme into how-might-we questions.
 - [ ] `root-concept-tenure.png`: Provide customers with discounts and rewards based off their tenure.
 - [ ] `root-concept-drive.png`: A driving score based reward system where customers can gain benefits based on their driving.
