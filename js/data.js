@@ -171,7 +171,7 @@ window.PORTFOLIO = {
     {
       id: "milk-and-froth",
       title: "Milk and Froth Redesign",
-      subtitle: "A Detroit-born ice cream brand, reimagined online",
+      subtitle: "Reimagining a Detroit ice cream brand’s website through UX and visual design.",
       focus: "Web design",
       approach: "Redesigned the site to spotlight flavors, help people find a shop, and browse by image",
       summary: "A website redesign concept for a Detroit-born ice cream brand, focused on showcasing distinctive flavors, improving location discovery, and creating a more visual browsing experience.",
@@ -179,9 +179,10 @@ window.PORTFOLIO = {
       year: "2026",
       tags: ["Web design", "Competitive analysis", "Design system"],
       role: "UX Designer",
-      team: "Two designers: Micaela Ciambrone & Layilah Campbell",
-      timeline: "Jan – Mar 2026",
-      tools: "Competitive analysis, wireframes, component library, brand and type system",
+      team: "2 designers\nMicaela Ciambrone & Layilah Campbell",
+      timeline: "Jan–Mar 2026",
+      toolsLabel: "Methods & deliverables",
+      tools: "Competitive analysis · Wireframes\nComponent library · Visual identity",
       hero: { src: "assets/img/milk-homepage.jpg", caption: "The redesigned homepage: an image-forward hero for the season's flavors." },
 
       problem: {
