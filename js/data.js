@@ -764,7 +764,6 @@ window.PORTFOLIO = {
         image: [
           { src: "assets/img/usda-finding1.jpg", fit: "full", caption: "Finding 1: search fails on imperfect input." },
           { src: "assets/img/usda-finding2.jpg", fit: "full", caption: "Finding 2: help is disconnected from the task." },
-          { src: "assets/img/usda-banner.jpg", fit: "wide", caption: "Even announcements live in a homepage carousel, one more place users must look for guidance." },
           { src: "assets/img/usda-finding3.jpg", fit: "full", caption: "Finding 3: small inconsistencies misplace user trust." },
           { src: "assets/img/usda-annotated.jpg", fit: "full", caption: "Heuristic evaluation: search rigidity, scattered help and no breadcrumbs, marked on the portal." }
         ]
@@ -805,9 +804,13 @@ window.PORTFOLIO = {
         ]
       },
       impact: {
-        image: { src: "assets/img/usda-discussion.jpg", fit: "full", caption: "What the study could not cover, and the next research steps." },
+                image: [
+          { src: "assets/img/usda-banner.jpg", fit: "wide", caption: "New features now live on the ACIR portal: a Reports page for data export, embedded procedure search on each manual page, a reworked procedure search page and a taxonomic group notes field." },
+          { src: "assets/img/usda-discussion.jpg", fit: "full", caption: "What the study could not cover, and the next research steps." }
+        ],
         decisionsHeading: "Where the research went",
         decisions: [
+          { title: "New features live on the ACIR portal", statement: "The portal now has embedded procedure search on each manual page and a taxonomic group notes field, both in areas our study examined.", why: "The ACIR portal's \"New ACIR Features\" announcement lists a Reports page for data export, embedded procedure search on each manual page, a reworked procedure search page and a new taxonomic group notes field. Cross-referencing between manuals and documents, and finding taxonomy information, were two of the problem areas our usability tests and heuristic evaluation looked at." },
           { title: "Delivered to USDA APHIS", why: "The full report, with the evidence (reports, presentations and videos) for every method, was sent to the USDA APHIS team." },
           { title: "Weekly stakeholder check-ins", why: "Met weekly with USDA stakeholders to share emerging findings on navigation, search filters and help resources." },
           { title: "Next research steps", why: "Recommended a card-sorting study to redesign the help architecture, a prototype of forgiving search, and a larger-scale survey. Mobile, accessibility and the general public were out of scope." }
