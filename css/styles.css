@@ -973,3 +973,9 @@ a.hud-status:focus-visible { box-shadow: 0 0 0 3px #ffd24a; }
 .pull-quote blockquote { margin: 0; }
 .pull-quote blockquote p { margin: 0; font-size: 1.35rem; line-height: 1.45; color: var(--strong); font-weight: 600; }
 .pull-quote figcaption { margin-top: 8px; color: var(--soft); font-size: 0.95rem; }
+
+.screen-reasons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 14px; margin: 0 0 18px; }
+.screen-reasons > div { background: var(--panel); border: 1px solid var(--bd); border-radius: 12px; padding: 12px 14px; }
+.screen-reasons dt { margin: 0 0 4px; color: var(--strong); font-weight: 700; }
+.screen-reasons dd { margin: 0; color: var(--soft-2); font-size: 0.95rem; line-height: 1.5; }
+@media (max-width: 700px) { .screen-reasons { grid-template-columns: 1fr; } }

@@ -500,7 +500,7 @@ window.PORTFOLIO = {
           { value: "15", label: "net-new retention concepts" },
           { value: "7", label: "insights posts shared" }
         ],
-        reflection: "All of the project’s goals were met. If I did it again, I’d plan for the unexpected in live fielding. During an outage I kept the session going by moving from Lookback to Google Meet, but I’d rather not depend on a fast fix. Next time I’d set up a Plan B in advance, with backup video links already in the calendar invites and a second recording tool running locally. I’m also keen to track the long-term impact of the CS script updates."
+        reflection: "All of the project’s goals were met. If I were to do it again, I’d prepare more thoroughly for unexpected issues during live sessions. When Lookback experienced an outage, I kept usability testing on track by switching to Google Meet. Although I received positive feedback on how I handled the disruption, I’d prefer to have a backup plan ready. Next time, I’d include backup video links in calendar invites and run a second recording tool locally. I’m also interested in tracking the long-term impact of the CS script updates and using Lovable to support consistent implementation."
       }
     },
 
@@ -681,6 +681,19 @@ window.PORTFOLIO = {
             title: "Brand, type and color",
             why: "Teal is associated with calm, focus, and trust, which suits a tool people use to steady their nerves before an interview. Gold signals achievement, confidence, and prestige, the feeling of the crown, so it is saved for moments of progress like the readiness score. Newsreader, a serif, adds the polish and elegance of pageant culture, while Manrope keeps buttons, labels, and body text clean and easy to read on a small screen."
           }
+        ],
+        screenReasonsHeading: "Why each screen works this way",
+        screenReasons: [
+          { screen: "Home", why: "Puts the readiness score first, so a contestant sees where she stands the moment she opens the app, with the checklist and answer bank one tap away." },
+          { screen: "Competition readiness", why: "Turns the next competition into a countdown with packing progress and paperwork status, so deadlines become visible tasks." },
+          { screen: "Daily reminders and tips", why: "Short daily strategy tips and two clear next actions keep practice consistent without overwhelming her." },
+          { screen: "Your decks", why: "Leads with a five-minute daily drill, then decks by level with progress on each, so it is clear what to practice next." },
+          { screen: "Flashcards practice", why: "A tap-to-reveal card with a drill timer adds a little interview pressure and keeps each session short." },
+          { screen: "Answer structure", why: "The answer side teaches a three-step structure, so contestants learn how to answer, not only what to answer." },
+          { screen: "Profile", why: "Shows the readiness score and competition focus in one place, as the starting point for what she shares with coaches." },
+          { screen: "Share Your Journey", why: "Lets coaches see real progress and give strategic feedback tied to it." },
+          { screen: "Submitted for Review", why: "Confirms what was sent and sets a clear turnaround, so the contestant knows what happens next." },
+          { screen: "Email notifications", why: "Puts reminders and weekly reports under the contestant’s control, so they help instead of nag." }
         ],
         designs: [
           {

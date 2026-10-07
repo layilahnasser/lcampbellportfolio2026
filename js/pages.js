@@ -512,6 +512,7 @@
                 ${ex.compare ? `<h3>Before and after</h3>${ex.compare.map((c) => `<div class="compare"><p class="compare-label">${esc(c.label)}</p><div class="compare-pair">${img(c.before)}${img(c.after)}</div></div>`).join("")}` : ""}
                 ${ex.prototypeUrl ? `<p>${ext(ex.prototypeUrl, "Open prototype ↗").replace("<a ", '<a class="btn btn--ghost" ')}</p>` : ""}
                 ${(ex.decisions || []).length ? `<h3>${esc(ex.decisionsHeading || "Why it looks and works this way")}</h3><div class="decision-grid">${ex.decisions.map((d, i) => `<div class="decision"><span class="card-num">0${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.why)}</p></div>`).join("")}</div>` : ""}
+                ${(ex.screenReasons || []).length ? `<h3>${esc(ex.screenReasonsHeading || "Why each screen works this way")}</h3><dl class="screen-reasons">${ex.screenReasons.map((d) => `<div><dt>${t(d.screen)}</dt><dd>${t(d.why)}</dd></div>`).join("")}</dl>` : ""}
                 ${more(`${ok(ex.summary) ? rp(ex.summary) : ""}${mapBlock(ex.map)}`)}
               </section>
 
