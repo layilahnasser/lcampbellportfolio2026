@@ -851,7 +851,7 @@ window.PORTFOLIO = {
       focus: "Strategy research",
       approach: "Interviewed 10 learners, HR professionals and Instructure staff, then turned five barriers into three product recommendations",
       summary: "Research that built the case for an AI-powered learning initiative advancing inclusive, alternative education pathways.",
-      glance: { problem: "Instructure mostly serves traditional schools, while 79% of people in the US do not attend a traditional university.", did: "10 interviews with learners, HR professionals and Instructure staff, then affinity mapping and a Pugh matrix.", changed: "Five barriers turned into three product recommendations.", role: "Lead UX Researcher, and the only UX researcher on a team of four." },
+      glance: { problem: "Instructure mostly serves traditional schools, while 79% of people in the US do not attend a traditional university.", did: "10 interviews with learners, HR professionals and Instructure staff, then affinity mapping and a Pugh matrix.", changed: "Five barriers turned into three product recommendations, presented to 180+ students and the strategy team after our team was selected from hundreds of students.", role: "Lead UX Researcher, and the only UX researcher on a team of four." },
       ballColor: "#27d9f5",
       year: "2025",
       tags: ["Stakeholder interviews", "Affinity mapping", "Prototyping"],
