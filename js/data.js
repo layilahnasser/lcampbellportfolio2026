@@ -720,7 +720,7 @@ window.PORTFOLIO = {
       team: "Apex Five: five UX researchers (SI 622), with USDA APHIS stakeholders",
       timeline: "Jan – Apr 2026",
       tools: "Interviews, survey, comparative and heuristic evaluation, usability testing",
-      hero: { src: "assets/img/usda-cover.jpg", fit: "full", caption: "The ACIR portal, and the three patterns that held across all five methods." },
+      hero: { src: "assets/img/usda-title.jpg", fit: "full", caption: "Harvesting Insights: the final report presentation for the USDA ACIR usability study." },
 
       problem: {
         statement: "How can importers, brokers and government officials find, and feel confident interpreting, the import requirements they need in USDA's ACIR portal?",
