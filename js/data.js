@@ -504,7 +504,7 @@ window.PORTFOLIO = {
         statement:
           "Pageant contestants often prepare for interviews with scattered tools like paper notes, screenshots, text messages, PDFs and social media advice, which makes it hard to stay organized, practice consistently, and know whether their answers are improving.",
         context:
-          "The app is an extension of the Crown Code brand, which already sells interview flashcards. Many contestants also need support beyond interview questions: reminders, readiness tracking, and personalized practice that matches their pageant system and division. TODO: add one line on how you saw this need first-hand (for example through your pageant coaching).",
+          "The app is an extension of the Crown Code brand, which already sells interview flashcards. Many contestants also need support beyond interview questions: reminders, readiness tracking, and personalized practice that matches their pageant system and division. I saw this need first-hand through my own pageant consulting work, where contestants kept their interview prep scattered across notes, screenshots and messages.",
         contribution:
           "Solo designer. I built the Crown Code design system from the ground up: color, type, buttons, navigation and cards, in light and dark mode.",
         goal:
