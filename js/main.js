@@ -25,7 +25,7 @@
   const img = (im, cls = "") => {
     // Side-by-side phones: { row: [ {src, caption}, … ], caption: "…" }; each phone can be missing and shows its own slot.
     if (im && Array.isArray(im.row)) {
-      return `<figure class="shot shot--rowwrap ${cls}"><div class="phone-row">${im.row.map((r) => img(r, "shot--phone")).join("")}</div>${im.caption ? `<figcaption>${esc(plain(im.caption))}</figcaption>` : ""}</figure>`;
+      return `<figure class="shot shot--rowwrap ${cls}"><div class="phone-row">${im.row.map((r) => img({ ...r, eager: true }, "shot--phone")).join("")}</div>${im.caption ? `<figcaption>${esc(plain(im.caption))}</figcaption>` : ""}</figure>`;
     }
     if (im && im.fit === "phone") cls += " shot--phone";
     if (im && im.fit === "phones") cls += " shot--phone shot--phones";
@@ -44,7 +44,7 @@
       return `<figure class="shot shot--embed ${cls}"><div class="embed-wrap"><iframe src="${esc(im.embed)}" title="${esc(plain(im.caption || "Embedded media"))}" loading="lazy" allow="fullscreen; autoplay; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>${cap}</figure>`;
     }
     if (im && im.src) {
-      return `<figure class="shot ${cls}"><img src="${esc(im.src)}" alt="${esc(plain(im.caption))}" loading="lazy">${
+      return `<figure class="shot ${cls}"><img src="${esc(im.src)}" alt="${esc(plain(im.caption))}" loading="${im.eager ? "eager" : "lazy"}">${
         im.caption ? `<figcaption>${esc(plain(im.caption))}</figcaption>` : ""
       }</figure>`;
     }
