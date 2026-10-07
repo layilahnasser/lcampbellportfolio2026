@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mock-up: link preview</title>
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+body{background:#0d0a14}.m{max-width:1000px;margin:0 auto;padding:24px 20px 50px;color:#e6e0f7}
+.tag{display:inline-block;background:#ffd24a;color:#1a1200;font-weight:700;border-radius:999px;padding:4px 12px;font-size:13px}
+h1{font-family:Damion,cursive;font-weight:400;font-size:42px;color:#fff;text-shadow:0 0 18px #ff2fb4;margin:8px 0 4px}
+.lead{color:#cfc8e6;margin:0 0 22px;max-width:70ch}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{background:#fff;border-radius:14px;padding:16px;color:#1d1c1d;font-family:system-ui,Arial,sans-serif}
+.panel h2{font-size:12px;letter-spacing:.1em;color:#888;margin:0 0 10px;text-transform:uppercase}
+.msg{font-size:14px;margin:0 0 8px}.msg b{color:#1d1c1d}
+.lp{border-left:4px solid #ddd;padding-left:12px;background:none}
+.site{font-size:12px;color:#616061}.t{font-size:15px;font-weight:700;color:#1264a3;margin:2px 0}.d{font-size:13px;color:#1d1c1d;margin:0 0 8px;line-height:1.4}
+.img{aspect-ratio:1200/630;width:100%;box-sizing:border-box;border-radius:10px;background:radial-gradient(circle at 20% 20%,#3b1670,#0d0a14 70%);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:6%;color:#fff}
+.img .n{font-family:Damion,cursive;font-size:clamp(24px,4.2vw,48px);line-height:1;white-space:nowrap;text-shadow:0 0 16px #ff2fb4}
+.img .s{font-size:clamp(10px,1.5vw,16px);color:#cfc8e6;margin-top:6px;max-width:70%}
+.img .b{position:absolute;right:5%;top:8%;display:flex;gap:5px}
+.img .b i{width:clamp(14px,2.4vw,26px);height:clamp(14px,2.4vw,26px);border-radius:50%;display:block}
+.email{border:1px solid #ddd;border-radius:12px;overflow:hidden;background:#f6f6f6}
+.email .img{border-radius:0}.email .x{padding:10px 12px;background:#fff}
+.email .x .t{color:#1d1c1d;font-size:14px}.email .x .d{color:#555;font-size:12px;margin:0}.email .x .site{font-size:11px}
+.note{margin-top:18px;color:#cfc8e6;font-size:14px}.note b{color:#fff}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+</style></head><body><main class="m">
+<span class="tag">MOCK-UP · not live</span><h1>Link preview</h1>
+<p class="lead">When someone pastes your link into Slack, email or a message, it shows a small card instead of a bare web address. Today the card is blank. This is what it would show.</p>
+<div class="grid">
+<div class="panel"><h2>In Slack</h2><p class="msg"><b>Reviewer</b> &nbsp;Here's the portfolio I mentioned:</p>
+<div class="lp"><div class="site">layilah-portfolio</div><div class="t">Layilah Campbell: UX Researcher &amp; Designer</div><p class="d">Five case studies in research and design, shown frame by frame. Start with Milk &amp; Froth, Root and Crown Code.</p>
+<div class="img"><div class="n">Layilah Campbell</div><div class="s">UX researcher &amp; designer · Case studies, frame by frame</div><div class="b"><i style="background:#ff5a3c"></i><i style="background:#ff7a45"></i><i style="background:#c6f24a"></i><i style="background:#ff2fb4"></i><i style="background:#27d9f5"></i></div></div></div></div>
+<div class="panel"><h2>In an email or text</h2><div class="email"><div class="img"><div class="n">Layilah Campbell</div><div class="s">UX researcher &amp; designer · Case studies, frame by frame</div><div class="b"><i style="background:#ff5a3c"></i><i style="background:#ff7a45"></i><i style="background:#c6f24a"></i><i style="background:#ff2fb4"></i><i style="background:#27d9f5"></i></div></div><div class="x"><div class="t">Layilah Campbell: UX Researcher &amp; Designer</div><p class="d">Five case studies in research and design, shown frame by frame.</p><div class="site">layilah-portfolio</div></div></div></div>
+</div>
+<p class="note"><b>What gets added:</b> a title, a one-line description and a 1200 × 630 picture in the page's hidden header. Visitors never see it on the site itself. Each case study can have its own card, for example Root with its shareout photo.</p>
+</main></body></html>
