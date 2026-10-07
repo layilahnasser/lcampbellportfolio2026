@@ -805,8 +805,7 @@ window.PORTFOLIO = {
       },
       impact: {
                 image: [
-          { src: "assets/img/usda-banner.jpg", fit: "wide", caption: "New features now live on the ACIR portal: a Reports page for data export, embedded procedure search on each manual page, a reworked procedure search page and a taxonomic group notes field." },
-          { src: "assets/img/usda-discussion.jpg", fit: "full", caption: "What the study could not cover, and the next research steps." }
+          { src: "assets/img/usda-banner.jpg", fit: "wide", caption: "New features now live on the ACIR portal: a Reports page for data export, embedded procedure search on each manual page, a reworked procedure search page and a taxonomic group notes field." }
         ],
         decisionsHeading: "Where the research went",
         decisions: [
