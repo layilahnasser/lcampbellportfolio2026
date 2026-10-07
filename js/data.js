@@ -27,7 +27,7 @@ window.PORTFOLIO = {
     ],
     // Text on the player card (home page + About)
     school: "University of Michigan",
-    degreeLine: "Master's Candidate - School of Information",
+    degreeLine: "Master's Candidate · School of Information",
     gradLine: "", // leave empty to hide the third card line
     status: "Open to opportunities", // HUD pill
     location: "Ann Arbor, MI",
@@ -181,7 +181,7 @@ window.PORTFOLIO = {
   projects: [
     {
       id: "milk-and-froth",
-      title: "Milk and Froth Redesign",
+      title: "Milk & Froth Redesign",
       subtitle: "Reimagining a Detroit ice cream brand’s website through UX and visual design.",
       focus: "Web design",
       approach: "Redesigned the site to spotlight flavors, help people find a shop, and browse by image",
@@ -495,7 +495,7 @@ window.PORTFOLIO = {
           { title: "\"New to Root Research\" onboarding playbook", statement: "Co-built an onboarding playbook so future researchers don't have to rebuild context from scratch.", why: "Co-developed with a teammate so future researchers don't have to rebuild critical context from scattered conversations, Slack history and repository searches. It covers Root and auto-insurance context; key research partners and communication channels; standard operating procedures from intake and planning through evidence handling, analysis, review and handoff; the Voice of the Customer program; a worked NPS example that keeps small samples visible; the customer quote library and retention context; Slack directories and knowledge repositories; and a governed workflow for applying AI research skills to a new dataset." }
         ],
         results: [
-          { value: "17", label: "research sessions" },
+          { value: "18", label: "research sessions" },
           { value: "3", label: "executive readouts" },
           { value: "15", label: "net-new retention concepts" },
           { value: "7", label: "insights posts shared" }
@@ -536,7 +536,7 @@ window.PORTFOLIO = {
 
       research: {
         summary:
-          "The project began from a design brief with an executive summary, problem statement, scope and requirements. I then compared the tools contestants use today to find the gap Crown Code could fill. Before that, I talked with more than 100 contestants about what is missing from the pageant world, and the answer kept coming back to scattered, inconsistent interview prep.",
+          "I started by talking with more than 100 contestants about what is missing from the pageant world, and the answer kept coming back to scattered, inconsistent interview prep. The project then began from a design brief with an executive summary, problem statement, scope and requirements, and I compared the tools contestants use today to find the gap Crown Code could fill.",
         methods: [
           { name: "Design brief", detail: "A written brief defining the product, problem, seven core features and ten requirements, including iOS and Android support." },
           { name: "Competitor analysis", detail: "Compared Pageant Planet, Quizlet / PDFs and CrownChat across five features to find where the market falls short." },
@@ -634,14 +634,14 @@ window.PORTFOLIO = {
 
       iterations: [
         {
-          version: "Round 1 — Sketches & low-fidelity",
+          version: "Round 1: Sketches and low-fidelity",
           change: "Started with ten paper sketches covering the profile, home dashboard, daily tips, decks, flashcards, competition readiness, submission confirmation, strategic feedback and email notifications, then moved the strongest ideas into low-fidelity screens.",
           feedback: "No user testing at this stage. I checked each sketch against the scope and requirements in the design brief before moving to screens.",
           image: { src: "assets/img/crown-lowfi.jpg", caption: "Low-fidelity wireframes." }
         },
         {
-          version: "Round 2 — Design system & high fidelity",
-          change: "Built a component library (primary, secondary and tertiary buttons in three sizes, navigation, flashcards, progress and readiness cards, top bar and action footer), then designed profile, home and progress, and flashcard screens in light mode, with a dark mode frame for the same screens.",
+          version: "Round 2: Design system and high fidelity",
+          change: "Built a component library (primary, secondary and tertiary buttons in three sizes, navigation, flashcards, progress and readiness cards, top bar and action footer), then designed profile, home and progress, and flashcard screens in light mode, then redesigned each one for dark mode.",
           feedback: "No user testing yet, so I ran a contrast check on the palette. Gold on black is 11.6:1, but gold on white is only 1.8:1, so gold is used only on dark surfaces, for moments of progress like the readiness score. White text on Crowning Blue is 4.35:1, just under the 4.5:1 AA target for small text, so I would use larger labels or a slightly darker teal for small text. Next I would run usability sessions with contestants on the readiness dashboard and flashcard practice.",
           image: [
             { src: "assets/img/crown-components.jpg", caption: "Component library: buttons, navigation, flashcards, progress and readiness cards." },
@@ -774,7 +774,7 @@ window.PORTFOLIO = {
         ]
       },
       methods: {
-        summary: "Five methods in sequence, so each one tested what the last one found. A finding counted only if it showed up in at least three of them.",
+        summary: "Five methods in sequence, so each one tested what the last one found, plus an interaction map that marked the friction. A finding counted only if it showed up in at least three of them.",
         items: [
           { name: "Interviews", detail: "7 semi-structured interviews of 45 to 60 minutes (one withdrawn at the participant's request, so 6 in the synthesis) with USDA staff across departments and states, plus a private-sector seed importer." },
           { name: "Survey", detail: "A 9-question survey in four sections (background, findability, interpretation, help and support). Piloted with 3 USDA staff, which led to four changes, such as asking about how requirements are organized rather than how they are worded." },
@@ -823,7 +823,7 @@ window.PORTFOLIO = {
             items: [
               "Small samples. Seven interviews and seven usability sessions show patterns, not statistics. That is why a finding only counted when at least three of the five methods supported it.",
               "Recommendations were not prototype-tested. They come from evidence, and a prototype of forgiving search is the first next step.",
-              "Mobile and accessibility were outside the scope and are listed as future research."
+              "Accessibility and the general public were outside the scope and are listed as future research."
             ]
           }
         ],
@@ -880,7 +880,7 @@ window.PORTFOLIO = {
       focus: "Strategy research",
       approach: "Interviewed 10 learners, HR professionals and Instructure staff, then turned five barriers into three product recommendations",
       summary: "Research that built the case for an AI-powered learning initiative advancing inclusive, alternative education pathways.",
-      glance: { problem: "Instructure mostly serves traditional schools, while 79% of people in the US do not attend a traditional university.", did: "10 interviews with learners, HR professionals and Instructure staff, followed by the Pugh matrix and building a Figma Make prototype of the recommendations.", changed: "Our team was selected to present five barriers turned into three product recommendations to 180+ students and the strategy team.", role: "Lead UX Researcher, and the only one on a team of four. I led research planning, interviews and affinity analysis, and helped present the work." },
+      glance: { problem: "Instructure mostly serves traditional schools, while 79% of people in the US do not attend a traditional university.", did: "10 interviews with learners, HR professionals and Instructure staff, followed by the Pugh matrix and building a Figma Make prototype of the recommendations.", changed: "Turned five barriers into three product recommendations, and our team was selected to present them to 180+ students and the strategy team.", role: "Lead UX Researcher, and the only one on a team of four. I led research planning, interviews and affinity analysis, and helped present the work." },
       ballColor: "#27d9f5",
       year: "2025",
       tags: ["Stakeholder interviews", "Affinity mapping", "Prototyping"],
@@ -1032,7 +1032,7 @@ window.PORTFOLIO = {
             points: [
               "Built a case for the creation of ElevateED through UX research, a strategic AI-powered initiative advancing Instructure's expansion into inclusive, alternative education pathways.",
               "Conducted stakeholder interviews, analyzed needs, and synthesized qualitative data to identify barriers in access, credentialing, and user experience for non-traditional learners.",
-              "Collaborated cross-functionally with researchers, designers, and organization stakeholders to develop prototypes, affinity walls, and actionable design recommendations presented to over 200 students/corporate employees.",
+              "Collaborated cross-functionally with researchers, designers, and organization stakeholders to develop prototypes, affinity walls, and actionable design recommendations presented to over 180 students and corporate employees.",
               "Presented final deliverables to all stakeholders, including high-fidelity wireframes, to drive alignment with Instructure's long-term strategic goals amid the rapidly evolving EdTech landscape."
             ]
           },
