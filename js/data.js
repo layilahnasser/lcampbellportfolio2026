@@ -513,11 +513,11 @@ window.PORTFOLIO = {
 
       research: {
         summary:
-          "The project began from a design brief with an executive summary, problem statement, scope and requirements. I then compared the tools contestants use today to find the gap Crown Code could fill. TODO: add the research behind the brief (interviews with contestants or coaches, or your own coaching experience) and what it taught you.",
+          "The project began from a design brief with an executive summary, problem statement, scope and requirements. I then compared the tools contestants use today to find the gap Crown Code could fill. Before that, I talked with more than 100 contestants about what is missing from the pageant world, and the answer kept coming back to scattered, inconsistent interview prep.",
         methods: [
           { name: "Design brief", detail: "A written brief defining the product, problem, seven core features and ten requirements, including iOS and Android support." },
           { name: "Competitor analysis", detail: "Compared Pageant Planet, Quizlet / PDFs and CrownChat across five features to find where the market falls short." },
-          { name: "TODO: User research", detail: "TODO: Who you talked to or observed, and how many." }
+          { name: "Conversations with contestants", detail: "Talked with 100+ contestants about what is missing from the pageant world." }
         ],
         insights: [
           "Most tools solve only one part of pageant interview prep.",
