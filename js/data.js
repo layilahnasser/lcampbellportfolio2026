@@ -673,7 +673,8 @@ window.PORTFOLIO = {
             phones: true,
             images: [
               { src: "assets/img/crown-decks.jpg", caption: "Your decks: a daily drill and a deck for each level, with progress on every one." },
-              { src: "assets/img/crown-flashcards-reveal.jpg", caption: "Flashcards practice: card 1 of 24, tap to reveal." }
+              { src: "assets/img/crown-flashcards-practice.jpg", caption: "Flashcards practice: card 1 of 24, tap to reveal, with a five-minute drill timer." },
+              { src: "assets/img/crown-answer-structure.jpg", caption: "The answer side: a three-step answer structure for each question, so responses are clear and confident." }
             ]
           },
           {
