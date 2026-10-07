@@ -749,7 +749,10 @@ window.PORTFOLIO = {
         ],
         image: [
           { src: "assets/img/usda-methods.jpg", fit: "full", caption: "Five methods, and the rule that a finding had to appear in at least three." },
+          { src: "assets/img/usda-interview-guide.png", fit: "tall", caption: "Interview guide: open-ended questions on search workflow, comprehension and collaboration." },
+          { src: "assets/img/usda-consent.png", fit: "tall", caption: "Interview consent form (contact details removed): voluntary, recorded, anonymized quotes." },
           { src: "assets/img/usda-survey.jpg", fit: "full", caption: "Survey design: the Findability section of the piloted survey." },
+          { src: "assets/img/usda-heuristic-sheet.jpg", fit: "full", caption: "Heuristic evaluation workbook: each issue logged with the heuristic violated, severity and a recommendation." },
           { src: "assets/img/usda-interaction.jpg", fit: "full", caption: "Interaction map: core search and organization, pre-filtering, and mobile layout." },
           { src: "assets/img/usda-testmethods.jpg", fit: "full", caption: "Usability test design: three tasks and a debrief." }
         ]
