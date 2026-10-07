@@ -753,6 +753,7 @@ window.PORTFOLIO = {
           { src: "assets/img/usda-consent.png", fit: "tall", caption: "Interview consent form (contact details removed): voluntary, recorded, anonymized quotes." },
           { src: "assets/img/usda-survey.jpg", fit: "full", caption: "Survey design: the Findability section of the piloted survey." },
           { src: "assets/img/usda-heuristic-sheet.jpg", fit: "full", caption: "Heuristic evaluation workbook: each issue logged with the heuristic violated, severity and a recommendation." },
+          { src: "assets/img/usda-annotated.jpg", fit: "full", caption: "Heuristic evaluation: search rigidity, scattered help and no breadcrumbs, marked on the portal." },
           { src: "assets/img/usda-interaction.jpg", fit: "full", caption: "Interaction map: core search and organization, pre-filtering, and mobile layout." },
           { src: "assets/img/usda-testmethods.jpg", fit: "full", caption: "Usability test design: three tasks and a debrief." }
         ]
@@ -767,8 +768,7 @@ window.PORTFOLIO = {
         image: [
           { src: "assets/img/usda-finding1.jpg", fit: "full", caption: "Finding 1: search fails on imperfect input." },
           { src: "assets/img/usda-finding2.jpg", fit: "full", caption: "Finding 2: help is disconnected from the task." },
-          { src: "assets/img/usda-finding3.jpg", fit: "full", caption: "Finding 3: small inconsistencies misplace user trust." },
-          { src: "assets/img/usda-annotated.jpg", fit: "full", caption: "Heuristic evaluation: search rigidity, scattered help and no breadcrumbs, marked on the portal." }
+          { src: "assets/img/usda-finding3.jpg", fit: "full", caption: "Finding 3: small inconsistencies misplace user trust." }
         ]
       },
       insights: {
