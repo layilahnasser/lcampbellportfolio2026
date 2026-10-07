@@ -32,8 +32,8 @@ window.PORTFOLIO = {
     status: "Open to opportunities", // HUD pill
     location: "Ann Arbor, MI",
     email: "layilah@umich.edu",
-    phone: "240-460-6166",
-    linkedin: "", // add your LinkedIn URL here (e.g. "https://www.linkedin.com/in/your-name") and it appears automatically
+    phone: "", // removed from the public site
+    linkedin: "https://www.linkedin.com/in/layilah-campbell-831b32107/",
     resumePdf: "assets/resume.pdf",
     photo: "assets/img/layilah.jpg", // swap this file for a higher-resolution photo any time
     photoAlt:
