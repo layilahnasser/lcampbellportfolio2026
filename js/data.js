@@ -923,7 +923,10 @@ window.PORTFOLIO = {
         image: [{ src: "assets/img/elevated-conclusion.jpg", fit: "full", caption: "Together the three functions are scalable, feasible and a market differentiator." }]
       },
       impact: {
-        image: { src: "assets/img/elevated-clientfeedback.jpg", fit: "full", caption: "Feedback from Instructure's client consultant." },
+        image: [
+          { src: "assets/img/elevated-presenting.jpg", fit: "full", caption: "Presenting the strategy to Instructure's team and a University of Michigan audience." },
+          { src: "assets/img/elevated-clientfeedback.jpg", fit: "full", caption: "Feedback from Instructure's client consultant." }
+        ],
         decisionsHeading: "Where the research reached people",
         decisions: [
           { title: "Presented to Instructure's strategy team", why: "Presented the final strategy and the Figma Make prototype to Instructure's full strategy team, and to over 180 University of Michigan students, to drive alignment with Instructure's long-term strategic goals." },
