@@ -696,6 +696,13 @@ window.PORTFOLIO = {
           }
         ],
         images: [],
+        darkScreens: [
+          { src: "assets/img/crown-dark-home.jpg", alt: "Dark mode home screen: Good morning, Layilah, with the readiness score card and bottom navigation.", caption: "Home" },
+          { src: "assets/img/crown-dark-profile.jpg", alt: "Dark mode profile screen: a member photo with a readiness score of 85, an Elite Member tag and bottom navigation.", caption: "Profile" },
+          { src: "assets/img/crown-dark-share-journey.jpg", alt: "Dark mode Share Your Journey screen: a readiness score of 85 and a 12 day mastery streak.", caption: "Share Your Journey" },
+          { src: "assets/img/crown-dark-submitted.jpg", alt: "Dark mode Submitted for Review screen: a confirmation that the dossier was sent to two coaches, with buttons to go to Daily Tips or view the progress page.", caption: "Submitted for Review" },
+          { src: "assets/img/crown-dark-email.jpg", alt: "Dark mode Email Notifications screen in the Preference Center, with a Performance Track section for daily and weekly metrics.", caption: "Email notifications" }
+        ],
         darkMode: { src: "assets/img/crown-dark-mode.jpg", fit: "wide", caption: "Dark mode: the profile, home and progress, and flashcard screens, each redesigned for dark." },
         prototypeUrl: ""
       },
