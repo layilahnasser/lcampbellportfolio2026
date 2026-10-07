@@ -129,7 +129,7 @@
             <a class="tablet" href="about.html"><span class="tablet-k">Player</span><strong>About Me</strong><span>Who I am &amp; how I work</span></a>
             <a class="tablet" href="work.html"><span class="tablet-k">Ball rack</span><strong>My Work</strong><span>All case studies</span></a>
             <a class="tablet" href="resume.html"><span class="tablet-k">Stats</span><strong>Resume</strong><span>Experience &amp; skills</span></a>
-            <a class="tablet" href="contact.html"><span class="tablet-k">Lane ${P.projects.length + 1}</span><strong>Contact</strong><span>Let's bowl a round</span></a>
+            <a class="tablet" href="contact.html"><span class="tablet-k">Lane ${P.projects.length + 1}</span><strong>Contact</strong><span>Let’s bowl a round</span></a>
           </div>
         </section>`;
     },
@@ -326,8 +326,8 @@
       return `
         <section class="page-head page-head--contact">
           <p class="eyebrow">Contact</p>
-          <h1>Let's bowl a round</h1>
-          <p class="lede">I'd love to talk about research, design and how I can help build experiences people love.</p>
+          <h1>Let’s bowl a round</h1>
+          <p class="lede">I’d love to talk about research, design, and how I can help build experiences people love.</p>
           <dl class="contact-list">
             ${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}
           </dl>
@@ -428,6 +428,8 @@
                 <div class="results">${(imp.results || []).map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`).join("")}</div>
                 ${decisions.length ? `<h3 class="strikes-h">${esc(imp.decisionsHeading || "Decisions influenced")}</h3><ol class="strikes">${decisions.map((d, i) => `<li class="strike"><span class="strike-x" aria-hidden="true">X</span><div class="strike-tx"><span class="strike-n">Strike ${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.statement || first(d.why))}</p></div></li>`).join("")}</ol>` : ""}
                 ${grid(imp.image)}
+                ${imp.imageCaption ? `<p class="grid-caption">${t(imp.imageCaption)}</p>` : ""}
+                ${imp.quote ? `<figure class="pull-quote"><blockquote><p>\u201C${t(imp.quote.text)}\u201D</p></blockquote><figcaption>${t(imp.quote.source)}</figcaption></figure>` : ""}
                 ${(imp.documents || []).length ? `<div class="docs"><h3>Deck and paper</h3><ul class="doc-list">${imp.documents.map((x) => `<li><a class="btn btn--ghost" href="${esc(x.file)}" target="_blank" rel="noopener">${esc(x.title)}<span class="sr-only"> (opens in a new tab)</span></a><span>${esc(x.note || "")}</span></li>`).join("")}</ul></div>` : ""}
                 ${more(`${decisions.filter((d) => d.statement || rest(d.why)).length ? `<h3>${esc(imp.decisionsHeading || "Decisions influenced")}</h3>${cards(decisions.filter((d) => d.statement || rest(d.why)))}` : ""}${imp.reflection ? `<h3>Reflection</h3><p>${t(imp.reflection)}</p>` : ""}`)}
               </section>
@@ -481,7 +483,7 @@
                 ${frameHead(3, FRAMES[2].label)}
                 ${goalCards.length ? `<div class="obj-grid obj-grid--3">${goalCards.map((g) => `<div class="goal-mini"><span class="card-num">${esc(g.tag)}</span>${t(g.text)}</div>`).join("")}</div>` : p.define.callout ? `<p class="callout">${t(p.define.callout)}</p>` : ""}
                 ${grid(p.define.image)}
-                ${more(`${p.define.callout && goalCards.length ? `<p class="callout">${t(p.define.callout)}</p>` : ""}${p.define.persona || p.define.journey ? `<div class="two-col"><div><h3>Who we're designing for</h3><p>${t(p.define.persona)}</p></div><div><h3>Where it breaks down</h3><p>${t(p.define.journey)}</p></div></div>` : ""}${p.define.painPoints ? `<h3>${esc(p.define.painPointsHeading || "Common pain points")}</h3><ol class="insights">${p.define.painPoints.map((x) => `<li>${t(x)}</li>`).join("")}</ol>` : ""}${listsBlock(p.define.lists)}${mapBlock(p.define.map)}`)}
+                ${more(`${p.define.callout && goalCards.length ? `<p class="callout">${t(p.define.callout)}</p>` : ""}${p.define.persona || p.define.journey ? `<div class="two-col"><div><h3>Who we’re designing for</h3><p>${t(p.define.persona)}</p></div><div><h3>Where it breaks down</h3><p>${t(p.define.journey)}</p></div></div>` : ""}${p.define.painPoints ? `<h3>${esc(p.define.painPointsHeading || "Common pain points")}</h3><ol class="insights">${p.define.painPoints.map((x) => `<li>${t(x)}</li>`).join("")}</ol>` : ""}${listsBlock(p.define.lists)}${mapBlock(p.define.map)}`)}
               </section>
 
               <section id="ideate" class="frame">
@@ -543,7 +545,7 @@
               <div><dt>${esc(p.toolsLabel || "Tools & methods")}</dt><dd>${String(p.tools).split("\n").map((l) => t(l)).join("<br>")}</dd></div>
             </dl>
             ${p.glance ? `<ul class="glance-boxes" aria-label="Case study at a glance">${[["Problem", p.glance.problem], ["What I did", p.glance.did], ["What changed", p.glance.changed]].map(([k, v]) => `<li><b>${k}</b><span>${t(v)}</span></li>`).join("")}</ul>` : ""}
-            <div class="expand-bar"><p>Skim the summaries, or open every frame to see the methods, evidence and reasons behind them.</p><button type="button" class="expand-all" aria-pressed="false">Open all details</button></div>
+            <div class="expand-bar"><p>Skim the summaries, or open every frame to see the methods, evidence, and reasons behind them.</p><button type="button" class="expand-all" aria-pressed="false">Open all details</button></div>
             ${img(p.hero, "shot--hero" + (p.hero && p.hero.fit === "phone" ? " shot--phone" : ""))}
           </header>
 
@@ -556,11 +558,10 @@
               ${isResearch ? researchBody : designBody}
 
               <section class="strike-panel" id="strike" aria-labelledby="strike-title">
-                <div class="sp-pins" aria-hidden="true">${Array.from({ length: 10 }, (_, k) => `<span class="sp-pin" style="--k:${k}">${pinSVG()}</span>`).join("")}</div>
                 <h2 id="strike-title" class="sp-big">Strike!</h2>
                 ${
                   isLast
-                    ? `<p>You've bowled every lane. Thanks for playing.</p>
+                    ? `<p>You’ve bowled every lane. Thanks for playing.</p>
                 <div class="sp-btns"><a class="btn btn--pink" href="index.html#scoreboard">Back to the scoreboard</a><a class="btn btn--ghost" href="contact.html">Get in touch</a></div>`
                     : `<p>You finished Lane ${idx + 1}: ${esc(plain(p.title))}. Ready for the next frame?</p>
                 <div class="sp-btns"><a class="btn btn--pink" href="project.html?p=${esc(next.id)}" data-roll="${esc(next.id)}">Bowl Lane ${idx + 2}: ${esc(plain(next.title))} <span aria-hidden="true">\u25B8</span></a><a class="btn btn--ghost" href="index.html#scoreboard">Back to the scoreboard</a></div>`

@@ -37,7 +37,7 @@
     if (im && im.video) {
       return `<figure class="shot shot--video ${cls}"><video controls playsinline preload="metadata"${im.poster ? ` poster="${esc(im.poster)}"` : ""}${im.loop ? " loop muted autoplay" : ""} aria-label="${esc(plain(im.caption || "Video"))}"><source src="${esc(im.video)}">${
         im.captions ? `<track kind="captions" src="${esc(im.captions)}" srclang="en" label="English" default>` : ""
-      }Your browser can't play this video.</video>${cap}</figure>`;
+      }Your browser can’t play this video.</video>${cap}</figure>`;
     }
     // Embed (Figma prototype, YouTube, Vimeo, Loom…): { embed: "https://…", caption: "…" }
     if (im && im.embed && /^https:\/\//.test(im.embed)) {
