@@ -497,7 +497,7 @@ window.PORTFOLIO = {
       team: "Solo project (Layilah Campbell)",
       timeline: "Jan – Apr 2026",
       tools: "Design brief, component library, light and dark mode prototypes",
-      hero: { src: "assets/img/crown-cover.png", fit: "phones", caption: "Crown Code's home, competition readiness, flashcards and Share Your Journey screens." },
+      hero: { src: "assets/img/crown-cover.png", fit: "phones", caption: "Crown Code's home, readiness dashboard, flashcards and Share Your Journey screens." },
 
       problem: {
         statement:
