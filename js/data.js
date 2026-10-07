@@ -925,6 +925,7 @@ window.PORTFOLIO = {
       impact: {
         image: [
           { src: "assets/img/elevated-presenting.jpg", fit: "full", caption: "Presenting the strategy to Instructure's team and a University of Michigan audience." },
+          { src: "assets/img/elevated-audience.jpg", fit: "full", caption: "A full lecture hall for Recommendation 3, the soft-skill development tool." },
           { src: "assets/img/elevated-clientfeedback.jpg", fit: "full", caption: "Feedback from Instructure's client consultant." }
         ],
         decisionsHeading: "Where the research reached people",
