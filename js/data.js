@@ -184,6 +184,7 @@ window.PORTFOLIO = {
       timeline: "Jan–Mar 2026",
       toolsLabel: "Methods & deliverables",
       tools: "Competitive analysis · Wireframes\nComponent library · Visual identity",
+      iterLabels: ["What changed", "How I checked it"],
       hero: { src: "assets/img/milk-homepage.jpg", caption: "The redesigned homepage: an image-forward hero for the season's flavors." },
 
       problem: {
@@ -251,7 +252,7 @@ window.PORTFOLIO = {
         {
           version: "Round 1: Wireframes to a design system",
           change: "Moved from the grey wireframes above to a design system built on the brand: Roasted Strawberry as the primary color, plus a golden secondary, success green, error red and a greyscale. Each color has a 10-step primitive scale and semantic roles (surface, border, text and icon in subtle, lighter, default and darker steps). Type pairs Nunito Sans with Montserrat, with a scale for desktop, tablet and mobile.",
-          feedback: "TODO: What feedback or testing showed, and what you changed.",
+          feedback: "No user testing took place on this concept project, so I checked the palette against accessibility targets instead. White text on Roasted Strawberry is 4.65:1 and black on Blushed Froth is 15.8:1, both above the 4.5:1 AA target. Roasted Strawberry on Blushed Froth is only 3.5:1, so it is used for large text and graphics, never small body copy.",
           palette: [
             { name: "Roasted Strawberry", hex: "#E02B00" },
             { name: "Blushed Froth", hex: "#FFD6D4" },
@@ -270,7 +271,7 @@ window.PORTFOLIO = {
         {
           version: "Round 2: Components",
           change: "Built the component library on those tokens: primary, secondary and tertiary buttons in three sizes, each with default, hover, selected, focused and disabled states; navigation links; add-to-cart and quantity controls; product cards in grid, list and quick-add layouts; the order summary; and the Churned, Scooped, Chilled, Repeat ticker. Pages were designed for desktop and mobile in a light (blush) and a dark (cocoa) theme.",
-          feedback: "TODO: What testing or review showed on the high-fidelity version.",
+          feedback: "Still no user testing. I reviewed the components against the competitive analysis, which showed online ordering and a store locator are expected, so the product cards, order summary and quick-add button were built for those flows. Next I would test the checkout and Find Pints flows with real customers.",
           image: [
             { src: "assets/img/milk-buttons.jpg", fit: "wide", caption: "Buttons: primary, secondary and tertiary, in three sizes and five states." },
             { src: "assets/img/milk-components.jpg", fit: "wide", caption: "Components: logo lockups, product cards (list, grid and quick-add), order summary, add button and the ticker." }
@@ -320,7 +321,15 @@ window.PORTFOLIO = {
             images: [{ src: "assets/img/milk-404.jpg", fit: "full", caption: "A 404 page that stays on brand: a melted cone and a way back home. Desktop and mobile." }]
           }
         ],
-        decisions: [],
+        decisionsHeading: "Why it looks and works this way",
+        decisions: [
+          { title: "An image-forward homepage", why: "The flavors are the product, so the hero leads with a full-bleed photo of the season's flavors instead of text. This answers Goal 3 and carries the shop's bold, indulgent energy online." },
+          { title: "Find Pints as a card per shop", why: "The old page was a text list of markets by city. A card for each shop puts hours, address, photo, directions and order now in one place, so finding a shop takes one glance. This answers Goal 2." },
+          { title: "The About story on the homepage", why: "Small batches, big flavor and the team now sit in the first scroll instead of a separate page, so the craft behind the ice cream is seen by everyone who lands on the site." },
+          { title: "Roasted Strawberry as the brand color", why: "It brings the shop's bold red interior onto the screen. Blushed Froth softens it, Midnight Cocoa grounds it, and every text pairing was checked against contrast targets." },
+          { title: "A cart, checkout and product pages", why: "All four brands in the competitive analysis offered online ordering, and the old site had none. Adding product pages, a cart and checkout closes that gap." },
+          { title: "A 404 page that stays on brand", why: "The old site had no 404 page. A melted cone and a way back home turn an error into a small brand moment instead of a dead end." }
+        ],
         images: [],
         prototypeUrl: ""
       },
@@ -504,6 +513,7 @@ window.PORTFOLIO = {
       timeline: "Jan–Apr 2026",
       toolsLabel: "Deliverables",
       tools: "Design brief · Component library\nLight & dark mode prototypes",
+      iterLabels: ["What changed", "How I checked it"],
       hero: { src: "assets/img/crown-cover.png", fit: "phones", caption: "Crown Code's home, readiness dashboard, flashcards and Share Your Journey screens." },
 
       problem: {
@@ -618,14 +628,14 @@ window.PORTFOLIO = {
       iterations: [
         {
           version: "Round 1 — Sketches & low-fidelity",
-          change: "TODO: What the first wireframes explored.",
-          feedback: "TODO: What feedback or testing showed, and what you changed.",
+          change: "Started with ten paper sketches covering the profile, home dashboard, daily tips, decks, flashcards, competition readiness, submission confirmation, strategic feedback and email notifications, then moved the strongest ideas into low-fidelity screens.",
+          feedback: "No user testing at this stage. I checked each sketch against the scope and requirements in the design brief before moving to screens.",
           image: { src: "assets/img/crown-lowfi.jpg", caption: "Low-fidelity wireframes." }
         },
         {
           version: "Round 2 — Design system & high fidelity",
           change: "Built a component library (primary, secondary and tertiary buttons in three sizes, navigation, flashcards, progress and readiness cards, top bar and action footer), then designed profile, home and progress, and flashcard screens in light mode, with a dark mode frame for the same screens.",
-          feedback: "TODO: What testing or review showed, and what changed as a result.",
+          feedback: "No user testing yet, so I ran a contrast check on the palette. Gold on black is 11.6:1, but gold on white is only 1.8:1, so gold is used only on dark surfaces, for moments of progress like the readiness score. White text on Crowning Blue is 4.35:1, just under the 4.5:1 AA target for small text, so I would use larger labels or a slightly darker teal for small text. Next I would run usability sessions with contestants on the readiness dashboard and flashcard practice.",
           image: [
             { src: "assets/img/crown-components.jpg", caption: "Component library: buttons, navigation, flashcards, progress and readiness cards." },
             { src: "assets/img/crown-screens-light.png", caption: "Screen set, light mode: profile pages, home and progress pages, and flashcards." },

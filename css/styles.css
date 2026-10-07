@@ -919,3 +919,8 @@ body { overflow-x: clip; }
 .lightbox.lb-actual .lb-stage { place-items: start center; }
 .lightbox.lb-actual .lb-stage img { max-width: none; max-height: none; }
 .lb-cap { margin: 0; padding: 10px 20px 16px; text-align: center; color: #cfc8e6; font-size: 0.95rem; }
+
+/* ---------- Expand all details bar ---------- */
+.expand-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; margin: 0 0 18px; color: #cfc8e6; font-size: 0.92rem; }
+.expand-all { border: 2px solid var(--cyan); background: transparent; color: var(--cyan); border-radius: 999px; padding: 6px 16px; font: inherit; font-weight: 700; cursor: pointer; }
+.expand-all:hover, .expand-all:focus-visible { background: var(--cyan); color: #0d0a14; }
