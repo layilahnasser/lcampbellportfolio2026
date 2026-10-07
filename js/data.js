@@ -726,7 +726,7 @@ window.PORTFOLIO = {
         statement: "How can importers, brokers and government officials find, and feel confident interpreting, the import requirements they need in USDA's ACIR portal?",
         context: "ACIR is the public-facing entry point for U.S. agricultural import rules, with over 100,000 country and commodity combinations and about 16,000 Commodity Import Requirement documents. Its users are importers and customs brokers, CBP agriculture specialists, APHIS and PPQ staff, and the general public. They often need an answer in under five minutes.",
         challenge: "Where do search, navigation and help content break down for each group, and what would improve findability and interpretive confidence?",
-        role: "UX Researcher on a five-person team. I co-led the interviews and usability tests, helped design and pilot the survey, and took part in the heuristic and comparative evaluations. TODO: confirm which parts you led."
+        role: "UX Researcher on a five-person team. I put together all of our presentations, ran our team meetings, supported the interviews, and wrote parts of several sections of the final report."
       },
       objectives: {
         summary: "The study set out to find where the portal's search, navigation and help content get in people's way.",
