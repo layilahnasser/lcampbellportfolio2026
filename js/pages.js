@@ -128,7 +128,7 @@
             <div>
               <h2 id="start-title">New here? Start here.</h2>
               <p>I'm a UX designer and researcher. Every case study follows the same seven frames, from problem to outcome, so you can see how I think, not just what I made.</p>
-              <p class="start-tags"><span>About 3 minutes per project</span><span>Accessible (WCAG)</span></p>
+              <p class="start-tags"><span>About 3 minutes per project</span><a href="about.html#accessibility">Accessible (WCAG)</a></p>
             </div>
             <ol class="start-list" aria-label="Three projects to read first">
               ${["milk-and-froth", "root-insurance", "crown-code"].map((id, i) => { const q = P.projects.find((x) => x.id === id); return q ? `<li><a href="project.html?p=${esc(q.id)}"><span class="start-n" aria-hidden="true">${i + 1}</span><span class="start-t"><strong>${t(q.title)}</strong><span>${esc(q.focus)}: ${esc(q.approach)}</span></span></a></li>` : ""; }).join("")}
@@ -193,6 +193,7 @@
           <div class="cap-grid">
             ${A.capabilities.map((c) => `<article class="cap"><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></article>`).join("")}
           </div>
+          ${A.accessNote ? `<article class="a11y-note" id="accessibility" aria-labelledby="a11y-title"><h3 id="a11y-title">${esc(A.accessNote.title)}</h3><p>${esc(A.accessNote.text)}</p><ul>${A.accessNote.points.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>` : ""}
         </section>
 
         <section class="section" aria-labelledby="edu-title">
@@ -213,7 +214,6 @@
               .map((m) => `<article class="more"><p class="more-v">${esc(m.value)}</p><h3>${esc(m.title)}</h3><p>${esc(m.text)}</p></article>`)
               .join("")}
           </div>
-          ${A.accessNote ? `<article class="a11y-note" aria-labelledby="a11y-title"><h3 id="a11y-title">${esc(A.accessNote.title)}</h3><p>${esc(A.accessNote.text)}</p><ul>${A.accessNote.points.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>` : ""}
           <article class="league">
             <figure class="league-photo"><img src="${esc(A.league.image.src)}" alt="${esc(A.league.image.alt)}" width="536" height="524" loading="lazy"></figure>
             <div class="league-body">

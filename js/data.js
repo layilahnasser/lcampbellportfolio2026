@@ -137,7 +137,7 @@ window.PORTFOLIO = {
 
     // Bonus frame
     accessNote: {
-      title: "This site is built to be accessible",
+      title: "Built to be accessible",
       text: "As a UX researcher and designer, I treat accessibility as part of the work, so I built this portfolio to meet WCAG 2.1 AA.",
       points: [
         "Automated testing with axe on every page, with no violations.",
