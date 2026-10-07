@@ -252,7 +252,7 @@
               )
               .join("")}
           </ul>
-          <span class="hud-status"><span class="dot" aria-hidden="true"></span>${esc(me.status)}</span>
+          <a class="hud-status" href="https://www.roblox.com/games/1333478699/The-Lanes-Bowling" target="_blank" rel="noopener">Inspired by The Lanes Bowling<span class="sr-only"> (opens in a new tab)</span></a>
         </nav>`;
     }
     const footer = document.getElementById("footer");

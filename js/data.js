@@ -47,13 +47,13 @@ window.PORTFOLIO = {
     kicker: "Player profile",
     title: "Meet Layilah",
     pronunciation: "Lay-La",
-    lede: "I bring a rare perspective to product work: I understand the people who build technology, the teams making product decisions, and the people who ultimately use those experiences.",
+    lede: "After seven years connecting people with careers at some of the biggest tech companies, I now research and design the products they use. I listen first, then design.",
     card: {
       header: "Meet the player",
       title: "Layilah Campbell",
       lines: ["Pronounced Lay-La", "Ann Arbor, MI"],
-      photo: "assets/img/layilah-about.jpg",
-      photoAlt: "Portrait of Layilah Campbell in a green blazer, one hand resting near her chin"
+      photo: "assets/img/layilah-about-street.jpg",
+      photoAlt: "Layilah Campbell standing in a narrow street, wearing sunglasses, a dark sweater and black leather pants, with a tall pagoda behind her"
     },
 
     // Frame 1 — your path, told as: find the problem, fix it from the hiring side, learn the craft

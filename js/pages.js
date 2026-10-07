@@ -117,24 +117,12 @@
         <section id="scoreboard" class="section" aria-labelledby="sb-title">
           <header class="section-head">
             <p class="eyebrow">Scoreboard</p>
-            <h2 id="sb-title">Choose a lane</h2>
-            <p class="lede">Explore my UX research and design case studies. Click a lane to bowl it down and open the case study.</p>
+            <h2 id="sb-title">Choose a lane <span class="start-badge">Start here</span></h2>
+            <p class="lede">Explore my UX research and design case studies. Click a lane to open the case study.</p>
           </header>
           ${scoreboard()}
         </section>
 
-        <section class="section start-here" aria-labelledby="start-title">
-          <div class="start-box">
-            <div>
-              <h2 id="start-title">New here? Start here.</h2>
-              <p>I'm a UX designer and researcher. Every case study follows the same seven frames, from problem to outcome, so you can see how I think, not just what I made.</p>
-              <p class="start-tags"><span>About 3 minutes per project</span><a href="about.html#accessibility">Accessible (WCAG)</a></p>
-            </div>
-            <ol class="start-list" aria-label="Three projects to read first">
-              ${["milk-and-froth", "root-insurance", "crown-code"].map((id, i) => { const q = P.projects.find((x) => x.id === id); return q ? `<li><a href="project.html?p=${esc(q.id)}"><span class="start-n" aria-hidden="true">${i + 1}</span><span class="start-t"><strong>${t(q.title)}</strong><span>${esc(q.focus)}: ${esc(q.approach)}</span></span></a></li>` : ""; }).join("")}
-            </ol>
-          </div>
-        </section>
 
         <section class="section" aria-label="More pages">
           <div class="tablet-row">
