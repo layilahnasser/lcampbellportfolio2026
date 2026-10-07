@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mock-up: project scoreboard ideas</title>
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+.hp{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
+.hp-badge{display:inline-block;background:#ffd24a;color:#1a1200;font-weight:700;border-radius:999px;padding:4px 12px;font-size:13px}
+.hp-lab{margin:26px 0 10px;color:#4de3ff;font-weight:700;letter-spacing:.1em;font-size:14px}
+.hp-lab span{color:#cfc8e6;font-weight:500;letter-spacing:0;margin-left:8px}
+.hp-ball{display:block;border-radius:50%;position:relative;flex:none;background:radial-gradient(circle at 32% 28%,#fff9 0 6%,transparent 18%),radial-gradient(circle at 40% 35%,color-mix(in srgb,var(--c) 70%,#fff),var(--c) 55%,color-mix(in srgb,var(--c) 55%,#000));box-shadow:0 8px 14px #0009}
+.hp-ball i{position:absolute;width:11%;height:11%;border-radius:50%;background:#150f26}
+.hp-ball i:nth-child(1){left:38%;top:20%}.hp-ball i:nth-child(2){left:53%;top:17%}.hp-ball i:nth-child(3){left:46%;top:33%}
+/* 1: scorecard frames */
+.sc{display:grid;grid-template-columns:repeat(6,1fr);border:3px solid #fff;border-radius:6px;background:#0f0b1c;overflow:hidden}
+.sc a{--c:#ff5a3c;text-decoration:none;color:#fff;border-right:2px solid #fff;display:grid;grid-template-rows:auto 1fr;min-width:0;transition:background .2s}
+.sc a:last-child{border-right:0}
+.sc a:hover,.sc a:focus-visible{background:color-mix(in srgb,var(--c) 22%,#0f0b1c);outline:none}
+.sc .top{display:flex;justify-content:space-between;align-items:center;padding:6px 8px;border-bottom:2px solid #fff3;font-size:13px;color:#cfc8e6;font-weight:700}
+.sc .top b{border:2px solid #fff;width:26px;height:26px;display:grid;place-items:center;color:var(--c);font-size:18px}
+.sc .mid{display:grid;place-items:center;padding:18px 6px 10px}
+.sc .mid .hp-ball{width:62px;height:62px}
+.sc .nm{padding:0 10px 14px;text-align:center}
+.sc .nm strong{display:block;font-size:17px;line-height:1.15}
+.sc .nm small{display:block;color:#cfc8e6;font-size:13px;margin-top:4px}
+.sc .tot{border-top:2px solid #fff3;text-align:center;padding:6px;font-size:13px;color:var(--c);font-weight:700;letter-spacing:.08em}
+/* 2: lanes */
+.ln{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;background:#0b0816;border:2px solid #2b2443;border-radius:18px;padding:16px 14px 0;overflow:hidden}
+.ln a{--c:#ff5a3c;text-decoration:none;color:#fff;display:flex;flex-direction:column;align-items:center;min-width:0}
+.ln .lpins{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;width:42px;margin-bottom:6px;justify-items:center}
+.ln .lpins s{width:7px;height:17px;border-radius:4px 4px 6px 6px;background:#fff;border-top:5px solid #e5392d;display:block;transition:transform .5s,opacity .5s}
+.ln .lnlane{width:100%;height:190px;background:linear-gradient(90deg,#9c6a31,#e0a955 20%,#e8b562 50%,#e0a955 80%,#9c6a31);border-left:5px solid color-mix(in srgb,var(--c) 60%,#fff);border-right:5px solid color-mix(in srgb,var(--c) 60%,#fff);display:flex;align-items:flex-end;justify-content:center;padding-bottom:10px;position:relative}
+.ln .lnlane .hp-ball{width:40px;height:40px;transition:transform .8s cubic-bezier(.3,.7,.3,1)}
+.ln a:hover .lnlane .hp-ball,.ln a:focus-visible .lnlane .hp-ball{transform:translateY(-130px) rotate(300deg)}
+.ln a:hover .lpins s:nth-child(-n+3),.ln a:focus-visible .lpins s:nth-child(-n+3){transform:translateY(-8px) rotate(25deg);opacity:.4}
+.ln .lncap{background:#120f1c;width:100%;padding:12px 6px 14px;text-align:center;margin:0 -2px}
+.ln .lncap em{font-style:normal;font-weight:700;color:var(--c);font-size:13px;letter-spacing:.1em}
+.ln .lncap strong{display:block;font-size:16px;line-height:1.15;margin-top:2px}
+.ln a:focus-visible{outline:3px solid #ffd24a;outline-offset:2px}
+@media(max-width:800px){.sc,.ln{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<main class="hp">
+<span class="hp-badge">MOCK-UP · two ideas for the project scoreboard</span>
+<div id="out"></div>
+<script>
+const P=[["Milk and Froth","Web design","#ff5a3c"],["Crown Code","Mobile design","#c6f24a"],["Root Insurance","Retention research","#ff7a45"],["Cancer Nutrition App","Health UX design","#ffb020"],["USDA ACIR Portal","Usability research","#ff2fb4"],["Instructure ElevateED","Strategy research","#27d9f5"]];
+const ball='<span class="hp-ball"><i></i><i></i><i></i></span>';
+const one=`<div class="hp-lab">1. The scorecard<span>six frames, like the overhead score screen. One ball, one name, one focus each.</span></div>
+<div class="sc">${P.map((p,i)=>`<a href="#" style="--c:${p[2]}"><div class="top"><span>FRAME</span><b>${i+1}</b></div><div class="mid">${ball.replace('class="hp-ball"','class="hp-ball" style="--c:'+p[2]+'"')}</div><div class="nm"><strong>${p[0]}</strong><small>${p[1]}</small></div><div class="tot">VIEW ▸</div></a>`).join('')}</div>`;
+const two=`<div class="hp-lab">2. The alley<span>six real lanes side by side. Hover a lane and its ball rolls into the pins.</span></div>
+<div class="ln">${P.map((p,i)=>`<a href="#" style="--c:${p[2]}"><div class="lpins" aria-hidden="true">${'<s></s>'.repeat(10)}</div><div class="lnlane"><span class="hp-ball" style="--c:${p[2]}"><i></i><i></i><i></i></span></div><div class="lncap"><em>LANE ${i+1}</em><strong>${p[0]}</strong></div></a>`).join('')}</div>`;
+document.getElementById('out').innerHTML=one+two;
+</script>
+</main></body></html>

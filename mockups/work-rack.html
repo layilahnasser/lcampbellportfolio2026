@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mock-up: The ball rack</title>
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+.rk{max-width:1100px;margin:0 auto;padding:28px 20px 70px}
+.mkbadge{display:inline-block;background:#ffd24a;color:#1a1200;font-weight:700;border-radius:999px;padding:4px 12px;font-size:13px}
+.rk h1{font-family:Damion,cursive;font-weight:400;font-size:64px;color:#fff;text-shadow:0 0 18px #ff2fb4;margin:8px 0 0}
+.rk .lead{color:#cfc8e6;font-size:19px;margin:6px 0 18px}
+/* the rack */
+.rk-rack{position:relative;margin:10px 0 0;padding:26px 24px 0;border-radius:22px 22px 0 0;background:linear-gradient(#17112b,#0e0a1b);border:2px solid #2b2443;border-bottom:0}
+.rk-rack::before{content:"";position:absolute;top:10px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.3em;color:#7d6fb0;font-weight:700}
+.rk-balls{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;padding-top:18px}
+.rk-bw{display:flex;flex-direction:column;align-items:center;gap:8px;background:none;border:0;color:#fff;cursor:pointer;font:inherit;padding:0 0 12px}
+.rk-ball{position:relative;width:min(120px,100%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff9 0 6%,transparent 18%),radial-gradient(circle at 40% 35%,color-mix(in srgb,var(--c) 70%,#fff),var(--c) 55%,color-mix(in srgb,var(--c) 55%,#000) 100%);box-shadow:0 14px 22px #0009,0 0 0 0 var(--c);transition:transform .25s cubic-bezier(.3,1.6,.5,1),box-shadow .25s}
+.rk-ball i{position:absolute;width:13%;height:13%;border-radius:50%;background:#150f26;box-shadow:inset 0 2px 3px #000}
+.rk-ball i:nth-child(1){left:36%;top:30%}.rk-ball i:nth-child(2){left:54%;top:26%}.rk-ball i:nth-child(3){left:46%;top:46%}
+.rk-ball b{position:absolute;inset:auto 0 12% 0;text-align:center;font-size:22px;color:#0008;font-weight:700}
+.rk-bw:hover .rk-ball,.rk-bw:focus-visible .rk-ball{transform:translateY(-14px) rotate(14deg)}
+.rk-bw[aria-pressed=true] .rk-ball{transform:translateY(-22px) scale(1.08);box-shadow:0 22px 30px #000b,0 0 34px var(--c)}
+.rk-bw span.nm{font-weight:700;font-size:15px;text-align:center;line-height:1.2;min-height:36px}
+.rk-bw:focus-visible{outline:3px solid #ffd24a;outline-offset:4px;border-radius:12px}
+.rk-shelf{height:26px;background:linear-gradient(#5b3a1c,#3a2310);border-radius:0 0 12px 12px;box-shadow:0 10px 24px #000a;margin:0 -2px}
+.rk-rails{height:8px;background:repeating-linear-gradient(90deg,#2b2443 0 40px,#1a1530 40px 80px)}
+/* lane preview */
+.rk-lane{margin-top:26px;display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:center;background:var(--panel);border:2px solid var(--c);border-radius:20px;padding:18px;box-shadow:0 0 36px color-mix(in srgb,var(--c) 35%,transparent)}
+.rk-lane .rk-pic{border-radius:14px;overflow:hidden;background:#120f1c;aspect-ratio:16/9;display:grid;place-items:center}
+.rk-lane .rk-pic img{width:100%;height:100%;object-fit:cover}
+.rk-lane .rk-eyebrow{color:var(--c);font-weight:700;letter-spacing:.12em;font-size:13px}
+.rk-lane h2{font-size:30px;margin:4px 0 6px;color:#fff}
+.rk-lane p{margin:0 0 12px;font-size:17px;color:#e9e4f7}
+.rk-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.rk-tags span{background:#1d1733;border:1px solid #3a2f5e;border-radius:999px;padding:5px 12px;font-size:14px}
+.rk-go{display:inline-block;background:#ff2fb4;color:#fff;font-weight:700;border:0;border-radius:999px;padding:12px 22px;font-size:17px;cursor:pointer}
+.rk-pins{display:flex;gap:5px;margin-top:14px;align-items:flex-end}.rk-pins s{width:10px;height:26px;border-radius:5px 5px 7px 7px;background:#fff;box-shadow:inset 0 -8px 0 #e8e8e8;border-top:6px solid #e5392d;display:block}
+.rk-alt{margin-top:34px}.rk-alt h3{color:#4de3ff;letter-spacing:.12em;font-size:13px;margin:0 0 8px}
+.rk-tt{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rk-tt .rk-note{background:#1a1530;border:2px solid #2b2443;border-radius:14px;padding:12px 14px;font-size:15px;color:#e9e4f7}
+.rk-tt b{color:#fff;display:block;font-size:17px;margin-bottom:2px}
+@media(max-width:800px){.rk-balls{grid-template-columns:repeat(3,1fr)}.rk-lane{grid-template-columns:1fr}.rk-tt{grid-template-columns:1fr}}
+</style></head><body>
+<main class="rk">
+<span class="mkbadge">MOCK-UP · click a ball</span>
+<h1>The ball rack</h1>
+
+<div class="rk-rack"><div class="rk-balls" id="balls"></div></div>
+<div class="rk-shelf"></div><div class="rk-rails"></div>
+
+<section class="rk-lane" id="lane" aria-live="polite"></section>
+
+</main>
+<script>
+const P=[
+ {id:"milk",n:"Milk and Froth",c:"#ff5a3c",y:"2026",img:"../assets/img/milk-homepage.jpg",s:"A Detroit ice cream website as vibrant as the shop.",t:["Web design","Design system","Competitive analysis"]},
+ {id:"crown",n:"Crown Code",c:"#c6f24a",y:"2026",img:"../assets/img/crown-cover.png",s:"Interview prep for pageant contestants, in one app.",t:["Mobile app","Design system","Light & dark"]},
+ {id:"root",n:"Root Insurance",c:"#ff7a45",y:"2026",img:"../assets/img/root-final-shareout.jpg",s:"Retention research for 500,000+ policyholders.",t:["Mixed-methods","Journey maps","Retention"]},
+ {id:"nut",n:"Cancer Nutrition App",c:"#ffb020",y:"2025",img:"../assets/img/nutrition-app-home.png",s:"Safer, easier meals for caregivers and patients.",t:["Healthcare","Surveys","Personas"]},
+ {id:"usda",n:"USDA ACIR Portal",c:"#ff2fb4",y:"2026",img:"../assets/img/usda-overview.jpg",s:"Helping importers find and trust import rules.",t:["Usability testing","Interviews","Heuristics"]},
+ {id:"elev",n:"Instructure ElevateED",c:"#27d9f5",y:"2025",img:"../assets/img/elevated-cover.jpg",s:"Research for learners outside the traditional path.",t:["Stakeholder interviews","Affinity mapping","Personas"]}
+];
+const B=document.getElementById('balls'),L=document.getElementById('lane');
+B.innerHTML=P.map((p,i)=>`<button class="rk-bw" style="--c:${p.c}" data-i="${i}" aria-pressed="false"><span class="rk-ball" aria-hidden="true"><i></i><i></i><i></i><b>${i+1}</b></span><span class="rk-nm">${p.n}</span></button>`).join('');
+function pick(i){const p=P[i];document.querySelectorAll('.rk-bw').forEach((b,k)=>b.setAttribute('aria-pressed',k===i));
+L.style.setProperty('--c',p.c);
+L.innerHTML=`<div class="rk-pic"><img src="${p.img}" alt=""></div><div><div class="rk-eyebrow">LANE ${i+1} · ${p.y}</div><h2>${p.n}</h2><p>${p.s}</p><button class="rk-go">Bowl this lane ▸</button></div>`}
+B.addEventListener('click',e=>{const b=e.target.closest('.rk-bw');if(b)pick(+b.dataset.i)});
+pick(2);
+</script></body></html>

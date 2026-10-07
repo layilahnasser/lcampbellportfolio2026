@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mock-up: concise design case study</title>
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+.mk{max-width:1100px;margin:0 auto;padding:28px 20px 80px}
+.mk h1{font-family:Damion,cursive;font-weight:400;font-size:56px;color:#fff;text-shadow:0 0 18px #ff2fb4;margin:6px 0}
+.mk .sub{color:var(--text-dim,#cfc8e6);font-size:20px;margin:0 0 20px}
+.mkbadge{display:inline-block;background:#ffd24a;color:#1a1200;font-weight:700;border-radius:999px;padding:4px 12px;font-size:13px;margin-bottom:8px}
+.stage{display:grid;grid-template-columns:230px 1fr;gap:22px;padding:26px 0;border-top:2px solid #2b2443}
+.stage .lab{position:sticky;top:12px;align-self:start}
+.stage .num{font-size:13px;letter-spacing:.12em;color:#4de3ff;font-weight:700}
+.stage h2{font-size:28px;margin:2px 0 8px;color:#fff}
+.stage .one{font-size:18px;line-height:1.4;color:#e9e4f7;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{background:#1d1733;border:1px solid #3a2f5e;border-radius:999px;padding:6px 12px;font-size:15px;color:#fff}
+.fig{margin:0;background:#120f1c;border:2px solid #2b2443;border-radius:14px;overflow:hidden}
+.fig img{display:block;width:100%;height:auto}
+.fig figcaption{padding:8px 12px;font-size:15px;color:#e9e4f7;background:#1a1530}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.g5 .fig figcaption{font-size:13px;padding:6px 8px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+.stat{background:#1a1530;border:2px solid #2b2443;border-radius:14px;padding:14px;text-align:center}
+.stat b{display:block;font-size:40px;color:#4de3ff;line-height:1}
+.stat span{font-size:14px;color:#e9e4f7}
+.quote{border-left:4px solid #ff2fb4;padding:6px 14px;margin:0 0 14px;font-size:20px;color:#fff}
+.arrow{display:grid;grid-template-columns:1fr 26px 1fr;align-items:center;gap:6px;font-size:14px}
+.arrow i{color:#ffd24a;font-style:normal;font-size:20px;text-align:center}
+.heard{background:#1d1733;border-radius:8px;padding:6px 8px}
+@media(max-width:800px){.stage{grid-template-columns:1fr}.stage .lab{position:static}.g5{grid-template-columns:repeat(2,1fr)}.g3,.stats{grid-template-columns:1fr 1fr}}
+.ba{display:grid;grid-template-columns:1fr 34px 1fr;gap:8px;align-items:center}.ba .tag{font-weight:700;font-size:13px;letter-spacing:.1em;padding:6px 12px;color:#fff;background:#3a2f5e}.ba .tag.after{background:#0b6b3a}.ba .mid{color:#ffd24a;font-size:26px;text-align:center}.fig.crop img{max-height:360px;object-fit:cover;object-position:top}.goal{background:#1a1530;border:2px solid #2b2443;border-radius:14px;padding:14px}.goal b{color:#4de3ff;font-size:13px;letter-spacing:.1em}.goal p{margin:4px 0 0;font-size:17px;color:#fff;font-weight:600}</style></head><body>
+<main class="mk">
+<span class="mkbadge">MOCK-UP · not live</span>
+<p style="color:#4de3ff;font-weight:700;letter-spacing:.1em;margin:0">LANE 1 · 2026</p>
+<h1>Milk and Froth Redesign</h1>
+<p class="sub">Making a Detroit ice cream website as vibrant as the shop</p>
+<div class="stats">
+ <div class="stat"><b>3</b><span>design goals</span></div>
+ <div class="stat"><b>4</b><span>brands benchmarked</span></div>
+ <div class="stat"><b>5</b><span>pages designed</span></div>
+ <div class="stat"><b>2</b><span>layouts: desktop + mobile</span></div>
+</div>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 1</div><h2>Problem</h2></div>
+ <div>
+  <p class="quote" style="font-size:22px;font-weight:600">How can Milk &amp; Froth's website do justice to small-batch ice cream made from scratch, with flavors that stand out, shops that are easy to find, and a more visual way to browse?</p>
+  <p class="one" style="margin:0 0 14px">Milk &amp; Froth is a Detroit-born ice cream brand. Every flavor is made from scratch in the Eastern Market kitchen, and the shop's bold red interior is energetic and indulgent. The existing website didn't carry that energy.</p>
+  <div class="goal" style="border-color:#4de3ff"><b>MY CONTRIBUTION</b><p>The brand had no design system, so I built one from the ground up: color tokens, type scale, buttons and components, all before designing a single page.</p></div>
+ </div></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 2</div><h2>Research</h2>
+ <p class="one">4 brands, 8 features.</p>
+ <div class="chips"><span class="chip">Ordering and locators are table stakes</span><span class="chip">Mobile + search = room to stand out</span></div></div>
+ <figure class="fig"><img src="../assets/img/milk-competitive.jpg" alt=""><figcaption>Competitive analysis</figcaption></figure></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 3</div><h2>Design Goals</h2>
+ <p class="one">Three goals, each tied to a feature.</p></div>
+ <div class="g3">
+  <div class="goal"><b>GOAL 1</b><p>Show off distinctive flavors and the handcrafted process</p></div>
+  <div class="goal"><b>GOAL 2</b><p>Make shops easy to find across Michigan</p></div>
+  <div class="goal"><b>GOAL 3</b><p>Make browsing image-forward and intuitive</p></div>
+ </div></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 4</div><h2>Wireframes</h2>
+ <p class="one">Five pages mapped before any color.</p>
+ <div class="chips"><span class="chip">Home</span><span class="chip">Menu</span><span class="chip">About</span><span class="chip">E-commerce</span><span class="chip">Contact</span></div></div>
+ <figure class="fig"><img src="../assets/img/milk-wireframes.jpg" alt=""><figcaption>Low-fi wireframes</figcaption></figure></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 5</div><h2>Design System</h2>
+ <p class="one">Built from the ground up: color, type, buttons and components.</p>
+ <div class="chips"><span class="chip">Roasted Strawberry</span><span class="chip">Nunito Sans</span><span class="chip">Montserrat</span></div></div>
+ <div class="g2">
+  <figure class="fig"><img src="../assets/img/milk-color-system.jpg" alt=""><figcaption>Color tokens</figcaption></figure>
+  <figure class="fig"><img src="../assets/img/milk-type-scale.png" alt=""><figcaption>Type scale</figcaption></figure>
+  <figure class="fig"><img src="../assets/img/milk-buttons.jpg" alt=""><figcaption>Buttons: 3 types, 5 states</figcaption></figure>
+  <figure class="fig"><img src="../assets/img/milk-components.jpg" alt=""><figcaption>Components</figcaption></figure>
+ </div></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 6</div><h2>Final Design</h2>
+ <p class="one">Desktop and mobile, every goal shown.</p></div>
+ <div class="g2">
+  <figure class="fig crop"><img src="../assets/img/milk-homepage-desktop.jpg" alt=""><figcaption>Homepage · desktop (Goal 3)</figcaption></figure>
+  <figure class="fig crop"><img src="../assets/img/milk-find-pints.jpg" alt=""><figcaption>Find Pints (Goal 2)</figcaption></figure>
+ </div></section>
+
+<section class="stage"><div class="lab"><div class="num">FRAME 7</div><h2>Outcome</h2>
+ <p class="one">Before and after, side by side.</p></div>
+ <div style="display:grid;gap:18px">
+  <div class="ba"><figure class="fig crop"><span class="tag">BEFORE</span><img src="../assets/img/milk-current-home.jpg" alt=""></figure><span class="mid">→</span><figure class="fig crop"><span class="tag after">AFTER</span><img src="../assets/img/milk-homepage-desktop.jpg" alt=""></figure></div>
+  <div class="ba"><figure class="fig crop"><span class="tag">BEFORE</span><img src="../assets/img/milk-current-locations.jpg" alt=""></figure><span class="mid">→</span><figure class="fig crop"><span class="tag after">AFTER</span><img src="../assets/img/milk-find-pints.jpg" alt=""></figure></div>
+ </div></section>
+</main></body></html>

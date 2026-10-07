@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mock-up: featured projects</title>
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+.wf{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
+.wf-badge{display:inline-block;background:#ffd24a;color:#1a1200;font-weight:700;border-radius:999px;padding:4px 12px;font-size:13px}
+.wf-eye{color:#4de3ff;font-weight:700;letter-spacing:.1em;margin:16px 0 0}
+.wf h1{font-family:Damion,cursive;font-weight:400;font-size:58px;color:#fff;text-shadow:0 0 18px #ff2fb4;margin:4px 0 6px}
+.wf-lead{color:#cfc8e6;font-size:18px;margin:0 0 26px;max-width:60ch}
+.wf-h{display:flex;align-items:center;gap:12px;margin:0 0 12px;color:#ffd24a;font-weight:700;letter-spacing:.14em;font-size:13px}
+.wf-h::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,#ffd24a66,transparent)}
+.wf-h.wf-more{color:#4de3ff;margin-top:34px}.wf-h.wf-more::after{background:linear-gradient(90deg,#4de3ff66,transparent)}
+.wf-top{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.wf-card{--c:#ff5a3c;position:relative;display:flex;flex-direction:column;background:var(--panel);border:2px solid color-mix(in srgb,var(--c) 55%,#2b2443);border-radius:18px;overflow:hidden;text-decoration:none;color:#fff;box-shadow:0 0 28px color-mix(in srgb,var(--c) 22%,transparent);transition:transform .2s}
+.wf-card:hover{transform:translateY(-4px)}
+.wf-card .im{height:170px;background:#120f1c;overflow:hidden}
+.wf-card .im img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.wf-card .im.ct img{object-fit:contain}
+.wf-card .bd{padding:16px 18px 20px}
+.wf-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.wf-card h3,.wf-row h3{margin:0;font-size:21px;line-height:1.15}
+.wf-card small,.wf-row small{display:block;font-weight:700;letter-spacing:.12em;font-size:12px;color:var(--c)}
+.wf-card p,.wf-row p{margin:0;color:#d8d2ec;font-size:15px;line-height:1.5}
+.wf-ball{position:relative;flex:none;width:50px;height:50px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff9 0 6%,transparent 18%),radial-gradient(circle at 40% 35%,color-mix(in srgb,var(--c) 70%,#fff),var(--c) 55%,color-mix(in srgb,var(--c) 55%,#000));box-shadow:0 6px 10px #0009}
+.wf-ball i{position:absolute;width:11%;height:11%;border-radius:50%;background:#150f26}
+.wf-ball i:nth-child(1){left:38%;top:15%}.wf-ball i:nth-child(2){left:53%;top:12%}.wf-ball i:nth-child(3){left:46%;top:27%}
+.wf-ball b{position:absolute;inset:0;display:grid;place-items:center;padding-top:24px;font-size:17px;color:#1a0f26}
+.wf-star{position:absolute;top:12px;right:12px;background:#ffd24a;color:#1a1200;font-weight:700;font-size:12px;letter-spacing:.1em;border-radius:999px;padding:4px 10px}
+.wf-go{display:inline-block;margin-top:12px;color:#4de3ff;font-weight:700}
+/* the last two: slim rows */
+.wf-rows{display:grid;gap:12px}
+.wf-row{--c:#ff2fb4;display:grid;grid-template-columns:150px 1fr auto;gap:18px;align-items:center;background:#15112a;border:2px solid #2b2443;border-radius:16px;padding:12px 18px 12px 12px;text-decoration:none;color:#fff;transition:border-color .2s}
+.wf-row:hover{border-color:var(--c)}
+.wf-row .im{height:84px;border-radius:10px;overflow:hidden;background:#120f1c}
+.wf-row .im img{width:100%;height:100%;object-fit:cover;object-position:top}
+.wf-row .tx{display:flex;align-items:center;gap:14px}
+.wf-row .go{font-weight:700;color:#4de3ff;white-space:nowrap}
+@media(max-width:800px){.wf-top{grid-template-columns:1fr}.wf-row{grid-template-columns:90px 1fr}.wf-row .go{display:none}}
+</style></head><body>
+<main class="wf">
+<span class="wf-badge">MOCK-UP · featured three + two more</span>
+<p class="wf-eye">MY WORK</p>
+<h1>The ball rack</h1>
+<p class="wf-lead">Pick a ball to explore my UX research and design work, frame by frame.</p>
+
+<div class="wf-h">FEATURED LANES</div>
+<div class="wf-top" id="top"></div>
+
+<div class="wf-h wf-more">MORE RESEARCH</div>
+<div class="wf-rows" id="more"></div>
+</main>
+<script>
+const ball=(c,n)=>`<span class="wf-ball" style="--c:${c}" aria-hidden="true"><i></i><i></i><i></i><b>${n}</b></span>`;
+const T=[["Milk and Froth Redesign","#ff5a3c","../assets/img/milk-homepage.jpg","A website redesign concept for a Detroit ice cream brand, built on a design system I created from scratch.","",1],
+["Root Insurance","#ff7a45","../assets/img/root-final-shareout.jpg","Research to improve retention for 500,000+ policyholders, turned into 15 retention concepts.","",2],
+["Crown Code","#c6f24a","../assets/img/crown-cover.png","A mobile app that brings interview prep, reminders and a readiness dashboard into one place.","ct",3]];
+document.getElementById('top').innerHTML=T.map(p=>`<a class="wf-card" href="#" style="--c:${p[1]}"><div class="im ${p[4]}"><img src="${p[2]}" alt=""></div><div class="bd"><div class="wf-head">${ball(p[1],p[5])}<div><small>★ LANE ${p[5]}</small><h3>${p[0]}</h3></div></div><p>${p[3]}</p><span class="wf-go">Bowl this lane ▸</span></div></a>`).join('');
+const M=[["USDA ACIR Portal","#ff2fb4","../assets/img/usda-overview.jpg","Five methods, one clear finding: make a federal import portal forgive small mistakes.",4],
+["Instructure: ElevateED","#27d9f5","../assets/img/elevated-cover.jpg","Research for learners outside the traditional path, turned into three product recommendations.",5]];
+document.getElementById('more').innerHTML=M.map(p=>`<a class="wf-row" href="#" style="--c:${p[1]}"><div class="im"><img src="${p[2]}" alt=""></div><div class="tx">${ball(p[1],p[4])}<div><small>LANE ${p[4]}</small><h3>${p[0]}</h3><p>${p[3]}</p></div></div><span class="go">Bowl ▸</span></a>`).join('');
+</script></body></html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mock-up: simple project row</title>
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+.hs{max-width:1100px;margin:0 auto;padding:30px 20px 60px}
+.hs-badge{display:inline-block;background:#ffd24a;color:#1a1200;font-weight:700;border-radius:999px;padding:4px 12px;font-size:13px}
+.hs h2{font-size:30px;color:#fff;margin:26px 0 4px}
+.hs .sub{color:#cfc8e6;margin:0 0 26px;font-size:18px}
+.hs-row{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:34px 10px 0;border-bottom:10px solid #6b4423;border-radius:6px;background:linear-gradient(#0f0b1c,#16102a)}
+.hs-row a{--c:#ff5a3c;text-decoration:none;color:#fff;display:flex;flex-direction:column;align-items:center;gap:10px;padding-bottom:20px;min-width:0;position:relative}
+.hs-ball{width:min(100px,100%);aspect-ratio:1;border-radius:50%;position:relative;background:radial-gradient(circle at 32% 28%,#fff9 0 6%,transparent 18%),radial-gradient(circle at 40% 35%,color-mix(in srgb,var(--c) 70%,#fff),var(--c) 55%,color-mix(in srgb,var(--c) 55%,#000));box-shadow:0 12px 18px #0009;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.hs-ball i{position:absolute;width:11%;height:11%;border-radius:50%;background:#150f26}
+.hs-ball i:nth-child(1){left:38%;top:20%}.hs-ball i:nth-child(2){left:53%;top:17%}.hs-ball i:nth-child(3){left:46%;top:33%}
+.hs-ball b{position:absolute;inset:0;display:grid;place-items:center;padding-top:30%;font-size:22px;color:#1a0f26}
+.hs-row a:hover .hs-ball,.hs-row a:focus-visible .hs-ball{transform:translateY(-12px)}
+.hs-row strong{font-size:16px;text-align:center;line-height:1.2}
+.hs-row a:focus-visible{outline:3px solid #ffd24a;outline-offset:3px;border-radius:12px}
+.hs-hint{margin-top:14px;min-height:28px;color:#4de3ff;font-weight:700;text-align:center;font-size:18px}
+@media(max-width:800px){.hs-row{grid-template-columns:repeat(3,1fr)}}
+</style></head><body>
+<main class="hs">
+<span class="hs-badge">MOCK-UP · the simple version</span>
+<h2>Choose a lane</h2>
+<p class="sub">Pick a ball to open the case study.</p>
+<div class="hs-row" id="r"></div>
+<p class="hs-hint" id="h" aria-live="polite">Interview prep for pageant contestants</p>
+<script>
+const P=[["Milk and Froth","A Detroit ice cream brand, reimagined online","#ff5a3c"],["Crown Code","Interview prep for pageant contestants","#c6f24a"],["Root Insurance","Retention research for 500,000+ policyholders","#ff7a45"],["Cancer Nutrition App","Meal planning for cancer patients","#ffb020"],["USDA ACIR Portal","Making a federal import portal easier to trust","#ff2fb4"],["Instructure ElevateED","Research for learners outside the traditional path","#27d9f5"]];
+document.getElementById('r').innerHTML=P.map((p,i)=>`<a href="#" style="--c:${p[2]}" data-s="${p[1]}"><span class="hs-ball"><i></i><i></i><i></i><b>${i+1}</b></span><strong>${p[0]}</strong></a>`).join('');
+const h=document.getElementById('h');
+document.querySelectorAll('#r a').forEach(a=>{const f=()=>h.textContent=a.dataset.s;a.addEventListener('mouseenter',f);a.addEventListener('focus',f)});
+</script>
+</main></body></html>
