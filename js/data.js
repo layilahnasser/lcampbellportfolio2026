@@ -263,7 +263,7 @@ window.PORTFOLIO = {
         {
           version: "Round 1: Wireframes to a design system",
           change: "Moved from the grey wireframes above to a design system built on the brand: Roasted Strawberry as the primary color, plus a golden secondary, success green, error red, and a greyscale. Each color has a 10-step primitive scale and semantic roles (surface, border, text, and icon in subtle, lighter, default, and darker steps). Type pairs Nunito Sans with Montserrat, with a scale for desktop, tablet, and mobile.",
-          feedback: "No user testing took place on this concept project, so I checked the palette against accessibility targets instead. White text on Roasted Strawberry is 4.65:1 and black on Blushed Froth is 15.8:1, both above the 4.5:1 AA target. Roasted Strawberry on Blushed Froth is only 3.5:1, so it is used for large text and graphics, never small body copy.",
+          feedback: "I checked the palette against accessibility targets. White text on Roasted Strawberry is 4.65:1 and black on Blushed Froth is 15.8:1, both above the 4.5:1 AA target. Roasted Strawberry on Blushed Froth is only 3.5:1, so it is used for large text and graphics, never small body copy.",
           palette: [
             { name: "Roasted Strawberry", hex: "#E02B00" },
             { name: "Blushed Froth", hex: "#FFD6D4" },
@@ -282,7 +282,7 @@ window.PORTFOLIO = {
         {
           version: "Round 2: Components",
           change: "Built the component library on those tokens: primary, secondary, and tertiary buttons in three sizes, each with default, hover, selected, focused, and disabled states; navigation links; add-to-cart and quantity controls; product cards in grid, list, and quick-add layouts; the order summary; and the Churned, Scooped, Chilled, Repeat ticker. Pages were designed for desktop and mobile in a light (blush) and a dark (cocoa) theme.",
-          feedback: "Still no user testing. I reviewed the components against the competitive analysis, which showed online ordering and a store locator are expected, so the product cards, order summary, and quick-add button were built for those flows. Next I would test the checkout and Find Pints flows with real customers.",
+          feedback: "I reviewed the components against the competitive analysis, which showed online ordering and a store locator are expected, so the product cards, order summary, and quick-add button were built for those flows.",
           image: [
             { src: "assets/img/milk-buttons.jpg", fit: "wide", caption: "Buttons: primary, secondary, and tertiary, in three sizes and five states." },
             { src: "assets/img/milk-components.jpg", fit: "wide", caption: "Components: logo lockups, product cards (list, grid, and quick-add), order summary, add button, and the ticker." }
@@ -369,7 +369,7 @@ window.PORTFOLIO = {
           { value: "2", label: "layouts designed: desktop and mobile" },
           { value: "Highest", label: "grade in the course for this redesign" }
         ],
-        reflection: "Our redesign received the highest grade in the course. Designing for a food brand taught me that the site has to feel like the shop. The bold red interior and the from-scratch flavors set the tone, so I built the design system first and let color, type, and photography carry the personality. Comparing four brands across eight features showed me what customers expect from an ice cream site, like a clear store locator, and where the original site fell short. This is a concept, so it has not been tested with real customers. Next I would test the Find Pints page with people choosing a shop and the image-forward browsing with first-time visitors, then adjust the design from what they do."
+        reflection: "Our redesign received the highest grade in the course. Designing for a food brand taught me that the site has to feel like the shop. The bold red interior and the from-scratch flavors set the tone, so I built the design system first and let color, type, and photography carry the personality. Comparing four brands across eight features showed me what customers expect from an ice cream site, like a clear store locator, and where the original site fell short."
       }
     },
 
@@ -735,7 +735,7 @@ window.PORTFOLIO = {
           { value: "2", label: "display modes: light and dark" },
           { value: "1", label: "place for all of pageant prep" }
         ],
-        reflection: "Working solo meant I made every decision, from the design system to the flows, and the biggest lesson was to keep the app focused. Contestants already juggle notes, screenshots, and messages, so each screen had to make the next step to practice obvious and not add one more thing to manage. Building the system in light and dark mode from the start kept the screens consistent as the app grew. Next I would run usability sessions with contestants on the readiness dashboard and flashcard practice, then design the answer-feedback flow."
+        reflection: "Working solo meant I made every decision, from the design system to the flows, and the biggest lesson was to keep the app focused. Contestants already juggle notes, screenshots, and messages, so each screen had to make the next step to practice obvious and not add one more thing to manage. Building the system in light and dark mode from the start kept the screens consistent as the app grew. Next I would design the answer-feedback flow."
       }
     },
 
