@@ -401,13 +401,13 @@ window.PORTFOLIO = {
         ]
       },
       methods: {
-        summary: "A mixed-methods plan across 18 sessions: desk research and stakeholder interviews first, then live customer interviews and concept testing.",
+        summary: "A mixed-methods plan across 18 sessions: desk research and stakeholder interviews first, then live customer interviews and usability testing.",
         items: [
           { name: "Desk research", detail: "Audited the support approaches of top carriers and Root's own voice-of-customer data, plus cancellation, retention and rate-shock data by customer segment, written up as a desk research report with separate reports on CS levers and retention levers." },
           { name: "Competitor benchmarking", detail: "Collected screenshots of competitor experiences, grouped under one question: what does it mean to be a member beyond just pricing?" },
           { name: "Stakeholder interviews", detail: "12 interviews with internal stakeholders, three times the four we first planned, to get deeper cross-functional alignment. Notes were captured per person on a shared board." },
           { name: "Customer interviews", detail: "6 live, moderated interviews with people insured across different insurance companies, run on Lookback after a pilot session, from a written research plan, moderator guide and screener." },
-          { name: "Concept testing", detail: "Tested early concepts in those interviews, using stimuli and a moderator guide built with the design intern." },
+          { name: "Usability testing", detail: "Ran live usability testing of early concepts in those interviews, using stimuli and a moderator guide built with the design intern." },
           { name: "Scoping the plan", detail: "Brainstormed ideas, sized them as pebbles, rocks and boulders, and plotted them by how sure we were of the solution and of its value to customers. The most uncertain, highest-value quadrant set the scope." }
         ],
         image: [
@@ -504,7 +504,7 @@ window.PORTFOLIO = {
       focus: "Mobile design",
       approach: "Designed a prep app that brings flashcards, reminders and a readiness dashboard into one place",
       summary: "A mobile app that brings interview flashcards, text-based reminders and a full prep dashboard into one place, helping pageant contestants build a consistent preparation routine.",
-      glance: { problem: "Pageant contestants prepare for interviews with scattered notes, screenshots and messages.", did: "Talked with 100+ contestants, wrote a design brief and built a light and dark design system.", changed: "One app for flashcards, practice reminders and a readiness dashboard.", role: "Solo UX Designer. I built the design system and designed every screen, from brief to final." },
+      glance: { problem: "Pageant contestants prepare for interviews with scattered notes, screenshots and messages.", did: "Talked with 100+ contestants, wrote a design brief, and built a light and dark design system and final designs.", changed: "One app for flashcards, practice reminders and a readiness dashboard.", role: "Solo UX Designer. I built the design system and designed every screen, from brief to final." },
       ballColor: "#c6f24a",
       year: "2026",
       tags: ["Mobile app", "Design system", "Light & dark mode"],
@@ -718,7 +718,6 @@ window.PORTFOLIO = {
           { src: "assets/img/crown-dark-submitted.jpg", alt: "Dark mode Submitted for Review screen: a confirmation that the dossier was sent to two coaches, with buttons to go to Daily Tips or view the progress page.", caption: "Submitted for Review" },
           { src: "assets/img/crown-dark-email.jpg", alt: "Dark mode Email Notifications screen in the Preference Center, with a Performance Track section for daily and weekly metrics.", caption: "Email notifications" }
         ],
-        darkMode: { src: "assets/img/crown-dark-mode.jpg", fit: "wide", caption: "Dark mode: the profile, home and progress, and flashcard screens, each redesigned for dark." },
         prototypeUrl: ""
       },
 
@@ -737,7 +736,7 @@ window.PORTFOLIO = {
       id: "usda-acir",
       layout: "research",
       title: "USDA ACIR Portal",
-      subtitle: "Search, help and trust in a federal import portal",
+      subtitle: "Improving how importers, brokers and officials find and trust agricultural import requirements.",
       focus: "Usability research",
       approach: "Combined interviews, a survey, a comparative and heuristic evaluation, and usability tests to find where the portal loses its users",
       summary: "Helping importers, brokers and government officials find and trust agricultural import requirements in the USDA ACIR portal.",
@@ -746,9 +745,10 @@ window.PORTFOLIO = {
       year: "2026",
       tags: ["Usability testing", "Interviews", "Heuristic evaluation"],
       role: "UX Researcher",
-      team: "Apex Five: five UX researchers, with USDA APHIS stakeholders",
-      timeline: "Jan – Apr 2026",
-      tools: "Interviews, survey, comparative and heuristic evaluation, usability testing",
+      team: "5 UX researchers\nWith USDA APHIS stakeholders",
+      timeline: "Jan–Apr 2026",
+      toolsLabel: "Methods & tools",
+      tools: "Interviews · Survey\nComparative & heuristic evaluation\nUsability testing",
       hero: { src: "assets/img/usda-title.jpg", fit: "full", caption: "Harvesting Insights: the final report presentation for the USDA ACIR usability study." },
 
       problem: {
@@ -822,9 +822,9 @@ window.PORTFOLIO = {
         ],
         image: [
           { src: "assets/img/usda-users.jpg", fit: "full", caption: "Primary users and an example use case: Maria, a customs broker who needs an answer in under five minutes." },
-          { src: "assets/img/usda-persona1.jpg", alt: "Persona card for Marcus Bennett, operations manager at an agricultural import company, with his background, how he uses ACIR, frustrations with dense regulatory language, and needs for plain-language summaries and a guided decision path.", fit: "full", caption: "Persona: Marcus Bennett, an operations manager at an agricultural import company who skips complex filters and wants plain-language answers." },
-          { src: "assets/img/usda-persona2.jpg", alt: "Persona card for Angela Rivera, trade director in international agricultural policy, with her background, how she uses ACIR, frustration that the database is siloed by commodity and country, and needs for concept-based search and linked definitions.", fit: "full", caption: "Persona: Angela Rivera, a trade director in international agricultural policy who needs concept-based search and links back to legacy manuals." },
-          { src: "assets/img/usda-persona3.jpg", alt: "Persona card for Claire Thompson, a plant protection and quarantine officer at an inspection station, with her background, how she uses ACIR, frustrations with inconsistent tiles and ambiguous wording, and needs for conflict alerts and embedded definitions.", fit: "full", caption: "Persona: Claire Thompson, a plant inspection officer who needs a clear yes or no, and why, under time pressure." }
+          { src: "assets/img/usda-persona1.jpg", alt: "Fictional persona card for Marcus Bennett, operations manager at an agricultural import company, with his background, how he uses ACIR, frustrations with dense regulatory language, and needs for plain-language summaries and a guided decision path.", fit: "full", caption: "Fictional persona: Marcus Bennett, an operations manager at an agricultural import company who skips complex filters and wants plain-language answers." },
+          { src: "assets/img/usda-persona2.jpg", alt: "Fictional persona card for Angela Rivera, trade director in international agricultural policy, with her background, how she uses ACIR, frustration that the database is siloed by commodity and country, and needs for concept-based search and linked definitions.", fit: "full", caption: "Fictional persona: Angela Rivera, a trade director in international agricultural policy who needs concept-based search and links back to legacy manuals." },
+          { src: "assets/img/usda-persona3.jpg", alt: "Fictional persona card for Claire Thompson, a plant protection and quarantine officer at an inspection station, with her background, how she uses ACIR, frustrations with inconsistent tiles and ambiguous wording, and needs for conflict alerts and embedded definitions.", fit: "full", caption: "Fictional persona: Claire Thompson, a plant inspection officer who needs a clear yes or no, and why, under time pressure." }
         ]
       },
       recommendations: {
@@ -873,14 +873,14 @@ window.PORTFOLIO = {
       focus: "Strategy research",
       approach: "Interviewed 10 learners, HR professionals and Instructure staff, then turned five barriers into three product recommendations",
       summary: "Research that built the case for an AI-powered learning initiative advancing inclusive, alternative education pathways.",
-      glance: { problem: "Instructure mostly serves traditional schools, while 79% of people in the US do not attend a traditional university.", did: "10 interviews with learners, HR professionals and Instructure staff, then affinity mapping and a Pugh matrix.", changed: "Five barriers turned into three product recommendations, presented to 180+ students and the strategy team after our team was selected from hundreds of students.", role: "Lead UX Researcher, and the only one on a team of four. I led research planning, interviews and affinity analysis, and helped present the work." },
+      glance: { problem: "Instructure mostly serves traditional schools, while 79% of people in the US do not attend a traditional university.", did: "10 interviews with learners, HR professionals and Instructure staff, then affinity mapping and a Pugh matrix.", changed: "Our team was selected to present five barriers turned into three product recommendations to 180+ students and the strategy team.", role: "Lead UX Researcher, and the only one on a team of four. I led research planning, interviews and affinity analysis, and helped present the work." },
       ballColor: "#27d9f5",
       year: "2025",
       tags: ["Stakeholder interviews", "Affinity mapping", "Prototyping"],
       role: "Lead UX Researcher",
       team: "4-person interdisciplinary team\nUniversity of Michigan",
       timeline: "Aug–Dec 2025",
-      toolsLabel: "Methods",
+      toolsLabel: "Methods & tools",
       tools: "10 stakeholder interviews\nCompetitive analysis · Affinity mapping\nPersonas · Pugh matrix",
       hero: { src: "assets/img/elevated-cover.jpg", fit: "full", caption: "Instructure: Life Changing Education, the final presentation to the client." },
 
