@@ -719,7 +719,7 @@ window.PORTFOLIO = {
       focus: "Usability research",
       approach: "Combined interviews, a survey, a comparative and heuristic evaluation, and usability tests to find where the portal loses its users",
       summary: "Helping importers, brokers and government officials find and trust agricultural import requirements in the USDA ACIR portal.",
-      glance: { problem: "Importers, brokers and officials struggle to find and trust import requirements in the ACIR portal.", did: "Five methods: interviews, a survey, comparative and heuristic evaluation, and usability tests.", changed: "Three recommendations, and new features now live on the portal.", role: "UX Researcher on a five-person team. I built our presentations, ran team meetings and supported the interviews." },
+      glance: { problem: "Importers, brokers and officials struggle to find and trust import requirements in the ACIR portal.", did: "Five methods: interviews, a survey, comparative and heuristic evaluation, and usability tests.", changed: "Three recommendations, and new features now live on USDA's national portal.", role: "UX Researcher on a five-person team. I built our presentations, ran team meetings and supported the interviews." },
       ballColor: "#ff2fb4",
       year: "2026",
       tags: ["Usability testing", "Interviews", "Heuristic evaluation"],
