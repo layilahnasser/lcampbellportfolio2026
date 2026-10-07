@@ -443,7 +443,7 @@ window.PORTFOLIO = {
             ]
           }
         ],
-        image: [{ src: "assets/img/root-coding.jpg", caption: "Coding the research into themes, then turning each theme into how-might-we questions." }]
+        image: [{ src: "assets/img/root-coding.jpg", fit: "full", caption: "From notes to questions: the design lead's and my own notes, the coding board, how-might-we questions grouped by theme, and the four starred questions we prioritized for design." }]
       },
       recommendations: {
         summary: "The research shaped the concepts the design partner built. Here is what we heard and the concept it became, then the five concepts from the final shareout.",
