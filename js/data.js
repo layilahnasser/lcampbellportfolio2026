@@ -286,13 +286,6 @@ window.PORTFOLIO = {
         newPages: ["Our Flavors", "Product page", "Cart", "Checkout", "404 page"],
         designs: [
           {
-            label: "Homepage",
-            images: [
-              { src: "assets/img/milk-homepage-desktop.jpg", alt: "Milk and Froth redesigned homepage at desktop width", fit: "full", caption: "Homepage, desktop" },
-              { src: "assets/img/milk-homepage-mobile.jpg", alt: "Milk and Froth redesigned homepage at mobile width", fit: "full", caption: "Homepage, mobile" }
-            ]
-          },
-          {
             label: "About",
             images: [{ src: "assets/img/milk-about-after.jpg", fit: "full", caption: "The About story, now on the homepage: small batches, big flavor, and the team." }]
           },
@@ -340,8 +333,8 @@ window.PORTFOLIO = {
             label: "Homepage",
             before: { src: "assets/img/milk-current-home.jpg", caption: "Before: the current homepage." },
             after: [
-              { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "After: desktop. A full-bleed hero, bestsellers, the story, customer quotes and the team." },
-              { src: "assets/img/milk-homepage-mobile.jpg", fit: "full", caption: "After: mobile." }
+              { src: "assets/img/milk-home-after-desktop.jpg", alt: "Redesigned Milk and Froth homepage at desktop width: a red navigation bar with Home, Our Story, Menu, Find Pints, Shop and an Order Now button, over a full-bleed photo of strawberry ice cream with the headline Sweet, Creamy and back in season.", fit: "full", caption: "After: desktop. A full-bleed hero for the season's flavors, a clear navigation bar and an Order Now button." },
+              { src: "assets/img/milk-home-after-mobile.jpg", alt: "Redesigned Milk and Froth homepage at mobile width: the logo and menu button over a full-bleed photo of a spoon of strawberry ice cream with the headline Sweet, Creamy and back in season.", fit: "full", caption: "After: mobile. The same hero, with a simple menu button." }
             ]
           },
           {
