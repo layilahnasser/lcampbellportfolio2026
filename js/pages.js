@@ -422,7 +422,7 @@
               <section id="impact" class="frame">
                 ${frameHead(7, FRAMES[6].label)}
                 <div class="results">${(imp.results || []).map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`).join("")}</div>
-                ${chips(decisions.map((d) => d.title))}
+                ${decisions.length ? `<h3 class="strikes-h">${esc(imp.decisionsHeading || "Decisions influenced")}</h3><ol class="strikes">${decisions.map((d, i) => `<li class="strike"><span class="strike-x" aria-hidden="true">X</span><div class="strike-tx"><span class="strike-n">Strike ${i + 1}</span><h4>${t(d.title)}</h4><p>${t(d.statement || first(d.why))}</p></div></li>`).join("")}</ol>` : ""}
                 ${grid(imp.image)}
                 ${(imp.documents || []).length ? `<div class="docs"><h3>Deck and paper</h3><ul class="doc-list">${imp.documents.map((x) => `<li><a class="btn btn--ghost" href="${esc(x.file)}" target="_blank" rel="noopener">${esc(x.title)}<span class="sr-only"> (opens in a new tab)</span></a><span>${esc(x.note || "")}</span></li>`).join("")}</ul></div>` : ""}
                 ${more(`${decisions.length ? `<h3>${esc(imp.decisionsHeading || "Decisions influenced")}</h3>${cards(decisions)}` : ""}${imp.reflection ? `<h3>Reflection</h3><p>${t(imp.reflection)}</p>` : ""}`)}
