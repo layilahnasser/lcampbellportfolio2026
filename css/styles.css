@@ -636,7 +636,15 @@ body.opener-open { overflow: hidden; }
 .jstep--up .jdot { top: 30%; }
 .jstep--down .jdot { top: 70%; }
 .jstep--now .jdot { border-color: var(--cyan); box-shadow: 0 0 16px rgba(39, 217, 245, 0.7); }
-@media (max-width: 1100px) {
+@media (max-width: 1100px) and (min-width: 761px) {
+  .jmap { column-gap: 8px; grid-template-rows: auto 90px auto; }
+  .jcard { padding: 12px 10px 14px; }
+  .jcard h3 { font-size: 0.95rem; }
+  .jorg { font-size: 0.78rem; margin-bottom: 6px !important; }
+  .jcard p:last-child { font-size: 0.78rem; line-height: 1.45; }
+  .jdot { width: 30px; height: 30px; margin: -15px 0 0 -15px; border-width: 4px; }
+}
+@media (max-width: 760px) {
   .jline { display: none; }
   .jmap { display: block; position: relative; padding-left: 52px; }
   .jmap::before { content: ""; position: absolute; left: 17px; top: 6px; bottom: 6px; width: 5px; border-radius: 3px; background: linear-gradient(to bottom, var(--pink), var(--cyan)); }
