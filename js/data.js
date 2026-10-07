@@ -597,7 +597,7 @@ window.PORTFOLIO = {
 
       ideate: {
         summary:
-          "I started on paper, sketching ten screens: the profile, home dashboard, daily tips, decks, two flashcard states (reveal and answer structure), competition readiness, submission confirmation, strategic feedback and email notifications. All of them sit under the same four tabs: Home, Cards, Progress and Profile.",
+          "I started on paper, sketching ten screens: the profile, home dashboard, daily tips, decks, two flashcard states (reveal and answer structure), competition readiness, submission confirmation, strategic feedback and email notifications. The bottom navigation changed from sketch to sketch while I worked out what belonged there, and the final design settled on four tabs: Home, Cards, Progress and Profile.",
         image: [{ src: "assets/img/crown-sketches.jpg", fit: "wide", caption: "Ten paper sketches: profile, home dashboard, daily tips, decks, flashcards (reveal and answer structure), competition readiness, submission confirmation, strategic feedback and email notifications." }]
       },
 
