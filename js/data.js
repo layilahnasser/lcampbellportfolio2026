@@ -350,9 +350,10 @@ window.PORTFOLIO = {
           { value: "3", label: "design goals, each with a feature" },
           { value: "4", label: "brands compared" },
           { value: "8", label: "features benchmarked" },
-          { value: "2", label: "layouts designed: desktop and mobile" }
+          { value: "2", label: "layouts designed: desktop and mobile" },
+          { value: "Highest", label: "grade in the course for this redesign" }
         ],
-        reflection: "Designing for a food brand taught me that the site has to feel like the shop. The bold red interior and the from-scratch flavors set the tone, so I built the design system first and let color, type and photography carry the personality. Comparing four brands across eight features showed me what customers expect from an ice cream site, like a clear store locator, and where the original site fell short. This is a concept, so it has not been tested with real customers. Next I would test the Find Pints page with people choosing a shop and the image-forward browsing with first-time visitors, then adjust the design from what they do."
+        reflection: "Our redesign received the highest grade in the course. Designing for a food brand taught me that the site has to feel like the shop. The bold red interior and the from-scratch flavors set the tone, so I built the design system first and let color, type and photography carry the personality. Comparing four brands across eight features showed me what customers expect from an ice cream site, like a clear store locator, and where the original site fell short. This is a concept, so it has not been tested with real customers. Next I would test the Find Pints page with people choosing a shop and the image-forward browsing with first-time visitors, then adjust the design from what they do."
       }
     },
 
