@@ -359,7 +359,7 @@ window.PORTFOLIO = {
       id: "root-insurance",
       layout: "research",
       title: "Root Insurance",
-      subtitle: "Retention research for 500,000+ policyholders",
+      subtitle: "Understanding why customers leave and what could make them stay.",
       focus: "Retention research",
       approach: "Interviewed customers and stakeholders to find churn drivers, then turned them into 15 retention concepts",
       summary: "Improving retention for 500,000+ policyholders while empowering CS agents with the tools and insights to better support customers.",
@@ -367,9 +367,10 @@ window.PORTFOLIO = {
       year: "2026",
       tags: ["Mixed-methods", "Journey maps", "Retention"],
       role: "UX Research Intern",
-      team: "Cross-functional stakeholders, including the Director of Design and SVP of Product",
-      timeline: "Jun – Aug 2026",
-      tools: "User Interviews, Lookback, Figma",
+      team: "Product Development\nDesign, Product & Customer Support",
+      timeline: "Jun–Aug 2026 · 11 weeks",
+      toolsLabel: "Methods & tools",
+      tools: "Stakeholder & customer interviews\nAffinity mapping · Journey mapping\nLookback · Figma · User Interviews Platform · Desk Research · Live Usability Testing",
       hero: { src: "assets/img/root-final-shareout.jpg", fit: "full", caption: "Presenting the CS & Retention Levers final shareout." },
 
       problem: {
