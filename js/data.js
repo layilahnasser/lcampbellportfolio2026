@@ -175,7 +175,7 @@ window.PORTFOLIO = {
       focus: "Web design",
       approach: "Redesigned the site to spotlight flavors, help people find a shop, and browse by image",
       summary: "A website redesign concept for a Detroit-born ice cream brand, focused on showcasing distinctive flavors, improving location discovery, and creating a more visual browsing experience.",
-      glance: { problem: "The website did not show off small-batch flavors, made shops hard to find, and offered little visual browsing.", did: "Audited the current site, compared four brands across eight features, and built a design system first.", changed: "A redesigned homepage, Find Pints page and About story, in desktop and mobile. Highest grade in the course.", role: "UX Designer. One of two designers; I built the design system." },
+      glance: { problem: "The site did not showcase the flavors, had no way to order online, made shops hard to find, and offered little visual browsing.", did: "Audited the current site, compared four brands across eight features, and built a design system first.", changed: "A redesigned homepage, Find Pints page and About story, in desktop and mobile. Highest grade in the course.", role: "UX Designer. One of two designers; I built the design system." },
       ballColor: "#ff5a3c",
       year: "2026",
       tags: ["Web design", "Competitive analysis", "Design system"],
