@@ -351,7 +351,7 @@ window.PORTFOLIO = {
           { value: "8", label: "features benchmarked" },
           { value: "2", label: "layouts designed: desktop and mobile" }
         ],
-        reflection: "TODO: What you learned about designing for a food brand, and what you'd do next (for example, testing the store locator with real customers)."
+        reflection: "Designing for a food brand taught me that the site has to feel like the shop. The bold red interior and the from-scratch flavors set the tone, so I built the design system first and let color, type and photography carry the personality. Comparing four brands across eight features showed me what customers expect from an ice cream site, like a clear store locator, and where the original site fell short. This is a concept, so it has not been tested with real customers. Next I would test the Find Pints page with people choosing a shop and the image-forward browsing with first-time visitors, then adjust the design from what they do."
       }
     },
 
@@ -701,7 +701,7 @@ window.PORTFOLIO = {
           { value: "2", label: "display modes: light and dark" },
           { value: "1", label: "place for all of pageant prep" }
         ],
-        reflection: "TODO: What you learned about designing a focused, motivating prep tool, and what you'd do next (for example usability testing with contestants, or building the answer-feedback flow)."
+        reflection: "Working solo meant I made every decision, from the design system to the flows, and the biggest lesson was to keep the app focused. Contestants already juggle notes, screenshots and messages, so each screen had to make the next step to practice obvious and not add one more thing to manage. Building the system in light and dark mode from the start kept the screens consistent as the app grew. This is a design concept, so it has not been tested with contestants. Next I would run usability sessions with contestants on the readiness dashboard and flashcard practice, then design the answer-feedback flow."
       }
     },
 
@@ -831,7 +831,7 @@ window.PORTFOLIO = {
           { value: "3", label: "patterns across every method" },
           { value: "100,000+", label: "country-commodity combinations in the portal" }
         ],
-        reflection: "TODO: What the research changed, what you learned, and what you'd do next."
+        reflection: "No single method gave the full picture. The interviews, survey, evaluations and usability tests each caught different problems, and requiring a finding to appear in at least three methods kept us honest about what mattered. I learned how much a complex federal tool depends on expert knowledge users never say out loud. As the person who built our presentations and ran our team meetings, I also learned that a clear story is part of the research: the findings only helped once stakeholders could follow them. If I did it again, I would recruit first-time importers earlier, and next I would run the card-sorting study we recommended to redesign how help is organized."
       }
     },
 
