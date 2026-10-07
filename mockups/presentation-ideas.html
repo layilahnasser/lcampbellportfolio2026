@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mock-up: presentation ideas</title>
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+.m{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
+.m h1{font-family:Damion,cursive;font-weight:400;font-size:48px;color:#fff;text-shadow:0 0 18px #ff2fb4;margin:0 0 4px}
+.m-lead{color:#cfc8e6;margin:0 0 28px}
+.m-tag{display:inline-block;background:#ffd24a;color:#1a1200;font-weight:700;border-radius:999px;padding:4px 12px;font-size:13px;margin-bottom:10px}
+.m-sec{margin:0 0 54px}
+.m-sec h2{color:#ffd24a;letter-spacing:.12em;font-size:14px;margin:0 0 4px}
+.m-sec p.n{color:#cfc8e6;margin:0 0 14px;max-width:70ch}
+.box{background:var(--panel);border:1px solid #2b2443;border-radius:16px;padding:22px}
+/* 1 start here */
+.sh{display:grid;grid-template-columns:1.1fr 2fr;gap:22px;align-items:start}
+.sh h3{margin:0 0 8px;color:#fff;font-size:22px}.sh p{color:#cfc8e6;margin:0 0 10px;font-size:15px}
+.sh ol{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.sh li{display:flex;gap:12px;align-items:center;background:#120f1c;border:1px solid #2b2443;border-radius:12px;padding:10px 14px}
+.sh .b{flex:none;width:30px;height:30px;border-radius:50%;background:#fff;color:#0d0a14;font-weight:800;display:grid;place-items:center;border:4px solid #c8118a}
+.sh li strong{color:#fff;display:block;font-size:15px}.sh li span{color:#b9b0d6;font-size:13px}
+.sh .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{border:1px solid #4de3ff;color:#4de3ff;border-radius:999px;padding:4px 12px;font-size:13px}
+/* 2 TL;DR */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tl div{background:#120f1c;border:1px solid #2b2443;border-radius:12px;padding:12px}
+.tl b{display:block;color:#ffd24a;font-size:11px;letter-spacing:.12em;margin-bottom:4px}
+.tl span{color:#e6e0f7;font-size:14px}
+/* 3 details open */
+.fr{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.fr .no{background:#ff5a3c;color:#fff;font-weight:800;font-size:12px;border-radius:6px;padding:3px 8px}
+.fr h3{margin:0;color:#fff;font-size:24px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cols p{color:#cfc8e6;font-size:14px;margin:0 0 8px}
+.cols b{color:#fff}
+.ph{background:#120f1c;border:1px dashed #5a4d86;border-radius:10px;height:110px;display:grid;place-items:center;color:#8f84b4;font-size:13px}
+.toggle{display:flex;gap:12px;align-items:center;margin-top:12px;color:#4de3ff;font-weight:700}
+.old{opacity:.6}
+/* 4 order */
+.ord{display:flex;gap:10px;flex-wrap:wrap}
+.ord div{flex:1 1 150px;background:#120f1c;border:2px solid #2b2443;border-radius:14px;padding:14px;text-align:center}
+.ord .top{border-color:#ff7a45}
+.ord .nm{color:#fff;font-weight:700}.ord .k{color:#ffd24a;font-size:12px;letter-spacing:.1em;display:block;margin-bottom:6px}
+.ord small{color:#b9b0d6;display:block;margin-top:4px}
+@media(max-width:800px){.sh,.cols{grid-template-columns:1fr}.tl{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<main class="m">
+<span class="m-tag">MOCK-UP · not live</span>
+<h1>Presentation ideas</h1>
+<p class="m-lead">Four small changes so a reviewer with no one to guide them can find the process and the strongest work quickly.</p>
+
+<section class="m-sec">
+<h2>1 · "START HERE" ON THE HOME PAGE</h2>
+<p class="n">A short guide under the scoreboard: who you are, the best order to read, and how every case study is built.</p>
+<div class="box sh">
+<div><h3>New here? Start here.</h3><p>I'm a UX researcher and designer. Every case study follows the same seven frames: problem, research, solution, outcome.</p>
+<div class="chips"><span class="chip">~3 min per project</span><span class="chip">Accessible (WCAG)</span></div></div>
+<ol>
+<li><span class="b">1</span><div><strong>Root Insurance</strong><span>Research · 12 stakeholder + 6 customer interviews</span></div></li>
+<li><span class="b">2</span><div><strong>USDA ACIR Portal</strong><span>Usability · 5 methods, live features shipped</span></div></li>
+<li><span class="b">3</span><div><strong>Crown Code</strong><span>Design · mobile app, light &amp; dark system</span></div></li>
+</ol></div>
+</section>
+
+<section class="m-sec">
+<h2>2 · ONE-GLANCE SUMMARY AT THE TOP OF EACH CASE STUDY</h2>
+<p class="n">Four lines a skimmer can read in ten seconds, before the seven frames.</p>
+<div class="box"><div class="tl">
+<div><b>PROBLEM</b><span>Customers leave and no one knows why.</span></div>
+<div><b>WHAT I DID</b><span>Interviews, affinity and journey mapping.</span></div>
+<div><b>WHAT CHANGED</b><span>15 retention concepts, shared out to leadership.</span></div>
+<div><b>MY ROLE</b><span>UX Research Intern, 11 weeks.</span></div>
+</div></div>
+</section>
+
+<section class="m-sec">
+<h2>3 · SHOW THE PROCESS BY DEFAULT</h2>
+<p class="n">Details open instead of hidden behind "Read the details", each design choice paired with its reason.</p>
+<div class="box">
+<div class="fr"><span class="no">FRAME 5</span><h3>Design system</h3></div>
+<div class="cols"><div>
+<p><b>Why teal and gold.</b> Teal for calm and focus before an interview; gold reserved for progress and achievement.</p>
+<p><b>Why a serif plus a sans.</b> Polish where it is seen, legibility where it is used.</p>
+<p><b>What changed after feedback.</b> <i>(your note goes here)</i></p></div>
+<div class="ph">Before → after screens</div></div>
+<div class="toggle old">▸ Read the details <small>(today: closed)</small></div>
+</div>
+</section>
+
+<section class="m-sec">
+<h2>4 · LEAD WITH THE STRONGEST WORK</h2>
+<p class="n">Order projects by evidence of process and impact, not by date.</p>
+<div class="box ord">
+<div class="top"><span class="k">STRONGEST</span><span class="nm">Root</span><small>Research</small></div>
+<div class="top"><span class="k">STRONGEST</span><span class="nm">USDA ACIR</span><small>Research</small></div>
+<div><span class="k">NEXT</span><span class="nm">ElevateED</span><small>Research</small></div>
+<div><span class="k">THEN</span><span class="nm">Crown Code</span><small>Design</small></div>
+<div><span class="k">THEN</span><span class="nm">Milk &amp; Froth</span><small>Design</small></div>
+</div>
+</section>
+</main></body></html>
