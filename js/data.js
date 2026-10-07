@@ -400,7 +400,7 @@ window.PORTFOLIO = {
         image: [
           { src: "assets/img/root-desk-report.jpg", fit: "full", caption: "The desk research report: context and findings on customer service levers and retention levers, with oversight, research lead and design lead named." },
           { src: "assets/img/root-benchmark.jpg", caption: "Screenshots from competitor experiences, grouped under the question \"What does it mean to be a member beyond just pricing?\"" },
-          { src: "assets/img/root-data.jpg", caption: "Quantitative data reviewed alongside the interviews: cancellations, 30-day retention, rate changes and rate shock by customer segment." },
+          { src: "assets/img/root-data.jpg", fit: "full", caption: "Quantitative data reviewed alongside the interviews: cancellations, 30-day retention, rate changes and rate shock by customer segment." },
           { src: "assets/img/root-stakeholder-notes.jpg", caption: "Notes from every stakeholder conversation organized per person, then read across columns to surface the general patterns and hypotheses shared between teams." },
           { src: "assets/img/root-test-plan.jpg", fit: "full", caption: "The research plan for the six customer interviews: objective, related documents, moderator guide, screener and pilot notes." },
           { src: "assets/img/root-ideas.jpg", caption: "Every idea from the brainstorms grouped into themed clusters, then sized as pebbles, rocks, and boulders so we could weigh effort against impact before choosing directions." },
