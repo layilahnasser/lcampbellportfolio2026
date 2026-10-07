@@ -1,26 +1,10 @@
 # Missing screenshots checklist
 
-Save each file into `assets/img/` with exactly this name, then refresh the page. Nothing else needs to change.
+No case-study page currently shows an "Add image" placeholder.
 
-**9 images missing.**
+Two images are named in `js/data.js` (Crown Code, `iterations`) but those rounds are not displayed on the page, so nothing is visibly missing:
 
-
-## Milk and Froth Redesign (5)
-
-
-- [ ] `milk-flavors.jpg`: Light (blush) and dark (cocoa) themes.
-- [ ] `milk-product.jpg`: Flavor and item pages, desktop and mobile, light and dark.
-
-## Crown Code (3)
-
-- [ ] `crown-sketches.jpg`: Early sketches.
 - [ ] `crown-lowfi.jpg`: Low-fidelity wireframes.
 - [ ] `crown-screens-dark.png`: Screen set, dark mode.
 
-## Root Insurance (8)
-
-- [ ] `root-concept-tenure.png`: Provide customers with discounts and rewards based off their tenure.
-- [ ] `root-concept-drive.png`: A driving score based reward system where customers can gain benefits based on their driving.
-- [ ] `root-concept-discounts.png`: Provide customers with opportunities to lower their rate by showcasing the different discounts that are available.
-- [ ] `root-concept-email.png`: Rewording existing email communications to make them more personable and friendly.
-
+To add an image, save it into `assets/img/` with exactly that name, then refresh the page.
