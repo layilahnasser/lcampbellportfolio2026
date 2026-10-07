@@ -698,6 +698,11 @@ window.PORTFOLIO = {
         images: [],
         darkScreens: [
           { src: "assets/img/crown-dark-home.jpg", alt: "Dark mode home screen: Good morning, Layilah, with the readiness score card and bottom navigation.", caption: "Home" },
+          { src: "assets/img/crown-dark-road.jpg", alt: "Dark mode Competition Readiness screen: Your Road to the Crown, with the next milestone USA National Miss, 42 days and 18 hours away, and a packing progress ring at 74 percent.", caption: "Competition readiness" },
+          { src: "assets/img/crown-dark-tips.jpg", alt: "Dark mode Daily Reminders and Tips screen with Practice Interview Q's and Go Home buttons and a Strategy section.", caption: "Daily reminders and tips" },
+          { src: "assets/img/crown-dark-decks.jpg", alt: "Dark mode Your Decks screen with a Daily Drill card, Start Today's Drill button and a list of curated decks.", caption: "Your decks" },
+          { src: "assets/img/crown-dark-flashcards.jpg", alt: "Dark mode Flashcards Practice screen: card 1 of 24 with an Onstage tag and a tap to reveal prompt.", caption: "Flashcards practice" },
+          { src: "assets/img/crown-dark-answer.jpg", alt: "Dark mode answer side of a flashcard: an interview question and a numbered answer structure starting with Systemic Accountability.", caption: "Answer structure" },
           { src: "assets/img/crown-dark-profile.jpg", alt: "Dark mode profile screen: a member photo with a readiness score of 85, an Elite Member tag and bottom navigation.", caption: "Profile" },
           { src: "assets/img/crown-dark-share-journey.jpg", alt: "Dark mode Share Your Journey screen: a readiness score of 85 and a 12 day mastery streak.", caption: "Share Your Journey" },
           { src: "assets/img/crown-dark-submitted.jpg", alt: "Dark mode Submitted for Review screen: a confirmation that the dossier was sent to two coaches, with buttons to go to Daily Tips or view the progress page.", caption: "Submitted for Review" },
