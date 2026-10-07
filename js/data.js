@@ -365,7 +365,7 @@ window.PORTFOLIO = {
       focus: "Retention research",
       approach: "Interviewed customers and stakeholders to find churn drivers, then turned them into 15 retention concepts",
       summary: "Improving retention for 500,000+ policyholders while empowering CS agents with the tools and insights to better support customers.",
-      glance: { problem: "Customers leave Root, and the teams who could keep them lacked a clear picture of why.", did: "12 stakeholder and 6 customer interviews, affinity mapping, journey mapping and concept testing.", changed: "15 net-new retention concepts, shared out to leadership.", role: "UX Research Intern for 11 weeks, working with design, product and customer support." },
+      glance: { problem: "Customers leave Root, and the teams who could keep them lacked a clear picture of why.", did: "12 stakeholder and 6 customer interviews, affinity mapping, desk research reports and live usability testing.", changed: "15 net-new retention concepts, shared out to leadership.", role: "UX Research Intern for 11 weeks, working with design, product and customer support." },
       ballColor: "#ff7a45",
       year: "2026",
       tags: ["Mixed-methods", "Journey maps", "Retention"],
