@@ -252,8 +252,23 @@
               )
               .join("")}
           </ul>
-          <span class="hud-status"><span class="dot" aria-hidden="true"></span>${esc(me.status)}</span>
+          <span class="hud-right"><button type="button" class="theme-toggle" aria-pressed="false"></button><span class="hud-status"><span class="dot" aria-hidden="true"></span>${esc(me.status)}</span></span>
         </nav>`;
+      const tb = header.querySelector(".theme-toggle");
+      const paintToggle = () => {
+        const light = document.documentElement.dataset.theme === "light";
+        tb.setAttribute("aria-pressed", String(light));
+        tb.textContent = light ? "Dark mode" : "Light mode";
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute("content", light ? "#f7f3fd" : "#0d0a14");
+      };
+      paintToggle();
+      tb.addEventListener("click", () => {
+        const light = document.documentElement.dataset.theme !== "light";
+        if (light) document.documentElement.dataset.theme = "light"; else delete document.documentElement.dataset.theme;
+        try { localStorage.setItem("theme", light ? "light" : "dark"); } catch (e) { /* ignore */ }
+        paintToggle();
+      });
     }
     const footer = document.getElementById("footer");
     if (footer) {
