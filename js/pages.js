@@ -527,7 +527,7 @@
                 ${frameHead(7, FRAMES[6].label)}
                 ${ok(p.outcome.reflection) ? `<p class="glance">${t(p.outcome.reflection)}</p>` : ""}
                 <div class="results">${p.outcome.results.map((r) => `<div class="result"><strong>${t(r.value)}</strong><span>${esc(r.label)}</span></div>`).join("")}</div>
-                ${p.outcome.compare ? p.outcome.compare.map((c) => `<div class="compare compare--page"><p class="compare-label">${c.goal ? `<span class="frame-no">${esc(c.goal)}</span> ` : ""}${esc(c.label)}</p><div class="compare-pair${c.before ? "" : " compare-pair--single"}">${c.before ? `<div class="cmp-col"><p class="cmp-tag">Before</p>${img(c.before)}</div>` : ""}<div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p><div class="cmp-after${Array.isArray(c.after) ? " cmp-after--multi" : ""}">${imgs(c.after)}</div></div></div></div>`).join("") : ""}
+                ${p.outcome.compare ? p.outcome.compare.map((c) => `<div class="compare compare--page"><p class="compare-label">${c.goal ? `<span class="frame-no">${esc(c.goal)}</span> ` : ""}${esc(c.label)}</p><div class="compare-pair${c.before ? "" : " compare-pair--single"}">${c.before ? `<div class="cmp-col"><p class="cmp-tag">Before</p>${img(c.before)}</div>` : ""}<div class="cmp-col"><p class="cmp-tag cmp-tag--after">After</p><div class="cmp-after${Array.isArray(c.after) ? " cmp-after--multi" : ""}">${imgs(c.after)}</div></div></div>${c.why ? `<div class="cmp-why"><b>What changed and why</b><p>${t(c.why)}</p></div>` : ""}</div>`).join("") : ""}
                 
               </section>
 `;

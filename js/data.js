@@ -346,17 +346,20 @@ window.PORTFOLIO = {
             after: [
               { src: "assets/img/milk-home-after-desktop.jpg", alt: "Redesigned Milk and Froth homepage at desktop width: a red navigation bar with Home, Our Story, Menu, Find Pints, Shop and an Order Now button, over a full-bleed photo of strawberry ice cream with the headline Sweet, Creamy and back in season.", fit: "full", caption: "After: desktop. A full-bleed hero for the season's flavors, a clear navigation bar and an Order Now button." },
               { src: "assets/img/milk-home-after-mobile.jpg", alt: "Redesigned Milk and Froth homepage at mobile width: the logo and menu button over a full-bleed photo of a spoon of strawberry ice cream with the headline Sweet, Creamy and back in season.", fit: "full", caption: "After: mobile. The same hero, with a simple menu button." }
-            ]
+            ],
+            why: "The old homepage led with a text slogan and three links, and gave no way to order. The new one leads with a full-bleed photo of the season's flavor, and puts the navigation, search, cart and an Order Now button within reach. This answers Goals 1 and 3."
           },
           {
             label: "Find Pints",
             before: { src: "assets/img/milk-current-locations.jpg", caption: "Before: the current Find Pints page, a text list of markets by city." },
-            after: { src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "After: Ann Arbor, Detroit and Royal Oak, each with hours, address, photo and directions. Desktop and mobile." }
+            after: { src: "assets/img/milk-find-pints.jpg", fit: "full", caption: "After: Ann Arbor, Detroit and Royal Oak, each with hours, address, photo and directions. Desktop and mobile." },
+            why: "The old page was a text list of markets by city. A card for each shop now shows hours, address, photo, directions and order now in one place, so a visitor can find a shop at a glance. This answers Goal 2."
           },
           {
             label: "About, now on the homepage",
             before: { src: "assets/img/milk-current-about.jpg", caption: "Before: the current About page." },
-            after: { src: "assets/img/milk-about-after.jpg", fit: "full", caption: "After: the About story, now part of the homepage: small batches, big flavor, and the team." }
+            after: { src: "assets/img/milk-about-after.jpg", fit: "full", caption: "After: the About story, now part of the homepage: small batches, big flavor, and the team." },
+            why: "The About story used to sit on its own page. Small batches, big flavor and the team now live on the homepage, so the craft behind the ice cream is seen in the first scroll."
           }
         ],
         results: [
