@@ -936,7 +936,7 @@ window.PORTFOLIO = {
           { value: "3", label: "product recommendations" },
           { value: "180+", label: "students and the strategy team presented to" }
         ],
-        reflection: "TODO: What you learned and what you'd do differently. One true thing from the paper: sorting hundreds of notes into themes was the hardest and most valuable part, and the feedback to add an American participant changed what we learned."
+        reflection: "Three things I would carry into the next project. First, who you recruit shapes what you learn: after feedback that our first two learner interviews shared one cultural context, we added an American participant, and the differences were real. Second, the interviews changed the question. We began with high-school graduates skipping college and learned that most alternative-pathway learners are already working and learning for life, so the design had to serve them. Third, synthesis is the hard part. Sorting hundreds of notes into themes was the most demanding stage, and it produced our strongest findings. If I did it again, I would bring education policymakers into the interviews, since we have no insight into how credentials are governed or recognized, and I would test the soft-skill tool first, because that is where Instructure's strategy and our research met."
       }
     }
   ],
