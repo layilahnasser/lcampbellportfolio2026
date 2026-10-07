@@ -123,6 +123,19 @@
           ${scoreboard()}
         </section>
 
+        <section class="section start-here" aria-labelledby="start-title">
+          <div class="start-box">
+            <div>
+              <h2 id="start-title">New here? Start here.</h2>
+              <p>I'm a UX designer and researcher. Every case study follows the same seven frames, from problem to outcome, so you can see how I think, not just what I made.</p>
+              <p class="start-tags"><span>About 3 minutes per project</span><span>Accessible (WCAG)</span></p>
+            </div>
+            <ol class="start-list" aria-label="Three projects to read first">
+              ${["milk-and-froth", "root-insurance", "crown-code"].map((id, i) => { const q = P.projects.find((x) => x.id === id); return q ? `<li><a href="project.html?p=${esc(q.id)}"><span class="start-n" aria-hidden="true">${i + 1}</span><span class="start-t"><strong>${t(q.title)}</strong><span>${esc(q.focus)}: ${esc(q.approach)}</span></span></a></li>` : ""; }).join("")}
+            </ol>
+          </div>
+        </section>
+
         <section class="section" aria-label="More pages">
           <div class="tablet-row">
             <a class="tablet" href="about.html"><span class="tablet-k">Player</span><strong>About Me</strong><span>Who I am &amp; how I work</span></a>
@@ -537,6 +550,7 @@
               <div><dt>Timeline</dt><dd>${t(p.timeline)}</dd></div>
               <div><dt>${esc(p.toolsLabel || "Tools & methods")}</dt><dd>${String(p.tools).split("\n").map((l) => t(l)).join("<br>")}</dd></div>
             </dl>
+            ${p.glance ? `<ul class="glance-boxes" aria-label="Case study at a glance">${[["Problem", p.glance.problem], ["What I did", p.glance.did], ["What changed", p.glance.changed], ["My role", p.glance.role]].map(([k, v]) => `<li><b>${k}</b><span>${t(v)}</span></li>`).join("")}</ul>` : ""}
             ${img(p.hero, "shot--hero" + (p.hero && p.hero.fit === "phone" ? " shot--phone" : ""))}
           </header>
 
