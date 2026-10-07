@@ -213,6 +213,7 @@
               .map((m) => `<article class="more"><p class="more-v">${esc(m.value)}</p><h3>${esc(m.title)}</h3><p>${esc(m.text)}</p></article>`)
               .join("")}
           </div>
+          ${A.accessNote ? `<article class="a11y-note" aria-labelledby="a11y-title"><h3 id="a11y-title">${esc(A.accessNote.title)}</h3><p>${esc(A.accessNote.text)}</p><ul>${A.accessNote.points.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>` : ""}
           <article class="league">
             <figure class="league-photo"><img src="${esc(A.league.image.src)}" alt="${esc(A.league.image.alt)}" width="536" height="524" loading="lazy"></figure>
             <div class="league-body">

@@ -136,6 +136,17 @@ window.PORTFOLIO = {
     ],
 
     // Bonus frame
+    accessNote: {
+      title: "This site is built to be accessible",
+      text: "As a UX researcher and designer, I treat accessibility as part of the work, so I built this portfolio to meet WCAG 2.1 AA.",
+      points: [
+        "Automated testing with axe on every page, with no violations.",
+        "Color contrast checked against AA targets, including text on every background.",
+        "Works with a keyboard alone, with a skip link and visible focus.",
+        "Every image has a description for screen readers.",
+        "Respects reduced-motion settings, and works on phones as small as 320 pixels wide."
+      ]
+    },
     moreHeading: "A little more about me",
     more: [
       {
@@ -367,7 +378,7 @@ window.PORTFOLIO = {
       focus: "Retention research",
       approach: "Interviewed customers and stakeholders to find churn drivers, then turned them into 15 retention concepts",
       summary: "Improving retention for 500,000+ policyholders while empowering CS agents with the tools and insights to better support customers.",
-      glance: { problem: "Customers leave Root, and the teams who could keep them lacked a clear picture of why.", did: "12 stakeholder and 6 customer interviews, affinity mapping, desk research reports and live usability testing.", changed: "15 net-new retention concepts, shared out to leadership.", role: "UX Research Intern. I wrote the research plan, moderated customer interviews, synthesized findings and presented readouts, with a product design intern." },
+      glance: { problem: "Customers leave Root, and the teams who could keep them lacked a clear picture of why.", did: "12 stakeholder and 6 customer interviews, affinity mapping, desk research reports and live usability testing.", changed: "15 net-new retention concepts, shared out to leadership. Used Lovable to host the research repository.", role: "UX Research Intern. I wrote the research plan, moderated customer interviews, synthesized findings and presented readouts, with a product design intern." },
       ballColor: "#ff7a45",
       year: "2026",
       tags: ["Mixed-methods", "Journey maps", "Retention"],
@@ -866,7 +877,7 @@ window.PORTFOLIO = {
       focus: "Strategy research",
       approach: "Interviewed 10 learners, HR professionals and Instructure staff, then turned five barriers into three product recommendations",
       summary: "Research that built the case for an AI-powered learning initiative advancing inclusive, alternative education pathways.",
-      glance: { problem: "Instructure mostly serves traditional schools, while 79% of people in the US do not attend a traditional university.", did: "10 interviews with learners, HR professionals and Instructure staff, then affinity mapping and a Pugh matrix.", changed: "Our team was selected to present five barriers turned into three product recommendations to 180+ students and the strategy team.", role: "Lead UX Researcher, and the only one on a team of four. I led research planning, interviews and affinity analysis, and helped present the work." },
+      glance: { problem: "Instructure mostly serves traditional schools, while 79% of people in the US do not attend a traditional university.", did: "10 interviews with learners, HR professionals and Instructure staff, followed by the Pugh matrix and building a Figma Make prototype of the recommendations.", changed: "Our team was selected to present five barriers turned into three product recommendations to 180+ students and the strategy team.", role: "Lead UX Researcher, and the only one on a team of four. I led research planning, interviews and affinity analysis, and helped present the work." },
       ballColor: "#27d9f5",
       year: "2025",
       tags: ["Stakeholder interviews", "Affinity mapping", "Prototyping"],

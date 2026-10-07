@@ -934,3 +934,9 @@ body { overflow-x: clip; }
 .case-meta dd { line-height: 1.3; font-size: 0.98rem; }
 @media (max-width: 700px) { .glance-boxes { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .glance-boxes { grid-template-columns: 1fr; } }
+
+/* ---------- About: accessibility note ---------- */
+.a11y-note { margin: 0 0 16px; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--cyan); border-radius: var(--radius, 16px); }
+.a11y-note h3 { margin: 0 0 8px; font-size: 1.2rem; }
+.a11y-note p { margin: 0 0 10px; color: #cfc8e6; }
+.a11y-note ul { margin: 0; padding-left: 20px; color: #e6e0f7; display: grid; gap: 4px; }
