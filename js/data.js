@@ -388,11 +388,11 @@ window.PORTFOLIO = {
         ]
       },
       methods: {
-        summary: "A mixed-methods plan across 17 sessions: desk research and stakeholder interviews first, then live customer interviews and concept testing.",
+        summary: "A mixed-methods plan across 18 sessions: desk research and stakeholder interviews first, then live customer interviews and concept testing.",
         items: [
           { name: "Desk research", detail: "Audited the support approaches of top carriers and Root's own voice-of-customer data, plus cancellation, retention and rate-shock data by customer segment, written up as a desk research report with separate reports on CS levers and retention levers." },
           { name: "Competitor benchmarking", detail: "Collected screenshots of competitor experiences, grouped under one question: what does it mean to be a member beyond just pricing?" },
-          { name: "Stakeholder interviews", detail: "11 interviews with internal stakeholders, more than double the four we first planned, to get deeper cross-functional alignment. Notes were captured per person on a shared board." },
+          { name: "Stakeholder interviews", detail: "12 interviews with internal stakeholders, three times the four we first planned, to get deeper cross-functional alignment. Notes were captured per person on a shared board." },
           { name: "Customer interviews", detail: "6 live, moderated interviews with people insured across different insurance companies, run on Lookback after a pilot session, from a written research plan, moderator guide and screener." },
           { name: "Concept testing", detail: "Tested early concepts in those interviews, using stimuli and a moderator guide built with the design intern." },
           { name: "Scoping the plan", detail: "Brainstormed ideas, sized them as pebbles, rocks and boulders, and plotted them by how sure we were of the solution and of its value to customers. The most uncertain, highest-value quadrant set the scope." }
@@ -717,7 +717,7 @@ window.PORTFOLIO = {
       year: "2026",
       tags: ["Usability testing", "Interviews", "Heuristic evaluation"],
       role: "UX Researcher",
-      team: "Apex Five: five UX researchers (SI 622), with USDA APHIS stakeholders",
+      team: "Apex Five: five UX researchers, with USDA APHIS stakeholders",
       timeline: "Jan – Apr 2026",
       tools: "Interviews, survey, comparative and heuristic evaluation, usability testing",
       hero: { src: "assets/img/usda-title.jpg", fit: "full", caption: "Harvesting Insights: the final report presentation for the USDA ACIR usability study." },
@@ -780,6 +780,14 @@ window.PORTFOLIO = {
               "Experts are fine and new users are not. Exact scientific names work for veterans and lock out everyone else.",
               "Help has to live inside the task. Users should never have to leave their work to understand it.",
               "Trust is built on small details. Conflicting tiles, blank loading screens and a back button that loses the search all lower confidence."
+            ]
+          },
+          {
+            heading: "What this study can and cannot tell us",
+            items: [
+              "Small samples. Seven interviews and seven usability sessions show patterns, not statistics. That is why a finding only counted when at least three of the five methods supported it.",
+              "Recommendations were not prototype-tested. They come from evidence, and a prototype of forgiving search is the first next step.",
+              "Mobile and accessibility were outside the scope and are listed as future research."
             ]
           }
         ],
