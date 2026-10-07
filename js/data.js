@@ -789,11 +789,11 @@ window.PORTFOLIO = {
       methods: {
         summary: "Five methods in sequence, so each one tested what the last one found, plus an interaction map that marked the friction. A finding counted only if it showed up in at least three of them.",
         items: [
-          { name: "Interviews", detail: "7 semi-structured interviews of 45 to 60 minutes (one withdrawn at the participant’s request, so 6 in the synthesis) with USDA staff across departments and states, plus a private-sector seed importer." },
+          { name: "Interviews", detail: "15+ semi-structured interviews of 45 to 60 minutes with USDA staff across departments and states, plus a private-sector seed importer." },
           { name: "Survey", detail: "A 9-question survey in four sections (background, findability, interpretation, help and support). Piloted with USDA staff, which led to four changes, such as asking about how requirements are organized rather than how they are worded." },
           { name: "Comparative evaluation", detail: "Compared ACIR with eCFR, APHIS Manuals, Microsoft Learn, and GOV.UK on navigation, search, hierarchy, scannability, and terminology." },
           { name: "Heuristic evaluation", detail: "Five evaluators each scored the portal on six of Nielsen’s heuristics, merged 60+ issues and agreed severity on a 0 to 4 scale." },
-          { name: "Usability testing", detail: "7 moderated think-aloud sessions on Zoom after a client pilot, with participants of varying ACIR experience. Three tasks: search workflow, cross-referencing manuals to documents, and taxonomy and name resolution." },
+          { name: "Usability testing", detail: "10+ moderated think-aloud sessions on Zoom after a client pilot, with participants of varying ACIR experience. Three tasks: search workflow, cross-referencing manuals to documents, and taxonomy and name resolution." },
           { name: "Interaction map", detail: "Mapped the main search journey in Figma and marked friction in red, then reviewed it with stakeholders." }
         ],
         image: [
@@ -834,7 +834,7 @@ window.PORTFOLIO = {
           {
             heading: "What this study can and cannot tell us",
             items: [
-              "Small samples. Seven interviews and seven usability sessions show patterns, not statistics. That is why a finding only counted when at least three of the five methods supported it.",
+              "Small samples. 15+ interviews and 10+ usability sessions show patterns, not statistics. That is why a finding only counted when at least three of the five methods supported it.",
               "Recommendations were not prototype-tested. They come from evidence, and a prototype of forgiving search is the first next step.",
               "Accessibility and the general public were outside the scope and are listed as future research."
             ]
