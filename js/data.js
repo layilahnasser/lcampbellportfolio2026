@@ -287,8 +287,8 @@ window.PORTFOLIO = {
           {
             label: "Homepage",
             images: [
-              { src: "assets/img/milk-homepage-desktop.jpg", fit: "full", caption: "Desktop" },
-              { src: "assets/img/milk-homepage-mobile.jpg", fit: "full", caption: "Mobile" }
+              { src: "assets/img/milk-homepage-desktop.jpg", alt: "Milk and Froth redesigned homepage at desktop width", fit: "full", caption: "Homepage, desktop" },
+              { src: "assets/img/milk-homepage-mobile.jpg", alt: "Milk and Froth redesigned homepage at mobile width", fit: "full", caption: "Homepage, mobile" }
             ]
           },
           {
@@ -297,7 +297,7 @@ window.PORTFOLIO = {
           },
           {
             label: "Our Flavors", isNew: true,
-            images: [{ src: "assets/img/milk-flavors.jpg", fit: "full", caption: "Desktop and mobile, light theme." }]
+            images: [{ src: "assets/img/milk-flavors.jpg", fit: "full", caption: "Flavors page: desktop and mobile, light theme." }]
           },
           {
             label: "Find Pints",
@@ -756,11 +756,11 @@ window.PORTFOLIO = {
         ],
         image: [
           { src: "assets/img/usda-methods.jpg", fit: "full", caption: "Five methods, and the rule that a finding had to appear in at least three." },
-          { src: "assets/img/usda-interview-guide.png", fit: "tall", caption: "Interview guide: open-ended questions on search workflow, comprehension and collaboration." },
-          { src: "assets/img/usda-consent.png", fit: "tall", caption: "Interview consent form (names and contact details removed): voluntary, recorded, anonymized quotes." },
+          { src: "assets/img/usda-interview-guide.png", alt: "Interview guide with an introduction, background questions, twelve numbered open-ended questions about searching for import requirements, and a conclusion.", fit: "tall", caption: "Interview guide: open-ended questions on search workflow, comprehension and collaboration." },
+          { src: "assets/img/usda-consent.png", alt: "Interview consent form for the UX research study on agricultural import information systems, covering purpose, what to expect, participant rights, confidentiality and questions, with a signature and printed name line. Names and contact details are covered.", fit: "tall", caption: "Interview consent form (names and contact details removed): voluntary, recorded, anonymized quotes." },
           { src: "assets/img/usda-survey.jpg", fit: "full", caption: "Survey design: the Findability section of the piloted survey." },
-          { src: "assets/img/usda-heuristic-sheet.jpg", fit: "full", caption: "Heuristic evaluation workbook (reviewer names and notes removed): each issue logged with the heuristic violated, severity and a recommendation." },
-          { src: "assets/img/usda-annotated.jpg", fit: "full", caption: "Heuristic evaluation: search rigidity, scattered help and no breadcrumbs, marked on the portal." },
+          { src: "assets/img/usda-heuristic-sheet.jpg", alt: "Spreadsheet titled Heuristic Analysis with columns for screen, problem identified, heuristic used, severity, how many reviewers mentioned it, screenshots, recommendations and resolution. Rows list issues such as blank screens during loading and search that needs an exact country and commodity name.", fit: "full", caption: "Heuristic evaluation workbook (reviewer names and notes removed): each issue logged with the heuristic violated, severity and a recommendation." },
+          { src: "assets/img/usda-annotated.jpg", alt: "Screenshot of the ACIR search page and a commodity import requirements page, annotated with three problems: search rigidity, no breadcrumbs and scattered help resources.", fit: "full", caption: "Heuristic evaluation: search rigidity, scattered help and no breadcrumbs, marked on the portal." },
           { src: "assets/img/usda-interaction.jpg", fit: "full", caption: "Interaction map: core search and organization, pre-filtering, and mobile layout." },
           { src: "assets/img/usda-testmethods.jpg", fit: "full", caption: "Usability test design: three tasks and a debrief." }
         ]
@@ -800,9 +800,9 @@ window.PORTFOLIO = {
         ],
         image: [
           { src: "assets/img/usda-users.jpg", fit: "full", caption: "Primary users and an example use case: Maria, a customs broker who needs an answer in under five minutes." },
-          { src: "assets/img/usda-persona1.jpg", fit: "full", caption: "Persona from the interviews." },
-          { src: "assets/img/usda-persona2.jpg", fit: "full", caption: "Persona from the interviews." },
-          { src: "assets/img/usda-persona3.jpg", fit: "full", caption: "Persona from the interviews." }
+          { src: "assets/img/usda-persona1.jpg", alt: "Persona card for Marcus Bennett, operations manager at an agricultural import company, with his background, how he uses ACIR, frustrations with dense regulatory language, and needs for plain-language summaries and a guided decision path.", fit: "full", caption: "Persona: Marcus Bennett, an operations manager at an agricultural import company who skips complex filters and wants plain-language answers." },
+          { src: "assets/img/usda-persona2.jpg", alt: "Persona card for Angela Rivera, trade director in international agricultural policy, with her background, how she uses ACIR, frustration that the database is siloed by commodity and country, and needs for concept-based search and linked definitions.", fit: "full", caption: "Persona: Angela Rivera, a trade director in international agricultural policy who needs concept-based search and links back to legacy manuals." },
+          { src: "assets/img/usda-persona3.jpg", alt: "Persona card for Claire Thompson, a plant protection and quarantine officer at an inspection station, with her background, how she uses ACIR, frustrations with inconsistent tiles and ambiguous wording, and needs for conflict alerts and embedded definitions.", fit: "full", caption: "Persona: Claire Thompson, a plant inspection officer who needs a clear yes or no, and why, under time pressure." }
         ]
       },
       recommendations: {

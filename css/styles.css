@@ -904,3 +904,18 @@ body { overflow-x: clip; }
 .start-t span { color: #cfc8e6; font-size: 0.85rem; }
 @media (max-width: 900px) { .glance-boxes { grid-template-columns: 1fr 1fr; } .start-box { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .glance-boxes { grid-template-columns: 1fr; } }
+
+/* ---------- Lightbox ---------- */
+.shot img[data-lb] { cursor: zoom-in; }
+.shot img[data-lb]:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+.lightbox { border: 0; padding: 0; width: 100vw; height: 100vh; max-width: none; max-height: none; background: rgba(8, 5, 14, 0.94); color: #fff; }
+.lightbox::backdrop { background: rgba(8, 5, 14, 0.8); }
+.lightbox[open] { display: flex; flex-direction: column; }
+.lb-bar { display: flex; justify-content: flex-end; gap: 10px; padding: 12px 16px; }
+.lb-bar button { border: 2px solid var(--cyan); background: transparent; color: var(--cyan); border-radius: 999px; padding: 6px 16px; font: inherit; font-weight: 700; cursor: pointer; }
+.lb-bar button:hover, .lb-bar button:focus-visible { background: var(--cyan); color: #0d0a14; }
+.lb-stage { flex: 1; min-height: 0; overflow: auto; display: grid; place-items: center; padding: 0 16px; }
+.lb-stage img { max-width: 100%; max-height: 100%; object-fit: contain; background: #fff0; }
+.lightbox.lb-actual .lb-stage { place-items: start center; }
+.lightbox.lb-actual .lb-stage img { max-width: none; max-height: none; }
+.lb-cap { margin: 0; padding: 10px 20px 16px; text-align: center; color: #cfc8e6; font-size: 0.95rem; }

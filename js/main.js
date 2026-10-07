@@ -44,7 +44,7 @@
       return `<figure class="shot shot--embed ${cls}"><div class="embed-wrap"><iframe src="${esc(im.embed)}" title="${esc(plain(im.caption || "Embedded media"))}" loading="lazy" allow="fullscreen; autoplay; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>${cap}</figure>`;
     }
     if (im && im.src) {
-      return `<figure class="shot ${cls}"><img src="${esc(im.src)}" alt="${esc(plain(im.caption))}" loading="${im.eager ? "eager" : "lazy"}">${
+      return `<figure class="shot ${cls}"><img src="${esc(im.src)}" alt="${esc(plain(im.alt || im.caption))}" loading="${im.eager ? "eager" : "lazy"}">${
         im.caption ? `<figcaption>${esc(plain(im.caption))}</figcaption>` : ""
       }</figure>`;
     }
@@ -74,6 +74,54 @@
     },
     true
   );
+
+  /* ---------- Click-to-enlarge (lightbox) ---------- */
+  (function lightbox() {
+    let dlg, big, cap, zoomBtn, opener;
+    const build = () => {
+      dlg = document.createElement("dialog");
+      dlg.className = "lightbox";
+      dlg.setAttribute("aria-label", "Enlarged image");
+      dlg.innerHTML = `<div class="lb-bar"><button type="button" class="lb-zoom" aria-pressed="false">Actual size</button><button type="button" class="lb-close">Close</button></div><div class="lb-stage"><img alt=""></div><p class="lb-cap"></p>`;
+      document.body.appendChild(dlg);
+      big = dlg.querySelector("img");
+      cap = dlg.querySelector(".lb-cap");
+      zoomBtn = dlg.querySelector(".lb-zoom");
+      dlg.querySelector(".lb-close").addEventListener("click", () => dlg.close());
+      zoomBtn.addEventListener("click", () => {
+        const on = dlg.classList.toggle("lb-actual");
+        zoomBtn.setAttribute("aria-pressed", String(on));
+        zoomBtn.textContent = on ? "Fit to screen" : "Actual size";
+      });
+      dlg.addEventListener("click", (e) => { if (e.target === dlg || e.target.classList.contains("lb-stage")) dlg.close(); });
+      dlg.addEventListener("close", () => { dlg.classList.remove("lb-actual"); zoomBtn.setAttribute("aria-pressed", "false"); zoomBtn.textContent = "Actual size"; if (opener && opener.focus) opener.focus(); });
+    };
+    const open = (im) => {
+      if (!dlg) build();
+      opener = im;
+      big.src = im.currentSrc || im.src;
+      big.alt = im.alt;
+      const fc = im.closest("figure") && im.closest("figure").querySelector("figcaption");
+      cap.textContent = fc ? fc.textContent : "";
+      dlg.showModal();
+      dlg.querySelector(".lb-close").focus();
+    };
+    const enhance = (root) => {
+      root.querySelectorAll(".shot img:not([data-lb])").forEach((im) => {
+        im.dataset.lb = "1";
+        im.tabIndex = 0;
+        im.setAttribute("role", "button");
+        im.setAttribute("aria-haspopup", "dialog");
+        im.title = "Click to enlarge";
+      });
+    };
+    document.addEventListener("click", (e) => { const im = e.target.closest && e.target.closest(".shot img[data-lb]"); if (im && typeof HTMLDialogElement !== "undefined") open(im); });
+    document.addEventListener("keydown", (e) => {
+      if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches(".shot img[data-lb]")) { e.preventDefault(); open(e.target); }
+    });
+    const start = () => { enhance(document); new MutationObserver(() => enhance(document)).observe(document.body, { childList: true, subtree: true }); };
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
+  })();
 
   /* ---------- SVG pieces ---------- */
   const PIN_PATH =
