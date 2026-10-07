@@ -201,8 +201,7 @@ window.PORTFOLIO = {
           "We audited the current Milk & Froth site (its homepage, About page and Find Pints page appear in the before and after at the end), then compared four ice cream brands, two local and two nationwide, across eight site features: online ordering, mobile app, search bar, store locator, 404 pages, product catalog, menu navigation bar and contact us.",
         methods: [
           { name: "Current-site review", detail: "Walked through the live homepage, About page and Find Pints page to see how the brand, flavors, story and stockists were presented." },
-          { name: "Competitive analysis", detail: "Compared Milkshake Factory, Michigan Creamery, Jeni's and Van Leeuwen across eight features." },
-          { name: "TODO: User research", detail: "TODO: Any interviews, surveys or usability tests you ran (and how many people)." }
+          { name: "Competitive analysis", detail: "Compared Milkshake Factory, Michigan Creamery, Jeni's and Van Leeuwen across eight features." }
         ],
         insights: [
           "All four brands offered online ordering and a store locator, so both are expected features rather than differentiators.",
@@ -660,7 +659,7 @@ window.PORTFOLIO = {
           },
           {
             title: "Brand, type and color",
-            why: "TODO: Why teal and gold, and why a Manrope and Newsreader pairing, suit confident, polished prep."
+            why: "Teal is associated with calm, focus and trust, which suits a tool people use to steady their nerves before an interview. Gold signals achievement, confidence and prestige, the feeling of the crown, so it is saved for moments of progress like the readiness score. Newsreader, a serif, adds the polish and elegance of pageant culture, while Manrope keeps buttons, labels and body text clean and easy to read on a small screen."
           }
         ],
         designs: [
