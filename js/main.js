@@ -252,7 +252,7 @@
               )
               .join("")}
           </ul>
-          <a class="hud-status" href="https://www.roblox.com/games/1333478699/The-Lanes-Bowling" target="_blank" rel="noopener"><span class="hud-long">Portfolio </span>Inspo: The Lanes Bowling<span class="hud-long"> (Roblox)</span><span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="hud-status" href="https://www.roblox.com/games/1333478699/The-Lanes-Bowling" target="_blank" rel="noopener">Portfolio inspired by The Lanes Bowling<span class="hud-long"> (Roblox)</span><span class="sr-only"> (opens in a new tab)</span></a>
         </nav>`;
     }
     const footer = document.getElementById("footer");

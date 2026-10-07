@@ -970,4 +970,5 @@ a.hud-status:hover, a.hud-status:focus-visible { background: rgba(255, 176, 32, 
 a.hud-status:focus-visible { box-shadow: 0 0 0 3px #ffd24a; }
 .start-badge { display: inline-block; margin-left: 12px; padding: 3px 14px; vertical-align: middle; border-radius: 999px; background: var(--pink-strong); color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; box-shadow: 0 0 14px rgba(255, 47, 180, 0.45); }
 @media (max-width: 1000px) { .hud-long { display: none; } }
-a.hud-status { display: inline-block; }
+@media (min-width: 861px) { a.hud-status { display: inline-block; } }
+@media (max-width: 860px) { a.hud-status { display: none; } }
